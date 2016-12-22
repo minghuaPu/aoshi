@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="../public/bootstrap-3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/css/register.css">
+</head>
+<body>
+<div class="body">
+    <div class="background"><img src="images/background.jpg" alt=""></div>
+    <div class="register">
+        <h2>注册</h2>
+        <form action="login.html" method="post">
+            <div class="register_box">
+                <div class="form-group">
+                    <input type="text" name="user_name" placeholder="用户名" class="write"  >
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="密码" class="write" >
+                </div>
+                <div class="form-group">
+                    <input type="password" name="user_pwd" placeholder="再次确认密码" class="write" >
+                </div>
+                <div class="warning">
+                    <p>请BOSS们登录之后立即完善公司信息!</p>
+                    <p>等待我们审查，否则将无法公布招聘信息！！！</p>
+                </div>
+            </div>
+            <div class="register_btn">
+                <input type="submit" class="btn btn-primary" value="注 册">
+                <input type="hidden" name="c" value="login">
+                <input type="hidden" name="a" value="do_login">
+            </div>
+        </form>
+        <div class="footer">
+            <div>广州源酷创意信息科技有限公司</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="../public/js/jquery.1.11.1.min.js"></script>
+<script src=../public/js/login.js></script>

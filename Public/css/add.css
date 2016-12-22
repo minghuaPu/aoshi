@@ -1,0 +1,62 @@
+.content {
+  width: 900px;
+  height: 1300px;
+  margin: 30px auto;
+  background-color: #ffffff;
+  padding-top: 20px;
+}
+.content .content_box {
+  width: 90%;
+  margin: 50px auto;
+}
+.content .content_box h5 {
+  font-size: 18px;
+  color: #53cac3;
+}
+.content .content_box p {
+  color: red;
+}
+.content .content_box form {
+  border-top: 1px solid #53cac3;
+  padding-top: 40px;
+  width: 100%;
+}
+.content .content_box form .form-group {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+}
+.content .content_box form .form-group .tit {
+  float: left;
+  font-size: 13px;
+  width: 100px;
+  margin-left: 60px;
+  text-align: right;
+}
+.content .content_box form .form-group input,
+.content .content_box form .form-group textarea {
+  margin-left: 20px;
+  float: left;
+  height: 40px;
+  width: 390px;
+  border-radius: 5px 5px;
+  padding-left: 10px;
+}
+.content .content_box form .form-group textarea {
+  width: 500px;
+  height: 200px;
+  resize: none;
+}
+.content .content_box form .job-require {
+  height: 200px;
+}
+.content .content_box .btn {
+  margin: 0 332px;
+  width: 146px;
+  height: 50px;
+  font-size: 20px;
+  line-height: 38px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #53cac3;
+}

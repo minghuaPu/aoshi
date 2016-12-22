@@ -1,0 +1,188 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    font-family: 微软雅黑;
+}
+.body{
+    width: 100%;
+    height: 100%;
+    min-width: 800px;
+    .header{
+        width: 100%;
+        height: 50px;
+        background-color: #53cac3;
+        border-bottom: 1px solid #00a49a;
+        position: relative;
+        z-index: 1000;
+        padding: 5px 0;
+        .logo{
+            width: 150px;
+            height: 40px;
+            margin-left: 300px;
+            background-color: black;
+            color: white;
+        }
+    }
+    .nav_bar{
+        float: left;
+        width: 200px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 50;
+        background-color: #4f5e68;
+        height: 100%;
+        padding-top: 65px;
+        .touxiang{
+            width: 100%;
+            height: 116px;
+            border-bottom: 1px solid #47525a;
+            .box{
+                width: 80px;
+                height: 80px;
+                margin: 0 auto;
+                border-radius: 50%;
+                background-color: #a76cbc;
+                line-height: 80px;
+                text-align: center;
+            }
+            p{
+                text-align: center;
+                font-size: 16px;
+                line-height: 16px;
+                margin-top: 10px;
+                color: #ffffff;
+            }
+        }
+        .nav_item{
+            margin-top: 16px;
+            color: #a4b9c6;
+            font-size: 16px;
+            padding-bottom: 58px;
+            .item{
+                width: 100%;
+                ul{
+                    margin: 0;
+                    padding: 0;
+                    li{
+                        width: 100%;
+                        font-size: 13px;
+                        height: 35px;
+                        line-height: 35px;
+                        cursor: pointer;
+                        background-color: #333e45;
+                        padding-left: 80px;
+                    }
+                    li:hover{
+                        background-color: #222a2f;
+                    }
+                }
+                .tit{
+                    width: 100%;
+                    height: 46px;
+                    line-height: 46px;
+                    padding: 0 20px;
+                    position: relative;
+                    cursor: pointer;
+                    [class^='icon_']{
+                        background: url(../images/menu_icon.png);
+                        background-size: 168px 100px;
+                        margin-top: 14px;
+                        position: absolute;
+                        width: 18px;
+                        height:24px;
+                    }
+                    .i_open{
+                        background: url("../images/i_close.png");
+                        position: absolute;
+                        right: 20px;
+                        top: 20px;
+                        width: 10px;
+                        height: 6px;
+                    }
+                    .icon_job{
+                        background-position: 0px 0;
+                    }
+                    .icon_me{
+                        width: 20px;
+                        background-position: 38px 0;
+                    }
+                    .icon_mess{
+                        width: 20px;
+                        background-position: -36px 0;
+                    }
+                    .icon_select{
+                        height: 25px;
+                        background-position: -34px -60px;
+                    }
+                    .icon_user{
+                        width: 27px;
+                        background-position: -76px 0px;
+                    }
+                    p{
+                        margin-left: 36px;
+                        font-weight: 600;
+                        font-size: 15px;
+                        margin-bottom: 0;
+                        color: #a4b9c6;
+                    }
+                }
+                .tit:hover{
+                    background-color: #333e45;
+                    color: #ffffff;
+                }
+            }
+        }
+        .tool{
+            height: 50px;
+            width: 100%;
+            background-color: #424f58;
+            position: absolute;
+            bottom: 0;
+            line-height: 50px;
+            color: #a4b9c6;
+            cursor: pointer;
+            .i_logout{
+                width: 18px;
+                height: 16px;
+                background: url("../images/i_logout.png");
+                position: absolute;
+            }
+            .logout{
+                width: 124px;
+                height: 50px;
+                position: relative;
+                float: left;
+                border-right: 1px solid #4f5e68;
+                .i_logout{
+                    top: 17px;
+                    left: 20px;
+                }
+                p{
+                    margin-left: 43px;
+                }
+            }
+            .setting{
+                width: 75px;
+                height: 50px;
+                float: left;
+                position: relative;
+                .i_logout{
+                    top: 17px;
+                    left: 15px;
+                }
+                p{
+                    margin-left: 35px;
+                }
+            }
+        }
+    }
+    .container{
+        float: left;
+        background-color: #e9ecec;
+        width: calc(~"100% - 200px");
+        height: calc(~"100% - 51px");
+        margin-left: 200px;
+        overflow-y: auto;
+    }
+}

@@ -1,0 +1,189 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 微软雅黑;
+}
+.body {
+  width: 100%;
+  height: 100%;
+  min-width: 800px;
+}
+.body .header {
+  width: 100%;
+  height: 50px;
+  background-color: #53cac3;
+  border-bottom: 1px solid #00a49a;
+  position: relative;
+  z-index: 1000;
+  padding: 5px 0;
+}
+.body .header .logo {
+  width: 150px;
+  height: 40px;
+  margin-left: 300px;
+  background-color: black;
+  color: white;
+}
+.body .nav_bar {
+  float: left;
+  width: 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  background-color: #4f5e68;
+  height: 100%;
+  padding-top: 65px;
+}
+.body .nav_bar .touxiang {
+  width: 100%;
+  height: 116px;
+  border-bottom: 1px solid #47525a;
+}
+.body .nav_bar .touxiang .box {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: #a76cbc;
+  line-height: 80px;
+  text-align: center;
+}
+.body .nav_bar .touxiang p {
+  text-align: center;
+  font-size: 16px;
+  line-height: 16px;
+  margin-top: 10px;
+  color: #ffffff;
+}
+.body .nav_bar .nav_item {
+  margin-top: 16px;
+  color: #a4b9c6;
+  font-size: 16px;
+  padding-bottom: 58px;
+}
+.body .nav_bar .nav_item .item {
+  width: 100%;
+}
+.body .nav_bar .nav_item .item ul {
+  margin: 0;
+  padding: 0;
+}
+.body .nav_bar .nav_item .item ul li {
+  width: 100%;
+  font-size: 13px;
+  height: 35px;
+  line-height: 35px;
+  cursor: pointer;
+  background-color: #333e45;
+  padding-left: 80px;
+}
+.body .nav_bar .nav_item .item ul li:hover {
+  background-color: #222a2f;
+}
+.body .nav_bar .nav_item .item .tit {
+  width: 100%;
+  height: 46px;
+  line-height: 46px;
+  padding: 0 20px;
+  position: relative;
+  cursor: pointer;
+}
+.body .nav_bar .nav_item .item .tit [class^='icon_'] {
+  background: url(../images/menu_icon.png);
+  background-size: 168px 100px;
+  margin-top: 14px;
+  position: absolute;
+  width: 18px;
+  height: 24px;
+}
+.body .nav_bar .nav_item .item .tit .i_open {
+  background: url("../images/i_close.png");
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 10px;
+  height: 6px;
+}
+.body .nav_bar .nav_item .item .tit .icon_job {
+  background-position: 0px 0;
+}
+.body .nav_bar .nav_item .item .tit .icon_me {
+  width: 20px;
+  background-position: 38px 0;
+}
+.body .nav_bar .nav_item .item .tit .icon_mess {
+  width: 20px;
+  background-position: -36px 0;
+}
+.body .nav_bar .nav_item .item .tit .icon_select {
+  height: 25px;
+  background-position: -34px -60px;
+}
+.body .nav_bar .nav_item .item .tit .icon_user {
+  width: 27px;
+  background-position: -76px 0px;
+}
+.body .nav_bar .nav_item .item .tit p {
+  margin-left: 36px;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 0;
+  color: #a4b9c6;
+}
+.body .nav_bar .nav_item .item .tit:hover {
+  background-color: #333e45;
+  color: #ffffff;
+}
+.body .nav_bar .tool {
+  height: 50px;
+  width: 100%;
+  background-color: #424f58;
+  position: absolute;
+  bottom: 0;
+  line-height: 50px;
+  color: #a4b9c6;
+  cursor: pointer;
+}
+.body .nav_bar .tool .i_logout {
+  width: 18px;
+  height: 16px;
+  background: url("../images/i_logout.png");
+  position: absolute;
+}
+.body .nav_bar .tool .logout {
+  width: 124px;
+  height: 50px;
+  position: relative;
+  float: left;
+  border-right: 1px solid #4f5e68;
+}
+.body .nav_bar .tool .logout .i_logout {
+  top: 17px;
+  left: 20px;
+}
+.body .nav_bar .tool .logout p {
+  margin-left: 43px;
+}
+.body .nav_bar .tool .setting {
+  width: 75px;
+  height: 50px;
+  float: left;
+  position: relative;
+}
+.body .nav_bar .tool .setting .i_logout {
+  top: 17px;
+  left: 15px;
+}
+.body .nav_bar .tool .setting p {
+  margin-left: 35px;
+}
+.body .container {
+  float: left;
+  background-color: #e9ecec;
+  width: calc(100% - 200px);
+  height: calc(100% - 51px);
+  margin-left: 200px;
+  overflow-y: auto;
+}
