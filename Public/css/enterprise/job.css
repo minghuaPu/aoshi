@@ -1,6 +1,5 @@
 .content {
   width: 900px;
-  height: 169px;
   margin: 30px auto;
   background-color: #ffffff;
   padding-top: 20px;
@@ -39,24 +38,26 @@
 .content .tit_box {
   background-color: #f8f8f8;
   height: 50px;
-}
-.content .tit_box ul {
-  height: 50px;
   width: 100%;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
-.content .tit_box ul li {
+.content .tit_box div {
   float: left;
   list-style: none;
   line-height: 50px;
   font-size: 14px;
-  padding: 0 40px;
+  text-align: center;
 }
-.content .table {
-  height: 35px;
-  line-height: 35px;
+.content .row {
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 .content .table th {
+  padding: 0;
+  height: 35px;
+  line-height: 35px;
   text-align: center;
+  font-weight: normal;
 }

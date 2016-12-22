@@ -61,6 +61,9 @@ html,body{
             padding-bottom: 58px;
             .item{
                 width: 100%;
+                a{
+                    color: #a4b9c6;
+                }
                 ul{
                     margin: 0;
                     padding: 0;
@@ -85,7 +88,7 @@ html,body{
                     position: relative;
                     cursor: pointer;
                     [class^='icon_']{
-                        background: url(../images/menu_icon.png);
+                        background: url(../../images/menu_icon.png);
                         background-size: 168px 100px;
                         margin-top: 14px;
                         position: absolute;
@@ -93,7 +96,15 @@ html,body{
                         height:24px;
                     }
                     .i_open{
-                        background: url("../images/i_close.png");
+                        background: url("../../images/i_open.png");
+                        position: absolute;
+                        right: 20px;
+                        top: 20px;
+                        width: 10px;
+                        height: 6px;
+                    }
+                    .i_close{
+                        background: url("../../images/i_close.png");
                         position: absolute;
                         right: 20px;
                         top: 20px;
@@ -103,7 +114,14 @@ html,body{
                     .icon_job{
                         background-position: 0px 0;
                     }
+                    .icon_job_sel{
+                        background-position: -18px 0;
+                    }
                     .icon_me{
+                        width: 20px;
+                        background-position: 38px 0;
+                    }
+                    .icon_me_sel{
                         width: 20px;
                         background-position: 38px 0;
                     }
@@ -111,13 +129,25 @@ html,body{
                         width: 20px;
                         background-position: -36px 0;
                     }
+                    .icon_mess_sel{
+                        width: 20px;
+                        background-position: -56px 0;
+                    }
                     .icon_select{
                         height: 25px;
                         background-position: -34px -60px;
                     }
+                    .icon_select_sel{
+                        height: 25px;
+                        background-position: 2px -60px;
+                    }
                     .icon_user{
                         width: 27px;
                         background-position: -76px 0px;
+                    }
+                    .icon_user_sel{
+                        width: 27px;
+                        background-position: -103px 0px;
                     }
                     p{
                         margin-left: 36px;
@@ -145,7 +175,7 @@ html,body{
             .i_logout{
                 width: 18px;
                 height: 16px;
-                background: url("../images/i_logout.png");
+                background: url("../../images/i_logout.png");
                 position: absolute;
             }
             .logout{

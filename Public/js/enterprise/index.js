@@ -82,7 +82,7 @@ $(".me").on("mouseover",function () {
 })
 $(".me").on("mouseout",function () {
     $(".me").css({
-        backgroundPosition: "38px -0px"
+        backgroundPosition: "38px 0px"
     })
 })
 $(".me").on("click",function () {
