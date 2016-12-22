@@ -1,0 +1,24 @@
+<include file="Public:header" />
+ 
+
+ <div class="container">
+ 	<div class="row">
+ 		<form action="{:U('Login/index')}" method="post">
+ 			<div class="form_group">
+ 				用户名：<input type="text" name="user_name">
+ 			</div>
+ 			<div class="form_group">
+ 				密码：<input type="password" name="user_pwd">
+ 			</div>
+ 			<div class="form_group">
+ 				验证码 :	<input type="text" name="verify_val"> <br><img src="{:U('Login/get_verify')}">
+ 			</div>
+ 			<div class="form_group">
+ 				<input type="submit" class="btn btn-success" value="登录">
+ 			</div>
+ 			
+ 		</form>
+ 	</div>
+ </div>
+
+<include file="Public:footer" />
