@@ -3,6 +3,7 @@ namespace Admin\Controller;
 use Think\Controller;
 use Common\Controller\AuthController;//权限控制
 use Think\Upload;
+use Think\Page;
 
 class ArticleController extends AuthController {
 
@@ -12,7 +13,13 @@ class ArticleController extends AuthController {
         // 第一步：查询列表信息
         $article=M('article');
 
-        $info=$article->order('id desc')->select();
+        $count=$article->count();//内容总数量
+            
+        $Page       = new Page($count,4);// 第一个参数：总数量，第二个参数：每一页显示的数量；
+        $show       = $Page->show();// 分页显示输出 //for <a> 
+        $this->assign('page',$show);// 赋值分页输出
+        
+        $info=$article->order('id desc')->limit($Page->firstRow.','.$Page->listRows)->select();
 
         // 第二步：模版赋值
         $this->assign('info',$info);
