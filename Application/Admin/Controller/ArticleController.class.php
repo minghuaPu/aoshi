@@ -2,6 +2,7 @@
 namespace Admin\Controller;
 use Think\Controller;
 use Common\Controller\AuthController;//权限控制
+use Think\Upload;
 
 class ArticleController extends AuthController {
 
@@ -33,9 +34,25 @@ class ArticleController extends AuthController {
     	$data['article_title']=I('article_title');//获取传输过来的参数 I:(input)
     	 $data['article_content']=I('article_content');
 
-       
+         // 保存图片类
+       $upload=new Upload();
+       //配置相关参数
+       $upload->maxSize="10240000";//10M
+       $upload->exts=array('jpg','gif','jpeg','png');
+       $upload -> autoSub = FALSE;
+       $upload->rootPath="./Public/upload/news/";
+       //上传图片
+       $up_info=$upload->upload();
+
+       if (!$up_info) {
+           $this -> error($upload->getError());
+       }else{
+            $data['thumb']= str_replace('./', "/", $upload->rootPath).$up_info['thumb']['savename'];
+       }
       
-       $data=$article->create();//加了自动完成，create返回的值重新赋到保存数组里面
+
+      
+       $data=$article->create($data);//加了自动完成，create返回的值重新赋到保存数组里面
 
        if(! $data){//校验数据
             echo $article->getError();
@@ -91,16 +108,47 @@ class ArticleController extends AuthController {
          $data['article_content']=I('article_content');
          $id=I('id');
 
-       
+       // 保存图片类
+       $upload=new Upload();
+       //配置相关参数
+       $upload->maxSize="10240000";//10M
+       $upload->exts=array('jpg','gif','jpeg','png');
+       $upload -> autoSub = FALSE;
+       $upload->rootPath="./Public/upload/news/";
+       //上传图片
+       $up_info=$upload->upload();
+
+       if (!$up_info) {
+           $this -> error($upload->getError());
+       }else{
+            $data['thumb']= str_replace('./', "/", $upload->rootPath).$up_info['thumb']['savename'];
+       }
       
-       $data=$article->create();//加了自动完成，create返回的值重新赋到保存数组里面
+
+       
+
+       $data=$article->create($data);//加了自动完成，create返回的值重新赋到保存数组里面
+
 
        if(! $data){//校验数据
             echo $article->getError();
         }else{
             $article->where("id=$id")->save($data);
+            
             $this->success('更新成功！',U('Article/index'));//跳转的方法
         }
+    }
+
+    public function view()
+    {
+       $article_d=D('Article');
+
+       $id=I('id');
+
+       $info=$article_d->where("id= $id")->find();
+
+       $this->assign('info',$info);
+        $this->display();
     }
 
 }
