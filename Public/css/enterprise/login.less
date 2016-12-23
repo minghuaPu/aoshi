@@ -6,106 +6,91 @@ body{
     width: 100%;
     height: 100%;
     font-family: 微软雅黑;
-    .body{
+    .body {
         width: 100%;
         height: 100%;
-        overflow: hidden;
+        //overflow: hidden;
         position: relative;
-        .background{
+        .bg{
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
+            height: 100%;
+            background-image: url(../../images/enterprise/index.jpg);
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            background-size: cover;
+        }
+        .header{
+            position: absolute;
+            top: 45px;
+            display: block;
+            width: 100%;
+            height: 56px;
+            z-index: 30;
             img{
-                width: 100%;
+                height: 56px;
+                display: block;
+                margin-left: 80px;
             }
         }
         .login{
-            width: 34%;
-            height: 100%;
             position: absolute;
-            z-index: 3;
-            left: 33%;
-            top: 0;
-            .logo{
-                width: 80px;
-                height: 80px;
-                margin: 50px auto 0;
+            top: 130px;
+            left: calc(~'50% - 140px');
+            background-color: #FFFFFF;
+            width: 280px;
+            height: 350px;
+            border-radius: 6px;
+            .touxiang{
+                width: 70px;
+                height: 70px;
                 border-radius: 50%;
-                background-color: black;
-            }
-            h1{
-                text-align: center;
-                width: 100%;
-                font-weight: 600;
-                color: white;
-                font-size: 40px;
+                margin: 10px auto;
+                background-image: url(../../images/enterprise/boss.png);
+                background-repeat: no-repeat;
+                background-position: center;
             }
             form{
                 .form-group{
-                    width: 60%;
-                    margin: 0 auto;
+                    width: 80%;
+                    margin: 16px auto 0;
                     input{
+                        border-radius: 5px;
                         width: 100%;
-                        margin: 0 auto;
-                        border: none;
-                        color: white;
-                        margin: 30px 0 10px;
-                        line-height: 30px;
-                        padding: 0 15px;
-                        border: none;
-                        border-bottom: 2px white solid;
-                    }
-                    .write{
-                        background-color: rgba(0,0,0,.0) !important;
-                    }
-                    .code{
-                        width: 50%;
-                        float: left;
-                    }
-                    .img{
-                        width: 50%;
-                        float: left;
+                        padding-left: 10px;
+                        height: 32px;
                     }
                     input[type=submit]{
-                        border: none;
-                        background-color: #f0b950;
-                        border-radius: 80px;
-                        margin: 40px 0 0;
-                        line-height: 43px;
-                        font-size: 20px;
-                        font-weight: 600;
+                        width: 80%;
+                        margin: 0 10%;
+                    }
+                    img{
+                        width: 70%;
+                        margin:  5px 15% 5px;
                     }
                 }
+                .log{
+                    margin-top: 0px;
+                }
             }
-            .help{
-                width: 140px;
+            ul{
+                margin: 20px auto 0;
+                width: 100%;
+                height: 20px;
                 padding: 0;
-                height: 30px;
-                margin: 30px auto;
                 li{
+                    width: 50%;
                     list-style: none;
                     float: left;
-                    padding: 0 5px;
-                    a{
-                        color: white;
-                        font-size: 12px;
-                    }
-                    .register_btn{
-                        color: #f0b950;
-                        text-decoration: underline;
-                    }
+                    padding: 0 8px;
+                    text-align: right;
+                    font-size: 12px;
                 }
                 li+li{
-                    border-left: 1px white solid;
-                }
-            }
-            .footer{
-                width: 100%;
-                position: absolute;
-                bottom: 20px;
-                div{
-                    font-size: 5px;
-                    color: #b6b7b9;
-                    width: 100%;
-                    text-align: center;
+                    border-left: blue 1px solid;
+                    text-align: left;
                 }
             }
         }
