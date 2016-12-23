@@ -28,15 +28,17 @@
                 <div class="col-md-1">状态</div>
             </div>
             <table class="table row">
-                <tr>
-                    <th class="col-md-2">PHP工程师</th>
-                    <th class="col-md-2">工程师</th>
-                    <th class="col-md-1">3k到5k</th>
-                    <th class="col-md-2">广州天河区</th>
-                    <th class="col-md-2">5个月5天</th>
-                    <th class="col-md-2"><a href="">共5人</a></th>
-                    <th class="col-md-1">已结束</th>
-                </tr>
+                <foreach name="job_info" item="job_item">
+                    <tr>
+                        <th class="col-md-2">{$job_item['job_name']}</th>
+                        <th class="col-md-2">{$job_item['job_require']}</th>
+                        <th class="col-md-1">￥{$job_item['money']}</th>
+                        <th class="col-md-2">{$job_item['place']}</th>
+                        <th class="col-md-2">5个月5天</th>
+                        <th class="col-md-2"><a href="">共5人</a></th>
+                        <th class="col-md-1">已结束</th>
+                    </tr>
+                </foreach>
             </table>
         </div>
     </div>

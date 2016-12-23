@@ -10,7 +10,9 @@
 <body>
 <div class="body">
 	<div class="header">
-		<div class="logo">logo</div>
+		<div class="logo">
+			<img src="__PUBLIC__/images/enterprise/logo.png">
+		</div>
 	</div>
 	<div class="nav_bar">
 		<div class="touxiang">
@@ -20,11 +22,11 @@
 		<div class="nav_item">
 			<div class="item job">
 				<div class="tit">
-					<span <if condition="$Think.const.ACTION_NAME eq add_job"> class="icon_job_sel" </if> class="icon_job"></span>
+					<span <if condition="$Think.const.ACTION_NAME eq add_job"> class="icon_job_sel" </if>   class="icon_job"></span>
 					<p>职位</p>
-					<span class="i_open"></span>
+					<span class="i_close"></span>
 				</div>
-				<ul style="display: none">
+				<ul class="hide">
 					<li ><a href="{:U('Index/add_job')}">新职位</a></li>
 					<li><a href="{:U('Index/job_list')}">已发布职位</a></li>
 				</ul>
@@ -33,9 +35,9 @@
 				<div class="tit">
 					<span class="icon_user"></span>
 					<p>牛人</p>
-					<span class="i_open"></span>
+					<span class="i_close"></span>
 				</div>
-				<ul style="display: none">
+				<ul class="hide">
 					<li>看过我</li>
 					<li>收藏我</li>
 					<li>搜索</li>
@@ -49,17 +51,20 @@
 			</div>
 			<div class="item mess">
 				<div class="tit">
-					<span class="icon_mess"></span>
-					<p>消息</p>
+					<div>
+						<span class="icon_mess"></span>
+						<p>消息</p>
+						<span class="badge">14</span>
+					</div>
 				</div>
 			</div>
 			<div class="item me">
 				<div class="tit">
 					<span class="icon_me"></span>
 					<p>我的</p>
-					<span class="i_open"></span>
+					<span class="i_close"></span>
 				</div>
-				<ul style="display: none">
+				<ul class="hide">
 					<li>我的公司</li>
 				</ul>
 			</div>
@@ -67,7 +72,7 @@
 		<div class="tool">
 			<div class="logout">
 				<span class="i_logout"></span>
-				<p>退出登录</p>
+				<p><a href="{:U('login/logout')}">退出登陆</a></p>
 			</div>
 			<div class="setting">
 				<span class="i_logout"></span>
