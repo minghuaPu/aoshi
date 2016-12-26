@@ -1,1 +1,0 @@
-<?php if (!defined('THINK_PATH')) exit();?>这个是企业后台
