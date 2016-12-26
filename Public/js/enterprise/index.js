@@ -1,6 +1,33 @@
 /**
  * Created by iphone on 2016/12/20.
  */
+$(".item").on("click",function () {
+
+    var $aItem = $(".item").eq($(this).index());
+    var $aUl = $(".item").eq($(this).index()).children().eq(1);
+    var $aIcon = $(".item").eq($(this).index()).children().eq(0).children().eq(2);
+    console.log($aItem)
+
+    $aItem.css({
+        backgroundColor:"#333e45"
+    })
+    $aItem.siblings().css({
+        backgroundColor:"#4f5e68"
+    })
+
+    if ($aIcon.attr("class")=="i_close"){
+        $(".item .i_open").attr("class","i_close")
+        $aIcon.attr("class","i_open");
+    }else {
+        $aIcon.attr("class","i_close");
+    }
+    if ($aUl.attr("class")=="hide"){
+        $(".item ul").attr("class","hide")
+        $aUl.attr("class","show");
+    }else {
+        $aUl.attr("class","hide");
+    }
+})
 $(".job").on("mouseover",function () {
     $(".icon_job").css({
         backgroundPosition: "-18px 0px"
@@ -13,19 +40,9 @@ $(".job").on("mouseout",function () {
 })
 $(".job").on("click",function () {
     if ($(".job ul").css("display")=="none"){
-        $(".item ul").hide();
-        $(".i_open").css({
-            background: 'url("../Public/images/i_close.png")'
-        })
         $(".job ul").show();
-        $(".job .i_open").css({
-            background: 'url("../Public/images/i_open.png")'
-        })
     }else {
         $(".job ul").hide();
-        $(".job .i_open").css({
-            background: 'url("../Public/images/i_close.png")'
-        })
     }
 })
 $(".user").on("mouseover",function () {
@@ -37,23 +54,6 @@ $(".user").on("mouseout",function () {
     $(".icon_user").css({
         backgroundPosition: "-76px 0px"
     })
-})
-$(".user").on("click",function () {
-    if ($(".user ul").css("display")=="none"){
-        $(".item ul").hide();
-        $(".i_open").css({
-            background: 'url("../Public/images/i_close.png")'
-        })
-        $(".user ul").show();
-        $(".user .i_open").css({
-            background: 'url("../Public/images/i_open.png")'
-        })
-    }else {
-        $(".user ul").hide();
-        $(".user .i_open").css({
-            background: 'url("../Public/images/i_close.png")'
-        })
-    }
 })
 $(".select").on("mouseover",function () {
     $(".icon_select").css({
@@ -81,24 +81,7 @@ $(".me").on("mouseover",function () {
     })
 })
 $(".me").on("mouseout",function () {
-    $(".me").css({
+    $(".icon_me").css({
         backgroundPosition: "38px 0px"
     })
-})
-$(".me").on("click",function () {
-    if ($(".me ul").css("display")=="none"){
-        $(".item ul").hide();
-        $(".i_open").css({
-            background: 'url("../Public/images/i_close.png")'
-        })
-        $(".me ul").show();
-        $(".me .i_open").css({
-            background: 'url("../Public/images/i_open.png")'
-        })
-    }else {
-        $(".me ul").hide();
-        $(".me .i_open").css({
-            background: 'url("../Public/images/i_close.png")'
-        })
-    }
 })
