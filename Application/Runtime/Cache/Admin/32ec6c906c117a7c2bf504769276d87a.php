@@ -1,5 +1,14 @@
-<include file="Public:header" />
-<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/admin/login.css">
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/aoshi/Public/css/bootstrap-3.3.0/css/bootstrap.min.css">
+	<script type="text/javascript" src="/aoshi/Public/js/jquery.1.11.1.min.js"></script>
+</head>
+<body>
+
+
+<link rel="stylesheet" type="text/css" href="/aoshi/Public/css/admin/login.css">
 
 
 <div class="login_box">
@@ -7,7 +16,7 @@
     	<h3>职信道总后台管理系统</h3>
     </div>
     <div class="login">
-        <form role="form" action="{:U('Login/index')}" method="post">
+        <form role="form" action="<?php echo U('Login/index');?>" method="post">
             <div class="form-group">
                 <input type="text" class="form-control" name="user_name" required  placeholder="请输入用户名">
             </div>
@@ -16,7 +25,7 @@
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" name="verify_val" required placeholder="请输入验证码">
-                <br><img style="cursor: pointer;" class='verify_img' src="{:U('Login/get_verify',array())}">
+                <br><img style="cursor: pointer;" class='verify_img' src="<?php echo U('Login/get_verify',array());?>">
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary">登录</button>
@@ -25,6 +34,6 @@
         </form>
     </div>
 </div>
-<script type="text/javascript" src='__PUBLIC__/js/admin/login.js'>   </script>
+<script type="text/javascript" src='/aoshi/Public/js/admin/login.js'>   </script>
 </body>
 </html>
