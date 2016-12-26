@@ -1,0 +1,106 @@
+@charset "UTF-8";
+body{
+    background-color: #f5f7f9;
+}
+a:hover{text-decoration: none;}
+#header{
+    position: relative;
+}
+
+.news {
+    width: 90%;
+    margin:20px auto 0px auto;
+    padding-top: 15px
+}
+.news-main {
+    float: left;
+    width: 746px;
+    margin-bottom: 20px;
+}
+.news-content {
+    background: #fff;
+    padding: 35px 35px 35px;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: .5px;
+    line-height: 30px
+}
+.news-content  .h1-title {
+    font-size: 30px;
+    line-height: 50px;
+    font-weight: 400;
+}
+.news-content .content p {
+    padding: 15px 0
+}
+.news-next{
+    background-color: #ffffff;
+    padding: 40px 45px 45px;
+    margin-top: 15px;
+}
+
+.news-next  .text-title{
+    padding-top: 30px;
+    font-size: 30px;
+    line-height: 50px;
+}
+.news-next .text-title a:hover{
+    color: #53cac3;
+}
+.news-sider {
+    float: left;
+    width: 400px;
+    background-color: #fff;
+    margin-left: 20px;
+}
+.news-sider .hot-news {
+    padding: 40px 35px 15px
+}
+
+.hot-news li {
+    padding: 30px 0;
+    border-bottom: 1px #EDEDED solid;
+}
+.title{
+    display: inline-block;
+    font-size: 17px;
+    height: 17px;
+    line-height: 17px;
+    border-left: 3px #59CAC2 solid;
+    padding-left: 10px;
+    font-weight: 400;
+}
+.news-sider .hot-news .text-title{
+    font-size: 20px;
+    font-weight: 500;
+    color:#000;
+    line-height: 26px;
+}
+.news-sider .hot-news a:hover{
+    color: #53cac3;
+    text-decoration: none;
+}
+ .info {
+    color: #999;
+    line-height: 18px;
+    font-size: 14px;
+    padding-top: 20px;
+}
+.info .author{
+    float: right;
+}
+.sider{
+    float: left;
+}
+.cooperation-sider{
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.cooperation-sider img {
+    display: block;
+    max-width: 100%
+}
+.footer{
+    clear:both;
+}
