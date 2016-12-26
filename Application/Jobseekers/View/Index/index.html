@@ -26,11 +26,9 @@
 		</header>
         <!--简历-->
         
-   <!----------------------------------------------------img(begin)------------------------------------------->
+
     
-           
-  <!---------------------------------------------------------img(end)------------------------------------------>
-              
+                         
         
         
         
@@ -39,8 +37,17 @@
 			<article class="resume-inner">
 				<!--用户头像-->
 				<aside class="avatar" id="crop-avatar">
-                  	<img class="absolute" src="__PUBLIC__/images/resume-bg.png">  
+                  	<img class="absolute" src="__PUBLIC__/images/resume-bg.png">              
+                    <img id="avatar-img" class="center" src="__PUBLIC__/images/avatar.png">
+					<img id="avatar-bg" class="center" src="__PUBLIC__/images/avatar-bg.png" style="display: none;">
+					
+					<input id="avatar-upload" class="center" type="file">
+           <!----------------------------------------------------img(begin)------------------------------------------->            
+                    
                      <include file="crop" class="center" />
+                     
+ 		 <!---------------------------------------------------------img(end)------------------------------------------>
+
                     </aside>
  <!-- --------------------------------------------------------Cropping modal -->
                      
@@ -64,7 +71,7 @@
                             </span>
                          </foreach>   
 					</div>
-					<form id="user-info-form">
+					<form id="user-info-form" >
 						<fieldset>
 							<label >姓名</label>
 							<input class="input-text" name="username">
@@ -126,7 +133,7 @@
                 
 				<!--工作经历-->
 				<section id="job-exp">
-					<h5 class="resume-title"><span>工作经历</span><a class="edit" href="javascript:;">添加</a></h5>
+					<h5 class="resume-title"><span>工作经历</span><a class="add_a" href="javascript:;">添加</a></h5><!--&javascript:;$item['resume_id']-->
 					<button class="add">+ 添加工作经历</button>
 					<ul class="list">
                     <foreach name="experience_info" item="item">
@@ -134,14 +141,19 @@
 							<div>
 								<b >{$item.re_company_name}</b>
 								<a class="edit" href="javascript:;">编辑</a>
-							</div>
+								<span class="edit_box">
+								<a class="modify" href="javascript:;" onclick="job_test({$item.resume_id});">修改</a>
+								<a class="del" href="javascript:;" onclick="job_test({$item.resume_id});">删除</a>
+                                </span>
+                            </div>
 							<div>
 								<span >{$item.job_title}</span>
+                                <span >{$item.resume_id}</span>
 								<span class="fr">{$item.working_time}</span>
 							</div>
 							<p >{$item.job_description}</p>
 						</li>
-						</foreach>
+					</foreach>
 					</ul>
 					<form id="job-exp-form"  action="{:U('Index/save')}" method="post">
 						<fieldset>
@@ -161,6 +173,34 @@
 							<textarea class="input-text" maxlength="300" rows="5" name="job_description"></textarea>
 						</fieldset>
 						<fieldset>
+                        	<input type="hidden" name="id" value="{$article_info['id']}">
+							<input class="btn submit" type="submit">
+							<button class="btn cancel">取消</button>
+						</fieldset>
+					</form>
+                    
+                    
+                    <form id="job-exp-update-form"  action="{:U('Index/update')}" method="post">
+						<fieldset>
+							<label>公司</label>
+							<input class="input-text" name="re_company_name">
+						</fieldset>
+						<fieldset>
+							<label>职位</label>
+							<input class="input-text" name="job_title">
+						</fieldset>
+						<fieldset>
+							<label>任职时间</label>
+							<input class="input-text" name="working_time">
+						</fieldset>
+						<fieldset>
+							<label class="align-top">工作内容</label>
+							<textarea class="input-text" maxlength="300" rows="5" name="job_description"></textarea>
+						</fieldset>
+						<fieldset>
+                        	<input type="hidden" name="what" value="experience" />
+                            <input id="job_resume_id" type="hidden" name="resume_id" value="" />
+                            <input  type="hidden" name="server" value="" />
 							<input class="btn submit" type="submit">
 							<button class="btn cancel">取消</button>
 						</fieldset>
@@ -170,7 +210,7 @@
                 
 				<!--教育经历-->
 				<section id="edu-exp">
-					<h5 class="resume-title"><span>教育经历</span><a class="edit" href="javascript:;">添加</a></h5>
+					<h5 class="resume-title"><span>教育经历</span><a class="add_a" href="javascript:;">添加</a></h5>
 					<button class="add"> + 添加教育经历</button>
 					<ul class="list">
                      <foreach name="education_info" item="item">
@@ -178,6 +218,10 @@
 							<div>
 								<b class="name">{$item.school_name}</b>
 								<a data-index="0" class="edit" href="javascript:;">编辑</a>
+                                <span class="edit_box">
+								<a class="modify" href="javascript:;" onclick="edu_test({$item.resume_id});">修改</a>
+								<a class="del" href="javascript:;" onclick="edu_test({$item.resume_id});">删除</a>
+                                </span>
 							</div>
 							<div>
 								<span class="xl">{$item.degree}</span> -
@@ -215,7 +259,41 @@
 							<button class="btn cancel">取消</button>
 						</fieldset>
 					</form>
+                    
+                    
+                    <form id="edu-exp-update-form"  action="{:U('Index/update')}" method="post">
+						<fieldset>
+							<label>学校名称</label>
+							<input class="input-text" name="school_name">
+						</fieldset>
+						<fieldset>
+							<label>所学专业</label>
+							<input class="input-text"	name="major">
+						</fieldset>
+						<fieldset>
+							<label>学历</label>
+							<select class="input-text" name="degree">
+								<option>大专</option>
+								<option>本科</option>
+								<option>硕士</option>
+								<option>博士</option>
+								<option>其他</option>
+							</select>
+						</fieldset>
+						<fieldset>
+							<label>毕业时间</label>
+							<input class="input-text" name="graduated">
+						</fieldset>
+						<fieldset>
+                       		 <input type="hidden" name="what" value="education" />
+                            <input id="edu_resume_id" type="hidden" name="resume_id" value="" />
+							<input class="btn submit" type="submit">
+							<button class="btn cancel">取消</button>
+						</fieldset>
+					</form>
 				</section>
+                
+                
 				<!--自我描述-->
 				<section id="self-des">
 					<h5 class="resume-title"><span>自我描述</span><a class="edit" href="javascript:;">编辑</a></h5>
@@ -223,11 +301,12 @@
                     <foreach name="jobseekers_info" item="item">
 						<p class="list">{$item.label}</p>
                      </foreach>
-					<form id="self-des-form">
+					<form id="self-des-update-form"   action="{:U('Index/update')}" method="post">
 						<fieldset>
 							<textarea maxlength="300" rows="5"></textarea>
 						</fieldset>
 						<fieldset>
+                        	<input type="hidden" name="what" value="jobseekers" />
 							<input class="btn submit" type="submit">
 							<button class="btn cancel">取消</button>
 						</fieldset>
