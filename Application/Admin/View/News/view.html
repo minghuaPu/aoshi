@@ -1,0 +1,19 @@
+<include file='Public:header'/>
+
+
+        <div class="container">
+            <h1 class="h1-title">{$info[0]['news_title']}</h1>
+            <div class="form-group"><div class="author" style="float: right;">{$info[0]['author']}<em>&nbsp;· &nbsp;</em><span style="float: right;" class="time">{$info[0]['add_time']|date="Y-m-d H:i:s",###}</span></div></div>
+            <span class="tags" style="float: left;">{$info[0]['cata_id']}</sqan>
+            <div class="content">
+                   <php> echo htmlspecialchars_decode($info[0]['news_content']);</php>
+            </div>
+            <a href="javascript:history.go(-1);" class="btn  btn-default">返回</a>
+        </div>
+       
+    
+
+
+</div>
+
+<include file='Public:footer'/>

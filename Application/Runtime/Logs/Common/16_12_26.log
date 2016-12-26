@@ -1,0 +1,180 @@
+[ 2016-12-26T02:15:05+08:00 ] 127.0.0.1 /aoshi/Public/js/admin/news_list.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000677s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-26T02:15:09+08:00 ] 127.0.0.1 /aoshi/Public/upphoto/news/585fe207d1441.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000719s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-26T02:15:20+08:00 ] 127.0.0.1 /aoshi/Public/css/home/news_detail.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000668s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-26T02:15:20+08:00 ] 127.0.0.1 /aoshi/Public/css/home/news_detail.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000684s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-26T02:15:40+08:00 ] 127.0.0.1 /aoshi/Public/upphoto/news/5860096f7989a.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001191s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-26T02:15:49+08:00 ] 127.0.0.1 /aoshi/Public/css/home/news_detail.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002895s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-26T02:15:49+08:00 ] 127.0.0.1 /aoshi/Public/css/home/news_detail.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000720s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-26T02:17:10+08:00 ] 127.0.0.1 /aoshi/Public/css/home/news_detail.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000771s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-26T02:17:10+08:00 ] 127.0.0.1 /aoshi/Public/css/home/news_detail.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001048s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-26T02:20:38+08:00 ] 127.0.0.1 /aoshi/Public/upphoto/news/5860096f7989a.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000995s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-26T02:22:21+08:00 ] 127.0.0.1 /aoshi/Public/js/admin/news_list.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000664s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-26T02:22:21+08:00 ] 127.0.0.1 /aoshi/Public/js/admin/news_list.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000649s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-26T02:24:15+08:00 ] 127.0.0.1 /aoshi/Public/js/admin/news_list.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000711s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-26T02:24:15+08:00 ] 127.0.0.1 /aoshi/Public/js/admin/news_list.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000815s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-26T02:25:26+08:00 ] 127.0.0.1 /aoshi/Public/js/admin/news_list.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001063s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-26T02:25:31+08:00 ] 127.0.0.1 /aoshi/Public/upphoto/news/585fe207d1441.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001010s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-26T02:25:42+08:00 ] 127.0.0.1 /aoshi/Public/css/home/news_detail.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000794s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-26T02:25:43+08:00 ] 127.0.0.1 /aoshi/Public/css/home/news_detail.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000753s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-26T02:29:03+08:00 ] 127.0.0.1 /aoshi/Public/css/home/news_detail.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000679s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-26T02:43:37+08:00 ] 127.0.0.1 /aoshi/Public/upphoto/news/5860096f7989a.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002589s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-26T02:43:44+08:00 ] 127.0.0.1 /aoshi/Public/upphoto/news/585fb20cd0738.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000092s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002053s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-26T02:43:49+08:00 ] 127.0.0.1 /aoshi/Public/upphoto/news/585fe207d1441.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000636s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-26T02:56:20+08:00 ] 127.0.0.1 /aoshi/Public/css/Home/news_list.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000723s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-26T02:56:33+08:00 ] 127.0.0.1 /aoshi/Public/css/Home/news_list.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000671s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-26T02:58:14+08:00 ] 127.0.0.1 /aoshi/Public/images/list-banner.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000623s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-26T03:00:18+08:00 ] 127.0.0.1 /aoshi/Public/css/home/news_detail.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000765s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-26T03:00:18+08:00 ] 127.0.0.1 /aoshi/Public/images/cooperation.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001091s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-26T03:01:03+08:00 ] 127.0.0.1 /aoshi/Public/css/home/news_detail.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000717s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-26T09:01:47+08:00 ] 127.0.0.1 /aoshi/Nwews
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000839s ]
+ERR: 无法加载模块:Nwews
+
+[ 2016-12-26T09:01:54+08:00 ] 127.0.0.1 /aoshi/News
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000844s ]
+ERR: 无法加载模块:News
+

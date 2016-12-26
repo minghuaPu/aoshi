@@ -1,9 +1,18 @@
-<include file="Public:header" />
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/aoshi/Public/css/bootstrap-3.3.0/css/bootstrap.min.css">
+	<script type="text/javascript" src="/aoshi/Public/js/jquery.1.11.1.min.js"></script>
+</head>
+<body>
+
+
 
 <div class="container">
 	<h1>内容管理一览表</h1>
 	<div class="row">
-		<a href="{:U('Article/add')}" class="btn btn-success">添加</a>
+		<a href="<?php echo U('Article/add');?>" class="btn btn-success">添加</a>
 		<a href="javascript:;" id="all_delete" class="btn btn-danger">批量删除</a>
 	</div>
 	<div class="row">
@@ -16,26 +25,24 @@
 				<td>操作</td>
 			</tr>
 			
-			<foreach name="info" item="item" >  
-			<tr>
-				<td><input   class="signl_box" type="checkbox" value="{$item.id}"></td>
+			<?php if(is_array($info)): foreach($info as $key=>$item): ?><tr>
+				<td><input   class="signl_box" type="checkbox" value="<?php echo ($item["id"]); ?>"></td>
 				<td>
-					{$item.id}
+					<?php echo ($item["id"]); ?>
 				</td>
 				<td>
-					{$item.article_title}
+					<?php echo ($item["article_title"]); ?>
 				</td>
 				<td>
-					{$item.add_time|date="Y-m-d H:i:s",###}
+					<?php echo (date("Y-m-d H:i:s",$item["add_time"])); ?>
 				</td>
 				<td>
 
-					<a href="{:U('Article/view',array('id'=>$item['id']))}">查看</a> 
-					<a href="{:U('Article/delete',array('id'=>$item['id']))}">删除</a> 
-					<a href="{:U('Article/edit',array('id'=>$item['id']))}">修改</a> 
+					<a href="<?php echo U('Article/view',array('id'=>$item['id']));?>">查看</a> 
+					<a href="<?php echo U('Article/delete',array('id'=>$item['id']));?>">删除</a> 
+					<a href="<?php echo U('Article/edit',array('id'=>$item['id']));?>">修改</a> 
 				</td>
-			</tr>
-			</foreach>
+			</tr><?php endforeach; endif; ?>
 		</table>
 	</div>
 </div>
@@ -74,7 +81,7 @@
 			console.log(id_string);
 
 			//ajax请求php进行删除
-			$.post('{:U("Article/all_delete")}',{'ids':id_string},function  (rt_object) {
+			$.post('<?php echo U("Article/all_delete");?>',{'ids':id_string},function  (rt_object) {
 				
 				//把json转换成对象
 				// var rt_object=JSON.parse(rtn);
@@ -96,4 +103,7 @@
 	})
 </script>
 
-<include file="Public:footer" />
+
+<div class='container'><a class=" btn btn-danger" style=" float: right;" href="<?php echo U('Login/logout');?>">退出</a></div>
+</body>
+</html>
