@@ -22,8 +22,10 @@
 				<td>
 					{$item.id}
 				</td>
-				<td>
+				<!-- HTML的标签自定义属性 -->
+				<td class="title_td_box" id_val="{$item.id}">
 					{$item.article_title}
+					
 				</td>
 				<td>
 					{$item.add_time|date="Y-m-d H:i:s",###}
@@ -41,9 +43,56 @@
 	<div class="row page_box">{$page}</div>
 </div>
 <script type="text/javascript">
-	
+		
+
+
 	// 按了顶部的全选，那么下面的复选框，要全部选中
-	$(function  () {
+	$(function  () {   
+
+		//页面加载完了才来执行里面的js
+
+		// 用jquery，给每个标题绑定一个点击事件：
+		$(".title_td_box").click(function  () {
+			//获取当前的内容,html/text
+			var this_val=$(this).text();
+			// 获取当前的文章ID
+			var this_id=$(this).attr("id_val");
+
+			//怎么去除左右的空格
+			// this_val.trim();
+
+			// 把当前的变成输入框,并且赋上原来的值
+			$(this).html("<input value='"+this_val.trim()+"' >");
+			//为什么输入不了内容？
+			$(this).find('input').focus();
+
+
+			
+			// 是在当前文本框失去焦点的时候执行
+			$(this).find("input").blur(function  () {
+				//$(this)  //td盒子  还是  input
+				var input_val=$(this).val();
+				// 还原，就是把当前td的input还原为纯文本的
+				$(this).parent().html(input_val);//td对象
+				
+
+				// 进行用ajax请求
+				//第一个参数：请求的地址
+				//第二个参数：请求的数据对象，标题的值，当前的文章id
+				$.post(SITE_URL+"/Article/ajax_edit",{"id":this_id,"title":input_val},function  (rtn) {
+				
+				},"json")
+			})
+			
+
+
+
+
+		})
+		
+	
+
+
 		$("#all_check").click(function  () {
 
 			if($(this).is(':checked') ){

@@ -1,0 +1,31 @@
+ body{
+            background-color:#0f0f0f;
+        }
+        .login_box{
+            width: 30%;
+            background-color:#ffffff;
+            border: 1px solid #000;
+            border-radius:10px;
+            margin:100px auto 0px auto;
+        }
+        .form-group{
+            margin-bottom: 20px;
+        }
+        .h3-title{
+            width: 320px;
+            margin: auto;
+            background-color: #59CAC3;
+            color: #ffffff;
+            padding:5px 8px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .login_box .login{
+            margin: 50px 80px;
+        }
+        .login .btn {
+            padding: 6px 110px;
+        }
+        .btn-primary{
+            background-color:#59CAC2;
+        }

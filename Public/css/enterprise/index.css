@@ -73,6 +73,9 @@ body {
 .body .nav_bar .nav_item a:hover {
   text-decoration: none;
 }
+.body .nav_bar .nav_item .selected {
+  background-color: #333e45;
+}
 .body .nav_bar .nav_item .item {
   width: 100%;
 }
@@ -91,6 +94,9 @@ body {
 }
 .body .nav_bar .nav_item .item ul li a:hover {
   text-decoration: none;
+}
+.body .nav_bar .nav_item .item ul .li_sel {
+  background-color: #222a2f;
 }
 .body .nav_bar .nav_item .item ul li:hover {
   background-color: #222a2f;
@@ -172,9 +178,11 @@ body {
   margin-bottom: 0;
   color: #a4b9c6;
 }
+.body .nav_bar .nav_item .item .it_sel {
+  background-color: #333e45;
+}
 .body .nav_bar .nav_item .item .tit:hover {
   background-color: #333e45;
-  color: #ffffff;
 }
 .body .nav_bar .nav_item .mess .tit .badge {
   display: block;

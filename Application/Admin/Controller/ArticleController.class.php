@@ -110,26 +110,30 @@ class ArticleController extends AuthController {
 
     public function update()
     {
-        $article=D('article');//怎么实例化模型   D:(Database)
-        $data['article_title']=I('article_title');//获取传输过来的参数 I:(input)
+         $article=D('article');//怎么实例化模型   D:(Database)
+         $data['article_title']=I('article_title');//获取传输过来的参数 I:(input)
          $data['article_content']=I('article_content');
          $id=I('id');
 
-       // 保存图片类
-       $upload=new Upload();
-       //配置相关参数
-       $upload->maxSize="10240000";//10M
-       $upload->exts=array('jpg','gif','jpeg','png');
-       $upload -> autoSub = FALSE;
-       $upload->rootPath="./Public/upload/news/";
-       //上传图片
-       $up_info=$upload->upload();
 
-       if (!$up_info) {
-           $this -> error($upload->getError());
-       }else{
-            $data['thumb']= str_replace('./', "/", $upload->rootPath).$up_info['thumb']['savename'];
-       }
+         if($_FILES['thumb']['size']>0){
+             // 保存图片类
+           $upload=new Upload();
+           //配置相关参数
+           $upload->maxSize="10240000";//10M
+           $upload->exts=array('jpg','gif','jpeg','png');
+           $upload -> autoSub = FALSE;
+           $upload->rootPath="./Public/upload/news/";
+           //上传图片
+           $up_info=$upload->upload();
+
+           if (!$up_info) {
+               $this -> error($upload->getError());
+           }else{
+                $data['thumb']= str_replace('./', "/", $upload->rootPath).$up_info['thumb']['savename'];
+           }
+          
+         }
       
 
        
@@ -156,6 +160,26 @@ class ArticleController extends AuthController {
 
        $this->assign('info',$info);
         $this->display();
+    }
+
+    public function ajax_edit()
+    {
+       $data['id']=I("id");
+       if (!$data['id']) {
+         $this->error("操作有误");
+       }
+       $data['article_title']=I("title");
+
+       // 修改
+       $article=D('Article');
+
+       $c_rtn=$article->create($data);
+       if (!$c_rtn) {
+            $this->ajaxReturn($article->getError(),"json");
+       }else{
+          $article->save($data);
+          $this->ajaxReturn(array('status'=>1),'json');
+       }
     }
 
 }
