@@ -1,0 +1,132 @@
+<include file="Public:header" />
+
+<link rel="stylesheet" href="__PUBLIC__/css/findjob.css"> 
+  	 
+
+<!-- banner -->
+	<div class="container">
+		<div class="banner-download">
+			<div class="img">
+				<img src="__PUBLIC__/images/download-phone.png">
+			</div>
+			<span>上职信道<br>找好工作</span>
+			<p>职信道<br>助您轻松找工作</p>
+			<div class="btn-download">
+				<a href="#" class="iphone"></a>
+				<a href="#" class="android"></a>
+			</div>
+		</div>
+	</div>
+<!-- 职位列表 -->
+	<div class="container">
+		<div class="position-left">
+			<div class="item">
+				<div class="main">
+					<span>技术</span>
+					<ul>
+						<li><a href="#">Java</a></li>
+						<li><a href="#">PHP</a></li>
+						<li><a href="#">Web前端</a></li>
+						<li><a href="#">测试工程师</a></li>
+						<li><a href="#">C++</a></li>
+					</ul>
+				</div>
+				<!-- 职位弹框 -->
+				<div class="slide">
+					<div class="top-job">
+						<span>技术类top10职位</span>
+						<ul>
+							<li><a href="#">Java</a></li>
+							<li><a href="#">PHP</a></li>
+							<li><a href="#">Web前端</a></li>
+							<li><a href="#">测试工程师</a></li>
+							<li><a href="#">C++</a></li>
+							<li><a href="#">android</a></li>
+							<li><a href="#">运维工程师</a></li>
+							<li><a href="#">.Net</a></li>
+							<li><a href="#">项目经理</a></li>
+							<li><a href="#">IOS</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="cover"></div>				
+			</div>
+			<div class="item">
+				<div class="main">
+					<span>设计</span>
+					<ul>
+						<li><a href="#">平面设计师</a></li>
+						<li><a href="#">美工</a></li>
+						<li><a href="#">UI设计师</a></li>
+						<li><a href="#">视觉设计师</a></li>
+						<li><a href="#">三维/CAD/制图</a></li>
+					</ul>
+				</div>
+				<!-- 职位弹框 -->
+				<div class="slide">
+					<div class="top-job">
+						<span>设计类top10职位</span>
+						<ul>
+							<li><a href="#">平面设计师</a></li>
+							<li><a href="#">美工</a></li>
+							<li><a href="#">UI设计师</a></li>
+							<li><a href="#">视觉设计师</a></li>
+							<li><a href="#">三维/CAD/制图</a></li>
+							<li><a href="#">网页设计师</a></li>
+							<li><a href="#">美术设计师</a></li>
+							<li><a href="#">设计师助理</a></li>
+							<li><a href="#">家具设计</a></li>
+							<li><a href="#">交互设计师</a></li>
+						</ul>
+					</div>
+				</div>	
+				<div class="cover"></div>			
+			</div>
+		</div>
+		<div class="position-right">
+			<div class="search-box">
+				<form action="" method="post">
+					<input type="text" name="key" placeholder="请输入职位或公司名称" class="search">
+					<input type="submit" value="搜索" class="btn btn-info">
+				</form>
+			</div>
+			<div class="search-tip">
+				<p>相关搜索结果</p>
+
+			</div>
+			<!-- 职位详情表 -->
+
+
+<!-- 第四步：遍历模版变量 -->
+		<foreach name="job_info" item="job_item">
+			<div class="job-list">
+				<a href="{:U('Index/jobdetail')}">
+					<div class="job-left">
+					<!-- 第五步：给对应信息添加动态数据 -->
+						<p>{$job_item['job_name']}</p>
+						<p class="word-red"><strong>￥{$job_item['money']}</strong></p>
+						<ul>
+							<li>广州</li>
+							<li>1-3年</li>
+							<li>本科</li>
+						</ul>
+					</div>
+					<div class="job-right">
+						<div class="company-img">
+							<img src="">
+						</div>
+						<span>{$job_item['company_name']}</span>
+					</div>
+				</a>
+			</div>
+			</foreach>
+
+			<div class="next-page">
+				<a href="#">下一页</a>
+			</div>
+
+		</div>
+	</div>
+
+</body>
+</html>

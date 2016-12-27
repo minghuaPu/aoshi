@@ -1,0 +1,98 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    width: 100%;
+    height: 100%;
+    font-family: 微软雅黑;
+    .body {
+        width: 100%;
+        height: 100%;
+        //overflow: hidden;
+        position: relative;
+        .bg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(../../images/enterprise/index.jpg);
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            background-size: cover;
+        }
+        .header{
+            position: absolute;
+            top: 45px;
+            display: block;
+            width: 100%;
+            height: 56px;
+            z-index: 30;
+            img{
+                height: 56px;
+                display: block;
+                margin-left: 80px;
+            }
+        }
+        .login{
+            position: absolute;
+            top: 130px;
+            left: calc(~'50% - 140px');
+            background-color: #FFFFFF;
+            width: 280px;
+            height: 350px;
+            border-radius: 6px;
+            .touxiang{
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                margin: 10px auto;
+                background-image: url(../../images/enterprise/boss.png);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            form{
+                .form-group{
+                    width: 80%;
+                    margin: 16px auto 0;
+                    input{
+                        border-radius: 5px;
+                        width: 100%;
+                        padding-left: 10px;
+                        height: 32px;
+                    }
+                    input[type=submit]{
+                        width: 80%;
+                        margin: 0 10%;
+                    }
+                    img{
+                        width: 70%;
+                        margin:  5px 15% 5px;
+                    }
+                }
+                .log{
+                    margin-top: 0px;
+                }
+            }
+            ul{
+                margin: 20px auto 0;
+                width: 100%;
+                height: 20px;
+                padding: 0;
+                li{
+                    width: 50%;
+                    list-style: none;
+                    float: left;
+                    padding: 0 8px;
+                    text-align: right;
+                    font-size: 12px;
+                }
+                li+li{
+                    border-left: blue 1px solid;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}

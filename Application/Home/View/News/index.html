@@ -1,0 +1,41 @@
+<include file='Public:header'/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/Home/news_list.css">
+<div class="box-1">
+    <h1>职信道新闻和数据实时跟踪</h1>
+    <p><a href="javascript:;" >媒体合作</a></div></p>   
+</div>
+<div class="container main">
+    <div class="box-2">
+        <volist name='type' offset='0' id='news' length='3'>
+                <div class="sort">
+                    <div class="title"> 
+                         <p class="name" >{$news.cata_id}</p>
+                         <p class="more"><a href="javascript:;">more</a></p>
+                    </div>
+                     <div class="picture">
+                    <a href="{:U('News/news_detail',array('id'=>$news['id']))}"><img src="__PUBLIC__/{$news.news_picture}" width="300px" height="150px"></a>
+                     </div>
+                        <p class="text-title"><a href="{:U('News/news_detail',array('id'=>$news['id']))}" >{$news.news_title}</a></p>
+                        <p class="details"><a href="{:U('News/news_detail',array('id'=>$news['id']))}" >查看详情</a></p>
+                </div>
+         </volist>
+    </div>
+
+    <div class="box-3">
+        <volist name='info' offset='0' id='news' length='10'>
+            <div class="in">
+                <div class="left" ><a href="{:U('News/news_detail',array('id'=>$news['id']))}"> <img src="__PUBLIC__/{$news.news_picture}" width="300px" height="150px"></a></div>
+                <div class="right">
+                    <p class="list"><a href="{:U('News/news_detail',array('id'=>$news['id']))}" >{$news.news_title}</a></p>
+                    <p class="author"><php> echo substr(strip_tags(htmlspecialchars_decode($news['news_content'])),0,200).'……';</php></p>
+                    <p class="author">{$news.author}&nbsp;.&nbsp;{$new.add_time|date="Y-m-d H:i:s",###}</p>
+                </div>
+            </div>
+         </volist>
+    </div>
+
+      <div class="box-4">
+              <p><a href="javascript:;">浏览更多</a></p>
+      </div>
+</div>
+<include file="Public:footer"/>

@@ -1,0 +1,76 @@
+.content {
+  width: 900px;
+  margin: 30px auto;
+  background-color: #ffffff;
+  padding-top: 20px;
+}
+.content form {
+  padding-bottom: 21px;
+  border-bottom: 1px solid #f4f5f5;
+}
+.content form .search {
+  width: 840px;
+  height: 38px;
+  margin: 2px 30px 0px;
+  line-height: 38px;
+  font-size: 14px;
+}
+.content form .search div {
+  float: left;
+}
+.content form .search div input {
+  border-radius: 5px;
+  height: 38px;
+  margin: 0 18px;
+}
+.content form .search .time {
+  margin-left: 22px;
+}
+.content form .search input[type=button] {
+  height: 38px;
+  width: 100px;
+  border-radius: 5px;
+  background-color: #53cac3;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 16px;
+}
+.content .tit_box {
+  background-color: #f8f8f8;
+  height: 50px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.content .tit_box div {
+  float: left;
+  list-style: none;
+  line-height: 50px;
+  font-size: 14px;
+  text-align: center;
+}
+.content .row {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.content .table th {
+  padding: 0;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  font-weight: normal;
+}
+.content .table .state {
+  position: relative;
+  cursor: pointer;
+}
+.content .table .state input {
+  height: 29px;
+  line-height: 17px;
+  position: absolute;
+  right: 8px;
+  top: 3px;
+  background-color: #ffffff;
+  border: none;
+}
