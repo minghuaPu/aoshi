@@ -40,23 +40,23 @@ class ArticleController extends AuthController {
     	$article=D('article');//怎么实例化模型   D:(Database)
     	$data['article_title']=I('article_title');//获取传输过来的参数 I:(input)
     	$data['article_content']=I('article_content');
+       if($_FILES['thumb']['size']>0){
+             // 保存图片类
+           $upload=new Upload();
+           //配置相关参数
+           $upload->maxSize="10240000";//10M
+           $upload->exts=array('jpg','gif','jpeg','png');
+           $upload -> autoSub = FALSE;
+           $upload->rootPath="./Public/upload/news/";
+           //上传图片
+           $up_info=$upload->upload();
 
-         // 保存图片类
-       $upload=new Upload();
-       //配置相关参数
-       $upload->maxSize="10240000";//10M
-       $upload->exts=array('jpg','gif','jpeg','png');
-       $upload -> autoSub = FALSE;
-       $upload->rootPath="./Public/upload/news/";
-       //上传图片
-       $up_info=$upload->upload();
-
-       if (!$up_info) {
-           $this -> error($upload->getError());
-       }else{
-            $data['thumb']= str_replace('./', "/", $upload->rootPath).$up_info['thumb']['savename'];
-       }
-      
+           if (!$up_info) {
+               $this -> error($upload->getError());
+           }else{
+                $data['thumb']= str_replace('./', "/", $upload->rootPath).$up_info['thumb']['savename'];
+           }
+      }
 
       
        $data=$article->create($data);//加了自动完成，create返回的值重新赋到保存数组里面
