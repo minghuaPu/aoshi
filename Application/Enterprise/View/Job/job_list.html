@@ -1,5 +1,5 @@
 <include file="Public:header" />
-    <link rel="stylesheet" href="__PUBLIC__/css/enterprise/job.css">
+    <link rel="stylesheet" href="__PUBLIC__/css/enterprise/job.css?3">
 
     <div class="container">
         <div class="content">
@@ -36,7 +36,7 @@
                         <th class="col-md-2">{$job_item['place']}</th>
                         <th class="col-md-2">5个月5天</th>
                         <th class="col-md-2"><a href="">共5人</a></th>
-                        <th class="col-md-1">已结束</th>
+                        <th class="col-md-1 state"><input type="button" value="已发布" class="btn-default"></th>
                     </tr>
                 </foreach>
             </table>
@@ -44,3 +44,4 @@
     </div>
 </div>
 <include file="Public:footer" />
+<script src="__PUBLIC__/js/enterprise/job.js"></script>

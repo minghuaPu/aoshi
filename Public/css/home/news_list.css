@@ -1,0 +1,155 @@
+body{
+        margin: 0px;
+        padding: 0px;
+        background: #f8f8f8;
+      }
+      a:hover{text-decoration: none;}
+
+      /*#header{position: relative;}*/
+      .box-1{
+        width:100%;
+        overflow: hidden; 
+        background: url(../../images/list-banner.jpg);
+      }
+
+    .box-1 h1{
+       text-align: center;
+       color: #ffffff;
+       font-size: 45px;
+       margin-top:120px;
+       font-family: "宋体";
+        }
+    .box-1 p {
+      margin: 70px 0px 120px 0px;
+    }
+    .box-1 p a{
+        display: block;
+        width:200px;
+        height:45px;
+        border-radius: 22.5px;
+        background: #53cac3;
+        color: #ffffff;
+        font-size:30px;
+        text-align: center;
+        margin: auto;
+      }
+      
+           
+        .container {
+          width:1098px;
+          margin: auto;
+          overflow: hidden;
+        } 
+        .box-2 .container{
+             
+             margin-top:-80px;
+             margin-bottom:10px;
+            }  
+        .box-2 .container .sort{
+            width: 355px;
+            float: left;
+            height: 390px;
+            margin-right: 1px;
+            background: #ffffff;
+           }
+      
+
+         
+        .box-2 .container .sort .title .name{
+          float: left;
+          margin-left: 40px;
+          padding-left: 10px;
+          font-family: "微软雅黑";
+          border-left: 3px solid  #53cac3;
+         }
+
+         .box-2 .container .sort .title .more{
+            float: right;
+         }
+
+         .box-2 .container .sort .title .more a{
+          display: block;
+          width: 40px;
+          height: 22px;
+          border:1px solid  #a5a5a5;
+          border-radius:11px ;
+          text-align: center;
+          font-weight: normal;
+          color: #a5a5a5;
+          margin-right: 40px; 
+         }
+         .more a:hover{background:#53cac3;} 
+
+         .box-2 .container .sort .title{
+          margin-top:45px ;
+          }
+        .box-2 .container .sort .picture {
+          clear: both;
+          margin-left:40px ;
+          margin-bottom: 20px;
+         }
+
+        .box-2 .container .sort .text-title a{
+          display: block;
+          width:280px; 
+          color:#111212;
+          font-family: "宋体";
+          margin: auto;
+          font-size:20px;
+          font-weight: normal;}
+         .box-2 .container .sort .text-title a:hover{
+         color: #53cac3;
+         } 
+     
+        .box-2 .container .sort .details a{
+            color: #a5a5a5;
+            margin-left:40px ;
+            font-size: 15px;
+            }
+        .box-3 .container .out{
+          width:1067px;
+          overflow: hidden;
+         
+          background: #ffffff;
+          margin-bottom: 3px;
+        } 
+        .box-3 .container .out .in{
+          width:938px;
+          height:180px;  
+          margin:50px 80px;
+         }
+        .box-3 .container .out .in .left{
+          float: left;
+        }
+        .box-3 .container .out .in .right{
+          float: left;
+          width:600px;
+          margin-left:55px; 
+        }
+        .box-3 .container .out .in .right h2 a{
+            color:#080808;
+            font-weight: normal;
+            font-family: "宋体"；
+        }
+         .box-3 .container .out .in .right h2 a:hover{
+          color: #53cac3;
+         }
+       
+        .box-3 .container .out .in .right p{
+            color: #7a7d7b;
+            line-height: 20px;
+            font-size: 15px;
+          }
+         a{text-decoration:none;}
+         .box-4 .container p{
+            text-align: center;
+            font-weight: normal;
+            font-size: 15px;
+            margin: 35px auto;
+            border: 1px solid  #d3cdcd;
+           }
+        .box-4 .container p a{
+            display: block;
+            margin: 20px auto;
+
+             }

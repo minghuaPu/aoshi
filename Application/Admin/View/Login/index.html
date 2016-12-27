@@ -1,24 +1,30 @@
 <include file="Public:header" />
- 
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/admin/login.css">
 
- <div class="container">
- 	<div class="row">
- 		<form action="{:U('Login/index')}" method="post">
- 			<div class="form_group">
- 				用户名：<input type="text" name="user_name">
- 			</div>
- 			<div class="form_group">
- 				密码：<input type="password" name="user_pwd">
- 			</div>
- 			<div class="form_group">
- 				验证码 :	<input type="text" name="verify_val"> <br><img src="{:U('Login/get_verify')}">
- 			</div>
- 			<div class="form_group">
- 				<input type="submit" class="btn btn-success" value="登录">
- 			</div>
- 			
- 		</form>
- 	</div>
- </div>
 
-<include file="Public:footer" />
+<div class="login_box">
+    <div class="h3-title">
+    	<h3>职信道总后台管理系统</h3>
+    </div>
+    <div class="login">
+        <form role="form" action="{:U('Login/index')}" method="post">
+            <div class="form-group">
+                <input type="text" class="form-control" name="user_name" required  placeholder="请输入用户名">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" name="user_pwd" required placeholder="请输入密码">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="verify_val" required placeholder="请输入验证码">
+                <br><img style="cursor: pointer;" class='verify_img' src="{:U('Login/get_verify',array())}">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">登录</button>
+                
+            </div>
+        </form>
+    </div>
+</div>
+<script type="text/javascript" src='__PUBLIC__/js/admin/login.js'>   </script>
+</body>
+</html>

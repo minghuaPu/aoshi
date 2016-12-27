@@ -39,7 +39,7 @@ class ArticleController extends AuthController {
 
     	$article=D('article');//怎么实例化模型   D:(Database)
     	$data['article_title']=I('article_title');//获取传输过来的参数 I:(input)
-    	 $data['article_content']=I('article_content');
+    	$data['article_content']=I('article_content');
 
          // 保存图片类
        $upload=new Upload();
