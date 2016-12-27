@@ -38,11 +38,11 @@
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-left">
-                    <li <if condition="$Think.const.ACTION_NAME eq index"> class="active" </if> ><a href="{:U('Index/index')}"><span>首页  </span></a></li>
+                    <li <if condition="$Think.const.CONTROLLER_NAME eq Index AND $Think.const.ACTION_NAME eq index "> class="active" </if> ><a href="{:U('Index/index')}"><span>首页  </span></a></li>
                     
                     <li <if condition="$Think.const.ACTION_NAME eq findjob"> class="active" </if> ><a href="{:U('Index/findjob')}"><span>求职</span></a></li>
                     <li><a href="#"><span>扫码登录</span></a></li>
-                    <li><a href="{:U('News/index')}"><span>新闻和数据</span></a></li>
+                    <li <if condition="$Think.const.CONTROLLER_NAME eq News"> class="active" </if> ><a href="{:U('News/index')}"><span>新闻和数据</span></a></li>
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
