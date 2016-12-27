@@ -124,7 +124,7 @@
 			console.log(id_string);
 
 			//ajax请求php进行删除
-			$.post('{:U("Index/all_delete")}',{'ids':id_string},function  (rt_object) {
+			$.post('{:U("Article/all_delete")}',{'ids':id_string},function  (rt_object) {
 				
 				//把json转换成对象
 				// var rt_object=JSON.parse(rtn);
