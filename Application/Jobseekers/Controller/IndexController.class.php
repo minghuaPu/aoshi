@@ -9,10 +9,36 @@ class IndexController extends Controller {
 
 
     public function index(){
+		// 个人主页
+
+
+		// 第一步：使用session会话必须要有
+		// session_start();//开启session
+			 include_once("../Conf/init.php"); 
+		// 登录的时候
+		// 选项框，记住我，7天免登录 
+		
+		//如果用户已经登录，我们就显示用户中心页面
+		//$_COOKIE['user_login_status']==1
+		if (cookie('user_login_status')) {
+		
+		}else{
+			 $this->error('请先登录!',U('Login/login'));
+			 
+		}
+		//如果没有登录，就提示请登录
+		
+		
+		
+		
+		
+		
+		
 		//获取模版数据
 		
  			//原生查询法
-			$id=1;//当前id
+			//$id=I('id');//当前id
+			$id=1;
 			$sql1 ="select * from  jobseekers where  id =". $id .$pageObj -> limit;
 			$jobseekers_info=D("jobseekers")->query($sql1);	
 			
@@ -23,8 +49,11 @@ class IndexController extends Controller {
 			$sql3 ="select * from  resume_education where id=". $id .$pageObj -> limit;
 			$education_info=D("resume_education")->query($sql3);
 			
-			$sql4 ="select * from  resume_prefered where id=". $id .$pageObj -> limit;
-			$prefered_info=D("resume_prefered")->query($sql4);
+			$sql4 ="select * from  jobseekers_describe where id=". $id .$pageObj -> limit;
+			$describe_info=D("jobseekers_describe")->query($sql4);
+			
+			$sql5 ="select * from  resume_prefered where id=". $id .$pageObj -> limit;
+			$prefered_info=D("resume_prefered")->query($sql5);
 			
 	
       
@@ -45,6 +74,7 @@ class IndexController extends Controller {
         $this->assign('jobseekers_info',$jobseekers_info);
 		$this->assign('experience_info',$experience_info);
 		$this->assign('education_info',$education_info);
+		$this->assign('describe_info',$describe_info);
 		$this->assign('prefered_info',$prefered_info);
         $this->display();
     }
@@ -57,53 +87,61 @@ class IndexController extends Controller {
     public function save() //添加
     {
 
-    	/*$article=D('jobseekers');//怎么实例化模型   D:(Database)    M方法实例化模型无需用户为每个数据表定义模型类，如果D方法没有找到定义的模型类，则会自动调用M方法
-    	$data['username']=I('username');//获取传输过来的参数 I:(input)
-    	$data['sex']=I('sex');
-		$data['phone']=I('phone');
+    	//怎么实例化模型   D:(Database)    M方法实例化模型无需用户为每个数据表定义模型类，如果D方法没有找到定义的模型类，则会自动调用M方法
+    	//获取传输过来的参数 I:(input)
+    	$server=I('what');		
 		
-
-
-*/		
-
-		$experience=D('resume_experience');
-		$ex_data['id']=1;
-		$ex_data['re_company_name']=I('re_company_name');
-		$ex_data['job_title']=I('job_title');
-		$ex_data['working_time']=I('working_time');
-		$ex_data['job_description']=I('job_description');
 		
-		$education=D("resume_education");
-		$ed_data['id']=1;
-		$ed_data['school_name']=I('school_name');
-		$ed_data['major']=I('major');
-		$ed_data['degree']=I('degree');
-		$ed_data['graduated']=I('graduated');
+		if($server=='experience'||$aa=='experience'){
+			$serversss=D('resume_experience');
+			$save_data['id']=1;
+			$save_data['re_company_name']=I('re_company_name');
+			$save_data['job_title']=I('job_title');
+			$save_data['working_time']=I('working_time');
+			$save_data['job_description']=I('job_description');
+		}
 		
-		$prefered=M("resume_prefered");
-		$pr_data['id']=1;
-		$pr_data['expected_position']=I('expected_position');
-		$pr_data['job_type']=I('job_type');
-		$pr_data['expected_location']=I('expected_location');
-		$pr_data['expected_monthly_income']=I('expected_monthly_income');
+		else if($server=='education'||$aa=='education'){
+			$serversss=D("resume_education");
+			$save_data['id']=1;
+			$save_data['school_name']=I('school_name');
+			$save_data['major']=I('major');
+			$save_data['degree']=I('degree');
+			$save_data['graduated']=I('graduated');
+		}
 		
+		else if($server=='describe'||$aa=='describe'){
+			$serversss=M("jobseekers_describe");
+			$save_data['id']=1;
+			$save_data['describe']=I('describe');
+		}
+		
+		else if($server=='prefered'||$aa=='prefered'){
+			echo 'prefered';
+			$serversss=M("resume_prefered");
+			$save_data['id']=1;
+			$save_data['expected_position']=I('expected_position');
+			$save_data['job_type']=I('job_type');
+			$save_data['expected_location']=I('expected_location');
+			$save_data['expected_monthly_income']=I('expected_monthly_income');
+		}
 		
 		//$data['create_time']=time();
 	
-		echo 1;
- 	/*	if(! $article->create()){
+/*		echo 1;
+ 		if(! $serversss->create()){
 			echo 2 ;
-            echo $article->getError();
-        }else{*/
+            echo $serversss->getError();
+        }else{
 			echo 3;
-         //   $article->add($data);
-			$experience->add($ex_data);
-			$education->add($ed_data);
-			$prefered->add($pr_data);
+        */
+			$serversss->add($save_data);
+	
             $this->success('修改成功！','Index/index');//跳转的方法
       // }
     }
-	 public function do_add(){
+	
+	public function do_add(){
 		 $aa=D("jobseekers");
 		 $datas['username']=I('username');
 		 $datas['sex']=I('sex');
@@ -122,56 +160,94 @@ class IndexController extends Controller {
 
 		 
 		 }
-		public function update() //编辑
-		{
+		 
+	public function update() //编辑
+	{
+			
 			
 			$resume_id=I('resume_id');
+			$id=1;
 			$server=I('what');
-			//$article_info=D('resume_experience')->where("resume_id=$resume_id ")->find();
-			echo $server;
-		
-    		if( $server = 'experience'){
-			$experience=D('resume_experience');
-			$ex_data['re_company_name']=I('re_company_name');
-			$ex_data['job_title']=I('job_title');
-			$ex_data['working_time']=I('working_time');
-			$ex_data['job_description']=I('job_description');
- 
-			}
-			else if( $server = 'education'){
-			$experience=D('resume_education');
-			$ex_data['school_name']=I('school_name');
-			$ex_data['major']=I('major');
-			$ex_data['degree']=I('degree');
-			$ex_data['graduated']=I('graduated');
- 
-			}
-			else if( $server = 'jobseekers'){
-			$experience=D('jobseekers');
-			$ex_data['label']=I('label');
 			
- 
-			}
-			else if( $server = 'prefered'){
-			$experience=D('resume_prefered');
-			$ex_data['expected_position']=I('expected_position');
-			$ex_data['job_type']=I('job_type');
-			$ex_data['expected_location']=I('expected_location');
-			$ex_data['expected_monthly_income']=I('expected_monthly_income');
- 
-			}
-     
-       /*$data=$article->create();//加了自动完成，create返回的值重新赋到保存数组里面
+			
+			echo $resume_id;
 
-       if(! $data){//校验数据
-            echo $article->getError();
-        }else{*/
-			 
-            $server->where("resume_id=$resume_id")->save($ex_data);
-
-           $this->success('更新成功！',U('Index/index'));//跳转的方法			
-       // }
+			if($server !='jobseekers'){
+				if( $server === 'experience'){
+				$serverssss=D('resume_experience');
+				$up_data['re_company_name']=I('re_company_name');
+				$up_data['job_title']=I('job_title');
+				$up_data['working_time']=I('working_time');
+				$up_data['job_description']=I('job_description');
+	 
+				}
+				else if( $server === 'education'){
+				$serverssss=D('resume_education');
+				$up_data['school_name']=I('school_name');
+				$up_data['major']=I('major');
+				$up_data['degree']=I('degree');
+				$up_data['graduated']=I('graduated');
+	 
+				}
+				else if( $server === 'describe'){
+				$serverssss=D('jobseekers_describe');
+				$up_data['describe']=I('describe');
+				
+	 
+				}
+				else if( $server === 'prefered'){
+				$serverssss=D('resume_prefered');
+				$up_data['expected_position']=I('expected_position');
+				$up_data['job_type']=I('job_type');
+				$up_data['expected_location']=I('expected_location');
+				$up_data['expected_monthly_income']=I('expected_monthly_income');
+	 
+				}
+				 $where="resume_id=$resume_id";
+				
+			 }
+			 else{
+				 
+				$serverssss=D('jobseekers');
+				$up_data['username']=I('username');
+				$up_data['peculiarity']=I('peculiarity');
+				$up_data['sex']=I('sex');
+				$up_data['birth']=I('birth');
+				$up_data['current_city']=I('current_city');
+				$up_data['phone']=I('phone');
+				$up_data['e_mail']=I('e_mail');
+			
+				
+				 $where="id=$id";
+				 
+				 
+				 }
+		   $data=$serverssss->create();//加了自动完成，create返回的值重新赋到保存数组里面
+	
+		   if(! $data){//校验数据
+				echo $serverssss->getError();
+			}else{
+				 
+			   $serverssss->where($where)->save($up_data);
+	
+			   $this->success('更新成功！',U('Index/index'));//跳转的方法			
+			}
     }
-
+	
+	 public function delete()
+    {
+        $resume_id=I('resume_id');
+		
+	
+		$rt_info=D('?')->where("resume_id=$resume_id")->delete().'?'.time();
+			
+		
+       
+        if ($rt_info) {
+            $this->success('删除成功！',U('Index/index'));
+        }else{
+            $this->error('删除错误，原因：'.$article->getError(),U('Index/index'));
+        }
+    }
 
 }

@@ -21,7 +21,8 @@
 				<a class="logo" href=""><img src="__PUBLIC__/images/logo.png"></a>
 				<a class="nav-link selected" href="{:U('Jobseekers/add')}">首页</a>
 				<a class="nav-link" href="">求职</a>
-				<a class="nav-link fr" href="">退出</a>
+               
+				<a class="nav-link fr" href="{:U('Login/log_out')}">退出</a>
 			</nav>
 		</header>
         <!--简历-->
@@ -71,7 +72,7 @@
                             </span>
                          </foreach>   
 					</div>
-					<form id="user-info-form" >
+					<form id="user-info-form"   action="{:U('Index/update')}" method="post" >
 						<fieldset>
 							<label >姓名</label>
 							<input class="input-text" name="username">
@@ -103,7 +104,7 @@
 						</fieldset>
 						<fieldset>
 							<label>工作年限</label>
-							<select class="input-text">
+							<select class="input-text" >
 								<option>应届毕业生</option>
 								<option>1-3年</option>
 								<option>3-5年</option>
@@ -113,17 +114,18 @@
 						</fieldset>
 						<fieldset>
 							<label>所在城市</label>
-							<input class="input-text">
+							<input class="input-text" name="current_city">
 						</fieldset>
 						<fieldset>
 							<label>手机号码</label>
-							<input class="input-text">
+							<input class="input-text" name="phone">
 						</fieldset>
 						<fieldset>
 							<label>联系邮箱</label>
-							<input class="input-text">
+							<input class="input-text" name="e_mail">
 						</fieldset>
 						<fieldset>
+                        	<input type="hidden" name="what" value="jobseekers" />
 							<input class="btn submit" type="submit">
 							<button class="btn cancel">取消</button>
 						</fieldset>
@@ -143,12 +145,11 @@
 								<a class="edit" href="javascript:;">编辑</a>
 								<span class="edit_box">
 								<a class="modify" href="javascript:;" onclick="job_test({$item.resume_id});">修改</a>
-								<a class="del" href="javascript:;" onclick="job_test({$item.resume_id});">删除</a>
+								<a class="del" href="{:U('Index/delete',array('id'=>$item['id']))}"  onclick="job_test({$item.resume_id});" >删除</a>
                                 </span>
                             </div>
 							<div>
 								<span >{$item.job_title}</span>
-                                <span >{$item.resume_id}</span>
 								<span class="fr">{$item.working_time}</span>
 							</div>
 							<p >{$item.job_description}</p>
@@ -173,6 +174,7 @@
 							<textarea class="input-text" maxlength="300" rows="5" name="job_description"></textarea>
 						</fieldset>
 						<fieldset>
+                       		<input type="hidden" name="what" value="experience" />
                         	<input type="hidden" name="id" value="{$article_info['id']}">
 							<input class="btn submit" type="submit">
 							<button class="btn cancel">取消</button>
@@ -200,7 +202,7 @@
 						<fieldset>
                         	<input type="hidden" name="what" value="experience" />
                             <input id="job_resume_id" type="hidden" name="resume_id" value="" />
-                            <input  type="hidden" name="server" value="" />
+                     
 							<input class="btn submit" type="submit">
 							<button class="btn cancel">取消</button>
 						</fieldset>
@@ -213,14 +215,14 @@
 					<h5 class="resume-title"><span>教育经历</span><a class="add_a" href="javascript:;">添加</a></h5>
 					<button class="add"> + 添加教育经历</button>
 					<ul class="list">
-                     <foreach name="education_info" item="item">
-						<li>
+                     <foreach name="education_info" item="item" >
+						<li >
 							<div>
 								<b class="name">{$item.school_name}</b>
 								<a data-index="0" class="edit" href="javascript:;">编辑</a>
                                 <span class="edit_box">
 								<a class="modify" href="javascript:;" onclick="edu_test({$item.resume_id});">修改</a>
-								<a class="del" href="javascript:;" onclick="edu_test({$item.resume_id});">删除</a>
+								<a class="del" href="{:U('Index/delete',array('id'=>$item['id']))}" onclick="edu_test({$item.resume_id});">删除</a>
                                 </span>
 							</div>
 							<div>
@@ -252,9 +254,10 @@
 						</fieldset>
 						<fieldset>
 							<label>毕业时间</label>
-							<input class="input-text" name="graduated">
+							<input  class="input-text" name="graduated">
 						</fieldset>
 						<fieldset>
+                       		<input type="hidden" name="what" value="education" />
 							<input class="btn submit" type="submit">
 							<button class="btn cancel">取消</button>
 						</fieldset>
@@ -282,10 +285,10 @@
 						</fieldset>
 						<fieldset>
 							<label>毕业时间</label>
-							<input class="input-text" name="graduated">
+							<input type="date" class="input-text" name="graduated">
 						</fieldset>
 						<fieldset>
-                       		 <input type="hidden" name="what" value="education" />
+                       		<input type="hidden" name="what" value="education" />
                             <input id="edu_resume_id" type="hidden" name="resume_id" value="" />
 							<input class="btn submit" type="submit">
 							<button class="btn cancel">取消</button>
@@ -296,17 +299,39 @@
                 
 				<!--自我描述-->
 				<section id="self-des">
-					<h5 class="resume-title"><span>自我描述</span><a class="edit" href="javascript:;">编辑</a></h5>
+					<h5 class="resume-title"><span>自我描述</span>
+                    	 
+                     </h5>
 					<button class="add"> + 添加自我描述</button>
-                    <foreach name="jobseekers_info" item="item">
-						<p class="list">{$item.label}</p>
+                    <foreach name="describe_info" item="item">
+						<p class="list">
+                        <span class="edit_box_box">
+                    	 <a class="edit" href="javascript:;">编辑</a>
+                         <span class="edit_box">
+						 <a class="modify" href="javascript:;" onclick="des_test({$item.resume_id});">修改</a>
+						 <a class="del" href="{:U('Index/delete',array('id'=>$item['id']))}" onclick="des_test({$item.resume_id});">删除</a>
+                         </span>
+                         </span>
+                        {$item.describe}</p>
                      </foreach>
-					<form id="self-des-update-form"   action="{:U('Index/update')}" method="post">
+                     <form id="self-des-form"   action="{:U('Index/save')}" method="post">
 						<fieldset>
-							<textarea maxlength="300" rows="5"></textarea>
+							<textarea maxlength="300" rows="5" name="describe" vlaue="11"></textarea>
 						</fieldset>
 						<fieldset>
-                        	<input type="hidden" name="what" value="jobseekers" />
+                        	<input type="hidden" name="what" value="describe" />
+							<input class="btn submit" type="submit">
+							<button class="btn cancel">取消</button>
+						</fieldset>
+					</form>
+                    
+					<form id="self-des-update-form"   action="{:U('Index/update')}" method="post">
+						<fieldset>
+							<textarea maxlength="300" rows="5" name="describe"></textarea>
+						</fieldset>
+						<fieldset>
+                        	<input id="des_resume_id" type="hidden" name="resume_id" value="" />
+                        	<input type="hidden" name="what" value="describe" />
 							<input class="btn submit" type="submit">
 							<button class="btn cancel">取消</button>
 						</fieldset>
@@ -314,14 +339,23 @@
 				</section>
 				<!--求职意向-->
 				<section id="job-career">
-					<h5 class="resume-title"><span>求职意向</span><a class="edit" href="javascript:;">编辑</a></h5>
+					<h5 class="resume-title"> <span>求职意向</span></h5>
+					
+
 					<button class="add"> + 添加求职意向</button>
-                    <foreach name="prefered_info" item="item">
+                    <foreach name="prefered_info" item="item">	
                         <dl class="list clear">
                             <dd class="name"><i></i>{$item.expected_position}</dd>
                             <dd class="type"><i></i>{$item.job_type}</dd>
                             <dd class="city"><i></i>{$item.expected_location}</dd>
                             <dd class="wages"><i></i>{$item.expected_monthly_income}</dd>
+                            <span class="edit_box_box">
+                            <a data-index="0" class="edit" href="javascript:;">编辑</a>
+                         	<span class="edit_box">
+							<a class="modify" href="javascript:;" onclick="pre_test({$item.resume_id});">修改</a>
+						 	<a class="del" href="{:U('Index/delete',array('id'=>$item['id']))}" onclick="pre_test({$item.resume_id});">删除</a> 
+                         	</span>
+                            </span>
                         </dl>
                      </foreach>   
 					<form id="job-career-form" action="{:U('Index/save')}" method="post">
@@ -342,6 +376,32 @@
 							<input class="input-text" name="expected_monthly_income">
 						</fieldset>
 						<fieldset>
+                        	<input type="hidden" name="what" value="prefered" />
+							<input class="btn submit" type="submit">
+							<button class="btn cancel">取消</button>
+						</fieldset>
+					</form>
+                    
+                    <form id="job-career-update-form" action="{:U('Index/update')}" method="post">
+						<fieldset>
+							<label>期望职位</label>
+							<input class="input-text" name="expected_position" >
+						</fieldset>
+						<fieldset>
+							<label>职位类型</label>
+							<input class="input-text" name="job_type" >
+						</fieldset>
+						<fieldset>
+							<label>期望城市</label>
+							<input class="input-text" name="expected_location">
+						</fieldset>
+						<fieldset>
+							<label>期望月薪</label>
+							<input class="input-text" name="expected_monthly_income">
+						</fieldset>
+						<fieldset>
+                        	<input id="pre_resume_id" type="hidden" name="resume_id" value="" />
+                        	<input type="hidden" name="what" value="prefered" />
 							<input class="btn submit" type="submit">
 							<button class="btn cancel">取消</button>
 						</fieldset>
