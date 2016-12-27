@@ -14,35 +14,37 @@ function ajax(config) {
 	}
 };
 /*list add*/
-if($("#job-exp .list").html()=="")
+if($("#job-exp .list").html())
 {
-	$("#job-exp .add").show();
+	$("#job-exp .add").hide();
 	
 }
 else{
-	$("#job-exp .add").hide();
+	$("#job-exp .add").show();
 	
 	}
-if($("#edu-exp .list").html()=="")
+if($("#edu-exp .li"))
 {
 	$("#edu-exp .add").show();
 }
 else{
+	
 	$("#edu-exp .add").hide();
 	}
-if($("#job-career .list").html()=="")
+if($("#job-career .list").html())
 {
-	$("#job-career .add").show();
-}
-else{
 	$("#job-career .add").hide();
-	}	
-if($("#self-des .list").html()=="")
-{
-	$("#self-des .add").show();
 }
 else{
+	$("#job-career .add").show();
+	}	
+if($("#self-des .list").html())
+{
 	$("#self-des .add").hide();
+}
+else{
+	
+	$("#self-des .add").show();
 	}
 
 
@@ -97,7 +99,7 @@ $uCancel.on("click", function(e) {
 });
 /*教育经历*/
 var $eduExp = $("#edu-exp"),
-	$eAdd = $eduExp.find(".resume-title .edit"),
+	$eAdd = $eduExp.find(".resume-title .add_a"),
 	$eList = $eduExp.find(".list"),
 	$eLi = $eList.find("li"),
 	$eEdit = $eLi.find(".edit"),
@@ -184,13 +186,17 @@ $jCancel.on("click", function(e) {
 });
 /*自我描述*/
 var $selfDes = $("#self-des"),
-	$dList = $selfDes.find(".list"),
 	$dEdit = $selfDes.find(".edit"),
 	$dAdds = $selfDes.find(".add"),
 	$dModify = $selfDes.find(".modify"),
-	$dForm = $selfDes.find("#self-des-update-form"),
+	$dForm = $selfDes.find("#self-des-form"),
+	$dUpdate = $selfDes.find("#self-des-update-form"),
 	$dCancel = $selfDes.find(".cancel");
-	
+	$dList=$selfDes.find(".list");
+//---获取resume——id--///
+function des_test(des_resume_id){
+	$("#des_resume_id").val(des_resume_id);
+}	
 $dEdit.on("click", function() {
 	//$jEdit_box.toggle();
 	$(this).hide();
@@ -198,18 +204,21 @@ $dEdit.on("click", function() {
 
 	});	
 $dAdds.on("click", function() {
-	$dList.hide();
+	$dAdds.hide();
 	$dForm.show();
+	$dUpdate.hide();
 });	
 $dModify.on("click", function() {
-	$dList.hide();
-	$dForm.show();
-	$dForm.find("textarea").val($dList.text());
+	$dAdds.hide();
+	$dForm.hide();
+	$dUpdate.show();
+	$dUpdate.find("textarea").val($dList.text());
 });
 $dCancel.on("click", function(e) {
 	e.preventDefault();
-	$dList.show();
+	$dAdds.show();
 	$dForm.hide();
+	$dUpdate.hide();
 });
 /*求职意向*/
 var $jCareer = $("#job-career"),
@@ -219,9 +228,13 @@ var $jCareer = $("#job-career"),
 	$cAdds = $jCareer.find(".add"),
 	$cModify = $jCareer.find(".modify"),
 	$cForm = $jCareer.find("#job-career-form"),
+	$cUpate = $jCareer.find("#job-career-update-form"),
 	$cCancel = $jCareer.find(".cancel");
 
-	
+//---获取resume——id--///
+function pre_test(pre_resume_id){
+	$("#pre_resume_id").val(pre_resume_id);
+}	
 $cEdit.on("click", function() {
 	
 	//$jEdit_box.toggle();
@@ -231,20 +244,21 @@ $cEdit.on("click", function() {
 	
 	});		
 $cAdds.on("click", function() {
-	$cList.hide();
+	$cAdds.hide();
 	$cForm.show();
 });	
 $cModify.on("click", function() {
-	$cList.hide();
-	$cForm.show();
-	$cForm.find(".input-text").eq(0).val($cList.find(".name").text());
-	$cForm.find(".input-text").eq(1).val($cList.find(".type").text());
-	$cForm.find(".input-text").eq(2).val($cList.find(".city").text());
-	$cForm.find(".input-text").eq(3).val($cList.find(".wages").text());
+	$cAdds.hide();
+	$cUpate.show();
+	$cUpate.find(".input-text").eq(0).val($cList.find(".name").text());
+	$cUpate.find(".input-text").eq(1).val($cList.find(".type").text());
+	$cUpate.find(".input-text").eq(2).val($cList.find(".city").text());
+	$cUpate.find(".input-text").eq(3).val($cList.find(".wages").text());
 });
 $cCancel.on("click", function(e) {
 	e.preventDefault();
-	$cList.show();
+	$cAdds.show();
+	$cUpate.hide();
 	$cForm.hide();
 });
 /*求职状态*/
