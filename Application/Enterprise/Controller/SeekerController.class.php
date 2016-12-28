@@ -6,7 +6,7 @@ class SeekerController extends Controller{
     public function visit(){
         $this->display();
     }
-    public function collect(){
+    public function resume(){
         $this->display();
     }
 }

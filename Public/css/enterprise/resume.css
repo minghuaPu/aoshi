@@ -1,0 +1,86 @@
+.content {
+  width: 900px;
+  margin: 30px auto;
+  padding-bottom: 10px;
+  background-color: #ffffff;
+}
+.content form {
+  background-color: #53cac3;
+  padding: 20px 0;
+}
+.content form .search_nav {
+  width: 100%;
+  height: 70px;
+}
+.content form .search_nav .dropdown {
+  width: 29%;
+  float: left;
+  height: 70px;
+  margin-left: 3%;
+}
+.content form .search_nav .dropdown h5 {
+  color: white;
+  padding-left: 5px;
+}
+.content form .search_nav .dropdown button {
+  width: 100%;
+}
+.content form .search_nav .dropdown ul {
+  width: 100%;
+}
+.content form .search_box {
+  width: 100%;
+  margin-top: 20px;
+  height: 40px;
+}
+.content form .search_box input[type='text'] {
+  margin-left: 3%;
+  width: 61%;
+  height: 40px;
+  resize: none;
+  padding-left: 10px;
+  border-radius: 3px;
+}
+.content form .search_box input[type='button'] {
+  margin-left: 3%;
+  height: 40px;
+  width: 20%;
+  border: none;
+}
+.content .tit_box {
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 7px 0;
+}
+.content .tit_box div {
+  text-align: center;
+  padding: 0;
+}
+.content .table {
+  margin: 0;
+}
+.content .table tr {
+  margin-top: 5px;
+  height: 20px;
+}
+.content .table tr th {
+  padding: 0;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  font-weight: normal;
+}
+.content .table tr .state {
+  position: relative;
+  cursor: pointer;
+}
+.content .table tr .state input {
+  height: 29px;
+  line-height: 17px;
+  position: absolute;
+  right: 8px;
+  top: 3px;
+  background-color: #ffffff;
+  border: none;
+}
