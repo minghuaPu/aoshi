@@ -10,10 +10,6 @@ class IndexController extends Controller {
     public function index(){
 
         $userInfo=session('auth');
-<<<<<<< HEAD
-=======
-
->>>>>>> 530c8c5de4819f04bacd4bf682399d8147ec76fb
         if ($userInfo) {
             // 怎么查询列表数据
             // 第一步：查询列表信息
