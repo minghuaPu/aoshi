@@ -19,7 +19,7 @@
 		<div class="login form">
 			<div class="group">
 				<div class="group-ipt user">
-					<input type="text" name="username" id="user" class="ipt" placeholder="选择一个用户名" required>
+					<input type="text" name="username" id="user" class="ipt" placeholder="设置帐号" required>
 				</div>
 				<div class="group-ipt password">
 					<input type="password" name="password" id="password" class="ipt" placeholder="设置登录密码" required>
@@ -27,6 +27,10 @@
 				<div class="group-ipt password1">
 					<input type="password" name="password" id="password1" class="ipt" placeholder="重复密码" required>
 				</div>
+               
+                <div class="group-ipt " >
+                	<input type="text" name="verify_val" placeholder="请证明你不是机器人" required> <br><img src="{:U('Login/get_verify')}">
+                </div>
 			</div>
 		</div>
 		<div class="button">

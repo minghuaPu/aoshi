@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>我的简历</title>
+		<link rel="stylesheet" href="__PUBLIC__/css/jobseekers/resume.css">
+        <link rel="stylesheet" href="__PUBLIC__/css/jobseekers/cropper.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="__PUBLIC__/css/jobseekers/main.css" rel="stylesheet"/>
+	
+	</head>
+
+	<body>
+		<section id="resume" class="container preview">
+			<!--简历信息-->
+			<article class="resume-inner">
+				<!--用户头像-->
+				<aside class="avatar" id="crop-avatar">
+                  	             
+                     <img class="absolute" src="__PUBLIC__/images/resume-bg.png"> 
+                    <img id="avatar-img " class="center hear" src="__PUBLIC__/images/avatar.png">
+                   <div class="avatar-view center">
+                            <foreach name="jobseekers_info" item="item">
+                          <img src="{$item.photo}"  id="avatar-img myhear" class="myhear" style="border-radius:50%;background-image:none"/ >
+                            </foreach>
+                        </div>
+                   
+                    
+					<img id="avatar-bg" class="center" src="__PUBLIC__/images/avatar-bg.png" style="display: none;">
+					
+					
+           <!----------------------------------------------------img(begin)------------------------------------------->            
+					
+                       
+ 		 <!---------------------------------------------------------img(end)------------------------------------------>
+
+                    </aside>
+				<!--基本信息-->
+				<section id="user-info">
+					<foreach name="jobseekers_info" item="item">
+                            <span class="name">{$item.nickname}</span>
+                            <span class="intro">{$item.peculiarity}</span>
+                            <span class="base">
+                                <em class="sex"><i class="icon"></i>{$item.sex}</em>
+                                <em class="birth">{$item.birth}</em>
+                                <em class="xl">{$item.top_edu}</em>
+                                <em class="gzjy">{$item.work_years}</em>
+                                <em class="city"><i class="icon city"></i>{$item.current_city}</em>
+                            </span>
+                            <span class="base">
+                                <em class="p"><i class="icon phone"></i>{$item.phone}</em>
+                                <em class="e"><i class="icon email"></i>{$item.e_mail}</em>
+                            </span>
+                         </foreach> 
+				</section>
+				<!--工作经历-->
+				 <if condition="$experience_info">
+					<section id="job-exp">
+						<h5 class="resume-title"><span>工作经历</span></h5>
+						<ul class="list job-exp-box">
+							<foreach name="experience_info" item="item">
+								<li>
+									<div class="name">{$item.re_company_name}</div>
+									<div>
+										<span class="job">{$item.job_title}</span>
+										<span class="fr">{$item.working_time}</span>
+									</div>
+									<p class="cont">{$item.job_description}</p>
+								</li>
+							</foreach>
+						</ul>
+					</section>
+                    <else/>
+				</if>
+				<!--教育经历-->
+				 <if condition="$education_info">
+					<section id="edu-exp">
+						<h5 class="resume-title"><span>教育经历</span></h5>
+						<ul class="list">
+							<foreach name="education_info" item="item">
+								<li>
+									<div class="name">{$item.school_name}</div>
+									<div>
+										<span class="xl">{$item.degree}</span> -
+										<span class="major">{$item.major}</span>
+										<span class="grad fr">{$item.graduated}毕业(预计)</span>
+									</div>
+								</li>
+							</foreach>
+						</ul>
+					</section>
+                    <else/>
+				</if>				
+				<!--自我描述-->
+				 <if condition="$describe_info">				
+					<section id="self-des">
+						<h5 class="resume-title"><span>自我描述</span></h5>
+						<foreach name="describe_info" item="item">
+							<p class="list">{$item.describe}</p>
+						</foreach>
+					</section>
+                    <else/>
+				</if>				
+				<!--求职意向-->
+				 <if condition="$prefered_info">					
+					<section id="job-career">
+						<h5 class="resume-title"><span>求职意向</span></h5>
+						<foreach name="prefered_info" item="item">
+							<dl class="list clear">
+								<dd class="name"><i></i>{$item.expected_position}</dd>
+                           		<dd class="type"><i></i>{$item.job_type}</dd>
+                         	    <dd class="city"><i></i>{$item.expected_location}</dd>
+                           	    <dd class="wages"><i></i>{$item.expected_monthly_income}</dd>       
+							</dl>
+						</foreach>
+					</section>
+                    <else/>
+				</if>					
+				<!--求职状态-->
+				 <if condition="$jobseekers_info.current_status">	
+					<section class="text-center preview-state">
+                    	<foreach name="jobseekers_info" item="item">
+						<span id="job-state" class="preview-resume">{$item.current_status}</span>
+                        </foreach>
+					</section>
+                    <else/>
+				</if>					
+			</article>
+		</section>
+        
+        <script type="text/javascript" src="__PUBLIC__/js/jobseekers/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/css/bootstrap-3.3.0/js/bootstrap.min.js"></script>
+   		<script type="text/javascript" src="__PUBLIC__/js/jobseekers/cropper.min.js"></script>
+  		<script type="text/javascript" src="__PUBLIC__/js/jobseekers/main.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/js/jobseekers/resume_pre.js"></script>
+	</body>
+
+</html>
