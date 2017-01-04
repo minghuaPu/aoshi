@@ -6,18 +6,19 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--bootstrap-->
-    <link rel="stylesheet" href="/thinkphp_3.2.3_full/Public/libs/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="/thinkphp_3.2.3_full/Public/css/normalize.css">
+    <link rel="stylesheet" href="/project/aoshi/Public/libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/project/aoshi/Public/css/normalize.css">
     <!--style-->
-    <link rel="stylesheet" href="/thinkphp_3.2.3_full/Public/css/base.css">
+    <link rel="stylesheet" href="/project/aoshi/Public/css/base.css">
     <!--[if lt IE 9]>
-    <script src="/thinkphp_3.2.3_full/Public/libs/html5shiv/html5shiv.min.js"></script>
-    <script src="/thinkphp_3.2.3_full/Public/libs/respond/respond.min.js"></script>
+    <script src="/project/aoshi/Public/libs/html5shiv/html5shiv.min.js"></script>
+    <script src="/project/aoshi/Public/libs/respond/respond.min.js"></script>
     <![endif]-->
     <!--owlcarousel-->
-    <link rel="stylesheet" href="/thinkphp_3.2.3_full/Public/libs/owlcarousel/assets/owl.carousel.min.css">
-    <!--<link rel="stylesheet" href="/thinkphp_3.2.3_full/Public/libs/owlcarousel/assets/owl.theme.default.css">-->
-    <link rel="stylesheet" href="/thinkphp_3.2.3_full/Public/css/animate.min.css">
+    <link rel="stylesheet" href="/project/aoshi/Public/libs/owlcarousel/assets/owl.carousel.min.css">
+    <!--<link rel="stylesheet" href="/project/aoshi/Public/libs/owlcarousel/assets/owl.theme.default.css">-->
+    <link rel="stylesheet" href="/project/aoshi/Public/css/animate.min.css">
+    <script type="text/javascript" src="/project/aoshi/Public/js/jquery.1.11.1.min.js"></script>
     <title>前端首页</title>
 </head>
 <body>
@@ -56,35 +57,36 @@
 <!--header-->
  
 
-	<link rel="stylesheet" href="/thinkphp_3.2.3_full/Public/css/common.css">
-	<link rel="stylesheet" href="/thinkphp_3.2.3_full/Public/css/jobdetail.css">
-	 
-	<div class="container">
+	<link rel="stylesheet" href="/project/aoshi/Public/css/common.css">
+	<link rel="stylesheet" href="/project/aoshi/Public/css/jobdetail.css">
+	 <div class="content">
+	 	<div class="container">
 		<div class="con-l">
 			<div class="chat-top">
 				<ul>
-					<li><a><img src="/thinkphp_3.2.3_full/Public/images/phone-icon.PNG">交换电话</a></li>
-					<li><a><img src="/thinkphp_3.2.3_full/Public/images/wx.PNG">交换微信</a></li>
+					<li><a><img src="/project/aoshi/Public/images/phone-icon.PNG">交换电话</a></li>
+					<li><a><img src="/project/aoshi/Public/images/wx.PNG">交换微信</a></li>
 				</ul>
 			</div>
 			<div class="chat-content">
-				<div class="company-word">
-					<i></i>公司名希望与您沟通以下职位<i></i>
+
+				<?php if(is_array($job_detail)): foreach($job_detail as $key=>$job_item): ?><div class="company-word">
+					<i></i><?php echo ($job_item['company_name']); ?>希望与您沟通以下职位<i></i>
 				</div>		
 				<div class="job-profile">
-					<p>前端工程师</p>
-					<p class="word-red">￥15K-30K</p>
+					<p><?php echo ($job_item['job_name']); ?></p>
+					<p class="word-red">￥<?php echo ($job_item['money']); ?></p>
 					<ul>
 						<li>广州</li>
 						<li>1-3年</li>
 						<li>本科</li>
 					</ul>
-				</div>
-				<p class="local-time">20:20</p>
+				</div><?php endforeach; endif; ?>
+				<p class="local-time">20:40</p>
 				<div class="speak-box">
 					<div class="box-con">
 						<div class="img">
-						
+							<img src="/project/aoshi/Public/images/company-logo2.png">
 						</div>
 						<p>
 							<i class="i-left-jian"></i>
@@ -96,7 +98,7 @@
 				<div class="speak-box">
 					<div class="box-con">
 						<div class="img">
-						
+							<img src="/project/aoshi/Public/images/company-logo2.png">
 						</div>
 						<p>
 							<i class="i-left-jian"></i>
@@ -105,14 +107,14 @@
 					</div>
 					
 				</div>
-				<div class="speak-box">
+				<?php if(is_array($job_detail)): foreach($job_detail as $key=>$job_item): ?><div class="speak-box">
 					<div class="box-con">
 						<div class="img">
-						
+							<img src="/project/aoshi/Public/images/company-logo2.png">
 						</div>
 						<p>
 							<i class="i-left-jian"></i>
-							我是某公司的，请问你对这职业感兴趣？
+							我是<?php echo ($job_item['company_name']); ?>公司的，请问你对这职业感兴趣？
 						</p>
 					</div>
 					
@@ -120,48 +122,47 @@
 			</div>
 			<form action>
 				<div class="form-container">
-					<textarea class="form-control" rows="4" placeholder="跟公司说点什么吧！"></textarea>
+					<textarea class="form-control" rows="4" placeholder="跟<?php echo ($job_item['company_name']); ?>说点什么吧！"></textarea>
 
 					<p class="error"></p>
 					<input type="submit" value="发送" class="send">
 				</div>
-			</form>
+			</form><?php endforeach; endif; ?>
 			
 		</div>
 		<div class="con-r">
 			<div class="search-box">
-				<form action="" method="post">
+				<form action="findjob.html" method="post">
 					<input type="text" name="key" placeholder="请输入职位或公司名称" class="search">
 					<input type="submit" value="搜索" class="btn btn-info">
 				</form>
 			</div>
 			<!-- 职位显示表-->
-			<div class="job-list">
-				<a href="#">
-					<div class="job-left">
-						<p>前端工程师</p>
-						<p class="word-red"><strong>￥15K-30K</strong></p>
-						<ul>
-							<li>广州</li>
-							<li>1-3年</li>
-							<li>本科</li>
-						</ul>
-					</div>
-					<div class="job-coner">
-						
-					</div>
-					<sup>职信道</sup>
-				</a>
-				<label>2016-12-20<span>更新</span></label>
+
+			<?php if(is_array($job_detail)): foreach($job_detail as $key=>$job_item): ?><div class="job-list">
+				<div class="job-left">
+					<p><?php echo ($job_item[job_name]); ?></p>
+					<p class="word-red"><strong>￥<?php echo ($job_item[money]); ?></strong></p>
+					<ul>
+						<li>广州</li>
+						<li>1-3年</li>
+						<li>本科</li>
+					</ul>
+				</div>
+				<div class="job-coner">
+					
+				</div>
+				<sup>职信道</sup>
+				<label><?php echo ($job_item[add_time]); ?><span>更新</span></label>
 			</div>
 			<!-- 公司显示表-->
 			<div class="company-dec">
 				<div class="company-left">
 					<div class="company-img">
-						<img src="">
+						<img src="/project/aoshi/Public/images/company-logo2.png">
 					</div>
 					<div class="company-name">
-						<p>公司名<span>招聘中</span></p>
+						<p><?php echo ($job_item[company_name]); ?><span>招聘中</span></p>
 						<span class="company-status">在线</span>
 					</div>
 					<a href="#" class="btn-chat">立即开聊</a>
@@ -170,13 +171,15 @@
 			<!-- 职位详情-->
 			<div class="job-detail">
 				<p class="job-describe">职位描述</p>
-				<p class="con-dec">职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述</p>
+				<p class="con-dec"><?php echo ($job_item[job_describe]); ?></p>
 				<p class="job-require">岗位要求</p>
-				<p class="con-dec">岗位要求岗位要求岗位要求岗位要求岗位要求岗位要求岗位要求岗位要求岗位要求岗位要求岗位要求岗位要求岗位要求岗位要求岗位要求岗位要求岗位要求岗位要求岗位要求岗位要求岗位要求岗位要求岗位要求岗位要求岗位要求</p>
+				<p class="con-dec"><?php echo ($job_item[job_require]); ?></p>
 				<p class="company-address">公司地址</p>
-				<p class="con-dec">公司地址公司地址公司地址公司地址公司地址公司地址</p>
+				<p class="con-dec"><?php echo ($job_item[place]); ?></p>
 			</div>
 		</div>
-	</div>
+	</div><?php endforeach; endif; ?>
+	 </div>
+	
 </body>
 </html>

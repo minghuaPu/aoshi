@@ -6,18 +6,19 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--bootstrap-->
-    <link rel="stylesheet" href="/thinkphp_3.2.3_full/Public/libs/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="/thinkphp_3.2.3_full/Public/css/normalize.css">
+    <link rel="stylesheet" href="/project/aoshi/Public/libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/project/aoshi/Public/css/normalize.css">
     <!--style-->
-    <link rel="stylesheet" href="/thinkphp_3.2.3_full/Public/css/base.css">
+    <link rel="stylesheet" href="/project/aoshi/Public/css/base.css">
     <!--[if lt IE 9]>
-    <script src="/thinkphp_3.2.3_full/Public/libs/html5shiv/html5shiv.min.js"></script>
-    <script src="/thinkphp_3.2.3_full/Public/libs/respond/respond.min.js"></script>
+    <script src="/project/aoshi/Public/libs/html5shiv/html5shiv.min.js"></script>
+    <script src="/project/aoshi/Public/libs/respond/respond.min.js"></script>
     <![endif]-->
     <!--owlcarousel-->
-    <link rel="stylesheet" href="/thinkphp_3.2.3_full/Public/libs/owlcarousel/assets/owl.carousel.min.css">
-    <!--<link rel="stylesheet" href="/thinkphp_3.2.3_full/Public/libs/owlcarousel/assets/owl.theme.default.css">-->
-    <link rel="stylesheet" href="/thinkphp_3.2.3_full/Public/css/animate.min.css">
+    <link rel="stylesheet" href="/project/aoshi/Public/libs/owlcarousel/assets/owl.carousel.min.css">
+    <!--<link rel="stylesheet" href="/project/aoshi/Public/libs/owlcarousel/assets/owl.theme.default.css">-->
+    <link rel="stylesheet" href="/project/aoshi/Public/css/animate.min.css">
+    <script type="text/javascript" src="/project/aoshi/Public/js/jquery.1.11.1.min.js"></script>
     <title>前端首页</title>
 </head>
 <body>
@@ -133,13 +134,13 @@
             <div class="col-md-3"><div class="circle circle3"></div></div>
             <div class="col-md-3"><div class="circle circle4"></div></div>
             <div class="col-md-12">
-                <img class="line" src="/thinkphp_3.2.3_full/Public/images/figure-line.png" alt="..">
+                <img class="line" src="/project/aoshi/Public/images/figure-line.png" alt="..">
             </div>
             <div class="col-md-12">
                 <p class="brand-defined">BRAND<br>职信道</p>
             </div>
             <div class="col-md-12">
-                <img class="phone" src="/thinkphp_3.2.3_full/Public/images/figure-phone-1.png" alt="..">
+                <img class="phone" src="/project/aoshi/Public/images/figure-phone-1.png" alt="..">
             </div>
         </div>
     </div>
@@ -153,12 +154,12 @@
             <div class="col-md-offset-1 col-md-5">
                 <div class="img-wrap">
                     <p>TOM</p>
-                    <img class="chat-wrap" src="/thinkphp_3.2.3_full/Public/images/download-phone.png" alt="...">
+                    <img class="chat-wrap" src="/project/aoshi/Public/images/download-phone.png" alt="...">
                     <div class="list-wrap">
-                        <img src="/thinkphp_3.2.3_full/Public/images/chat-list.png" alt="..." class="chat-list wow animated fadeInUp">
+                        <img src="/project/aoshi/Public/images/chat-list.png" alt="..." class="chat-list wow animated fadeInUp">
                     </div>
 
-                    <img src="/thinkphp_3.2.3_full/Public/images/chat-tip.png" alt="..." class="chat-tip wow animated fadeInUp">
+                    <img src="/project/aoshi/Public/images/chat-tip.png" alt="..." class="chat-tip wow animated fadeInUp">
                 </div>
 
             </div>
@@ -179,27 +180,27 @@
     <div class="container">
         <div class="row">
             <div class="comp-img-wrap">
-                <img src="/thinkphp_3.2.3_full/Public/images/figure-computer.png" alt="...">
+                <img src="/project/aoshi/Public/images/figure-computer.png" alt="...">
             </div>
             <div class="logo-wrap">
                 <ul class="figure-logo">
                     <li class="logo1">
-                        <img src="/thinkphp_3.2.3_full/Public/Picture/logo-didi.png" alt="...">
+                        <img src="/project/aoshi/Public/Picture/logo-didi.png" alt="...">
                     </li>
                     <li class="logo2">
-                        <img src="/thinkphp_3.2.3_full/Public/Picture/logo-baidu.png" alt="...">
+                        <img src="/project/aoshi/Public/Picture/logo-baidu.png" alt="...">
                     </li>
                     <li class="logo3">
-                        <img src="/thinkphp_3.2.3_full/Public/Picture/logo-meituan.png" alt="...">
+                        <img src="/project/aoshi/Public/Picture/logo-meituan.png" alt="...">
                     </li>
                     <li class="logo4">
-                        <img src="/thinkphp_3.2.3_full/Public/Picture/logo-jd.png" alt="...">
+                        <img src="/project/aoshi/Public/Picture/logo-jd.png" alt="...">
                     </li>
                     <li class="logo5">
-                        <img src="/thinkphp_3.2.3_full/Public/Picture/logo-ali.png" alt="...">
+                        <img src="/project/aoshi/Public/Picture/logo-ali.png" alt="...">
                     </li>
                     <li class="logo6">
-                        <img src="/thinkphp_3.2.3_full/Public/Picture/logo-tencent.png" alt="...">
+                        <img src="/project/aoshi/Public/Picture/logo-tencent.png" alt="...">
                     </li>
                 </ul>
             </div>
@@ -221,7 +222,7 @@
             </div>
             <div class="col-md-5">
                 <div class="img-wrap">
-                    <img src="/thinkphp_3.2.3_full/Public/images/figure-phone-3.png" alt="...">
+                    <img src="/project/aoshi/Public/images/figure-phone-3.png" alt="...">
                 </div>
                 <ul class="cards-list">
                     <li class="card1 wow animated fadeInUp"></li>
@@ -297,18 +298,18 @@
         <p class="line"></p>
     </div>
     <div class="owl-carousel">
-        <div class="owl-item"><img src="/thinkphp_3.2.3_full/Public/Picture/c-1.png"></div>
-        <div class="owl-item"><img src="/thinkphp_3.2.3_full/Public/Picture/c-2.png"></div>
-        <div class="owl-item"><img src="/thinkphp_3.2.3_full/Public/Picture/c-3.png"></div>
-        <div class="owl-item"><img src="/thinkphp_3.2.3_full/Public/Picture/c-4.png"></div>
-        <div class="owl-item"><img src="/thinkphp_3.2.3_full/Public/Picture/c-5.png"></div>
-        <div class="owl-item"><img src="/thinkphp_3.2.3_full/Public/Picture/c-6.png"></div>
-        <div class="owl-item"><img src="/thinkphp_3.2.3_full/Public/Picture/c-7.png"></div>
-        <div class="owl-item"><img src="/thinkphp_3.2.3_full/Public/Picture/c-8.png"></div>
-        <div class="owl-item"><img src="/thinkphp_3.2.3_full/Public/Picture/c-9.png"></div>
-        <div class="owl-item"><img src="/thinkphp_3.2.3_full/Public/Picture/c-10.png"></div>
-        <div class="owl-item"><img src="/thinkphp_3.2.3_full/Public/Picture/c-11.png"></div>
-        <div class="owl-item"><img src="/thinkphp_3.2.3_full/Public/Picture/c-12.png"></div>
+        <div class="owl-item"><img src="/project/aoshi/Public/Picture/c-1.png"></div>
+        <div class="owl-item"><img src="/project/aoshi/Public/Picture/c-2.png"></div>
+        <div class="owl-item"><img src="/project/aoshi/Public/Picture/c-3.png"></div>
+        <div class="owl-item"><img src="/project/aoshi/Public/Picture/c-4.png"></div>
+        <div class="owl-item"><img src="/project/aoshi/Public/Picture/c-5.png"></div>
+        <div class="owl-item"><img src="/project/aoshi/Public/Picture/c-6.png"></div>
+        <div class="owl-item"><img src="/project/aoshi/Public/Picture/c-7.png"></div>
+        <div class="owl-item"><img src="/project/aoshi/Public/Picture/c-8.png"></div>
+        <div class="owl-item"><img src="/project/aoshi/Public/Picture/c-9.png"></div>
+        <div class="owl-item"><img src="/project/aoshi/Public/Picture/c-10.png"></div>
+        <div class="owl-item"><img src="/project/aoshi/Public/Picture/c-11.png"></div>
+        <div class="owl-item"><img src="/project/aoshi/Public/Picture/c-12.png"></div>
         <div class="owl-nav">
             <div class="owl-pre"></div>
             <div class="owl-next"></div>
@@ -323,10 +324,10 @@
     <p class="p2">zhixindao.com.保留所有版权. 使用这些服务遵守用户协议</p>
 </section>
 <!--footer-->
-<script src="/thinkphp_3.2.3_full/Public/libs/jquery/jquery.min.js"></script>
-<script src="/thinkphp_3.2.3_full/Public/js/wow.min.js"></script>
-<script src="/thinkphp_3.2.3_full/Public/libs/bootstrap/js/bootstrap.min.js"></script>
-<script src="/thinkphp_3.2.3_full/Public/libs/owlcarousel/owl.carousel.min.js"></script>
-<script src="/thinkphp_3.2.3_full/Public/js/base.js"></script>
+<script src="/project/aoshi/Public/libs/jquery/jquery.min.js"></script>
+<script src="/project/aoshi/Public/js/wow.min.js"></script>
+<script src="/project/aoshi/Public/libs/bootstrap/js/bootstrap.min.js"></script>
+<script src="/project/aoshi/Public/libs/owlcarousel/owl.carousel.min.js"></script>
+<script src="/project/aoshi/Public/js/base.js"></script>
 </body>
 </html>

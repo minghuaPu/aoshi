@@ -6,18 +6,19 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--bootstrap-->
-    <link rel="stylesheet" href="/thinkphp_3.2.3_full/Public/libs/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="/thinkphp_3.2.3_full/Public/css/normalize.css">
+    <link rel="stylesheet" href="/project/aoshi/Public/libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/project/aoshi/Public/css/normalize.css">
     <!--style-->
-    <link rel="stylesheet" href="/thinkphp_3.2.3_full/Public/css/base.css">
+    <link rel="stylesheet" href="/project/aoshi/Public/css/base.css">
     <!--[if lt IE 9]>
-    <script src="/thinkphp_3.2.3_full/Public/libs/html5shiv/html5shiv.min.js"></script>
-    <script src="/thinkphp_3.2.3_full/Public/libs/respond/respond.min.js"></script>
+    <script src="/project/aoshi/Public/libs/html5shiv/html5shiv.min.js"></script>
+    <script src="/project/aoshi/Public/libs/respond/respond.min.js"></script>
     <![endif]-->
     <!--owlcarousel-->
-    <link rel="stylesheet" href="/thinkphp_3.2.3_full/Public/libs/owlcarousel/assets/owl.carousel.min.css">
-    <!--<link rel="stylesheet" href="/thinkphp_3.2.3_full/Public/libs/owlcarousel/assets/owl.theme.default.css">-->
-    <link rel="stylesheet" href="/thinkphp_3.2.3_full/Public/css/animate.min.css">
+    <link rel="stylesheet" href="/project/aoshi/Public/libs/owlcarousel/assets/owl.carousel.min.css">
+    <!--<link rel="stylesheet" href="/project/aoshi/Public/libs/owlcarousel/assets/owl.theme.default.css">-->
+    <link rel="stylesheet" href="/project/aoshi/Public/css/animate.min.css">
+    <script type="text/javascript" src="/project/aoshi/Public/js/jquery.1.11.1.min.js"></script>
     <title>前端首页</title>
 </head>
 <body>
@@ -55,14 +56,15 @@
 </header>
 <!--header-->
 
-<link rel="stylesheet" href="/thinkphp_3.2.3_full/Public/css/findjob.css"> 
+<link rel="stylesheet" href="/project/aoshi/Public/css/common.css">
+<link rel="stylesheet" href="/project/aoshi/Public/css/findjob.css"> 
   	 
 
 <!-- banner -->
 	<div class="container">
 		<div class="banner-download">
 			<div class="img">
-				<img src="/thinkphp_3.2.3_full/Public/images/download-phone.png">
+				<img src="/project/aoshi/Public/images/download-phone.png">
 			</div>
 			<span>上职信道<br>找好工作</span>
 			<p>职信道<br>助您轻松找工作</p>
@@ -73,7 +75,6 @@
 		</div>
 	</div>
 <!-- 职位列表 -->
-<!-- 遍历模版变量 -->
 	<div class="container">
 		<div class="position-left">
 			<div class="item">
@@ -141,21 +142,25 @@
 		</div>
 		<div class="position-right">
 			<div class="search-box">
-				<form action="" method="post">
+				<form id="search-form" action="" method="post">
 					<input type="text" name="key" placeholder="请输入职位或公司名称" class="search">
 					<input type="submit" value="搜索" class="btn btn-info">
 				</form>
 			</div>
 			<div class="search-tip">
-				<p>相关搜索结果</p>
+				<p><?php echo ($_REQUEST['key']); ?>&nbsp;相关搜索结果</p>
 
 			</div>
 			<!-- 职位详情表 -->
-			<div class="job-list">
+
+
+<!-- 第四步：遍历模版变量 -->
+		<?php if(is_array($job_info)): foreach($job_info as $key=>$job_item): ?><div class="job-list">
 				<a href="<?php echo U('Index/jobdetail');?>">
 					<div class="job-left">
-						<p>前端工程师</p>
-						<p class="word-red"><strong>￥15K-30K</strong></p>
+					<!-- 第五步：给对应信息添加动态数据 -->
+						<p class="job-name"><?php echo ($job_item['job_name']); ?></p>
+						<p class="word-red"><strong>￥<?php echo ($job_item['money']); ?></strong></p>
 						<ul>
 							<li>广州</li>
 							<li>1-3年</li>
@@ -164,94 +169,19 @@
 					</div>
 					<div class="job-right">
 						<div class="company-img">
-							<img src="">
+							<img src="/project/aoshi/Public/images/company-logo2.png">
 						</div>
-						<span>公司名</span>
+						<span><?php echo ($job_item['company_name']); ?></span>
 					</div>
 				</a>
-			</div>
-			<div class="job-list">
-				<a href="#">
-					<div class="job-left">
-						<p>前端工程师</p>
-						<p class="word-red"><strong>￥15K-30K</strong></p>
-						<ul>
-							<li>广州</li>
-							<li>1-3年</li>
-							<li>本科</li>
-						</ul>
-					</div>
-					<div class="job-right">
-						<div class="company-img">
-							<img src="">
-						</div>
-						<span>公司名</span>
-					</div>
-				</a>
-			</div>
-			<div class="job-list">
-				<a href="#">
-					<div class="job-left">
-						<p>前端工程师</p>
-						<p class="word-red"><strong>￥15K-30K</strong></p>
-						<ul>
-							<li>广州</li>
-							<li>1-3年</li>
-							<li>本科</li>
-						</ul>
-					</div>
-					<div class="job-right">
-						<div class="company-img">
-							<img src="">
-						</div>
-						<span>公司名</span>
-					</div>
-				</a>
-			</div>
-			<div class="job-list">
-				<a href="#">
-					<div class="job-left">
-						<p>前端工程师</p>
-						<p class="word-red"><strong>￥15K-30K</strong></p>
-						<ul>
-							<li>广州</li>
-							<li>1-3年</li>
-							<li>本科</li>
-						</ul>
-					</div>
-					<div class="job-right">
-						<div class="company-img">
-							<img src="">
-						</div>
-						<span>公司名</span>
-					</div>
-				</a>
-			</div>
-			<div class="job-list">
-				<a href="#">
-					<div class="job-left">
-						<p>前端工程师</p>
-						<p class="word-red"><strong>￥15K-30K</strong></p>
-						<ul>
-							<li>广州</li>
-							<li>1-3年</li>
-							<li>本科</li>
-						</ul>
-					</div>
-					<div class="job-right">
-						<div class="company-img">
-							<img src="">
-						</div>
-						<span>公司名</span>
-					</div>
-				</a>
-			</div>
+			</div><?php endforeach; endif; ?>
+
 			<div class="next-page">
 				<a href="#">下一页</a>
 			</div>
 
 		</div>
 	</div>
-
+	<script type="text/javascript" src="/project/aoshi/Public/js/enterprise/findjob.js"></script>
 </body>
 </html>

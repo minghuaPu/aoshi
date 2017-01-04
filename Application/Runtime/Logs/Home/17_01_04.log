@@ -1,0 +1,1867 @@
+[ 2017-01-04T00:02:40+08:00 ] ::1 /project/aoshi/index.php/Home/Index/jobdetail.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000113s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001856s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002355s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0385s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 62 行.
+SQL: SELECT job.id,`job_name`,`money`,`job_require`,`job_describe`,job.add_time,`place`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id  WHERE ( job.id=13 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000288s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000604s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 44 行.
+NOTIC: [8] Use of undefined constant job_name - assumed 'job_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 144 行.
+NOTIC: [8] Use of undefined constant money - assumed 'money' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 145 行.
+NOTIC: [8] Use of undefined constant add_time - assumed 'add_time' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 156 行.
+NOTIC: [8] Use of undefined constant company_name - assumed 'company_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 165 行.
+NOTIC: [8] Use of undefined constant job_describe - assumed 'job_describe' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 174 行.
+NOTIC: [8] Use of undefined constant job_require - assumed 'job_require' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 176 行.
+NOTIC: [8] Use of undefined constant place - assumed 'place' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 178 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051533s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052131s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001051s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001615s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001661s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002231s ]
+
+[ 2017-01-04T00:06:01+08:00 ] ::1 /project/aoshi/index.php/Home/Index/jobdetail.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000117s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001604s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001648s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 62 行.
+SQL: SELECT job.id,`job_name`,`money`,`job_require`,`job_describe`,job.add_time,`place`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id  WHERE ( job.id=13 )  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000281s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000617s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 44 行.
+NOTIC: [8] Use of undefined constant job_name - assumed 'job_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 144 行.
+NOTIC: [8] Use of undefined constant money - assumed 'money' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 145 行.
+NOTIC: [8] Use of undefined constant add_time - assumed 'add_time' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 156 行.
+NOTIC: [8] Use of undefined constant company_name - assumed 'company_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 165 行.
+NOTIC: [8] Use of undefined constant job_describe - assumed 'job_describe' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 174 行.
+NOTIC: [8] Use of undefined constant job_require - assumed 'job_require' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 176 行.
+NOTIC: [8] Use of undefined constant place - assumed 'place' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 178 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042338s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042802s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001141s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001755s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001447s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001887s ]
+
+[ 2017-01-04T00:10:28+08:00 ] ::1 /project/aoshi/index.php/Home/Index/findjob.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001187s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001500s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 25 行.
+SQL: SELECT job.id,`job_name`,`money`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id   [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000272s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000721s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 44 行.
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 151 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038710s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039159s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001130s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001536s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001612s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002242s ]
+
+[ 2017-01-04T00:10:52+08:00 ] ::1 /project/aoshi/index.php/Home/Index/findjob.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000955s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001260s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0104s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 25 行.
+SQL: SELECT job.id,`job_name`,`money`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000274s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000599s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 44 行.
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 151 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042312s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042930s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000690s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001034s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001505s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002168s ]
+
+[ 2017-01-04T00:10:58+08:00 ] ::1 /project/aoshi/index.php/Home/Index/jobdetail.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000065s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000975s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001890s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002640s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0111s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 62 行.
+SQL: SELECT job.id,`job_name`,`money`,`job_require`,`job_describe`,job.add_time,`place`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id  WHERE ( job.id=13 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000466s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001087s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 44 行.
+NOTIC: [8] Use of undefined constant job_name - assumed 'job_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 144 行.
+NOTIC: [8] Use of undefined constant money - assumed 'money' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 145 行.
+NOTIC: [8] Use of undefined constant add_time - assumed 'add_time' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 156 行.
+NOTIC: [8] Use of undefined constant company_name - assumed 'company_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 165 行.
+NOTIC: [8] Use of undefined constant job_describe - assumed 'job_describe' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 174 行.
+NOTIC: [8] Use of undefined constant job_require - assumed 'job_require' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 176 行.
+NOTIC: [8] Use of undefined constant place - assumed 'place' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 178 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045518s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045834s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000535s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000819s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000920s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001225s ]
+
+[ 2017-01-04T00:11:01+08:00 ] ::1 /project/aoshi/index.php/Home/Index/findjob.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000925s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001960s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002678s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0120s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 25 行.
+SQL: SELECT job.id,`job_name`,`money`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000411s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001028s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 44 行.
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 151 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049446s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050083s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000865s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001403s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001705s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002323s ]
+
+[ 2017-01-04T00:11:05+08:00 ] ::1 /project/aoshi/index.php/Home/Index/jobdetail.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000938s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002221s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002798s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0122s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 62 行.
+SQL: SELECT job.id,`job_name`,`money`,`job_require`,`job_describe`,job.add_time,`place`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id  WHERE ( job.id=13 )  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000280s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000596s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 44 行.
+NOTIC: [8] Use of undefined constant job_name - assumed 'job_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 144 行.
+NOTIC: [8] Use of undefined constant money - assumed 'money' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 145 行.
+NOTIC: [8] Use of undefined constant add_time - assumed 'add_time' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 156 行.
+NOTIC: [8] Use of undefined constant company_name - assumed 'company_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 165 行.
+NOTIC: [8] Use of undefined constant job_describe - assumed 'job_describe' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 174 行.
+NOTIC: [8] Use of undefined constant job_require - assumed 'job_require' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 176 行.
+NOTIC: [8] Use of undefined constant place - assumed 'place' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 178 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047166s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047609s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000915s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001471s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001436s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001927s ]
+
+[ 2017-01-04T00:12:30+08:00 ] ::1 /project/aoshi/index.php/Home/Index/jobdetail.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000212s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002164s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001496s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002071s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0114s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 62 行.
+SQL: SELECT job.id,`job_name`,`money`,`job_require`,`job_describe`,job.add_time,`place`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id  WHERE ( job.id=13 )  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000304s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000645s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 44 行.
+NOTIC: [8] Use of undefined constant job_name - assumed 'job_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 144 行.
+NOTIC: [8] Use of undefined constant money - assumed 'money' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 145 行.
+NOTIC: [8] Use of undefined constant add_time - assumed 'add_time' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 156 行.
+NOTIC: [8] Use of undefined constant company_name - assumed 'company_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 165 行.
+NOTIC: [8] Use of undefined constant job_describe - assumed 'job_describe' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 174 行.
+NOTIC: [8] Use of undefined constant job_require - assumed 'job_require' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 176 行.
+NOTIC: [8] Use of undefined constant place - assumed 'place' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 178 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042221s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042675s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000713s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000997s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001082s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001373s ]
+
+[ 2017-01-04T00:12:32+08:00 ] ::1 /project/aoshi/index.php/Home/Index/findjob.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000109s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001523s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001740s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002358s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0124s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 25 行.
+SQL: SELECT job.id,`job_name`,`money`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000445s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001054s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 44 行.
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 151 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048979s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049518s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000692s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001201s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001518s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002139s ]
+
+[ 2017-01-04T00:12:35+08:00 ] ::1 /project/aoshi/index.php/Home/Index/jobdetail.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000103s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001512s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001586s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002179s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0118s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 62 行.
+SQL: SELECT job.id,`job_name`,`money`,`job_require`,`job_describe`,job.add_time,`place`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id  WHERE ( job.id=13 )  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000445s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001064s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 44 行.
+NOTIC: [8] Use of undefined constant job_name - assumed 'job_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 144 行.
+NOTIC: [8] Use of undefined constant money - assumed 'money' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 145 行.
+NOTIC: [8] Use of undefined constant add_time - assumed 'add_time' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 156 行.
+NOTIC: [8] Use of undefined constant company_name - assumed 'company_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 165 行.
+NOTIC: [8] Use of undefined constant job_describe - assumed 'job_describe' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 174 行.
+NOTIC: [8] Use of undefined constant job_require - assumed 'job_require' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 176 行.
+NOTIC: [8] Use of undefined constant place - assumed 'place' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 178 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052307s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052833s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000806s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001304s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001309s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001818s ]
+
+[ 2017-01-04T00:12:51+08:00 ] ::1 /project/aoshi/index.php/Home/Index/findjob.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000148s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001601s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001661s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002313s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0125s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 25 行.
+SQL: SELECT job.id,`job_name`,`money`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000272s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000599s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 44 行.
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 151 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039838s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040285s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000525s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000812s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001643s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002117s ]
+
+[ 2017-01-04T00:12:54+08:00 ] ::1 /project/aoshi/index.php/Home/Index/jobdetail.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000111s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001478s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001557s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002145s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0123s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 62 行.
+SQL: SELECT job.id,`job_name`,`money`,`job_require`,`job_describe`,job.add_time,`place`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id  WHERE ( job.id=13 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000430s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000972s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 44 行.
+NOTIC: [8] Use of undefined constant job_name - assumed 'job_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 144 行.
+NOTIC: [8] Use of undefined constant money - assumed 'money' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 145 行.
+NOTIC: [8] Use of undefined constant add_time - assumed 'add_time' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 156 行.
+NOTIC: [8] Use of undefined constant company_name - assumed 'company_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 165 行.
+NOTIC: [8] Use of undefined constant job_describe - assumed 'job_describe' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 174 行.
+NOTIC: [8] Use of undefined constant job_require - assumed 'job_require' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 176 行.
+NOTIC: [8] Use of undefined constant place - assumed 'place' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 178 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057426s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058196s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000887s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001437s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001386s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001957s ]
+
+[ 2017-01-04T00:13:15+08:00 ] ::1 /project/aoshi/index.php/Home/Index/findjob.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000946s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001587s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001924s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0113s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 25 行.
+SQL: SELECT job.id,`job_name`,`money`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000270s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000614s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 44 行.
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 151 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034614s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000730s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001032s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001506s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002078s ]
+
+[ 2017-01-04T00:13:29+08:00 ] ::1 /project/aoshi/index.php/Home/Index/jobdetail.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000957s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000944s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001252s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0518s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 62 行.
+SQL: SELECT job.id,`job_name`,`money`,`job_require`,`job_describe`,job.add_time,`place`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id  WHERE ( job.id=13 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000604s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001222s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 44 行.
+NOTIC: [8] Use of undefined constant job_name - assumed 'job_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 144 行.
+NOTIC: [8] Use of undefined constant money - assumed 'money' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 145 行.
+NOTIC: [8] Use of undefined constant add_time - assumed 'add_time' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 156 行.
+NOTIC: [8] Use of undefined constant company_name - assumed 'company_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 165 行.
+NOTIC: [8] Use of undefined constant job_describe - assumed 'job_describe' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 174 行.
+NOTIC: [8] Use of undefined constant job_require - assumed 'job_require' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 176 行.
+NOTIC: [8] Use of undefined constant place - assumed 'place' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 178 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055048s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055606s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000957s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001645s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001377s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001995s ]
+
+[ 2017-01-04T00:15:13+08:00 ] ::1 /project/aoshi/index.php/Home/Index/findjob.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000121s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001657s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001694s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002123s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0083s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 25 行.
+SQL: SELECT job.id,`job_name`,`money`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000279s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000624s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 44 行.
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 151 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037904s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038367s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001208s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001799s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001943s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002562s ]
+
+[ 2017-01-04T00:15:16+08:00 ] ::1 /project/aoshi/index.php/Home/Index/jobdetail.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000111s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001497s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001540s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002162s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0121s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 62 行.
+SQL: SELECT job.id,`job_name`,`money`,`job_require`,`job_describe`,job.add_time,`place`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id  WHERE ( job.id=13 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000279s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000602s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 44 行.
+NOTIC: [8] Use of undefined constant job_name - assumed 'job_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 144 行.
+NOTIC: [8] Use of undefined constant money - assumed 'money' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 145 行.
+NOTIC: [8] Use of undefined constant add_time - assumed 'add_time' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 156 行.
+NOTIC: [8] Use of undefined constant company_name - assumed 'company_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 165 行.
+NOTIC: [8] Use of undefined constant job_describe - assumed 'job_describe' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 174 行.
+NOTIC: [8] Use of undefined constant job_require - assumed 'job_require' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 176 行.
+NOTIC: [8] Use of undefined constant place - assumed 'place' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 178 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052830s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053292s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000867s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001427s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001509s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002084s ]
+
+[ 2017-01-04T00:16:08+08:00 ] ::1 /project/aoshi/index.php/Home/Index/findjob.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000125s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001608s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001092s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001418s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0185s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 25 行.
+SQL: SELECT job.id,`job_name`,`money`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000412s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000994s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 44 行.
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 151 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034987s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035304s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000621s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000913s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001516s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002092s ]
+
+[ 2017-01-04T00:16:13+08:00 ] ::1 /project/aoshi/index.php/Home/Index/jobdetail.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000062s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000944s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000973s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001280s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0062s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 62 行.
+SQL: SELECT job.id,`job_name`,`money`,`job_require`,`job_describe`,job.add_time,`place`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id  WHERE ( job.id=13 )  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000456s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000972s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 44 行.
+NOTIC: [8] Use of undefined constant job_name - assumed 'job_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 144 行.
+NOTIC: [8] Use of undefined constant money - assumed 'money' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 145 行.
+NOTIC: [8] Use of undefined constant add_time - assumed 'add_time' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 156 行.
+NOTIC: [8] Use of undefined constant company_name - assumed 'company_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 165 行.
+NOTIC: [8] Use of undefined constant job_describe - assumed 'job_describe' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 174 行.
+NOTIC: [8] Use of undefined constant job_require - assumed 'job_require' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 176 行.
+NOTIC: [8] Use of undefined constant place - assumed 'place' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 178 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049162s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049480s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000913s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001360s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001395s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001838s ]
+
+[ 2017-01-04T00:16:26+08:00 ] ::1 /project/aoshi/index.php/Home/Index/findjob.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000156s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001899s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001021s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001346s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0125s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 25 行.
+SQL: SELECT job.id,`job_name`,`money`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000271s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000595s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 44 行.
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 151 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041894s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042335s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000923s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001435s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001533s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002105s ]
+
+[ 2017-01-04T00:18:14+08:00 ] ::1 /project/aoshi/index.php/Home/Index/findjob.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000065s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001282s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001958s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002577s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0121s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 25 行.
+SQL: SELECT job.id,`job_name`,`money`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000452s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001060s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 44 行.
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 151 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039336s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039650s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000721s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002675s ]
+
+[ 2017-01-04T00:18:19+08:00 ] ::1 /project/aoshi/index.php/Home/Index/jobdetail.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000116s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001516s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001085s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001430s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0129s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 62 行.
+SQL: SELECT job.id,`job_name`,`money`,`job_require`,`job_describe`,job.add_time,`place`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id  WHERE ( job.id=13 )  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000286s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000618s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 44 行.
+NOTIC: [8] Use of undefined constant job_name - assumed 'job_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 144 行.
+NOTIC: [8] Use of undefined constant money - assumed 'money' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 145 行.
+NOTIC: [8] Use of undefined constant add_time - assumed 'add_time' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 156 行.
+NOTIC: [8] Use of undefined constant company_name - assumed 'company_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 165 行.
+NOTIC: [8] Use of undefined constant job_describe - assumed 'job_describe' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 174 行.
+NOTIC: [8] Use of undefined constant job_require - assumed 'job_require' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 176 行.
+NOTIC: [8] Use of undefined constant place - assumed 'place' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 178 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043487s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043954s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000897s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001418s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001493s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002009s ]
+
+[ 2017-01-04T00:18:22+08:00 ] ::1 /project/aoshi/index.php/Home/Index/findjob.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000102s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001329s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001579s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002189s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0131s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 25 行.
+SQL: SELECT job.id,`job_name`,`money`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id   [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000532s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001106s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 44 行.
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 151 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044984s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045568s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000984s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001573s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001590s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002228s ]
+
+[ 2017-01-04T00:18:25+08:00 ] ::1 /project/aoshi/index.php/Home/Index/jobdetail.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000102s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001488s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001406s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002002s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0111s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 62 行.
+SQL: SELECT job.id,`job_name`,`money`,`job_require`,`job_describe`,job.add_time,`place`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id  WHERE ( job.id=13 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000408s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001035s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 44 行.
+NOTIC: [8] Use of undefined constant job_name - assumed 'job_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 144 行.
+NOTIC: [8] Use of undefined constant money - assumed 'money' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 145 行.
+NOTIC: [8] Use of undefined constant add_time - assumed 'add_time' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 156 行.
+NOTIC: [8] Use of undefined constant company_name - assumed 'company_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 165 行.
+NOTIC: [8] Use of undefined constant job_describe - assumed 'job_describe' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 174 行.
+NOTIC: [8] Use of undefined constant job_require - assumed 'job_require' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 176 行.
+NOTIC: [8] Use of undefined constant place - assumed 'place' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 178 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055431s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055988s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000937s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001464s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001496s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002057s ]
+
+[ 2017-01-04T00:18:27+08:00 ] ::1 /project/aoshi/index.php/Home/Index/findjob.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000120s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001596s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002115s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0090s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 25 行.
+SQL: SELECT job.id,`job_name`,`money`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000444s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001039s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 44 行.
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 151 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045192s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045730s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000902s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001441s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001553s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002153s ]
+
+[ 2017-01-04T00:18:32+08:00 ] ::1 /project/aoshi/index.php/Home/Index/jobdetail.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000111s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002473s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003098s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0109s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 62 行.
+SQL: SELECT job.id,`job_name`,`money`,`job_require`,`job_describe`,job.add_time,`place`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id  WHERE ( job.id=13 )  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000354s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000790s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 44 行.
+NOTIC: [8] Use of undefined constant job_name - assumed 'job_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 144 行.
+NOTIC: [8] Use of undefined constant money - assumed 'money' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 145 行.
+NOTIC: [8] Use of undefined constant add_time - assumed 'add_time' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 156 行.
+NOTIC: [8] Use of undefined constant company_name - assumed 'company_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 165 行.
+NOTIC: [8] Use of undefined constant job_describe - assumed 'job_describe' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 174 行.
+NOTIC: [8] Use of undefined constant job_require - assumed 'job_require' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 176 行.
+NOTIC: [8] Use of undefined constant place - assumed 'place' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 178 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046559s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047068s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000992s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001557s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001162s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001585s ]
+
+[ 2017-01-04T00:27:10+08:00 ] ::1 /project/aoshi/index.php/Home/Index/findjob.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000124s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001855s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001613s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001974s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0776s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 25 行.
+SQL: SELECT job.id,`job_name`,`money`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000450s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001071s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 44 行.
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 151 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042274s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042731s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001170s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001467s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001532s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001898s ]
+
+[ 2017-01-04T00:27:14+08:00 ] ::1 /project/aoshi/index.php/Home/Index/jobdetail.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000105s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001601s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002092s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002597s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0120s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 62 行.
+SQL: SELECT job.id,`job_name`,`money`,`job_require`,`job_describe`,job.add_time,`place`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id  WHERE ( job.id=13 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000296s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000627s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 44 行.
+NOTIC: [8] Use of undefined constant job_name - assumed 'job_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 144 行.
+NOTIC: [8] Use of undefined constant money - assumed 'money' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 145 行.
+NOTIC: [8] Use of undefined constant add_time - assumed 'add_time' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 156 行.
+NOTIC: [8] Use of undefined constant company_name - assumed 'company_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 165 行.
+NOTIC: [8] Use of undefined constant job_describe - assumed 'job_describe' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 174 行.
+NOTIC: [8] Use of undefined constant job_require - assumed 'job_require' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 176 行.
+NOTIC: [8] Use of undefined constant place - assumed 'place' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 178 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055030s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055634s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001703s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002276s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002151s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002716s ]
+
+[ 2017-01-04T00:27:48+08:00 ] ::1 /project/aoshi/index.php/Home/Index/findjob.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000125s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001711s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001709s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002221s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0090s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 25 行.
+SQL: SELECT job.id,`job_name`,`money`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000427s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000989s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 44 行.
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 151 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041055s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041398s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001269s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001587s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002281s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002931s ]
+
+[ 2017-01-04T00:27:50+08:00 ] ::1 /project/aoshi/index.php/Home/Index/jobdetail.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001390s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001772s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0082s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 62 行.
+SQL: SELECT job.id,`job_name`,`money`,`job_require`,`job_describe`,job.add_time,`place`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id  WHERE ( job.id=13 )  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000448s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001045s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 44 行.
+NOTIC: [8] Use of undefined constant job_name - assumed 'job_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 144 行.
+NOTIC: [8] Use of undefined constant money - assumed 'money' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 145 行.
+NOTIC: [8] Use of undefined constant add_time - assumed 'add_time' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 156 行.
+NOTIC: [8] Use of undefined constant company_name - assumed 'company_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 165 行.
+NOTIC: [8] Use of undefined constant job_describe - assumed 'job_describe' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 174 行.
+NOTIC: [8] Use of undefined constant job_require - assumed 'job_require' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 176 行.
+NOTIC: [8] Use of undefined constant place - assumed 'place' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 178 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055834s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056455s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001651s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002224s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002314s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002952s ]
+
+[ 2017-01-04T00:27:56+08:00 ] ::1 /project/aoshi/index.php/Home/Index/findjob.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000118s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001758s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002243s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002865s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0556s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 25 行.
+SQL: SELECT job.id,`job_name`,`money`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000273s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000598s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 44 行.
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 151 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042225s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042747s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001810s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002444s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002388s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003022s ]
+
+[ 2017-01-04T00:28:03+08:00 ] ::1 /project/aoshi/index.php/Home/Index/jobdetail.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001006s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002355s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003004s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0114s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 62 行.
+SQL: SELECT job.id,`job_name`,`money`,`job_require`,`job_describe`,job.add_time,`place`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id  WHERE ( job.id=13 )  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000285s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000611s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 44 行.
+NOTIC: [8] Use of undefined constant job_name - assumed 'job_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 144 行.
+NOTIC: [8] Use of undefined constant money - assumed 'money' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 145 行.
+NOTIC: [8] Use of undefined constant add_time - assumed 'add_time' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 156 行.
+NOTIC: [8] Use of undefined constant company_name - assumed 'company_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 165 行.
+NOTIC: [8] Use of undefined constant job_describe - assumed 'job_describe' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 174 行.
+NOTIC: [8] Use of undefined constant job_require - assumed 'job_require' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 176 行.
+NOTIC: [8] Use of undefined constant place - assumed 'place' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 178 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048511s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048943s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001193s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001502s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001930s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002416s ]
+
+[ 2017-01-04T00:28:22+08:00 ] ::1 /project/aoshi/index.php/Home/Index/findjob.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000123s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001712s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002511s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003110s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0124s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 25 行.
+SQL: SELECT job.id,`job_name`,`money`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000269s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000594s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 44 行.
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 151 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043761s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044371s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001640s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002158s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002339s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002950s ]
+
+[ 2017-01-04T00:28:27+08:00 ] ::1 /project/aoshi/index.php/Home/Index/jobdetail.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001011s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002367s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003070s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0124s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 62 行.
+SQL: SELECT job.id,`job_name`,`money`,`job_require`,`job_describe`,job.add_time,`place`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id  WHERE ( job.id=13 )  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000440s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001088s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 44 行.
+NOTIC: [8] Use of undefined constant job_name - assumed 'job_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 144 行.
+NOTIC: [8] Use of undefined constant money - assumed 'money' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 145 行.
+NOTIC: [8] Use of undefined constant add_time - assumed 'add_time' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 156 行.
+NOTIC: [8] Use of undefined constant company_name - assumed 'company_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 165 行.
+NOTIC: [8] Use of undefined constant job_describe - assumed 'job_describe' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 174 行.
+NOTIC: [8] Use of undefined constant job_require - assumed 'job_require' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 176 行.
+NOTIC: [8] Use of undefined constant place - assumed 'place' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 178 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050747s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051182s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001101s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001410s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001637s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002127s ]
+
+[ 2017-01-04T00:28:29+08:00 ] ::1 /project/aoshi/index.php/Home/Index/findjob.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000114s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001809s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002190s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002800s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0125s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 25 行.
+SQL: SELECT job.id,`job_name`,`money`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000367s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000980s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 44 行.
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 151 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051324s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051923s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001717s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002291s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008498s ]
+INFO: [ app_end ] --END-- [ RunTime:0.009153s ]
+
+[ 2017-01-04T00:28:34+08:00 ] ::1 /project/aoshi/index.php/Home/Index/jobdetail.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000208s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002025s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001528s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001867s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0125s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 62 行.
+SQL: SELECT job.id,`job_name`,`money`,`job_require`,`job_describe`,job.add_time,`place`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id  WHERE ( job.id=13 )  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000297s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000629s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 44 行.
+NOTIC: [8] Use of undefined constant job_name - assumed 'job_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 144 行.
+NOTIC: [8] Use of undefined constant money - assumed 'money' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 145 行.
+NOTIC: [8] Use of undefined constant add_time - assumed 'add_time' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 156 行.
+NOTIC: [8] Use of undefined constant company_name - assumed 'company_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 165 行.
+NOTIC: [8] Use of undefined constant job_describe - assumed 'job_describe' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 174 行.
+NOTIC: [8] Use of undefined constant job_require - assumed 'job_require' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 176 行.
+NOTIC: [8] Use of undefined constant place - assumed 'place' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 178 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051185s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051679s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002178s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002768s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002353s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002960s ]
+
+[ 2017-01-04T00:31:48+08:00 ] ::1 /project/aoshi/index.php/Home/Index/findjob.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000110s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001478s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001923s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002407s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0751s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 25 行.
+SQL: SELECT job.id,`job_name`,`money`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000278s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000644s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 44 行.
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 151 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040546s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001163s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001454s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002558s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005572s ]
+
+[ 2017-01-04T00:31:52+08:00 ] ::1 /project/aoshi/index.php/Home/Index/jobdetail.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000122s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001733s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002245s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002831s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0122s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 62 行.
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 77 行.
+SQL: SELECT job.id,`job_name`,`money`,`job_require`,`job_describe`,job.add_time,`place`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id  WHERE `job_name` = null  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000463s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001022s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 44 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056209s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056664s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001632s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002160s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002166s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002727s ]
+
+[ 2017-01-04T00:32:00+08:00 ] ::1 /project/aoshi/index.php/Home/Index/findjob.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001040s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001967s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002615s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0113s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 25 行.
+SQL: SELECT job.id,`job_name`,`money`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000293s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000618s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 44 行.
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 151 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045688s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046348s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001833s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002396s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002540s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003184s ]
+
+[ 2017-01-04T00:32:03+08:00 ] ::1 /project/aoshi/index.php/Home/Index/jobdetail.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000065s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001017s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002287s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002931s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0123s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 62 行.
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 77 行.
+SQL: SELECT job.id,`job_name`,`money`,`job_require`,`job_describe`,job.add_time,`place`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id  WHERE `job_name` = null  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000285s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000599s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 44 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050435s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051018s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001699s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002247s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002206s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002778s ]
+
+[ 2017-01-04T00:32:07+08:00 ] ::1 /project/aoshi/index.php/Home/Index/findjob.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000125s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001733s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002403s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003027s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0116s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 25 行.
+SQL: SELECT job.id,`job_name`,`money`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000423s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001003s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 44 行.
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 151 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041567s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042066s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001693s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002267s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002379s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003018s ]
+
+[ 2017-01-04T00:32:18+08:00 ] ::1 /project/aoshi/index.php/Home/Index/jobdetail.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000065s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002336s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002859s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0115s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 62 行.
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 77 行.
+SQL: SELECT job.id,`job_name`,`money`,`job_require`,`job_describe`,job.add_time,`place`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id  WHERE `job_name` = null  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000323s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000668s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 44 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046102s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046577s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002105s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002706s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002392s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003026s ]
+
+[ 2017-01-04T00:33:09+08:00 ] ::1 /project/aoshi/index.php/Home/Index/findjob.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000109s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001585s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001483s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001825s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0109s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 25 行.
+SQL: SELECT job.id,`job_name`,`money`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000424s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000999s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 44 行.
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 151 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044990s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045637s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001663s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002240s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002210s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002819s ]
+
+[ 2017-01-04T00:33:11+08:00 ] ::1 /project/aoshi/index.php/Home/Index/jobdetail.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000114s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001755s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003243s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0117s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 62 行.
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 77 行.
+SQL: SELECT job.id,`job_name`,`money`,`job_require`,`job_describe`,job.add_time,`place`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id   [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000450s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001038s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 44 行.
+NOTIC: [8] Use of undefined constant job_name - assumed 'job_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 144 行.
+NOTIC: [8] Use of undefined constant money - assumed 'money' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 145 行.
+NOTIC: [8] Use of undefined constant add_time - assumed 'add_time' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 156 行.
+NOTIC: [8] Use of undefined constant company_name - assumed 'company_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 165 行.
+NOTIC: [8] Use of undefined constant job_describe - assumed 'job_describe' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 174 行.
+NOTIC: [8] Use of undefined constant job_require - assumed 'job_require' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 176 行.
+NOTIC: [8] Use of undefined constant place - assumed 'place' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 178 行.
+NOTIC: [8] Use of undefined constant job_name - assumed 'job_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 144 行.
+NOTIC: [8] Use of undefined constant money - assumed 'money' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 145 行.
+NOTIC: [8] Use of undefined constant add_time - assumed 'add_time' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 156 行.
+NOTIC: [8] Use of undefined constant company_name - assumed 'company_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 165 行.
+NOTIC: [8] Use of undefined constant job_describe - assumed 'job_describe' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 174 行.
+NOTIC: [8] Use of undefined constant job_require - assumed 'job_require' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 176 行.
+NOTIC: [8] Use of undefined constant place - assumed 'place' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 178 行.
+NOTIC: [8] Use of undefined constant job_name - assumed 'job_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 144 行.
+NOTIC: [8] Use of undefined constant money - assumed 'money' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 145 行.
+NOTIC: [8] Use of undefined constant add_time - assumed 'add_time' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 156 行.
+NOTIC: [8] Use of undefined constant company_name - assumed 'company_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 165 行.
+NOTIC: [8] Use of undefined constant job_describe - assumed 'job_describe' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 174 行.
+NOTIC: [8] Use of undefined constant job_require - assumed 'job_require' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 176 行.
+NOTIC: [8] Use of undefined constant place - assumed 'place' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 178 行.
+NOTIC: [8] Use of undefined constant job_name - assumed 'job_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 144 行.
+NOTIC: [8] Use of undefined constant money - assumed 'money' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 145 行.
+NOTIC: [8] Use of undefined constant add_time - assumed 'add_time' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 156 行.
+NOTIC: [8] Use of undefined constant company_name - assumed 'company_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 165 行.
+NOTIC: [8] Use of undefined constant job_describe - assumed 'job_describe' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 174 行.
+NOTIC: [8] Use of undefined constant job_require - assumed 'job_require' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 176 行.
+NOTIC: [8] Use of undefined constant place - assumed 'place' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 178 行.
+NOTIC: [8] Use of undefined constant job_name - assumed 'job_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 144 行.
+NOTIC: [8] Use of undefined constant money - assumed 'money' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 145 行.
+NOTIC: [8] Use of undefined constant add_time - assumed 'add_time' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 156 行.
+NOTIC: [8] Use of undefined constant company_name - assumed 'company_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 165 行.
+NOTIC: [8] Use of undefined constant job_describe - assumed 'job_describe' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 174 行.
+NOTIC: [8] Use of undefined constant job_require - assumed 'job_require' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 176 行.
+NOTIC: [8] Use of undefined constant place - assumed 'place' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 178 行.
+NOTIC: [8] Use of undefined constant job_name - assumed 'job_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 144 行.
+NOTIC: [8] Use of undefined constant money - assumed 'money' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 145 行.
+NOTIC: [8] Use of undefined constant add_time - assumed 'add_time' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 156 行.
+NOTIC: [8] Use of undefined constant company_name - assumed 'company_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 165 行.
+NOTIC: [8] Use of undefined constant job_describe - assumed 'job_describe' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 174 行.
+NOTIC: [8] Use of undefined constant job_require - assumed 'job_require' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 176 行.
+NOTIC: [8] Use of undefined constant place - assumed 'place' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 178 行.
+NOTIC: [8] Use of undefined constant job_name - assumed 'job_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 144 行.
+NOTIC: [8] Use of undefined constant money - assumed 'money' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 145 行.
+NOTIC: [8] Use of undefined constant add_time - assumed 'add_time' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 156 行.
+NOTIC: [8] Use of undefined constant company_name - assumed 'company_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 165 行.
+NOTIC: [8] Use of undefined constant job_describe - assumed 'job_describe' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 174 行.
+NOTIC: [8] Use of undefined constant job_require - assumed 'job_require' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 176 行.
+NOTIC: [8] Use of undefined constant place - assumed 'place' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 178 行.
+NOTIC: [8] Use of undefined constant job_name - assumed 'job_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 144 行.
+NOTIC: [8] Use of undefined constant money - assumed 'money' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 145 行.
+NOTIC: [8] Use of undefined constant add_time - assumed 'add_time' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 156 行.
+NOTIC: [8] Use of undefined constant company_name - assumed 'company_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 165 行.
+NOTIC: [8] Use of undefined constant job_describe - assumed 'job_describe' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 174 行.
+NOTIC: [8] Use of undefined constant job_require - assumed 'job_require' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 176 行.
+NOTIC: [8] Use of undefined constant place - assumed 'place' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 178 行.
+NOTIC: [8] Use of undefined constant job_name - assumed 'job_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 144 行.
+NOTIC: [8] Use of undefined constant money - assumed 'money' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 145 行.
+NOTIC: [8] Use of undefined constant add_time - assumed 'add_time' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 156 行.
+NOTIC: [8] Use of undefined constant company_name - assumed 'company_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 165 行.
+NOTIC: [8] Use of undefined constant job_describe - assumed 'job_describe' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 174 行.
+NOTIC: [8] Use of undefined constant job_require - assumed 'job_require' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 176 行.
+NOTIC: [8] Use of undefined constant place - assumed 'place' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 178 行.
+NOTIC: [8] Use of undefined constant job_name - assumed 'job_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 144 行.
+NOTIC: [8] Use of undefined constant money - assumed 'money' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 145 行.
+NOTIC: [8] Use of undefined constant add_time - assumed 'add_time' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 156 行.
+NOTIC: [8] Use of undefined constant company_name - assumed 'company_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 165 行.
+NOTIC: [8] Use of undefined constant job_describe - assumed 'job_describe' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 174 行.
+NOTIC: [8] Use of undefined constant job_require - assumed 'job_require' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 176 行.
+NOTIC: [8] Use of undefined constant place - assumed 'place' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 178 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.064435s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.065045s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002691s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003732s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002440s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003068s ]
+
+[ 2017-01-04T00:34:05+08:00 ] ::1 /project/aoshi/index.php/Home/Index/findjob.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001499s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001845s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0108s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 25 行.
+SQL: SELECT job.id,`job_name`,`money`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000424s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000995s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 44 行.
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 151 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044804s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045355s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001272s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001696s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002204s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002729s ]
+
+[ 2017-01-04T00:34:07+08:00 ] ::1 /project/aoshi/index.php/Home/Index/jobdetail.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000119s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001704s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002251s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002885s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0112s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 62 行.
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 77 行.
+SQL: SELECT job.id,`job_name`,`money`,`job_require`,`job_describe`,job.add_time,`place`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id  WHERE ( job.id=13 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000453s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001051s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 44 行.
+NOTIC: [8] Use of undefined constant job_name - assumed 'job_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 144 行.
+NOTIC: [8] Use of undefined constant money - assumed 'money' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 145 行.
+NOTIC: [8] Use of undefined constant add_time - assumed 'add_time' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 156 行.
+NOTIC: [8] Use of undefined constant company_name - assumed 'company_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 165 行.
+NOTIC: [8] Use of undefined constant job_describe - assumed 'job_describe' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 174 行.
+NOTIC: [8] Use of undefined constant job_require - assumed 'job_require' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 176 行.
+NOTIC: [8] Use of undefined constant place - assumed 'place' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 178 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.061210s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062301s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001698s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002411s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002234s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002829s ]
+
+[ 2017-01-04T00:35:07+08:00 ] ::1 /project/aoshi/index.php/Home/Index/findjob.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000118s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002145s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001506s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001846s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0739s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 25 行.
+SQL: SELECT job.id,`job_name`,`money`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000406s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000974s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 44 行.
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 151 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040177s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040535s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001142s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001433s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002316s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002901s ]
+
+[ 2017-01-04T00:35:12+08:00 ] ::1 /project/aoshi/index.php/Home/Index/jobdetail.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000122s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001683s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001892s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002291s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 62 行.
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 77 行.
+SQL: SELECT job.id,`job_name`,`money`,`job_require`,`job_describe`,job.add_time,`place`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id  WHERE `job_name` = null  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000475s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001102s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 44 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059589s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060065s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001657s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002233s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002327s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002911s ]
+
+[ 2017-01-04T00:37:23+08:00 ] ::1 /project/aoshi/index.php/Home/Index/findjob.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000114s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001584s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002227s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002797s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0120s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 25 行.
+SQL: SELECT job.id,`job_name`,`money`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000273s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000596s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 44 行.
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 151 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043129s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043614s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001535s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001990s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002410s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002984s ]
+
+[ 2017-01-04T00:37:30+08:00 ] ::1 /project/aoshi/index.php/Home/Index/jobdetail.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001029s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002344s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002978s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0123s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 62 行.
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 77 行.
+SQL: SELECT job.id,`job_name`,`money`,`job_require`,`job_describe`,job.add_time,`place`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id  WHERE `job_name` = null  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000306s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000764s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 44 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048266s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048923s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001784s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002390s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002495s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003305s ]
+
+[ 2017-01-04T00:38:28+08:00 ] ::1 /project/aoshi/index.php/Home/Index/findjob.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000104s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001649s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001438s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001763s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0102s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 25 行.
+SQL: SELECT job.id,`job_name`,`money`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000432s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001012s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 44 行.
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 151 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040668s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041147s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001166s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001461s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002200s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002839s ]
+
+[ 2017-01-04T00:38:31+08:00 ] ::1 /project/aoshi/index.php/Home/Index/findjob.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000122s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001770s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002207s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002817s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0092s ]
+SQL: SELECT job.id,`job_name`,`money`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id  WHERE ( `job_name` LIKE '%PHP%' OR `company_name` LIKE '%PHP%' )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000442s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001088s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 44 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040898s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041490s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001607s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002161s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001532s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001856s ]
+
+[ 2017-01-04T00:38:37+08:00 ] ::1 /project/aoshi/index.php/Home/Index/findjob.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000128s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001796s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003617s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004747s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0089s ]
+SQL: SELECT job.id,`job_name`,`money`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id  WHERE ( `job_name` LIKE '%平面设计师%' OR `company_name` LIKE '%平面设计师%' )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000438s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001041s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 44 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041397s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042122s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001642s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002219s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002491s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003096s ]
+
+[ 2017-01-04T00:38:41+08:00 ] ::1 /project/aoshi/index.php/Home/Index/findjob.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000124s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001754s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002424s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003026s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0069s ]
+SQL: SELECT job.id,`job_name`,`money`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id  WHERE ( `job_name` LIKE '%Java%' OR `company_name` LIKE '%Java%' )  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000440s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001024s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 44 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039628s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040233s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001288s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001708s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002052s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002533s ]
+
+[ 2017-01-04T00:38:50+08:00 ] ::1 /project/aoshi/index.php/Home/Index/findjob.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000125s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001788s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002588s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0066s ]
+SQL: SELECT job.id,`job_name`,`money`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id  WHERE ( `job_name` LIKE '%哈弗健康%' OR `company_name` LIKE '%哈弗健康%' )  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000267s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000966s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 44 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039986s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040633s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001357s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001813s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002546s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003137s ]
+
+[ 2017-01-04T00:40:15+08:00 ] ::1 /project/aoshi/index.php/Home/Index/findjob.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000065s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001484s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001812s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0587s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 25 行.
+SQL: SELECT job.id,`job_name`,`money`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000324s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000651s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 44 行.
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 151 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040149s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040629s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001130s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001420s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001554s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001902s ]
+
+[ 2017-01-04T00:40:19+08:00 ] ::1 /project/aoshi/index.php/Home/Index/findjob.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000120s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001574s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002520s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003174s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0086s ]
+SQL: SELECT job.id,`job_name`,`money`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id  WHERE ( `job_name` LIKE '%PHP高级工程师%' OR `company_name` LIKE '%PHP高级工程师%' )  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000415s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000952s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 44 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037310s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037762s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001326s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001771s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001656s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002105s ]
+
+[ 2017-01-04T00:40:19+08:00 ] ::1 /project/aoshi/index.php/Home/Index/jobdetail.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001012s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001870s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002370s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0077s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 62 行.
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 77 行.
+SQL: SELECT job.id,`job_name`,`money`,`job_require`,`job_describe`,job.add_time,`place`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id  WHERE `job_name` = null  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000322s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000666s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 44 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043519s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043978s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000783s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001073s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001113s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001416s ]
+
+[ 2017-01-04T00:47:37+08:00 ] ::1 /project/aoshi/index.php/Home/Index/findjob.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001105s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001230s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001555s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0070s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 25 行.
+SQL: SELECT job.id,`job_name`,`money`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000274s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000596s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 44 行.
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 151 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039383s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039740s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000855s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001162s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001857s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002485s ]
+
+[ 2017-01-04T00:47:41+08:00 ] ::1 /project/aoshi/index.php/Home/Index/findjob.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000126s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001643s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001553s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002201s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0081s ]
+SQL: SELECT job.id,`job_name`,`money`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id  WHERE ( `job_name` LIKE '%PHP高级工程师%' OR `company_name` LIKE '%PHP高级工程师%' )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000318s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000775s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 44 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036695s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037237s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000780s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001200s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001510s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001980s ]
+
+[ 2017-01-04T00:47:41+08:00 ] ::1 /project/aoshi/index.php/Home/Index/jobdetail.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000132s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001850s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001810s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002347s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0073s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 62 行.
+SQL: SELECT job.id,`job_name`,`money`,`job_require`,`job_describe`,job.add_time,`place`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id  WHERE ( job.id=13 )  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000283s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000606s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 44 行.
+NOTIC: [8] Use of undefined constant job_name - assumed 'job_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 144 行.
+NOTIC: [8] Use of undefined constant money - assumed 'money' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 145 行.
+NOTIC: [8] Use of undefined constant add_time - assumed 'add_time' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 156 行.
+NOTIC: [8] Use of undefined constant company_name - assumed 'company_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 165 行.
+NOTIC: [8] Use of undefined constant job_describe - assumed 'job_describe' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 174 行.
+NOTIC: [8] Use of undefined constant job_require - assumed 'job_require' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 176 行.
+NOTIC: [8] Use of undefined constant place - assumed 'place' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 178 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045038s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045472s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001674s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002094s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002518s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003109s ]
+
+[ 2017-01-04T01:00:45+08:00 ] ::1 /project/aoshi/index.php/Home/Index/jobdetail.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000062s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002671s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003236s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0114s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 62 行.
+SQL: SELECT job.id,`job_name`,`money`,`job_require`,`job_describe`,job.add_time,`place`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id  WHERE ( job.id=13 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000424s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000962s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 44 行.
+NOTIC: [8] Use of undefined constant job_name - assumed 'job_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 144 行.
+NOTIC: [8] Use of undefined constant money - assumed 'money' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 145 行.
+NOTIC: [8] Use of undefined constant add_time - assumed 'add_time' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 156 行.
+NOTIC: [8] Use of undefined constant company_name - assumed 'company_name' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 165 行.
+NOTIC: [8] Use of undefined constant job_describe - assumed 'job_describe' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 174 行.
+NOTIC: [8] Use of undefined constant job_require - assumed 'job_require' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 176 行.
+NOTIC: [8] Use of undefined constant place - assumed 'place' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\007fb4cccff358ee5be1b1d01bb504b9.php 第 178 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046224s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046667s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001155s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001445s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002503s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003158s ]
+
+[ 2017-01-04T09:17:39+08:00 ] ::1 /project/aoshi/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000122s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001728s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001471s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001967s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000609s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001216s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 44 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.076935s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.077642s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001261s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001840s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001811s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002396s ]
+
+[ 2017-01-04T09:17:42+08:00 ] ::1 /project/aoshi/index.php/Home/Index/findjob.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000089s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001156s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001398s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001853s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0299s ]
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Home\Controller\IndexController.class.php 第 25 行.
+SQL: SELECT job.id,`job_name`,`money`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id   [ RunTime:0.0371s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000488s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001197s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 44 行.
+NOTIC: [8] Undefined index: key D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 151 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043358s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043904s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000911s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001555s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001763s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002388s ]
+
+[ 2017-01-04T09:17:46+08:00 ] ::1 /project/aoshi/index.php/Home/Index/findjob.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000122s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001521s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001653s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002418s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0099s ]
+SQL: SELECT job.id,`job_name`,`money`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id  WHERE ( `job_name` LIKE '%Java%' OR `company_name` LIKE '%Java%' )  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000458s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001299s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 44 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045963s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046592s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000870s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001415s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001466s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002017s ]
+
+[ 2017-01-04T09:17:52+08:00 ] ::1 /project/aoshi/index.php/Home/Index/findjob.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000127s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001699s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001520s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002140s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0081s ]
+SQL: SELECT job.id,`job_name`,`money`,`company_name` FROM `job` INNER JOIN company on job.enterprise_id=company.enterprise_id  WHERE ( `job_name` LIKE '%哈弗健康%' OR `company_name` LIKE '%哈弗健康%' )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000367s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000849s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 42 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\wamp\www\project\aoshi\Application\Runtime\Cache\Home\9eb018846b02df4b2c1ee814555f95e0.php 第 44 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042705s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043322s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000858s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001298s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001491s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002087s ]
+
