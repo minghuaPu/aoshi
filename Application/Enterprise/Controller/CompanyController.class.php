@@ -16,6 +16,7 @@ class CompanyController extends Controller{
         $data['name']=I('name');
         $data['job']=I('job');
         $data['email']=I('email');
+        $data['introduction']=I('introduction');
         $data['touxiang']=I('touxiang');
 
         $data=$job->create();
@@ -24,7 +25,7 @@ class CompanyController extends Controller{
             echo $job->getError();
         }else{
             $job->add($data);
-            $this->success('发布成功！',U('job/job_list'));
+            $this->success('提交成功！',U('seeker/resume'));
         }
     }
 }

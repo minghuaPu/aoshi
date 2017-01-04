@@ -1,5 +1,5 @@
 <include file="Public:header" />
-<link rel="stylesheet" href="__PUBLIC__/css/enterprise/company.css?2">
+<link rel="stylesheet" href="__PUBLIC__/css/enterprise/company.css?5">
 
 <div class="container">
     <form action="{:U('Company/save')}" method="post">
@@ -15,6 +15,13 @@
                 <h3>公司地址</h3>
                 <p>{$enterprise_item['address']}</p>
                 <input type="text" name="address" class="hide">
+            </div>
+            <div class="content_box introduction">
+                <h3>公司简介</h3>
+                <div class="introduce">
+                    <p>{$enterprise_item['introduction']}</p>
+                </div>
+                <textarea class="hide" name="introduction"></textarea>
             </div>
         </div>
         <div class="content">

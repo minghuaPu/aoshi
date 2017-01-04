@@ -52,3 +52,12 @@ $(".revise").click(function  () {
 
     })
 })
+$(".detail").hide();
+$(".info").click(function (event) {
+    event.stopPropagation();
+    $(".detail").hide();
+    $("#"+$(this).parent().parent().attr("id_val")).show();
+})
+document.onclick=function () {
+    $(".detail").hide();
+}

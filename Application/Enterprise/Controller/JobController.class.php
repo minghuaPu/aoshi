@@ -17,7 +17,7 @@ class JobController extends Controller{
         $job=M('job');
         $count=$job->where(array("enterprise_id" => session('tid')))->count();
 
-        $Page = new Page($count,6);
+        $Page = new Page($count,8);
         $show   = $Page->show();
         $this->assign('page',$show);
         $info=$job->order('id desc')->limit($Page->firstRow.','.$Page->listRows)->select();
@@ -25,6 +25,19 @@ class JobController extends Controller{
         $this->assign('job_info',$info);
         $this->display();
     }
+
+//    public function search()
+//    {
+//        $job=M('job');
+//        $data=I('key');
+//
+//        $job['job_name']=array('like',$data.'%');
+//
+//        $info=$job->order('id desc')->limit($Page->firstRow.','.$Page->listRows)->select();
+//
+//        $this->assign('job_info',$info);
+//        $this->display();
+//    }
 
     public function save(){
         $job=D('job');//怎么实例化模型   D:(Database)

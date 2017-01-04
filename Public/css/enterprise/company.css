@@ -41,6 +41,15 @@
   width: 500px;
   padding-left: 10px;
 }
+.content .content_box textarea {
+  float: left;
+  margin-left: 60px;
+  width: 500px;
+  padding-left: 10px;
+  height: 150px;
+  line-height: 20px;
+  resize: none;
+}
 .content .content_box p {
   float: left;
   width: 490px;
@@ -48,6 +57,21 @@
   font-size: 15px;
   line-height: 30px;
   margin-left: 40px;
+}
+.content .content_box .introduce {
+  height: 150px;
+  float: left;
+  width: 520px;
+  overflow: hidden;
+  margin-left: 40px;
+  overflow-y: auto;
+  padding: 5px;
+}
+.content .content_box .introduce p {
+  margin: 0;
+}
+.content .introduction {
+  height: 150px;
 }
 .content #submit {
   width: 30%;
