@@ -1,6 +1,7 @@
 <?php
 namespace Enterprise\Controller;
 use Think\Controller;
+use Think\Page;
 
 class JobController extends Controller{
     public function add_job()
@@ -14,8 +15,14 @@ class JobController extends Controller{
     public function job_list()
     {
         $job=M('job');
-        $job_info=$job->where(array("enterprise_id" => session('tid')))->select();
-        $this->assign("job_info",$job_info);
+        $count=$job->where(array("enterprise_id" => session('tid')))->count();
+
+        $Page = new Page($count,6);
+        $show   = $Page->show();
+        $this->assign('page',$show);
+        $info=$job->order('id desc')->limit($Page->firstRow.','.$Page->listRows)->select();
+
+        $this->assign('job_info',$info);
         $this->display();
     }
 

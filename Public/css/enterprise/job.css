@@ -99,3 +99,24 @@
   width: 100%;
   height: 100%;
 }
+.content .table th .btn-info {
+  height: 31px;
+  margin-top: -3px;
+}
+.content .page_box {
+  height: 25px;
+  margin-top: 20px;
+  padding: 0 auto;
+}
+.content .page_box div {
+  font-size: 15px;
+  line-height: 25px;
+  height: 25px;
+  text-align: center;
+}
+.content .page_box div a {
+  margin: 0 10px;
+}
+.content .page_box div span {
+  margin: 0 10px;
+}

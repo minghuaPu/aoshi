@@ -1,5 +1,5 @@
 <include file="Public:header" />
-    <link rel="stylesheet" href="__PUBLIC__/css/enterprise/job.css?2">
+    <link rel="stylesheet" href="__PUBLIC__/css/enterprise/job.css?5">
 
     <div class="container">
         <div class="content">
@@ -45,7 +45,7 @@
                     </div>
                 </div>
                 <div class="search_box">
-                    <input type="text" placeholder="输入关键词：职业类型或者地点等，例如：JAVA，广州天河">
+                    <input type="text" placeholder="输入关键词：职位名称或者地点等，例如：JAVA工程师，广州天河">
                     <input type="button" value="筛 选" class="btn btn-primary">
                 </div>
             </form>
@@ -67,12 +67,13 @@
                         <th class="col-md-1 col-xs-1 revise money" name="money">￥{$job_item['money']}</th>
                         <th class="col-md-1 col-xs-1" name="work_time">{$job_item['work_time']}</th>
                         <th class="col-md-2 col-xs-2" name="education">{$job_item['education']}</th>
-                        <th class="col-md-1 col-xs-1" name="add_time">{$job_item['add_time']}</th>
+                        <th class="col-md-1 col-xs-1" name="add_time">{$job_item['add_time']|date='m-d',###} </th>
                         <th class="col-md-3 col-xs-3 revise require" name="job_require">{$job_item['job_require']}</th>
-                        <th class="col-md-1 col-xs-1">点击详情</th>
+                        <th class="col-md-1 col-xs-1"><button class="btn btn-info">点击详情</button></th>
                     </tr>
                 </foreach>
             </table>
+            <div class="row page_box">{$page}</div>
         </div>
     </div>
 </div>
