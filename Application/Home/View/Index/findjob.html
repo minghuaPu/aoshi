@@ -1,5 +1,6 @@
 <include file="Public:header" />
 
+<link rel="stylesheet" href="__PUBLIC__/css/common.css">
 <link rel="stylesheet" href="__PUBLIC__/css/findjob.css"> 
   	 
 
@@ -85,13 +86,13 @@
 		</div>
 		<div class="position-right">
 			<div class="search-box">
-				<form action="" method="post">
+				<form id="search-form" action="" method="post">
 					<input type="text" name="key" placeholder="请输入职位或公司名称" class="search">
 					<input type="submit" value="搜索" class="btn btn-info">
 				</form>
 			</div>
 			<div class="search-tip">
-				<p>相关搜索结果</p>
+				<p>{$_REQUEST['key']}&nbsp;相关搜索结果</p>
 
 			</div>
 			<!-- 职位详情表 -->
@@ -103,7 +104,7 @@
 				<a href="{:U('Index/jobdetail')}">
 					<div class="job-left">
 					<!-- 第五步：给对应信息添加动态数据 -->
-						<p>{$job_item['job_name']}</p>
+						<p class="job-name">{$job_item['job_name']}</p>
 						<p class="word-red"><strong>￥{$job_item['money']}</strong></p>
 						<ul>
 							<li>广州</li>
@@ -113,7 +114,7 @@
 					</div>
 					<div class="job-right">
 						<div class="company-img">
-							<img src="">
+							<img src="__PUBLIC__/images/company-logo2.png">
 						</div>
 						<span>{$job_item['company_name']}</span>
 					</div>
@@ -127,6 +128,6 @@
 
 		</div>
 	</div>
-
+	<script type="text/javascript" src="__PUBLIC__/js/enterprise/findjob.js"></script>
 </body>
 </html>

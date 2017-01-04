@@ -14,8 +14,8 @@
         </div>
         <div class="news-next">
             <h3 class="title">下一篇</h3>
-            <p class="text-title"><a href="{:U('News/news_detail',array('id'=>$info['id']))}">{$info['news_title']}</a></p>
-            <div class="info"><p class="author">Cher Deo<em>&nbsp;· &nbsp;</em><span class="time">2016-10-10</span></p><p class="tags">干货文章</p></div>
+            <p class="text-title"><a href=<if condition="$next['status'] neq '0'">"{:U('News/news_detail',array('id'=>$next['id']))}" </if> >{$next.news_title}</a></p>
+            <div class="info"><p class="author">{$next['author']}<em>&nbsp;· &nbsp;</em><span class="time">{$next['add_time']|date="Y-m-d H:i:s",###}</span></p><p class="tags">{$next['cata_id']}</p></div>
         </div>
     </div>
     <div class="sider">

@@ -44,6 +44,7 @@
 .con-l .chat-content .company-word{
 	text-align: center;
 	padding:10px 0px;
+	font-size: 13px;
 }
 .con-l .chat-content .company-word i{
 	display: inline-block;
@@ -71,11 +72,12 @@
     color: #53cac3;
 }
 .con-l .chat-content .job-profile ul{
-	margin-top: 3px;
+	margin-bottom: 5px;
 }
 .con-l .chat-content .job-profile ul li{
 	display: inline-block;
 	padding: 0px 5px;
+	font-size: 12px;
 }
 .con-l .chat-content .job-profile ul li+li{
 	border-left: 1px solid #ccc;
@@ -94,9 +96,12 @@
 	width: 46px;
     height: 46px;
     border-radius: 50%;
-    background: #53cac3;
+    /*background: #53cac3;*/
     float:left;
     margin: 5px 0px 15px 12px;
+}
+.con-l .chat-content .speak-box .img img{
+    width: 100%;
 }
 .con-l .chat-content .speak-box p{
 	position: relative;
@@ -112,6 +117,7 @@
     background: #fff;
     border: 1px solid #ccc;
     color: #666;
+    font-size: 14px;
 }
 .con-l .chat-content .speak-box p .i-left-jian{
 	position: absolute;
@@ -122,10 +128,7 @@
     height: 14px;
     background: url(../images/left_jian.png) no-repeat;
 }
-/*.con-l form{
-	content: "";
-	clear:both;
-}*/
+
 .con-l form .form-container{
 	width:100%;
 	margin-top: 130px;
@@ -173,6 +176,9 @@
 	background: #fff;
 	border: 1px solid #53cac3;
 }
+.con-r .search-box form{
+	margin:0;
+}
 .con-r .search-box .search{
 	width:80%;
 	padding: 13px 0 13px 0;
@@ -202,7 +208,6 @@
 }
 .con-r .job-list a{
 	width:100%;
-	cursor: pointer;
 }
 .con-r .job-list .job-left{
 	padding:10px 0px;
@@ -261,8 +266,11 @@
 	width:80px;
 	height:80px;
 	border-radius: 50%;
-	background: #53cac3;
+	/*background: #53cac3;*/
 	margin: 7px 10px;
+}
+.con-r .company-dec .company-left .company-img img{
+	width:100%;
 }
 .con-r .company-dec .company-left .company-name{
 	position: absolute;

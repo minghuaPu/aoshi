@@ -61,7 +61,6 @@ body{
          .box-2 .sort .title .more{
             float: right;
          }
-
          .box-2 .sort .title .more a{
           display: block;
           width: 40px;
@@ -83,6 +82,19 @@ body{
           margin-left:40px ;
           margin-bottom: 20px;
          }
+		 .box-2 .sort .picture a{
+			 transform: scale(1.05,1.05);
+			 webkit-transition: all ease-out .3s;
+			 transition: all ease-out .3s;
+			 transition-property: all;
+			 transition-duration: 0.3s;
+			 transition-timing-function: ease-out;
+			 transition-delay: 0s;
+		 }
+		 .box-2 .sort .picture a:hover img {
+			-webkit-transform: scale(1.05,1.05);
+			transform: scale(1.05,1.05);
+		 }
 
         .box-2 .sort .text-title a{
           display: block;
@@ -108,18 +120,47 @@ body{
         .box-3{
           margin-top: 15px;
           width: 1116px;
-          overflow: hidden;
           background: #ffffff;
         } 
         .box-3 .in{
-          width:938px;
-          height:180px;  
-          margin:50px 80px;
+         width: 938px;
+         height: auto;
+         margin: 30px 80px 0 80px;
+        padding-top: 40px;
+        clear: both;
+        overflow: hidden;
+        padding-bottom: 23px;
 
          }
         .box-3 .in .left{
           float: left;
         }
+		.box-3 .in .left a{
+			 transform: scale(1.05,1.05);
+			 webkit-transition: all ease-out .3s;
+			 transition: all ease-out .3s;
+			 transition-property: all;
+			 transition-duration: 0.3s;
+			 transition-timing-function: ease-out;
+			 transition-delay: 0s;
+		}
+		.box-3 .in .left  a:hover img {
+			-webkit-transform: scale(1.05,1.05);
+			transform: scale(1.05,1.05);
+		 }
+		 .box-3 .in .left .cata{
+			background-color:#53CAC3;
+			color:#fff;
+			width: 68px;
+			height: 24px;
+			position: absolute;
+			padding: 2px;
+      margin-top: 12px;
+      padding-left: 5px;
+      left: 180px;
+			border-top-right-radius: 15px;
+			border-bottom-right-radius: 15px;
+		}
         .box-3 .in .right{
           float: left;
           width:550px;
@@ -127,7 +168,7 @@ body{
         }
         .box-3 .in .right .list a{
           color:#111212;
-          font-family: "宋体";
+          white-space: nowrap;
           font-size:20px;
           font-weight: normal;
         }
@@ -135,6 +176,7 @@ body{
           color: #53cac3;
          }
         .box-3 .in .right .author{
+            margin-top: 20px;
             color: #7a7d7b;
             line-height: 20px;
             font-size: 15px;
@@ -142,7 +184,7 @@ body{
          a{text-decoration:none;}
         .box-4{
              background: #ffffff;
-             padding: 35px 50px 0px 50px;
+             padding: 50px 50px 0px 50px;
              width: 1116px;
              height: 130px;
              margin-bottom: 20px;
