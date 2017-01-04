@@ -1,5 +1,4 @@
 <!doctype html>
-<html lang="zh-cn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -19,6 +18,13 @@
     <!--<link rel="stylesheet" href="__PUBLIC__/libs/owlcarousel/assets/owl.theme.default.css">-->
     <link rel="stylesheet" href="__PUBLIC__/css/animate.min.css">
     <title>前端首页</title>
+    <script src="__PUBLIC__/libs/jquery/jquery.min.js"></script>
+    <script src="__PUBLIC__/libs/jquery/jquery.min.js"></script>
+    <script type="text/javascript">
+        var SITE_URL="__MODULE__";
+         var PUBLIC="__PUBLIC__";
+
+    </script>
 </head>
 <body>
 <!--header-->
@@ -38,11 +44,11 @@
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-left">
-                    <li <if condition="$Think.const.ACTION_NAME eq index"> class="active" </if> ><a href="{:U('Index/index')}"><span>首页  </span></a></li>
+                    <li <if condition="$Think.const.CONTROLLER_NAME eq Index AND $Think.const.ACTION_NAME eq index "> class="active" </if> ><a href="{:U('Index/index')}"><span>首页  </span></a></li>
                     
                     <li <if condition="$Think.const.ACTION_NAME eq findjob"> class="active" </if> ><a href="{:U('Index/findjob')}"><span>求职</span></a></li>
                     <li><a href="#"><span>扫码登录</span></a></li>
-                    <li><a href="{:U('News/index')}"><span>新闻和数据</span></a></li>
+                    <li <if condition="$Think.const.CONTROLLER_NAME eq News"> class="active" </if> ><a href="{:U('News/index')}"><span>新闻和数据</span></a></li>
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">

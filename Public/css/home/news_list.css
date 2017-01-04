@@ -7,11 +7,10 @@ body{
 
       /*#header{position: relative;}*/
       .box-1{
-        width:100%;
+        margin: 0px 0px 15px 0px;
         overflow: hidden; 
         background: url(../../images/list-banner.jpg);
       }
-
     .box-1 h1{
        text-align: center;
        color: #ffffff;
@@ -33,29 +32,25 @@ body{
         text-align: center;
         margin: auto;
       }
+      .container .main{
+         background: #f8f8f8;
+      }
       
-           
-        .container {
-          width:1098px;
-          margin: auto;
-          overflow: hidden;
-        } 
-        .box-2 .container{
-             
-             margin-top:-80px;
-             margin-bottom:10px;
-            }  
-        .box-2 .container .sort{
-            width: 355px;
-            float: left;
-            height: 390px;
-            margin-right: 1px;
-            background: #ffffff;
-           }
-      
+      .main .box-2{
+           margin-top:-80px;
+           width: 1200px;
+           height: 390px;
+        }  
+        .box-2 .sort{
 
-         
-        .box-2 .container .sort .title .name{
+            width: 370px;
+            float: left;
+           /*  margin-right: 1px; */
+            height: 390px;
+
+            background: #ffffff;
+           }  
+        .box-2 .sort .title .name{
           float: left;
           margin-left: 40px;
           padding-left: 10px;
@@ -63,11 +58,10 @@ body{
           border-left: 3px solid  #53cac3;
          }
 
-         .box-2 .container .sort .title .more{
+         .box-2 .sort .title .more{
             float: right;
          }
-
-         .box-2 .container .sort .title .more a{
+         .box-2 .sort .title .more a{
           display: block;
           width: 40px;
           height: 22px;
@@ -80,16 +74,29 @@ body{
          }
          .more a:hover{background:#53cac3;} 
 
-         .box-2 .container .sort .title{
+         .box-2 .sort .title{
           margin-top:45px ;
           }
-        .box-2 .container .sort .picture {
+        .box-2 .sort .picture {
           clear: both;
           margin-left:40px ;
           margin-bottom: 20px;
          }
+		 .box-2 .sort .picture a{
+			 transform: scale(1.05,1.05);
+			 webkit-transition: all ease-out .3s;
+			 transition: all ease-out .3s;
+			 transition-property: all;
+			 transition-duration: 0.3s;
+			 transition-timing-function: ease-out;
+			 transition-delay: 0s;
+		 }
+		 .box-2 .sort .picture a:hover img {
+			-webkit-transform: scale(1.05,1.05);
+			transform: scale(1.05,1.05);
+		 }
 
-        .box-2 .container .sort .text-title a{
+        .box-2 .sort .text-title a{
           display: block;
           width:280px; 
           color:#111212;
@@ -97,58 +104,101 @@ body{
           margin: auto;
           font-size:20px;
           font-weight: normal;}
-         .box-2 .container .sort .text-title a:hover{
-         color: #53cac3;
+         .box-2 .sort .text-title a:hover{
+          color: #53cac3;
          } 
      
-        .box-2 .container .sort .details a{
+        .box-2 .sort .details a{
             color: #a5a5a5;
             margin-left:40px ;
             font-size: 15px;
             }
-        .box-3 .container .out{
-          width:1067px;
-          overflow: hidden;
-         
+          .box-2 .sort .details a:hover{
+          color: #53cac3;
+         } 
+     
+        .box-3{
+          margin-top: 15px;
+          width: 1116px;
           background: #ffffff;
-          margin-bottom: 3px;
         } 
-        .box-3 .container .out .in{
-          width:938px;
-          height:180px;  
-          margin:50px 80px;
+        .box-3 .in{
+         width: 938px;
+         height: auto;
+         margin: 30px 80px 0 80px;
+        padding-top: 40px;
+        clear: both;
+        overflow: hidden;
+        padding-bottom: 23px;
+
          }
-        .box-3 .container .out .in .left{
+        .box-3 .in .left{
           float: left;
         }
-        .box-3 .container .out .in .right{
+		.box-3 .in .left a{
+			 transform: scale(1.05,1.05);
+			 webkit-transition: all ease-out .3s;
+			 transition: all ease-out .3s;
+			 transition-property: all;
+			 transition-duration: 0.3s;
+			 transition-timing-function: ease-out;
+			 transition-delay: 0s;
+		}
+		.box-3 .in .left  a:hover img {
+			-webkit-transform: scale(1.05,1.05);
+			transform: scale(1.05,1.05);
+		 }
+		 .box-3 .in .left .cata{
+			background-color:#53CAC3;
+			color:#fff;
+			width: 68px;
+			height: 24px;
+			position: absolute;
+			padding: 2px;
+      margin-top: 12px;
+      padding-left: 5px;
+      left: 180px;
+			border-top-right-radius: 15px;
+			border-bottom-right-radius: 15px;
+		}
+        .box-3 .in .right{
           float: left;
-          width:600px;
-          margin-left:55px; 
+          width:550px;
+          margin-left: 50px;
         }
-        .box-3 .container .out .in .right h2 a{
-            color:#080808;
-            font-weight: normal;
-            font-family: "宋体"；
+        .box-3 .in .right .list a{
+          color:#111212;
+          white-space: nowrap;
+          font-size:20px;
+          font-weight: normal;
         }
-         .box-3 .container .out .in .right h2 a:hover{
+         .box-3 .in .right .list a:hover{
           color: #53cac3;
          }
-       
-        .box-3 .container .out .in .right p{
+        .box-3 .in .right .author{
+            margin-top: 20px;
             color: #7a7d7b;
             line-height: 20px;
             font-size: 15px;
           }
          a{text-decoration:none;}
-         .box-4 .container p{
+        .box-4{
+             background: #ffffff;
+             padding: 50px 50px 0px 50px;
+             width: 1116px;
+             height: 130px;
+             margin-bottom: 20px;
+          }
+         .box-4  p{
             text-align: center;
             font-weight: normal;
+            width: 980px;
             font-size: 15px;
-            margin: 35px auto;
+            padding: 0px 40px 8px 40px; 
             border: 1px solid  #d3cdcd;
+            height: 70px;
            }
-        .box-4 .container p a{
+        .box-4 p a{
             display: block;
             margin: 20px auto;
 

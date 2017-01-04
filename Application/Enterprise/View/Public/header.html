@@ -5,7 +5,7 @@
 	<title>index</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<link rel="stylesheet" href="__PUBLIC__/css/bootstrap-3.3.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="__PUBLIC__/css/enterprise/index.css?3">
+	<link rel="stylesheet" href="__PUBLIC__/css/enterprise/index.css">
 	<script type="text/javascript" src="__PUBLIC__/js/jquery.1.11.1.min.js"></script>
 </head>
 <body>
@@ -45,7 +45,7 @@
 			<div class="item user">
 				<div
                     <if condition="$Think.const.ACTION_NAME eq visit"> class="tit it_sel" </if>
-                    <if condition="$Think.const.ACTION_NAME eq collect"> class="tit it_sel"</if>
+                    <if condition="$Think.const.ACTION_NAME eq resume"> class="tit it_sel"</if>
                     class="tit">
 					<span class="icon_user"></span>
 					<p>牛人</p>
@@ -53,21 +53,15 @@
 				</div>
 				<ul
                     <if condition="$Think.const.ACTION_NAME eq visit"> class="show" </if>
-                    <if condition="$Think.const.ACTION_NAME eq collect"> class="show" </if>
+                    <if condition="$Think.const.ACTION_NAME eq resume"> class="show" </if>
                     class="hide">
 					<li
 					<if condition="$Think.const.ACTION_NAME eq visit"> class="li_sel" </if>
 					><a href="{:U('Seeker/visit')}">看过我</a></li>
 					<li
-					<if condition="$Think.const.ACTION_NAME eq collect"> class="li_sel" </if>
-					><a href="{:U('Seeker/collect')}">收藏我</a></li>
+					<if condition="$Think.const.ACTION_NAME eq resume"> class="li_sel" </if>
+					><a href="{:U('Seeker/resume')}">收到的简历</a></li>
 				</ul>
-			</div>
-			<div class="item select">
-				<div class="tit">
-					<span class="icon_select"></span>
-					<p><a href="{:U('Index/index')}">候选人</a></p>
-				</div>
 			</div>
 			<div class="item mess">
 				<div class="tit">
@@ -99,10 +93,6 @@
 			<div class="logout">
 				<span class="i_logout"></span>
 				<p><a href="{:U('login/logout')}">退出登陆</a></p>
-			</div>
-			<div class="setting">
-				<span class="i_logout"></span>
-				<p>设置</p>
 			</div>
 		</div>
 	</div>

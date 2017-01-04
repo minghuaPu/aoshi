@@ -155,14 +155,6 @@ body {
   width: 20px;
   background-position: -56px 0;
 }
-.body .nav_bar .nav_item .item .tit .icon_select {
-  height: 25px;
-  background-position: -34px -60px;
-}
-.body .nav_bar .nav_item .item .tit .icon_select_sel {
-  height: 25px;
-  background-position: 2px -60px;
-}
 .body .nav_bar .nav_item .item .tit .icon_user {
   width: 27px;
   background-position: -76px 0px;
@@ -207,11 +199,9 @@ body {
   position: absolute;
 }
 .body .nav_bar .tool .logout {
-  width: 124px;
+  width: 100%;
   height: 50px;
   position: relative;
-  float: left;
-  border-right: 1px solid #4f5e68;
 }
 .body .nav_bar .tool .logout a {
   width: 100%;
@@ -225,24 +215,11 @@ body {
 }
 .body .nav_bar .tool .logout .i_logout {
   top: 17px;
-  left: 20px;
+  left: 45px;
 }
 .body .nav_bar .tool .logout p {
-  margin-left: 43px;
+  text-align: center;
   color: #a4b9c6;
-}
-.body .nav_bar .tool .setting {
-  width: 75px;
-  height: 50px;
-  float: left;
-  position: relative;
-}
-.body .nav_bar .tool .setting .i_logout {
-  top: 17px;
-  left: 15px;
-}
-.body .nav_bar .tool .setting p {
-  margin-left: 35px;
 }
 .body .container {
   float: left;
