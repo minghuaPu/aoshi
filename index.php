@@ -22,7 +22,7 @@ define('APP_DEBUG',True);
 define('APP_PATH','./Application/');
 
 // 自动生成目录
-// define('BIND_MODULE','Enterprise');
+//define('BIND_MODULE','person');
 
 
 // 引入ThinkPHP入口文件
