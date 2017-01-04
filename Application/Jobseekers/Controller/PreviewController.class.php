@@ -7,26 +7,31 @@ class PreviewController extends Controller {
 	//预览简历
     public function index(){
 
-       	$uid = 1;
+       	$id = session('id');
     	
     	//简历基本信息
-    	$resumes_basic = M('resumes_basic')->where("uid =$uid")->select();
-        $this->assign('resumes_basic', $resumes_basic);
+    	$jobseekers_info = M('jobseekers')->where("id =$id")->select();
+        $this->assign('jobseekers_info', $jobseekers_info);
         
         //简历工作经历
-    	$resumes_jobexp = M('resumes_jobexp')->where("uid =$uid")->select();
-        $this->assign('resumes_jobexp', $resumes_jobexp);
+    	$experience_info = M('resume_experience')->where("id =$id")->select();
+        $this->assign('experience_info', $experience_info);
         
         //简历教育经历
-    	$resumes_eduexp = M('resumes_eduexp')->where("uid =$uid")->select();
-        $this->assign('resumes_eduexp', $resumes_eduexp);
+    	$education_info = M('resume_education')->where("id =$id")->select();
+        $this->assign('education_info', $education_info);
+		
         
         //简历求职意向
-        $resumes_career = M('resumes_career')->where("uid =$uid")->select();
-        $this->assign('resumes_career', $resumes_career);
+        $describe_info = M('jobseekers_describe')->where("id =$id")->select();
+        $this->assign('describe_info', $describe_info);
+		
+		//简历教育经历
+    	$prefered_info = M('resume_prefered')->where("id =$id")->select();
+        $this->assign('prefered_info', $prefered_info);
         
         //输出
-        $this->display(); 
+        $this->display("index"); 
       
     }
     

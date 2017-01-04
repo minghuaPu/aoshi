@@ -1,0 +1,569 @@
+/*全局*/
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	
+}
+
+body {
+	font: 14px/1.5 "microsoft yahei", Arial;
+	color: #333;
+	background-color: #efefef;
+}
+a {
+	color: #555;
+	text-decoration: none;
+}
+body a:active,
+body a:link ,
+body a:visited,
+body a:hover,
+body a:active{
+	text-decoration: none;
+	}
+img {
+	vertical-align: middle;
+}
+
+ul {
+	list-style: none;
+}
+
+input,
+textarea,
+select,
+button {
+	border: 1px solid #eee;
+	outline: none;
+	border-radius: 3px;
+}
+
+::selection {
+	color: #fff;
+	background-color: #53cac3;
+}
+
+.container {
+	max-width: 1024px;
+	margin: auto;
+}
+
+.clear:after {
+	display: table;
+	content: "";
+	clear: both;
+}
+
+.fr {
+	float: right;
+}
+
+.absolute {
+	position: absolute;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.align-top {
+	vertical-align: top;
+}
+
+.btn {
+	border: 1px solid #eee;
+	border-radius: 3px;
+	padding: 10px 30px;
+	color: #666;
+	background-color: #fff;
+	cursor: pointer;
+}
+
+.icon {
+	display: inline-block;
+	background: url(../../images/resume_icon.png) no-repeat;
+	vertical-align: sub;
+}
+/*回到顶部*/
+#imgs{
+				position: fixed;
+				bottom: 20px;
+				right: 20px;
+				display: none;
+			}
+
+/*头部*/
+
+#header {
+	height: 50px;
+	line-height: 50px;
+	margin-bottom:35px;
+	background-color: #53cac3;
+}
+
+#header .nav-link {
+	display: inline-block;
+	color: #fff;
+	font-size: 16px;
+	padding: 0 22px;
+}
+
+#header .nav-link.selected {
+	margin-left: 30px;
+	background-color: #00C2B8;
+}
+
+
+/*简历模块*/
+
+#resume {
+	margin: 0px auto;
+}
+
+#resume .resume-inner {
+	width: 702px;
+	display: inline-block;
+	background-color: #fafafa;
+}
+
+#resume .resume-inner section {
+	width: 604px;
+	margin: 25px auto;
+}
+
+
+/*简历头像*/
+
+#resume .avatar {
+	position: relative;
+	height: 170px;
+}
+
+#resume .avatar .center {
+	position: absolute;
+	top: 44px;
+	left: 292px;
+	width: 120px;
+	height: 120px;
+	border-radius:50%;
+}
+
+#resume .avatar #avatar-upload {
+	cursor: pointer;
+	opacity: 0;
+}
+
+
+/*简历标题*/
+
+#resume .resume-title {
+	position: relative;
+	height: 35px;
+	line-height: 35px;
+	font-weight: normal;
+	margin-bottom: 25px;
+}
+
+#resume .resume-title span {
+	padding: 7px 24px;
+	margin: 0 12px;
+	font-size: 18px;
+	background-color: #eee;
+	border-radius: 25px;
+}
+
+#resume .resume-title:before,
+#resume .resume-title:after {
+	display: inline-block;
+	content: "";
+	vertical-align: middle;
+	width: 228px;
+	height: 1px;
+	background-color: #eee;
+}
+
+
+/*简历编辑*/
+#job-career .list{
+	position:relative;
+	}
+#self-des .edit_box_box{
+	position:relative;
+	}	
+#resume .edit_box{
+	width: 86px;
+    height: 19px;
+	top:-52px;
+	
+    right: 0;
+    position: absolute;
+	}
+#resume .edit {
+	padding-left: 20px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 16px;
+	color: #23cbc2;
+	background-color: #fafafa;
+}
+
+#resume .add {
+	width: 100%;
+	height: 100px;
+	margin-bottom: 20px;
+	color: #23cbc2;
+	font-size: 16px;
+	border: 1px dashed #ddd;
+	background-color: #fefefe;
+	cursor: pointer;
+}
+
+#resume .add:hover {
+	border-color: #23cbc2;
+}
+
+#resume form {
+	display: none;
+	padding: 30px 50px 10px;
+	background-color: #fff;
+}
+
+#resume form fieldset {
+	border: none;
+	margin-bottom: 20px;
+}
+
+#resume form label {
+	display: inline-block;
+	width: 100px;
+	line-height: 38px;
+	text-align: right;
+	color: #666;
+	margin-right: 20px;
+}
+
+#resume form textarea {
+	resize: none;
+	width: 100%;
+	padding: 15px;
+	color: #666;
+}
+
+#resume form .input-text {
+	padding: 10px 15px;
+	width: 320px;
+	color: #555;
+}
+
+#resume form .submit {
+	margin: 0 15px 0 124px;
+	color: #fff;
+	border-color: #53cac3;
+	background-color: #53cac3;
+}
+
+
+/*用户信息*/
+
+#resume #user-info {
+	position: relative;
+	text-align: center;
+}
+
+#resume #user-info span {
+	display: block;
+	padding-bottom: 15px;
+}
+
+#resume #user-info .name {
+	font-size: 30px;
+}
+
+#resume #user-info .intro {
+	font-size: 16px;
+}
+
+#resume #user-info .base em {
+	font-style: normal;
+	color: #666;
+	margin: 0 7.5px;
+}
+
+#resume #user-info .base i {
+	width: 15px;
+	height: 15px;
+	margin-right: 5px;
+	background-position: -110px -70px;
+}
+#resume #user-info .base .city{
+	background-position: -130px -91px;
+	} 
+#resume #user-info .base .phone {
+	background-position: -130px -70px;
+}
+
+#resume #user-info .base .email {
+	background-position: -150px -71px;
+}
+
+#resume #user-info .list:hover {
+	background-color: #fff;
+	cursor: pointer;
+}
+
+#resume #user-info .list .edit {
+	display: none;
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	font-size: 16px;
+	color: #23cbc2;
+	background-color: #fff;
+}
+
+#resume #user-info .list:hover .edit {
+	display: inline-block;
+}
+
+
+/*工作经历 or 教育经历*/
+
+#resume .list li {
+	position: relative;
+	padding-bottom: 30px;
+	font-size: 14px;
+	color: #999;
+}
+
+#resume  .del {
+	position: absolute;
+	right: 52px;
+	font-size: 16px;
+	color: #23cbc2;
+	background:#fafafa;
+}
+
+#resume .list li b {
+	font-weight: 400;
+	font-size: 16px;
+	color: #555;
+}
+
+#resume .list li p {
+	padding-top: 5px;
+	color: #555;
+	    
+}
+/*自我描述*/
+#self-des p{
+	width: 605px;
+    word-break: break-word;
+}
+/*求职意向*/
+
+#resume #job-career .list {
+	padding: 0 30px;
+}
+
+#resume #job-career .list dd {
+	float: left;
+	width: 114px;
+	line-height: 25px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	font-size: 16px;
+	color: #555;
+}
+
+#resume #job-career .list dd i {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	margin-right: 10px;
+	background: url(../../images/resume_icon.png) no-repeat;
+	background-position: -97px -220px;
+	vertical-align: text-bottom;
+}
+
+#resume #job-career .list .name {
+	width: 200px;
+}
+
+#resume #job-career .list .name i {
+	width: 10px;
+}
+
+#resume #job-career .list .type i {
+	background-position: -92px -247px;
+}
+
+#resume #job-career .list .city i {
+	background-position: -92px -273px;
+}
+
+#resume #job-career .list .wages i {
+	background-position: -92px -294px;
+}
+
+
+/*求职状态*/
+
+#resume #job-state {
+	width: 264px;
+	padding: 11px 15px;
+	color: #888;
+	background-color: #fafafa;
+	border-color: #efefef;
+}
+
+#resume #job-state:hover {
+	background-color: #fff;
+	cursor: pointer;
+}
+
+
+/*简历导航*/
+
+#resume .resume-nav {
+	float: right;
+	width: 280px;
+}
+
+#resume .resume-nav .integrity {
+	margin-bottom: 20px;
+	padding: 15px;
+	background-color: #fafafa;
+	border-radius: 3px;
+}
+
+#resume .resume-nav .integrity .top em {
+	color: #00C2B8;
+	font-style: normal;
+}
+
+#resume .resume-nav .integrity .top a {
+	color: #00C2B8;
+	text-decoration: none;
+}
+
+#resume .resume-nav #nav-list {
+	width: 280px;
+}
+
+#resume .resume-nav .fixed {
+	position: fixed;
+	top: 0;
+}
+
+#resume .resume-nav ul {
+	background-color: #fafafa;
+	border-radius: 3px;
+}
+
+#resume .resume-nav li {
+	height: 50px;
+	line-height: 50px;
+	padding-left: 8px;
+	border-left: 1px solid #fafafa;
+}
+
+#resume .resume-nav li:hover {
+	background-color: #fff;
+}
+
+#resume .resume-nav li.selected {
+	border-left: 2px solid #00C2B8;
+	background-color: #fff;
+}
+
+#resume .resume-nav li a {
+	display: block;
+}
+
+#resume .resume-nav li.selected a {
+	color: #53CAC3;
+}
+
+#resume .resume-nav li i {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	margin: 0 25px 0 30px;
+	background: url(../../images/resume_icon.png) no-repeat;
+	vertical-align: text-bottom;
+}
+
+#resume .resume-nav li .base_i {
+	background-position: -24px -117px;
+}
+#resume .resume-nav li .base_i:hover{
+	background-position: -5px -117px;
+	}
+#resume .resume-nav .selected .base_i {
+	background-position: -5px -117px;
+}	
+#resume .resume-nav li .job_i {
+	background-position: -24px -137px;
+}
+#resume .resume-nav li .job_i:hover{
+	background-position: -5px -137px;
+	}
+#resume .resume-nav .selected .job_i {
+	background-position: -5px -137px;
+}	
+#resume .resume-nav li .edu_i {
+	background-position: -23px -156px
+}
+#resume .resume-nav li .edu_i:hover {
+	background-position: -4px -156px
+}
+#resume .resume-nav .selected .edu_i {
+	background-position: -4px -156px
+}
+#resume .resume-nav li .career_i {
+	background-position: -65px -239px;
+}
+#resume .resume-nav li .career_i:hover{
+	background-position: -5px -239px;
+	}
+#resume .resume-nav .selected .career_i {
+	background-position: -5px -239px;
+}	
+#resume .resume-nav li .self_i {
+	background-position: -67px -218px;
+}
+#resume .resume-nav li .self_i:hover {
+	background-position: -5px -218px;
+}
+#resume .resume-nav  .selected .self_i{
+	background-position:-5px -218px;
+	}
+
+
+/*预览简历*/
+
+.preview {
+	width: 702px;
+}
+
+.preview-state {
+	margin: 0!important;
+	width: 100%!important;
+	height: 80px;
+	line-height: 80px;
+	background-color: #f8f8f8;
+}
+
+#job-state.preview-resume {
+	background-color: transparent!important;
+}
+
+.preview-resume:hover,
+.preview-state #job-state:hover {
+	background-color: transparent!important;
+	cursor: default!important;
+}
