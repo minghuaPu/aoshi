@@ -1,9 +1,19 @@
-// $(".job-list").on('click',function() {
-// 	var val=$(this).find('.job-name').html();
-// 	//alert(val);
-// 	var inputVal=$(".position-right .search-box .search").val(val);
-// 	autoSubmit();
-// });
+$(".job-list").on('click',function() {
+	var val=$(this).find('.job-name').html();
+	$.ajax({
+	   type: "POST",
+	   url: "jobdetail.html",
+	   //dataType : 'json',
+	   async : false,
+	   data: { "value":val },
+	   success: function(data){
+	     // console.log(val)
+	     location.href ="jobdetail.html"+"#"+val;
+
+	     // alert(data);
+	   }
+	}); 
+});
 $(".position-left .item a").on('click',function(){
 	var val=$(this).html();
 	//获取分类表里的值

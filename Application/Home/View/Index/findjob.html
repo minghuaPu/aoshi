@@ -101,7 +101,7 @@
 <!-- 第四步：遍历模版变量 -->
 		<foreach name="job_info" item="job_item">
 			<div class="job-list">
-				<a href="{:U('Index/jobdetail')}">
+				<a href="#"><!-- {:U('Index/jobdetail')} -->
 					<div class="job-left">
 					<!-- 第五步：给对应信息添加动态数据 -->
 						<p class="job-name">{$job_item['job_name']}</p>

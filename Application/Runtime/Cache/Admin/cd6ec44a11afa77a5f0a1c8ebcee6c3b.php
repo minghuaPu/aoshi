@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 
 	<head>
 		<meta charset="utf-8">
 		<title>我的简历</title>
-		<link rel="stylesheet" href="__PUBLIC__/css/jobseekers/resume.css">
-		<script src="__PUBLIC__/js/angular-1.0.1.min.js"></script>
+		<link rel="stylesheet" href="/project/aoshi/Public/css/jobseekers/resume.css">
+		<script src="/project/aoshi/Public/js/angular-1.0.1.min.js"></script>
 	 	<style>
 			#resume form{display: block;}
 	 	</style>
@@ -15,7 +15,7 @@
 		<!--头部-->
 		<header id="header">
 			<nav class="container">
-				<a class="logo" href=""><img src="__PUBLIC__/images/u-logo.png"></a>
+				<a class="logo" href=""><img src="/project/aoshi/Public/images/u-logo.png"></a>
 				<a class="nav-link selected" href="#">首页</a>
 				<a class="nav-link" href="#">求职</a>
 				<a class="nav-link fr" href="#">退出</a>
@@ -27,15 +27,14 @@
 			<article class="resume-inner">
 				<!--用户头像-->
 				<aside class="avatar">
-					<img id="avatar-img" class="center" src="__PUBLIC__/images/u-avatar.png">
-					<img id="avatar-bg" class="center" src="__PUBLIC__/images/u-avatar-bg.png" style="display: none;">
-					<img class="absolute" src="__PUBLIC__/images/u-resume-dg.png">
+					<img id="avatar-img" class="center" src="/project/aoshi/Public/images/u-avatar.png">
+					<img id="avatar-bg" class="center" src="/project/aoshi/Public/images/u-avatar-bg.png" style="display: none;">
+					<img class="absolute" src="/project/aoshi/Public/images/u-resume-dg.png">
 					<input id="avatar-upload" class="center" type="file">
 				</aside>
 				<!--基本信息-->
 				<section id="user-info" ng-controller="userinfo">
-					<if condition="$resumes_basic">
-						<li ng-repeat="item in info_list">
+					<?php if($resumes_basic): ?><li ng-repeat="item in info_list">
 							<div class="list text-center">
 								<a class="edit" href="javascript:;">修改</a>
 								<span class="name">{{item.name}}</span>
@@ -53,9 +52,8 @@
 								</span>
 							</div>
 						</li>
-						<else/>
-						<button class="add" ng-click="show_form(true)">+ 添加基本资料</button>
-					</if>
+						<?php else: ?>
+						<button class="add" ng-click="show_form(true)">+ 添加基本资料</button><?php endif; ?>
 					<form id="user-info-form" ng-show="user_info_form">
 						<fieldset>
 							<label>姓名</label>
@@ -171,8 +169,7 @@
 				<section id="edu-exp" ng-controller="eduexp">
 					<h5 class="resume-title"><span>教育经历</span><a class="edit" href="javascript:;">添加</a></h5>
 					<ul class="list">
-						<if condition="$resumes_eduexp">
-							<li ng-repeat="item in edu_list">
+						<?php if($resumes_eduexp): ?><li ng-repeat="item in edu_list">
 								
 								<a class="del" href="javascript:;" data-id={{item.eid}}>删除</a>
 								<a class="edit" href="javascript:;" data-id={{item.eid}} ng-click="show_form()">修改</a>
@@ -183,9 +180,8 @@
 									<span class="grad fr">{{item.grad}}</span>
 								</div>
 							</li>
-							<else/>
-							<button class="add" ng-click="show_form(true)">+ 添加教育经历</button>
-						</if>
+							<?php else: ?>
+							<button class="add" ng-click="show_form(true)">+ 添加教育经历</button><?php endif; ?>
 					</ul>
 					<form id="edu-exp-form" ng-show="edu_exp_form">
 						<fieldset>
@@ -238,11 +234,9 @@
 				<!--自我描述-->
 				<section id="self-des" ng-controller="selfdes">
 					<h5 class="resume-title"><span>自我描述</span><a class="edit" href="javascript:;">修改</a></h5>
-					<if condition="$resumes_basic[0][des]">
-						<p class="list">{$resumes_basic[0][des]}</p>
-						<else/>
-						<button class="add" ng-click="show_form(true)">+ 添加自我描述</button>
-					</if>
+					<?php if($resumes_basic[0][des]): ?><p class="list"><?php echo ($resumes_basic[0][des]); ?></p>
+						<?php else: ?>
+						<button class="add" ng-click="show_form(true)">+ 添加自我描述</button><?php endif; ?>
 					<form id="self-des-form" ng-show="self_des_form">
 						<fieldset>
 							<textarea maxlength="300" rows="5" ng-model="self_des_form.resumes_basic[0][des]"></textarea>
@@ -255,20 +249,16 @@
 					</foreach>
 				</section>
 				<!--求职意向-->
-				<section id="job-career" ng-controller="jobcareer">
+				<section id="job-career">
 					<h5 class="resume-title"><span>求职意向</span><a class="edit" href="javascript:;">修改</a></h5>
-					<if condition="$resumes_career">
-						<foreach name="resumes_career" item="item">
-							<dl class="list clear">
-								<dd class="name"><i></i>{$item.name}</dd>
-								<dd class="type"><i></i>{$item.type}</dd>
-								<dd class="city"><i></i>{$item.city}</dd>
-								<dd class="wages"><i></i>{$item.wages}</dd>
-							</dl>
-						</foreach>
-						<else/>
-						<button class="add" ng-click="show_form(true)">+ 添加求职意向</button>
-					</if>
+					<?php if($resumes_career): if(is_array($resumes_career)): foreach($resumes_career as $key=>$item): ?><dl class="list clear">
+								<dd class="name"><i></i><?php echo ($item["name"]); ?></dd>
+								<dd class="type"><i></i><?php echo ($item["type"]); ?></dd>
+								<dd class="city"><i></i><?php echo ($item["city"]); ?></dd>
+								<dd class="wages"><i></i><?php echo ($item["wages"]); ?></dd>
+							</dl><?php endforeach; endif; ?>
+						<?php else: ?>
+						<button class="add">+ 添加求职意向</button><?php endif; ?>
 					<form id="job-career-form">
 						<fieldset>
 							<label>期望职位</label>
@@ -307,21 +297,19 @@
 							</select>
 						</fieldset>
 						<fieldset>
-							<input class="btn submit" type="submit" value="保存" ng-click="save_form()">
-							<button class="btn cancel" ng-click="hide_form()">取消</button>
+							<input class="btn submit" type="submit" value="保存">
+							<button class="btn cancel">取消</button>
 						</fieldset>
 					</form>
 				</section>
 				<!--求职状态-->
 				<section class="text-center">
 					<select id="job-state">
-						<if condition="$resumes_basic[0][state]">
-							<option>{$resumes_basic[0][state]}</option>
+						<?php if($resumes_basic[0][state]): ?><option><?php echo ($resumes_basic[0][state]); ?></option>
 							<option>我是应届毕业生</option>
 							<option>我暂时不想找工作</option>
 							<option>我目前已离职，可快速到岗</option>
-							<option>我目前正在职，正考虑换个新环境</option>
-						</if>
+							<option>我目前正在职，正考虑换个新环境</option><?php endif; ?>
 					</select>
 				</section>
 			</article>
@@ -356,10 +344,10 @@
 			</aside>
 		</section>
 		<script type="text/javascript">
-			var SITE_URL = "__CONTROLLER__";
+			var SITE_URL = "/project/aoshi/index.php/Admin/Rsum";
 		</script>
-		<script src="__PUBLIC__/js/jobseekers/jquery.min.js"></script>
-		<script src="__PUBLIC__/js/admin/resume.js"></script>
+		<script src="/project/aoshi/Public/js/jobseekers/jquery.min.js"></script>
+		<script src="/project/aoshi/Public/js/admin/resume.js"></script>
 	</body>
 
 </html>
