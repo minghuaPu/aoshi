@@ -1,0 +1,163 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/aoshi/aoshi/Public/css/bootstrap-3.3.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/aoshi/aoshi/Public/css/admin/common.css">
+	<script type="text/javascript" src="/aoshi/aoshi/Public/js/jquery.1.11.1.min.js"></script>
+	<script type="text/javascript">
+		var SITE_URL="/aoshi/aoshi/index.php/Admin";
+	</script>
+</head>
+<body>
+
+
+
+<div class="container">
+	<h1>内容管理一览表</h1>
+	<div class="row">
+		<a href="<?php echo U('Article/add');?>" class="btn btn-success">添加</a>
+		<a href="javascript:;" id="all_delete" class="btn btn-danger">批量删除</a>
+	</div>
+	<div class="row">
+		<table class="table table-bordered ">
+			<tr>
+				<td><label ><input type="checkbox" id="all_check"> 全选</label></td>
+				<td>ID</td>
+				<td>标题</td>
+				<td>时间</td>
+				<td>操作</td>
+			</tr>
+			
+			<?php if(is_array($info)): foreach($info as $key=>$item): ?><tr>
+				<td><input   class="signl_box" type="checkbox" value="<?php echo ($item["id"]); ?>"></td>
+				<td>
+					<?php echo ($item["id"]); ?>
+				</td>
+				<!-- HTML的标签自定义属性 -->
+				<td class="title_td_box" id_val="<?php echo ($item["id"]); ?>">
+					<?php echo ($item["article_title"]); ?>
+					
+				</td>
+				<td>
+					<?php echo (date("Y-m-d H:i:s",$item["add_time"])); ?>
+				</td>
+				<td>
+
+					<a href="<?php echo U('Article/view',array('id'=>$item['id']));?>">查看</a> 
+					<a href="<?php echo U('Article/delete',array('id'=>$item['id']));?>">删除</a> 
+					<a href="<?php echo U('Article/edit',array('id'=>$item['id']));?>">修改</a> 
+				</td>
+			</tr><?php endforeach; endif; ?>
+		</table>
+	</div>
+	<div class="row page_box"><?php echo ($page); ?></div>
+</div>
+<script type="text/javascript">
+		
+
+
+	// 按了顶部的全选，那么下面的复选框，要全部选中
+	$(function  () {   
+
+		//页面加载完了才来执行里面的js
+
+		// 用jquery，给每个标题绑定一个点击事件：
+		$(".title_td_box").click(function  () {
+			//获取当前的内容,html/text
+			var this_val=$(this).text();
+			// 获取当前的文章ID
+			var this_id=$(this).attr("id_val");
+
+			//怎么去除左右的空格
+			// this_val.trim();
+
+			// 把当前的变成输入框,并且赋上原来的值
+			$(this).html("<input value='"+this_val.trim()+"' >");
+			//为什么输入不了内容？
+			$(this).find('input').focus();
+
+
+			
+			// 是在当前文本框失去焦点的时候执行
+			$(this).find("input").blur(function  () {
+				//$(this)  //td盒子  还是  input
+				var input_val=$(this).val();
+				// 还原，就是把当前td的input还原为纯文本的
+				$(this).parent().html(input_val);//td对象
+				
+
+				// 进行用ajax请求
+				//第一个参数：请求的地址
+				//第二个参数：请求的数据对象，标题的值，当前的文章id
+				$.post(SITE_URL+"/Article/ajax_edit",{"id":this_id,"title":input_val},function  (rtn) {
+				
+				},"json")
+			})
+			
+
+
+
+
+		})
+		
+	
+
+
+		$("#all_check").click(function  () {
+
+			if($(this).is(':checked') ){
+				$('.signl_box').prop('checked',true);//判断复选框是不是选中
+			}
+			else {
+				// 怎么取消复选框的选中
+				$('.signl_box').prop('checked',false);
+			}
+			
+			//要顶部的全选，取消了，下面的也全部取消
+			
+		})
+
+		$("#all_delete").click(function  () {
+			//把选中的复选框拿出来，获取它们的id值
+			var id_string='';
+			var coma='';
+			$('.signl_box').each(function  () {
+				if ($(this).is(":checked")) {
+					 
+					 id_string+=coma+$(this).val();
+					 coma=',';
+				}
+			})
+
+			
+			//把对象转换成json
+			console.log(id_string);
+
+			//ajax请求php进行删除
+			$.post('<?php echo U("Article/all_delete");?>',{'ids':id_string},function  (rt_object) {
+				
+				//把json转换成对象
+				// var rt_object=JSON.parse(rtn);
+				if (rt_object.status==1) {
+					
+					$('.signl_box').each(function  () {
+						if ($(this).is(":checked")) {
+							 $(this).parent().parent().remove();
+						}
+					})
+					//把当前删除的行给remove掉
+					// .remove
+				}else{
+					console.log(rt_object.msg);
+
+				}
+			},"json")
+		})
+	})
+</script>
+
+
+<div class='container'><a class=" btn btn-danger" style=" float: right;" href="<?php echo U('Login/logout');?>">退出</a></div>
+</body>
+</html>

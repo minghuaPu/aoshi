@@ -1,6 +1,7 @@
 .content {
   width: 900px;
   height: 1300px;
+  max-width: 900px;
   margin: 30px auto;
   background-color: #ffffff;
   padding-top: 20px;
@@ -13,6 +14,15 @@
   border-top: 1px solid #53cac3;
   width: 90%;
   margin: 20px auto;
+  moz-user-select: -moz-none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  /* you could also put this in a class */
+  -webkit-user-select: none;
+  /* and add the CSS class here instead */
+  -ms-user-select: none;
+  user-select: none;
 }
 .content .form .content_box h5 {
   font-size: 18px;
@@ -20,11 +30,21 @@
 }
 .content .form .content_box p {
   color: red;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 .content .form .content_box .form-group {
   width: 100%;
   height: 40px;
   line-height: 40px;
+}
+.content .form .content_box .form-group .sp {
+  margin: 0 0 0 18px;
+  width: 420px;
+  text-align: center;
+  color: #000000;
+  font-size: 18px;
+  float: left;
 }
 .content .form .content_box .form-group .tit {
   float: left;
@@ -46,6 +66,29 @@
   width: 500px;
   height: 200px;
   resize: none;
+}
+.content .form .content_box .form-group .dropdown {
+  margin-left: 20px;
+  height: 40px;
+  width: 150px;
+  float: left;
+}
+.content .form .content_box .form-group .dropdown button {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  line-height: 25px;
+  background-color: #FFFFFF;
+  color: #000000;
+  font-size: 15px;
+  font-weight: normal;
+}
+.content .form .content_box .form-group .dropdown ul {
+  width: 150px;
+}
+.content .form .content_box .form-group .dropdown ul li {
+  line-height: 30px;
+  text-align: center;
 }
 .content .form .content_box .job-require {
   height: 200px;

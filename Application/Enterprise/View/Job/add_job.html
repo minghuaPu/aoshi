@@ -4,62 +4,106 @@
     <div class="container">
         <div class="content">
             <form action="{:U('Job/save')}" method="post" class="form">
+                <foreach name="enterprise_info" item="enterprise_item">
                 <div class="content_box qu">
                     <h5>公司基本信息<span style="color: red ;font-weight: 600;font-size: 22px">*</span></h5>
-                    <p>如果公司信息还未通过审核，您将不能发布招聘信息！！</p>
+                    <p class="tip"></p>
                         <div class="form-group">
                             <div class="tit">公司全称</div>
-                            <input type="text" name="" >
-                        </div>
-                        <div class="form-group">
-                            <div class="tit">公司基本信息</div>
-                            <input type="text" name="" >
+                            <p class="sp">{$enterprise_item['company_name']}</p>
                         </div>
                 </div>
                 <div class="content_box">
                     <h5>职业基本信息<span style="color: red ;font-weight: 600;font-size: 22px">*</span></h5>
                         <div class="form-group">
-                            <div class="tit">职位名称</div>
-                            <input type="text" name="job_name" placeholder="测试中，只能填写本框中的内容">
+                            <div class="tit">职位类型</div>
+                            <input type="text" name="job_type" class="hide">
+                            <div class="dropdown choose">
+                                <button class="btn btn-default dropdown-toggle" required type="button" id="dropdownMenu1" data-toggle="dropdown">
+                                    选择职业类型
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">技术</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">设计</a></li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="form-group">
-                            <div class="tit">职位类型</div>
-                            <input type="text" name="job_require" placeholder="测试中，只能填写本框中的内容" >
+                            <div class="tit">职位名称</div>
+                            <input type="text" name="job_name" required>
                         </div>
                         <div class="form-group">
                             <div class="tit">技能要求</div>
-                            <input type="text" name="" >
+                            <input type="text" name="job_require" required>
                         </div>
                         <div class="form-group">
                             <div class="tit">工作地点</div>
-                            <input type="text" name="place"  placeholder="测试中，只能填写本框中的内容">
+                            <input type="text" name="place" value="{$enterprise_item['address']}" required>
                         </div>
                         <div class="form-group">
                             <div class="tit">薪酬范围</div>
-                            <input type="text" name="money"  placeholder="测试中，只能填写本框中的内容">
+                            <input type="text" name="money" required>
                         </div>
                         <div class="form-group">
                             <div class="tit">学历要求</div>
-                            <input type="text" name="" >
+                            <input type="text" name="education" class="hide">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" required type="button" id="dropdownMenu3" data-toggle="dropdown">
+                                    选择学历
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu develop" role="menu" aria-labelledby="dropdownMenu2">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">博士</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">本科及以上</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">大专及以上</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">学历不限</a></li>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="tit">工作经验</div>
+                            <input type="text" name="work_time" class="hide">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" required type="button" id="dropdownMenu4" data-toggle="dropdown">
+                                    不限
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu develop" role="menu" aria-labelledby="dropdownMenu2">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">大于3年</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">大于2年</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">大于1年</a></li>
+                            </div>
                         </div>
                         <div class="form-group job-require">
                             <div class="tit">职业描述</div>
-                            <textarea  name="" ></textarea>
+                            <textarea  name="job_describe" required></textarea>
                         </div>
                 </div>
                 <div class="content_box">
                     <h5>其他信息<span style="color: red ;font-weight: 600;font-size: 22px">*</span></h5>
                     <div class="form-group">
                         <div class="tit">简历接收邮箱</div>
-                        <input type="text" name="" >
+                        <input type="text" name="email" value="{$enterprise_item['email']}" required>
                     </div>
                 </div>
                 <div class="content_box qu">
                     <input type="hidden" name="enterprise_id"  value="<?php echo session('tid')?>">
-                    <input type="submit" value="发 布" class="btn">
+                    <input type="submit" value="发 布" class="btn submit">
                 </div>
+                </foreach>
             </form>
         </div>
     </div>
 </div>
 <include file="Public:footer" />
+<script src="__PUBLIC__/js/enterprise/add_job.js"></script>
+<script>
+    if({$enterprise_item['auditing']}==2){
+        $(".tip").html("");
+        $(".submit").attr("disabled",false);
+    } else {
+        $(".tip").html("您的公司信息还未通过审核，请尽快通过审核，否则您将不能发布招聘信息！！");
+        $(".submit").attr("disabled",true);
+    }
+</script>
+
