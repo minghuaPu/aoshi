@@ -1,99 +1,11 @@
-html {
-  width: 100%;
-  height: 100%;
+.reg form .form-group {
+  margin: 20px auto 0;
 }
-body {
-  width: 100%;
-  height: 100%;
-  font-family: 微软雅黑;
-}
-body .body {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-}
-body .body img {
-  width: 100%;
-}
-body .body .register {
-  width: 56%;
-  height: 100%;
-  position: absolute;
-  z-index: 3;
-  left: 22%;
-  top: 0;
-}
-body .body .register h2 {
+.reg form p {
   text-align: center;
-  width: 100%;
-  font-weight: 600;
-  color: white;
-  font-size: 40px;
-}
-body .body .register form {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-body .body .register form .register_box {
-  width: 70%;
-  margin: 30px auto;
-}
-body .body .register form .form-group {
-  width: 80%;
-  margin: 0 auto;
-}
-body .body .register form .form-group input {
-  width: 100%;
-  margin: 0 auto;
-  color: white;
-  margin: 30px 0 10px;
-  line-height: 30px;
-  padding: 0 15px;
-  border: none;
-  border-bottom: 2px white solid;
-}
-body .body .register form .form-group .write {
-  background-color: rgba(0, 0, 0, 0) !important;
-}
-body .body .register form .form-group .img {
-  width: 50%;
-  float: left;
-}
-body .body .register form .warning {
-  width: 100%;
-  margin-top: 20px;
-}
-body .body .register form .warning p {
-  font-size: 18px;
   color: red;
-  font-weight: 600;
-  text-align: center;
+  margin-top: 9px;
 }
-body .body .register form .register_btn {
-  width: 100%;
-  height: 50px;
-  margin: 50px auto;
-  float: left;
-}
-body .body .register form .register_btn input[type=submit] {
-  width: 50%;
-  margin-left: 25%;
-  background-color: #f0b950;
-  border-radius: 80px;
-  line-height: 43px;
-  font-size: 20px;
-  font-weight: 600;
-}
-body .body .register .footer {
-  width: 100%;
-  position: absolute;
-  bottom: 20px;
-}
-body .body .register .footer div {
-  font-size: 5px;
-  color: #b6b7b9;
-  width: 100%;
-  text-align: center;
+.reg form .sub {
+  margin-top: 11px;
 }

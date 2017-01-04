@@ -1,0 +1,42 @@
+<include file='Public:header'/>
+    <link rel="stylesheet" href="__PUBLIC__/css/home/news_detail.css">
+
+
+<!--news-->
+<div class="news">
+    <div class="news-main">
+        <div class="news-content">
+            <h1 class="h1-title">{$info['news_title']}</h1>
+            <div class="info"><p class="author">{$info['author']}<em>&nbsp;· &nbsp;</em><span class="time">{$info['add_time']|date="Y-m-d H:i:s",###}</span><p class="tags">{$info['cata_id']}</p></p></div>
+            <div class="content">
+                   <php> echo htmlspecialchars_decode($info['news_content']);</php>
+            </div>
+        </div>
+        <div class="news-next">
+            <h3 class="title">下一篇</h3>
+            <p class="text-title"><a href=<if condition="$next['status'] neq '0'">"{:U('News/news_detail',array('id'=>$next['id']))}" </if> >{$next.news_title}</a></p>
+            <div class="info"><p class="author">{$next['author']}<em>&nbsp;· &nbsp;</em><span class="time">{$next['add_time']|date="Y-m-d H:i:s",###}</span></p><p class="tags">{$next['cata_id']}</p></div>
+        </div>
+    </div>
+    <div class="sider">
+        <div class="news-sider">
+            <div class="hot-news">
+                <h3 class="title">热门新闻</h3>
+                <ul>
+                    <li><p class="text-title"><a href="#">职信道启动“攻薪季”招聘周，撮合优质大厂与实力牛人</a></p><div class="info"><p class="author"><span class="time">2016-10-22</span></p><p class="tags">公司动态</p></div></li>
+
+                    <li><p class="text-title"><a href="#">职场人士如何利用业余时间实现自我提升</a></p><div class="info"><p class="author"><span class="time">2016-10-10</span></p><p class="tags">干货文章</p></div></li>
+
+                    <li><p class="text-title"><a href="#">做好这七步，分分钟化解同事间冲突</a></p><div class="info"><p class="author"><span class="time">2016-10-08</span></p><p class="tags">干货文章</p></div></li>
+
+                    <li><p class="text-title"><a href="#">社会即将分层，你将会在第几层？</a></p><div class="info"><p class="author"><span class="time">2016-09-29</span></p><p class="tags">干货文章</p></div></li>
+
+                    <li style=" border-bottom:0px;"><p class="text-title"><a href="#" >张一鸣：我遇到的优秀年轻人的5个特质</a></p><div class="info"><p class="author"><span class="time">2016-09-29</span></p><p class="tags">干货文章</p></div></li>
+                </ul>
+            </div>
+        </div>
+        <div class="cooperation-sider"><a href="javascript:;" title="媒体合作" ><img src="__PUBLIC__/images/cooperation.jpg" width="400px" /></a></div>
+    </div>
+</div>
+
+<include file='Public:footer'/>

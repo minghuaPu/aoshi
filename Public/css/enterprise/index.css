@@ -19,11 +19,12 @@ body {
   padding: 5px 0;
 }
 .body .header .logo {
-  width: 150px;
   height: 40px;
   margin-left: 300px;
-  background-color: black;
-  color: white;
+  padding-top: 6px;
+}
+.body .header .logo img {
+  height: 28px;
 }
 .body .nav_bar {
   float: left;
@@ -63,11 +64,20 @@ body {
   font-size: 16px;
   padding-bottom: 58px;
 }
+.body .nav_bar .nav_item a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  color: #a4b9c6;
+}
+.body .nav_bar .nav_item a:hover {
+  text-decoration: none;
+}
+.body .nav_bar .nav_item .selected {
+  background-color: #333e45;
+}
 .body .nav_bar .nav_item .item {
   width: 100%;
-}
-.body .nav_bar .nav_item .item a {
-  color: #a4b9c6;
 }
 .body .nav_bar .nav_item .item ul {
   margin: 0;
@@ -82,6 +92,12 @@ body {
   background-color: #333e45;
   padding-left: 80px;
 }
+.body .nav_bar .nav_item .item ul li a:hover {
+  text-decoration: none;
+}
+.body .nav_bar .nav_item .item ul .li_sel {
+  background-color: #222a2f;
+}
 .body .nav_bar .nav_item .item ul li:hover {
   background-color: #222a2f;
 }
@@ -94,7 +110,7 @@ body {
   cursor: pointer;
 }
 .body .nav_bar .nav_item .item .tit [class^='icon_'] {
-  background: url(../../images/menu_icon.png);
+  background: url(../../images/enterprise/menu_icon.png);
   background-size: 168px 100px;
   margin-top: 14px;
   position: absolute;
@@ -102,7 +118,7 @@ body {
   height: 24px;
 }
 .body .nav_bar .nav_item .item .tit .i_open {
-  background: url("../../images/i_open.png");
+  background: url("../../images/enterprise/i_open.png");
   position: absolute;
   right: 20px;
   top: 20px;
@@ -110,7 +126,7 @@ body {
   height: 6px;
 }
 .body .nav_bar .nav_item .item .tit .i_close {
-  background: url("../../images/i_close.png");
+  background: url("../../images/enterprise/i_close.png");
   position: absolute;
   right: 20px;
   top: 20px;
@@ -132,20 +148,12 @@ body {
   background-position: 38px 0;
 }
 .body .nav_bar .nav_item .item .tit .icon_mess {
-  width: 20px;
+  width: 19px;
   background-position: -36px 0;
 }
 .body .nav_bar .nav_item .item .tit .icon_mess_sel {
   width: 20px;
   background-position: -56px 0;
-}
-.body .nav_bar .nav_item .item .tit .icon_select {
-  height: 25px;
-  background-position: -34px -60px;
-}
-.body .nav_bar .nav_item .item .tit .icon_select_sel {
-  height: 25px;
-  background-position: 2px -60px;
 }
 .body .nav_bar .nav_item .item .tit .icon_user {
   width: 27px;
@@ -162,9 +170,17 @@ body {
   margin-bottom: 0;
   color: #a4b9c6;
 }
+.body .nav_bar .nav_item .item .it_sel {
+  background-color: #333e45;
+}
 .body .nav_bar .nav_item .item .tit:hover {
   background-color: #333e45;
-  color: #ffffff;
+}
+.body .nav_bar .nav_item .mess .tit .badge {
+  display: block;
+  position: absolute;
+  top: 14px;
+  right: 11px;
 }
 .body .nav_bar .tool {
   height: 50px;
@@ -179,35 +195,31 @@ body {
 .body .nav_bar .tool .i_logout {
   width: 18px;
   height: 16px;
-  background: url("../../images/i_logout.png");
+  background: url("../../images/enterprise/i_logout.png");
   position: absolute;
 }
 .body .nav_bar .tool .logout {
-  width: 124px;
+  width: 100%;
   height: 50px;
   position: relative;
-  float: left;
-  border-right: 1px solid #4f5e68;
+}
+.body .nav_bar .tool .logout a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  color: #a4b9c6;
+}
+.body .nav_bar .tool .logout a:hover {
+  color: #a4b9c6;
+  text-decoration: none;
 }
 .body .nav_bar .tool .logout .i_logout {
   top: 17px;
-  left: 20px;
+  left: 45px;
 }
 .body .nav_bar .tool .logout p {
-  margin-left: 43px;
-}
-.body .nav_bar .tool .setting {
-  width: 75px;
-  height: 50px;
-  float: left;
-  position: relative;
-}
-.body .nav_bar .tool .setting .i_logout {
-  top: 17px;
-  left: 15px;
-}
-.body .nav_bar .tool .setting p {
-  margin-left: 35px;
+  text-align: center;
+  color: #a4b9c6;
 }
 .body .container {
   float: left;
