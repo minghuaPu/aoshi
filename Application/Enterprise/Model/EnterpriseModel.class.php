@@ -25,6 +25,3 @@ class EnterpriseModel extends Model
     );
 
 }
-
-
-?>

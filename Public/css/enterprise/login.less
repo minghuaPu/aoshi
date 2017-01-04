@@ -9,7 +9,6 @@ body{
     .body {
         width: 100%;
         height: 100%;
-        //overflow: hidden;
         position: relative;
         .bg{
             position: absolute;
@@ -22,17 +21,32 @@ body{
             background-position: center bottom;
             background-size: cover;
         }
-        .header{
+        .logo{
+            height: 40px;
+            z-index: 100;
             position: absolute;
-            top: 45px;
-            display: block;
-            width: 100%;
-            height: 56px;
-            z-index: 30;
-            img{
-                height: 56px;
-                display: block;
-                margin-left: 80px;
+            top: 60px;
+            left: 80px;
+            .logoImg{
+                width: 60px;
+                height: 60px;
+                background-color: #53cac3;
+                border-radius: 13px;
+                font-size: 14px;
+                text-align: center;
+                padding-top: 10px;
+                line-height: 20px;
+                color: #ffffff;
+                font-weight: 600;
+                float: left;
+            }
+            h3{
+                float: left;
+                line-height: 60px;
+                color: black;
+                font-size: 26px;
+                font-weight: 600;
+                margin: 0 0 0 30px;
             }
         }
         .login{

@@ -1,5 +1,6 @@
 .content {
   width: 900px;
+  max-width: 900px;
   margin: 30px auto;
   padding-bottom: 10px;
   background-color: #ffffff;
@@ -50,8 +51,18 @@
 .content .tit_box {
   width: 100%;
   position: relative;
+  max-width: 900px;
   margin: 0;
   padding: 7px 0;
+  moz-user-select: -moz-none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  /* you could also put this in a class */
+  -webkit-user-select: none;
+  /* and add the CSS class here instead */
+  -ms-user-select: none;
+  user-select: none;
 }
 .content .tit_box div {
   text-align: center;
@@ -59,10 +70,22 @@
 }
 .content .table {
   margin: 0;
+  width: 100%;
+  max-width: 900px;
+  moz-user-select: -moz-none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  /* you could also put this in a class */
+  -webkit-user-select: none;
+  /* and add the CSS class here instead */
+  -ms-user-select: none;
+  user-select: none;
 }
 .content .table tr {
   margin-top: 5px;
   height: 20px;
+  width: 100%;
 }
 .content .table tr th {
   padding: 0;
