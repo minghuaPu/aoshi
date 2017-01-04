@@ -17,7 +17,6 @@ body {
 .avatar-view img {
     width: 100%;
     text-align: center;
-    background-image: url(../../images/avatar-bg.png);
     line-height: 120px;
   
 }

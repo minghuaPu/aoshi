@@ -4,6 +4,7 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	
 }
 
 body {
@@ -11,18 +12,17 @@ body {
 	color: #333;
 	background-color: #efefef;
 }
-
 a {
 	color: #555;
 	text-decoration: none;
 }
-<<<<<<< HEAD
-body a:hover{
-	text-decoration:none;
+body a:active,
+body a:link ,
+body a:visited,
+body a:hover,
+body a:active{
+	text-decoration: none;
 	}
-=======
-
->>>>>>> 52745953a4e8f54f493eca97c12ccde434932b74
 img {
 	vertical-align: middle;
 }
@@ -46,11 +46,7 @@ button {
 }
 
 .container {
-<<<<<<< HEAD
 	max-width: 1024px;
-=======
-	width: 1024px;
->>>>>>> 52745953a4e8f54f493eca97c12ccde434932b74
 	margin: auto;
 }
 
@@ -87,20 +83,23 @@ button {
 
 .icon {
 	display: inline-block;
-<<<<<<< HEAD
 	background: url(../../images/resume_icon.png) no-repeat;
-=======
-	background: url(../../images/u-icons.png) no-repeat;
->>>>>>> 52745953a4e8f54f493eca97c12ccde434932b74
 	vertical-align: sub;
 }
-
+/*回到顶部*/
+#imgs{
+				position: fixed;
+				bottom: 20px;
+				right: 20px;
+				display: none;
+			}
 
 /*头部*/
 
 #header {
 	height: 50px;
 	line-height: 50px;
+	margin-bottom:35px;
 	background-color: #53cac3;
 }
 
@@ -120,7 +119,7 @@ button {
 /*简历模块*/
 
 #resume {
-	margin: 35px auto;
+	margin: 0px auto;
 }
 
 #resume .resume-inner {
@@ -148,10 +147,7 @@ button {
 	left: 292px;
 	width: 120px;
 	height: 120px;
-<<<<<<< HEAD
 	border-radius:50%;
-=======
->>>>>>> 52745953a4e8f54f493eca97c12ccde434932b74
 }
 
 #resume .avatar #avatar-upload {
@@ -183,37 +179,28 @@ button {
 	display: inline-block;
 	content: "";
 	vertical-align: middle;
-<<<<<<< HEAD
 	width: 228px;
-=======
-	width: 230px;
->>>>>>> 52745953a4e8f54f493eca97c12ccde434932b74
 	height: 1px;
 	background-color: #eee;
 }
 
 
 /*简历编辑*/
-<<<<<<< HEAD
- .edit_box{
-	
-	display:none}
- .edit_box a {
-	position: absolute;
-    right: 0;
-	font-size: 16px;
-	color: #23cbc2;
-	background-color: #fafafa;
-	text-decoration: none;
-	}	
- .edit_box .del{
-	right: 40px;
+#job-career .list{
+	position:relative;
 	}
-#resume .edit,.add_a {
-=======
-
+#self-des .edit_box_box{
+	position:relative;
+	}	
+#resume .edit_box{
+	width: 86px;
+    height: 19px;
+	top:-52px;
+	
+    right: 0;
+    position: absolute;
+	}
 #resume .edit {
->>>>>>> 52745953a4e8f54f493eca97c12ccde434932b74
 	padding-left: 20px;
 	position: absolute;
 	top: 0;
@@ -223,13 +210,7 @@ button {
 	background-color: #fafafa;
 }
 
-<<<<<<< HEAD
-
 #resume .add {
-	display:none;
-=======
-#resume .add {
->>>>>>> 52745953a4e8f54f493eca97c12ccde434932b74
 	width: 100%;
 	height: 100px;
 	margin-bottom: 20px;
@@ -289,6 +270,7 @@ button {
 
 #resume #user-info {
 	position: relative;
+	text-align: center;
 }
 
 #resume #user-info span {
@@ -316,7 +298,9 @@ button {
 	margin-right: 5px;
 	background-position: -110px -70px;
 }
-
+#resume #user-info .base .city{
+	background-position: -130px -91px;
+	} 
 #resume #user-info .base .phone {
 	background-position: -130px -70px;
 }
@@ -354,16 +338,14 @@ button {
 	color: #999;
 }
 
-<<<<<<< HEAD
-=======
-#resume .list li .del {
+#resume  .del {
 	position: absolute;
 	right: 52px;
 	font-size: 16px;
 	color: #23cbc2;
+	background:#fafafa;
 }
 
->>>>>>> 52745953a4e8f54f493eca97c12ccde434932b74
 #resume .list li b {
 	font-weight: 400;
 	font-size: 16px;
@@ -373,32 +355,17 @@ button {
 #resume .list li p {
 	padding-top: 5px;
 	color: #555;
+	    
 }
-
-<<<<<<< HEAD
 /*自我描述*/
-#self-des .list{
-	position:relative;	
-	}
-/*求职意向*/
-#resume .edit_box_box{
-	position: absolute;
-    width: 86px;
-    height: 26px;
-    top: -51px;
-    right: 1px;
-	
-	}
-#resume #job-career .list {
-	padding: 0 30px;
-	position:relative;
-=======
-
+#self-des p{
+	width: 605px;
+    word-break: break-word;
+}
 /*求职意向*/
 
 #resume #job-career .list {
 	padding: 0 30px;
->>>>>>> 52745953a4e8f54f493eca97c12ccde434932b74
 }
 
 #resume #job-career .list dd {
@@ -410,10 +377,6 @@ button {
 	text-overflow: ellipsis;
 	font-size: 16px;
 	color: #555;
-<<<<<<< HEAD
-	
-=======
->>>>>>> 52745953a4e8f54f493eca97c12ccde434932b74
 }
 
 #resume #job-career .list dd i {
@@ -421,11 +384,7 @@ button {
 	width: 18px;
 	height: 18px;
 	margin-right: 10px;
-<<<<<<< HEAD
-	background: url(../../images/resume_icon.png);
-=======
-	background: url(../../images/u-icons.png) no-repeat;
->>>>>>> 52745953a4e8f54f493eca97c12ccde434932b74
+	background: url(../../images/resume_icon.png) no-repeat;
 	background-position: -97px -220px;
 	vertical-align: text-bottom;
 }
@@ -454,7 +413,7 @@ button {
 /*求职状态*/
 
 #resume #job-state {
-	width: 250px;
+	width: 264px;
 	padding: 11px 15px;
 	color: #888;
 	background-color: #fafafa;
@@ -488,6 +447,7 @@ button {
 
 #resume .resume-nav .integrity .top a {
 	color: #00C2B8;
+	text-decoration: none;
 }
 
 #resume .resume-nav #nav-list {
@@ -516,12 +476,8 @@ button {
 }
 
 #resume .resume-nav li.selected {
-<<<<<<< HEAD
-	border-left: 2px solid #00C2B8;  background-color: #fff;
-=======
 	border-left: 2px solid #00C2B8;
 	background-color: #fff;
->>>>>>> 52745953a4e8f54f493eca97c12ccde434932b74
 }
 
 #resume .resume-nav li a {
@@ -537,35 +493,55 @@ button {
 	width: 18px;
 	height: 18px;
 	margin: 0 25px 0 30px;
-<<<<<<< HEAD
-	background: url(../../images/resume_icon.png);
-=======
-	background: url(../../images/u-icons.png) no-repeat;
->>>>>>> 52745953a4e8f54f493eca97c12ccde434932b74
+	background: url(../../images/resume_icon.png) no-repeat;
 	vertical-align: text-bottom;
 }
 
 #resume .resume-nav li .base_i {
 	background-position: -24px -117px;
 }
-
+#resume .resume-nav li .base_i:hover{
+	background-position: -5px -117px;
+	}
+#resume .resume-nav .selected .base_i {
+	background-position: -5px -117px;
+}	
 #resume .resume-nav li .job_i {
 	background-position: -24px -137px;
 }
-
+#resume .resume-nav li .job_i:hover{
+	background-position: -5px -137px;
+	}
+#resume .resume-nav .selected .job_i {
+	background-position: -5px -137px;
+}	
 #resume .resume-nav li .edu_i {
 	background-position: -23px -156px
 }
-
+#resume .resume-nav li .edu_i:hover {
+	background-position: -4px -156px
+}
+#resume .resume-nav .selected .edu_i {
+	background-position: -4px -156px
+}
 #resume .resume-nav li .career_i {
 	background-position: -65px -239px;
 }
-
+#resume .resume-nav li .career_i:hover{
+	background-position: -5px -239px;
+	}
+#resume .resume-nav .selected .career_i {
+	background-position: -5px -239px;
+}	
 #resume .resume-nav li .self_i {
 	background-position: -67px -218px;
-<<<<<<< HEAD
-=======
 }
+#resume .resume-nav li .self_i:hover {
+	background-position: -5px -218px;
+}
+#resume .resume-nav  .selected .self_i{
+	background-position:-5px -218px;
+	}
 
 
 /*预览简历*/
@@ -590,5 +566,4 @@ button {
 .preview-state #job-state:hover {
 	background-color: transparent!important;
 	cursor: default!important;
->>>>>>> 52745953a4e8f54f493eca97c12ccde434932b74
 }
