@@ -149,7 +149,7 @@
 		<div class="position-right">
 			<div class="search-box">
 				<form id="search-form" action="" method="post">
-					<input type="text" name="key" placeholder="请输入职位或公司名称" class="search">
+					<input type="text" name="key" placeholder="请输入职位或公司名称" class="search" value=<?php echo ($_REQUEST['key']); ?>>
 					<input type="submit" value="搜索" class="btn btn-info">
 				</form>
 			</div>

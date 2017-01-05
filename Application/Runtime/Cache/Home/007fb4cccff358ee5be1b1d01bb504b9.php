@@ -88,7 +88,7 @@
 						<li>本科</li>
 					</ul>
 				</div><?php endforeach; endif; ?>
-				<p class="local-time">20:40</p>
+				<p class="local-time"></p>
 				<div class="speak-box">
 					<div class="box-con">
 						<div class="img">

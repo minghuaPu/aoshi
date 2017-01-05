@@ -7,7 +7,11 @@
 		<link rel="stylesheet" href="__PUBLIC__/css/jobseekers/resume.css">
 		<script src="__PUBLIC__/js/angular-1.0.1.min.js"></script>
 	 	<style>
+<<<<<<< HEAD
 			#resume form{display: block;}
+=======
+			#resume form#job-exp-form,#resume form#edu-exp-form{display: block;}
+>>>>>>> 98a4c6f673c957bbb5a114a4277b69c0fd2afe88
 	 	</style>
 	</head>
 
@@ -22,7 +26,7 @@
 			</nav>
 		</header>
 		<!--简历-->
-		<section id="resume" class="container" ng-app="myResume" ng-controller="resume">
+		<section id="resume" class="container" ng-app="myResume"  >
 			<!--简历信息-->
 			<article class="resume-inner">
 				<!--用户头像-->
@@ -128,10 +132,10 @@
 				</section>
 				<!--工作经历-->
 				<section ng-controller="jobexp">
-					<h5 class="resume-title"><span>工作经历</span><a class="edit" href="javascript:;">添加 {{ zfc }}</a></h5>
+					<h5 class="resume-title"><span>工作经历</span><a class="edit" href="javascript:;" ng-click="show_form(true)">添加 {{ zfc }}</a></h5>
 					<ul class="list">
 					  <li ng-repeat="item in exp_list">
-					  	<a class="del" href="javascript:;" data-id="{{ item.jid }}">删除</a>
+					  	<a class="del" href="javascript:;" ng-click="delete_info(item)">删除</a>
 						<a class="edit"   ng-click="show_form(item)">修改</a>
 									<div class="name">{{ item.name }}</div>
 									<div>
@@ -168,6 +172,7 @@
 					</form>
 				</section>
 				<!--教育经历-->
+<<<<<<< HEAD
 				<section id="edu-exp" ng-controller="eduexp">
 					<h5 class="resume-title"><span>教育经历</span><a class="edit" href="javascript:;">添加</a></h5>
 					<ul class="list">
@@ -199,6 +204,38 @@
 						<fieldset>
 							<label>学历</label>
 							<select class="input-text" ng-model="edu_exp_form.xl">
+=======
+				<section ng-controller="eduexp">
+					<h5 class="resume-title"><span>教育经历</span><a class="edit" href="javascript:;" ng-click="show_form(true)">添加</a></h5>
+					<ul class="list" >
+						 
+						<li ng-repeat="item in edu_list">
+						 	<a class="del" href="javascript:;" ng-click="delete_info(item)">删除</a>
+							<a class="edit"   ng-click="show_form(item)">修改</a>
+							<div class="name">{{item.name}}</div>
+							<div>
+								<span class="xl">{{item.xl}}</span> -
+								<span class="major">{{item.major}}</span>
+								<span class="grad fr">{{item.grad}}</span>
+							</div>
+						</li>
+					 
+					<button class="add" ng-click="show_form(true)">+ 添加教育经历</button>
+						 
+					</ul>
+					<form id="edu-exp-form" ng-show="form_info">
+						<fieldset>
+							<label>学校名称</label>
+							<input class="input-text" ng-model="form_info.name">
+						</fieldset>
+						<fieldset>
+							<label>所学专业</label>
+							<input class="input-text" ng-model="form_info.major">
+						</fieldset>
+						<fieldset>
+							<label>学历</label>
+							<select class="input-text" ng-model="form_info.xl">
+>>>>>>> 98a4c6f673c957bbb5a114a4277b69c0fd2afe88
 								<option>大专</option>
 								<option>本科</option>
 								<option>硕士</option>
@@ -208,7 +245,11 @@
 						</fieldset>
 						<fieldset>
 							<label>毕业时间</label>
+<<<<<<< HEAD
 							<select class="input-text" ng-model="edu_exp_form.grad">
+=======
+							<select class="input-text"  ng-model="form_info.grad">
+>>>>>>> 98a4c6f673c957bbb5a114a4277b69c0fd2afe88
 								<option>2017</option>
 								<option>2016</option>
 								<option>2015</option>
@@ -230,7 +271,11 @@
 							</select>
 						</fieldset>
 						<fieldset>
+<<<<<<< HEAD
 							<input class="btn submit" type="submit" value="保存" ng-click="save_form()">
+=======
+							<input class="btn submit"  ng-click="save_form()" value="保存">
+>>>>>>> 98a4c6f673c957bbb5a114a4277b69c0fd2afe88
 							<button class="btn cancel" ng-click="hide_form()">取消</button>
 						</fieldset>
 					</form>

@@ -73,17 +73,18 @@ class IndexController extends Controller {
                 ->select();
        }
        else{
-
-        $where['job_name']= $_REQUEST['value'];
+        //echo $url = location.search;
+       
+        $where['job_name']= $_REQUEST["value"];
         $job_detail=$job
                 ->field("job.id,job_name,money,job_require,job_describe,job.add_time,place,company_name")//查询指定的字段
                 ->join("company on job.enterprise_id=company.enterprise_id")//join是关联查询
-                ->where($where)
-                // ->where('job.id=13')
+                // ->where($where)
+                ->where('job.id=13')
                 ->select();
        }
        
-       //print_r(this.id);
+       //print_r($where['job_name']);
        echo $job->getLastSql();//获取上一次执行的sql语句
       
        // 作关联查询

@@ -71,6 +71,7 @@ body{
 }
 .position-left ul li a{
     color: #999;
+    text-decoration: none;
 }
 .position-left .item:hover .slide{
     display: block;
@@ -90,7 +91,7 @@ body{
 }
 .position-left .item:nth-child(2):hover .cover{
     display: block;
-    height: 170px;
+    height: 173px;
 }
 .position-left .item .main{
 	width: 100%;
@@ -120,7 +121,7 @@ body{
 }
 
 .position-left .item .cover{
-	height:133px;
+	height:135px;
     position: absolute;
     z-index: 10;
     top: 0px;
