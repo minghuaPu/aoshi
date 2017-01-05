@@ -1,9 +1,9 @@
 <include file="Public:header" />
-    <link rel="stylesheet" href="__PUBLIC__/css/enterprise/job.css?5">
+    <link rel="stylesheet" href="__PUBLIC__/css/enterprise/job.css?8">
 
     <div class="container">
         <div class="content">
-            <form action="">
+            <form action="{:U('Job/search')}" method="post">
                 <div class="search_nav">
                     <div class="dropdown">
                         <h5>职位类别</h5>
@@ -45,7 +45,7 @@
                     </div>
                 </div>
                 <div class="search_box">
-                    <input type="text" placeholder="输入关键词：职位名称或者地点等，例如：JAVA工程师，广州天河">
+                    <input type="text" placeholder="输入关键词：职位名称或者地点等，例如：JAVA工程师，广州天河" name="key">
                     <input type="button" value="筛 选" class="btn btn-primary">
                 </div>
             </form>
@@ -69,8 +69,18 @@
                         <th class="col-md-2 col-xs-2" name="education">{$job_item['education']}</th>
                         <th class="col-md-1 col-xs-1" name="add_time">{$job_item['add_time']|date='m-d',###} </th>
                         <th class="col-md-3 col-xs-3 revise require" name="job_require">{$job_item['job_require']}</th>
-                        <th class="col-md-1 col-xs-1"><button class="btn btn-info">点击详情</button></th>
+                        <th class="col-md-1 col-xs-1"><button type="button" class="btn btn-info info" >点击详情</button></th>
                     </tr>
+                    <div class="detail" id="{$job_item['id']}">
+                        <div class="describe">
+                            <h3>职位描述：</h3>
+                            <p>{$job_item['job_describe']}</p>
+                        </div>
+                        <div class="address">
+                            <h3>工作地址：</h3>
+                            <p>{$job_item['place']}</p>
+                        </div>
+                    </div>
                 </foreach>
             </table>
             <div class="row page_box">{$page}</div>
@@ -79,4 +89,4 @@
 </div>
 <include file="Public:footer" />
 <script src="__PUBLIC__/js/enterprise/search.js"></script>
-<script src="__PUBLIC__/js/enterprise/job_list.js"></script>
+<script src="__PUBLIC__/js/enterprise/job_list.js?3"></script>

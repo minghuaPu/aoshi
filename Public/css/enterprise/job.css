@@ -1,7 +1,17 @@
 .content {
   width: 900px;
   margin: 30px auto;
+  position: relative;
   background-color: #ffffff;
+  moz-user-select: -moz-none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  /* you could also put this in a class */
+  -webkit-user-select: none;
+  /* and add the CSS class here instead */
+  -ms-user-select: none;
+  user-select: none;
 }
 .content form {
   background-color: #53cac3;
@@ -78,15 +88,6 @@
 }
 .content .table {
   max-width: 900px;
-  moz-user-select: -moz-none;
-  -moz-user-select: none;
-  -o-user-select: none;
-  -khtml-user-select: none;
-  /* you could also put this in a class */
-  -webkit-user-select: none;
-  /* and add the CSS class here instead */
-  -ms-user-select: none;
-  user-select: none;
 }
 .content .table th {
   padding: 0;
@@ -102,6 +103,26 @@
 .content .table th .btn-info {
   height: 31px;
   margin-top: -3px;
+}
+.content .detail {
+  width: 500px;
+  position: absolute;
+  top: 230px;
+  left: 200px;
+  border-radius: 8px;
+  background-color: #53cac3;
+  color: white;
+}
+.content .detail h3 {
+  font-size: 16px;
+  margin-left: 30px;
+}
+.content .detail p {
+  padding: 0 30px;
+}
+.content .detail .address {
+  margin-top: 30px;
+  margin-bottom: 25px;
 }
 .content .page_box {
   height: 25px;
