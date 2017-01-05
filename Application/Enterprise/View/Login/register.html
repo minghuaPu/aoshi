@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="__PUBLIC__/css/bootstrap-3.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="__PUBLIC__/css/enterprise/login.css?3">
     <link rel="stylesheet" href="__PUBLIC__/css/enterprise/register.css">
+    <link rel="stylesheet" href="__PUBLIC__/css/enterprise/Jcrop.min.css">
+    <link rel="stylesheet" href="__PUBLIC__/libs/uploadify/uploadify.css">
+
 </head>
 <body>
 <div class="body">
@@ -19,7 +22,10 @@
         <h3>互联网招聘神器</h3>
     </div>
     <div class="login reg">
-        <div class="touxiang"></div>
+        <div class="touxiang" id="element_id">
+            <div class="default-img"></div>
+            <input type="file" name="fileUpload" id="fileUpload" title="支持jpg、jpeg、gif、png格式，文件小于10M">
+        </div>
         <form action="{:U('Login/register')}" method="post">
             <div class="form-group">
                 <input type="text" name="user_name" placeholder="用户名" required>
@@ -37,10 +43,22 @@
         </form>
         <ul>
             <li><a href="{:U('Login/login')}">返回登录</a></li>
-            <li>忘记密码？</li>
+            <li><a href="#">忘记密码？</a></li>
         </ul>
     </div>
 </div>
+<script src="__PUBLIC__/js/jobseekers/jquery-3.1.1.min.js" type="text/javascript"></script>
+<script src="__PUBLIC__/libs/uploadify/jquery.uploadify.min.js"></script>
+<script src="__PUBLIC__/js/enterprise/Jcrop.min.js"></script>
+<script type="text/javascript">
+//    var jcropApi;
+//    $('#element_id').Jcrop({
+//        allowSelect: true,
+//        baseClass: 'jcrop'
+//    }, function() {
+//        jcropApi = this;
+//    });
 
+</script>
 </body>
 </html>

@@ -290,6 +290,7 @@ a:hover, a:active {
     font-size: 19px;
     text-indent: 1rem;
     animation-duration:1s;
+    color: #f1f1f1;
 }
 
 #content .container .row .col-lg-12 .input-defined .icon-search {

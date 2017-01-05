@@ -75,9 +75,8 @@ class LoginController extends Controller {
     public function get_verify()
     {
         $Verify = new \Think\Verify();
-        $Verify->useCurve=true;
-        $Verify->useNoise=true;
-
+        $Verify->useCurve=false;
+//        $Verify->useNoise=false;
         $Verify->entry();
     }
 }
