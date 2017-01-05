@@ -1,0 +1,72 @@
+<include file="Public:header" />
+<link rel="stylesheet" href="__PUBLIC__/css/enterprise/company.css?5">
+
+<div class="container">
+    <form action="{:U('Company/save')}" method="post">
+     <foreach name="enterprise_info" item="enterprise_item">
+        <div class="content">
+            <h1>公司信息</h1>
+            <div class="content_box">
+                <h3>公司全称</h3>
+                <p>{$enterprise_item['company_name']}</p>
+                <input type="text" name="company_name" class="hide">
+            </div>
+            <div class="content_box">
+                <h3>公司地址</h3>
+                <p>{$enterprise_item['address']}</p>
+                <input type="text" name="address" class="hide">
+            </div>
+            <div class="content_box introduction">
+                <h3>公司简介</h3>
+                <div class="introduce">
+                    <p>{$enterprise_item['introduction']}</p>
+                </div>
+                <textarea class="hide" name="introduction"></textarea>
+            </div>
+        </div>
+        <div class="content">
+            <h1>您的信息</h1>
+            <div class="content_box">
+                <h3>姓名</h3>
+                <p>{$enterprise_item['name']}</p>
+                <input type="text" name="name" class="hide">
+            </div>
+            <div class="content_box">
+                <h3>职位</h3>
+                <p>{$enterprise_item['job']}</p>
+                <input type="text" name="job" class="hide">
+            </div>
+            <div class="content_box">
+                <h3>默认邮箱</h3>
+                <p>{$enterprise_item['email']}</p>
+                <input type="text" name="email" class="hide">
+            </div>
+            <div class="content_box">
+                <h3>电话</h3>
+                <p>{$enterprise_item['phone']}</p>
+                <input type="text" name="phone" class="hide">
+            </div>
+        </div>
+        <div class="content">
+            <input type="submit"  id_val= "{$enterprise_item['id']}" id="submit" class="btn">
+        </div>
+     </foreach>
+    </form>
+</div>
+
+<include file="Public:footer" />
+<script src="__PUBLIC__/js/enterprise/company.js"></script>
+<script>
+    if ({$enterprise_item['auditing']}==1){
+        $("#submit").attr("disabled",true);
+        $("#submit").attr("value","正在审核中");
+    }else if({$enterprise_item['auditing']}==0){
+        $("#submit").attr("disabled",false);
+        $("#submit").attr("value","申请审核");
+        $(".hide").removeClass("hide");
+        $(".content_box p").hide()
+    }else if({$enterprise_item['auditing']}==2){
+        $("#submit").attr("disabled",true);
+        $("#submit").attr("value","已通过官方认证");
+    }
+</script>

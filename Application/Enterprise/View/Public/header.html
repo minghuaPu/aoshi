@@ -1,98 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>index</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-	<link rel="stylesheet" href="__PUBLIC__/css/bootstrap-3.3.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="__PUBLIC__/css/enterprise/index.css">
-	<script type="text/javascript" src="__PUBLIC__/js/jquery.1.11.1.min.js"></script>
+    <meta charset="UTF-8">
+    <title>{$Think.const.ACTION_NAME}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="__PUBLIC__/css/bootstrap-3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="__PUBLIC__/css/enterprise/index.css?1">
+    <script type="text/javascript" src="__PUBLIC__/js/jquery.1.11.1.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/libs/bootstrap/js/bootstrap.min.js"></script>
+      		<script type="text/javascript" src="__PUBLIC__/js/jobseekers/main.js"></script>
+   		<script type="text/javascript" src="__PUBLIC__/js/jobseekers/cropper.min.js"></script>
+    <script type="text/javascript">
+        var SITE_URL="__MODULE__";
+    </script>
 </head>
 <body>
 <div class="body">
-	<div class="header">
-		<div class="logo">
-			<img src="__PUBLIC__/images/enterprise/logo.png">
-		</div>
-	</div>
-	<div class="nav_bar">
-		<div class="touxiang">
-			<div class="box">头像</div>
-			<p>姓名</p>
-		</div>
-		<div class="nav_item">
-			<div class="item job">
-				<div
-					<if condition="$Think.const.ACTION_NAME eq add_job"> class="tit it_sel" </if>
-					<if condition="$Think.const.ACTION_NAME eq job_list"> class="tit it_sel"</if>
-					class="tit">
-					<span class="icon_job"></span>
-					<p>职位</p>
-					<span class="i_close"></span>
-				</div>
-				<ul
-					<if condition="$Think.const.ACTION_NAME eq add_job"> class="show" </if>
-					<if condition="$Think.const.ACTION_NAME eq job_list"> class="show" </if>
-					class="hide">
-					<li
-					<if condition="$Think.const.ACTION_NAME eq add_job"> class="li_sel" </if>
-					><a href="{:U('Job/add_job')}">新职位</a></li>
-					<li
-					<if condition="$Think.const.ACTION_NAME eq job_list"> class="li_sel" </if>
-					><a href="{:U('Job/job_list')}">已发布职位</a></li>
-				</ul>
-			</div>
-			<div class="item user">
-				<div
-                    <if condition="$Think.const.ACTION_NAME eq visit"> class="tit it_sel" </if>
+    <div class="header">
+        <div class="logo">
+            <div class="logoImg">
+                BRAND
+                <br>职信通
+            </div>
+            <h3>互联网招聘神器</h3>
+        </div>
+    </div>
+    <div class="nav_bar">
+        <div class="touxiang">
+            <div class="box">
+    
+            <!----------------------------------------------------img(begin)------------------------------------------->            
+                    
+ 		<include file="Public:crop" />
+ 		 <!---------------------------------------------------------img(end)------------------------------------------>
+
+            </div>
+        </div>
+        <div class="nav_item">
+            <div class="item job">
+                <div
+                    <if condition="$Think.const.ACTION_NAME eq add_job"> class="tit it_sel"</if>
+                    <if condition="$Think.const.ACTION_NAME eq job_list"> class="tit it_sel"</if>
+                class="tit">
+                    <span class="icon_job"></span>
+                    <p>职位</p>
+                    <span
+                        <if condition="$Think.const.ACTION_NAME eq add_job"> class="i_open"</if>
+                        <if condition="$Think.const.ACTION_NAME eq job_list"> class="i_open"</if>
+                    class="i_close"></span>
+                </div>
+                <ul
+                    <if condition="$Think.const.ACTION_NAME eq add_job"> class="show"</if>
+                    <if condition="$Think.const.ACTION_NAME eq job_list"> class="show"</if>
+                    class="hide">
+                    <li
+                    <if condition="$Think.const.ACTION_NAME eq add_job"> class="li_sel"</if>
+                    ><a href="{:U('Job/add_job')}">新职位</a></li>
+                    <li
+                    <if condition="$Think.const.ACTION_NAME eq job_list"> class="li_sel"</if>
+                    ><a href="{:U('Job/job_list')}">已发布职位</a></li>
+                </ul>
+            </div>
+            <div class="item seeker">
+                <div
                     <if condition="$Think.const.ACTION_NAME eq resume"> class="tit it_sel"</if>
-                    class="tit">
-					<span class="icon_user"></span>
-					<p>牛人</p>
-					<span class="i_close"></span>
-				</div>
-				<ul
-                    <if condition="$Think.const.ACTION_NAME eq visit"> class="show" </if>
-                    <if condition="$Think.const.ACTION_NAME eq resume"> class="show" </if>
-                    class="hide">
-					<li
-					<if condition="$Think.const.ACTION_NAME eq visit"> class="li_sel" </if>
-					><a href="{:U('Seeker/visit')}">看过我</a></li>
-					<li
-					<if condition="$Think.const.ACTION_NAME eq resume"> class="li_sel" </if>
-					><a href="{:U('Seeker/resume')}">收到的简历</a></li>
-				</ul>
-			</div>
-			<div class="item mess">
-				<div class="tit">
-					<div>
-						<span class="icon_mess"></span>
-						<p>消息</p>
-						<span class="badge">14</span>
-					</div>
-				</div>
-			</div>
-			<div class="item me">
-				<div
-                    <if condition="$Think.const.ACTION_NAME eq company"> class="tit it_sel" </if>
-                    class="tit">
-					<span class="icon_me"></span>
-					<p>我的</p>
-					<span class="i_close"></span>
-				</div>
-				<ul
-                    <if condition="$Think.const.ACTION_NAME eq company"> class="show" </if>
-                    class="hide">
-					<li
-					<if condition="$Think.const.ACTION_NAME eq company"> class="li_sel" </if>
-					><a href="{:U('Me/company')}">公司信息</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="tool">
-			<div class="logout">
-				<span class="i_logout"></span>
-				<p><a href="{:U('login/logout')}">退出登陆</a></p>
-			</div>
-		</div>
-	</div>
+                class="tit">
+                    <span class="icon_user"></span>
+                    <p>求职者</p>
+                    <a href="{:U('Seeker/resume')}"></a>
+                </div>
+            </div>
+            <!--<div class="item mess">-->
+                <!--<div class="tit">-->
+                    <!--<span class="icon_mess"></span>-->
+                    <!--<p>消息</p>-->
+                    <!--<span class="badge">14</span>-->
+                <!--</div>-->
+            <!--</div>-->
+            <div class="item me">
+                <div
+                <if condition="$Think.const.ACTION_NAME eq index"> class="tit it_sel"</if>
+                class="tit">
+                    <span class="icon_me"></span>
+                    <p>公司信息</p>
+                    <a href="{:U('Company/index')}"></a>
+                </div>
+            </div>
+    </div>
+    <div class="tool">
+        <div class="logout">
+            <span class="i_logout"></span>
+            <p><a href="{:U('login/logout')}">退出登陆</a></p>
+        </div>
+    </div>
+</div>

@@ -47,7 +47,7 @@ class LoginController extends Controller {
 			}
 		
 			
-			 echo json_encode($json_str);
+//			 echo json_encode($json_str);
 		}
 		else{
 			$this->display();

@@ -211,7 +211,7 @@
 						 
 						<li ng-repeat="item in edu_list">
 						 	<a class="del" href="javascript:;" ng-click="delete_info(item)">删除</a>
-							<a class="edit"   ng-click="show_form(item)">修改</a>
+							<a class="edit" ng-click="show_form(item)">修改</a>
 							<div class="name">{{item.name}}</div>
 							<div>
 								<span class="xl">{{item.xl}}</span> -
@@ -280,27 +280,48 @@
 						</fieldset>
 					</form>
 				</section>
+
+
 				<!--自我描述-->
+<<<<<<< HEAD
 				<section id="self-des" ng-controller="selfdes">
+=======
+				<section id="self-des" ng-controller="self_des">
+>>>>>>> b97d4a6a92e89cf32ee984487441fc5e50970bbf
 					<h5 class="resume-title"><span>自我描述</span><a class="edit" href="javascript:;">修改</a></h5>
 					<if condition="$resumes_basic[0][des]">
 						<p class="list">{$resumes_basic[0][des]}</p>
 						<else/>
 						<button class="add" ng-click="show_form(true)">+ 添加自我描述</button>
 					</if>
+<<<<<<< HEAD
 					<form id="self-des-form" ng-show="self_des_form">
 						<fieldset>
 							<textarea maxlength="300" rows="5" ng-model="self_des_form.resumes_basic[0][des]"></textarea>
 						</fieldset>
 						<fieldset>
 							<input class="btn submit" type="submit" value="保存" ng-click="save_form()">
+=======
+					<form id="self-des-form" ng-show="form_info">
+						<fieldset>
+							<textarea maxlength="300" rows="5" ng-model="form_info.des"></textarea>
+						</fieldset>
+						<fieldset>
+							<input class="btn submit" ng-click="save_form()" value="保存">
+>>>>>>> b97d4a6a92e89cf32ee984487441fc5e50970bbf
 							<button class="btn cancel" ng-click="hide_form()">取消</button>
 						</fieldset>
 					</form>
 					</foreach>
 				</section>
+
+
 				<!--求职意向-->
+<<<<<<< HEAD
 				<section id="job-career" ng-controller="jobcareer">
+=======
+				<section id="job-career" ng-controller="job_career">
+>>>>>>> b97d4a6a92e89cf32ee984487441fc5e50970bbf
 					<h5 class="resume-title"><span>求职意向</span><a class="edit" href="javascript:;">修改</a></h5>
 					<if condition="$resumes_career">
 						<foreach name="resumes_career" item="item">
@@ -358,7 +379,7 @@
 					</form>
 				</section>
 				<!--求职状态-->
-				<section class="text-center">
+				<section class="text-center" ng-controller="job_state">
 					<select id="job-state">
 						<if condition="$resumes_basic[0][state]">
 							<option>{$resumes_basic[0][state]}</option>
@@ -401,6 +422,7 @@
 			</aside>
 		</section>
 		<script type="text/javascript">
+		// /aoshi/index.php/Admin/Rsum
 			var SITE_URL = "__CONTROLLER__";
 		</script>
 		<script src="__PUBLIC__/js/jobseekers/jquery.min.js"></script>

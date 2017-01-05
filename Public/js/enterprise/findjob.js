@@ -1,7 +1,7 @@
 $(".job-list").on('click',function() {
 	var val=$(this).find('.job-name').html();
 	$.ajax({
-	   type: "POST",
+	   type: "GET",
 	   url: "jobdetail",
 	   //dataType : 'json',
 	   async : false,

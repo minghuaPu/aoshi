@@ -21,10 +21,34 @@ body {
 .body .header .logo {
   height: 40px;
   margin-left: 300px;
-  padding-top: 6px;
+  moz-user-select: -moz-none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  /* you could also put this in a class */
+  -webkit-user-select: none;
+  /* and add the CSS class here instead */
+  -ms-user-select: none;
+  user-select: none;
 }
-.body .header .logo img {
-  height: 28px;
+.body .header .logo .logoImg {
+  width: 50px;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  font-size: 8px;
+  text-align: center;
+  padding-top: 5px;
+  line-height: 15px;
+  color: #53cac3;
+  font-weight: 600;
+  float: left;
+}
+.body .header .logo h3 {
+  float: left;
+  line-height: 40px;
+  color: #ffffff;
+  margin: 0 0 0 20px;
 }
 .body .nav_bar {
   float: left;
@@ -39,7 +63,7 @@ body {
 }
 .body .nav_bar .touxiang {
   width: 100%;
-  height: 116px;
+  height: 103px;
   border-bottom: 1px solid #47525a;
 }
 .body .nav_bar .touxiang .box {
@@ -50,13 +74,15 @@ body {
   background-color: #a76cbc;
   line-height: 80px;
   text-align: center;
+  overflow: hidden;
+  position: relative;
 }
-.body .nav_bar .touxiang p {
-  text-align: center;
-  font-size: 16px;
-  line-height: 16px;
-  margin-top: 10px;
-  color: #ffffff;
+.body .nav_bar .touxiang .box img {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  top: -5px;
+  left: -5px;
 }
 .body .nav_bar .nav_item {
   margin-top: 16px;
@@ -109,6 +135,13 @@ body {
   position: relative;
   cursor: pointer;
 }
+.body .nav_bar .nav_item .item .tit a {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .body .nav_bar .nav_item .item .tit [class^='icon_'] {
   background: url(../../images/enterprise/menu_icon.png);
   background-size: 168px 100px;
@@ -148,7 +181,7 @@ body {
   background-position: 38px 0;
 }
 .body .nav_bar .nav_item .item .tit .icon_mess {
-  width: 19px;
+  width: 20px;
   background-position: -36px 0;
 }
 .body .nav_bar .nav_item .item .tit .icon_mess_sel {

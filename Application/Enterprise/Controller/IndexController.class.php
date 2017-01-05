@@ -20,7 +20,7 @@ class IndexController extends Controller {
             // 第二步：模版赋值
             $this->assign('info',$info);
 
-            $this->display();
+            $this->success('',U('Seeker/resume'));
         }else{
             $this->error('请先登录！',U('Login/login'));
         }

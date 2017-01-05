@@ -25,7 +25,7 @@
 					<input type="password" name="password" id="password" class="ipt" placeholder="输入您的登录密码" required>
 				</div>
                 <div class="group-ipt " >
-                	<input type="text" name="verify_val" placeholder="验证码" required> <br><img src="{:U('Login/get_verify')}">
+                	<input type="text" name="verify_val" placeholder="验证码" required> <br><img src="{:U('Login/get_verify')}" onclick="this.src=this.src+'?'">
                 </div>
 			</div>
 		</div>

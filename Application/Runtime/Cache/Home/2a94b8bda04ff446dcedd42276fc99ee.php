@@ -74,8 +74,8 @@
             </div>
             <div class="col-lg-12">
                 <div class="input-group input-defined">
-                    <form action="" method="get">
-                        <input type="text" class="form-control animated bounceIn" placeholder="输入公司或职位">
+                    <form action="<?php echo U('Index/findjob');?>" method="post">
+                        <input type="text" class="form-control animated bounceIn" name="key" placeholder="输入公司或职位">
                         <span class="input-group-btn">
         <button class="btn btn-default icon-search" type="submit"></button>
       </span>
