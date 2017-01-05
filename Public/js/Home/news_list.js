@@ -36,7 +36,7 @@ $( function (){
                         $("div.box-3").append(box);
                         $('.box-5').html("<input type='hidden' id='page' value=" +page +"><input type='hidden' id='cata_id' value=" +cata_id +">");
                    });
-                  }if (returns.more.end==1) {$(".box-4").hide();}
+                  }if (returns.more.end==1) {$(".box-4").html('<p>没有更多了</p>');}
 				  else{
 					$('.box-3').html(returns.zhi);
                   }

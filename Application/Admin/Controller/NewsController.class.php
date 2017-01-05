@@ -114,8 +114,8 @@ class NewsController extends AuthController{
             }
         
         $id=I('id');
-        $data['news_title']=I('article_title');//获取传输过来的数据
-        $data['news_content']=I('article_content');
+        $data['news_title']=I('news_title');//获取传输过来的数据
+        $data['news_content']=I('news_content');
         $data['cata_id']=I('cata_id');
         $data['add_time']=time();
         $data['status']=I('status');
