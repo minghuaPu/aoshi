@@ -5,15 +5,11 @@
 		<meta charset="utf-8">
 		<title>我的简历</title>
 		<link rel="stylesheet" href="__PUBLIC__/css/jobseekers/resume.css">
-<<<<<<< HEAD
         <link rel="stylesheet" href="__PUBLIC__/css/bootstrap-3.3.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="__PUBLIC__/css/jobseekers/cropper.min.css" rel="stylesheet"/>
         <link rel="stylesheet" href="__PUBLIC__/css/jobseekers/main.css" rel="stylesheet"/>
 		<script>
         var SITE_URL="__MODULE__";
-        
-        /*回到顶部*/
-		
         </script>       
 
 	</head>
@@ -25,7 +21,7 @@
 			<nav class="container">
 				<a class="logo" href=""><img src="__PUBLIC__/images/logo.png"></a>
 				<a class="nav-link selected" href="{:U('Index/index')}">首页</a>
-				<a class="nav-link" href="delivery.html">求职</a>
+				<a class="nav-link" href="{:U('Index/delivery')}">投递箱</a>
                 <a class="nav-link fr" href="{:U('Login/log_out')}">退出</a>
                 
 				
@@ -33,26 +29,10 @@
 		</header>
         <!--简历-->
         
-=======
-	</head>
-
-	<body>
-		<!--头部-->
-		<header id="header">
-			<nav class="container">
-				<a class="logo" href=""><img src="__PUBLIC__/images/u-logo.png"></a>
-				<a class="nav-link selected" href="#">首页</a>
-				<a class="nav-link" href="#">求职</a>
-				<a class="nav-link fr" href="#">退出</a>
-			</nav>
-		</header>
-		<!--简历-->
->>>>>>> 52745953a4e8f54f493eca97c12ccde434932b74
-		<section id="resume" class="container">
+		<section id="resume" class="container" ng-app="myResume" ng-controller="resume">
 			<!--简历信息-->
 			<article class="resume-inner">
 				<!--用户头像-->
-<<<<<<< HEAD
 				<aside class="avatar" id="crop-avatar">
                   	<img class="absolute" src="__PUBLIC__/images/resume-bg.png">              
                     <img id="avatar-img" class="center hear" src="__PUBLIC__/images/avatar.png">
@@ -101,61 +81,12 @@
 							<label>性别</label>
 							<select class="input-text" required>
 								<option >男</option>
-=======
-				<aside class="avatar">
-					<img id="avatar-img" class="center" src="__PUBLIC__/images/u-avatar.png">
-					<img id="avatar-bg" class="center" src="__PUBLIC__/images/u-avatar-bg.png" style="display: none;">
-					<img class="absolute" src="__PUBLIC__/images/u-resume-dg.png">
-					<input id="avatar-upload" class="center" type="file">
-				</aside>
-				<!--基本信息-->
-				<section id="user-info">
-					<if condition="$resumes_basic">
-						<foreach name="resumes_basic" item="item">
-							<div class="list text-center">
-								<a class="edit" href="javascript:;">修改</a>
-								<span class="name">{$item.name}</span>
-								<span class="intro">{$item.intro}</span>
-								<span class="base">
-									<em class="sex"><i class="icon"></i>{$item.sex}</em>
-									<em class="birth">{$item.birth}</em>
-									<em class="xl">{$item.xl}</em>
-									<em class="gzjy">{$item.gzjy}</em>
-									<em class="city">{$item.city}</em>
-								</span>
-								<span class="base">
-									<em class="p"><i class="icon phone"></i>{$item.phone}</em>
-									<em class="e"><i class="icon email"></i>{$item.email}</em>
-								</span>
-							</div>
-						</foreach>
-						<else/>
-						<button class="add">+ 添加基本资料</button>
-					</if>
-					<form id="user-info-form">
-						<fieldset>
-							<label>姓名</label>
-							<input class="input-text">
-						</fieldset>
-						<fieldset>
-							<label>介绍</label>
-							<input class="input-text">
-						</fieldset>
-						<fieldset>
-							<label>性别</label>
-							<select class="input-text">
-								<option>男</option>
->>>>>>> 52745953a4e8f54f493eca97c12ccde434932b74
 								<option>女</option>
 							</select>
 						</fieldset>
 						<fieldset>
 							<label>出生年份</label>
-<<<<<<< HEAD
                             <select class="input-text" >
-=======
-							<select class="input-text">
->>>>>>> 52745953a4e8f54f493eca97c12ccde434932b74
 								<option>00后</option>
 								<option>90后</option>
 								<option>80后</option>
@@ -163,13 +94,8 @@
 							</select>
 						</fieldset>
 						<fieldset>
-<<<<<<< HEAD
 							<label>最高学历</label>
 							<select class="input-text"  required>
-=======
-							<label>最高年限</label>
-							<select class="input-text">
->>>>>>> 52745953a4e8f54f493eca97c12ccde434932b74
 								<option>大专</option>
 								<option>本科</option>
 								<option>硕士</option>
@@ -179,11 +105,7 @@
 						</fieldset>
 						<fieldset>
 							<label>工作年限</label>
-<<<<<<< HEAD
 							<select class="input-text" required>
-=======
-							<select class="input-text">
->>>>>>> 52745953a4e8f54f493eca97c12ccde434932b74
 								<option>应届毕业生</option>
 								<option>1-3年</option>
 								<option>3-5年</option>
@@ -193,11 +115,7 @@
 						</fieldset>
 						<fieldset>
 							<label>所在城市</label>
-<<<<<<< HEAD
                             <select class="input-text"  >
-=======
-							<select class="input-text">
->>>>>>> 52745953a4e8f54f493eca97c12ccde434932b74
 								<option>北京</option>
 								<option>上海</option>
 								<option>广州</option>
@@ -208,19 +126,11 @@
 						</fieldset>
 						<fieldset>
 							<label>手机号码</label>
-<<<<<<< HEAD
 							<input class="input-text" required>
 						</fieldset>
 						<fieldset>
 							<label>联系邮箱</label>
-							<input class="input-text"  required>
-=======
-							<input class="input-text">
-						</fieldset>
-						<fieldset>
-							<label>联系邮箱</label>
-							<input class="input-text">
->>>>>>> 52745953a4e8f54f493eca97c12ccde434932b74
+							<input class="input-text"  >
 						</fieldset>
 						<fieldset>
 							<input class="btn submit" type="submit" value="保存">
@@ -228,100 +138,57 @@
 						</fieldset>
 					</form>
 				</section>
-<<<<<<< HEAD
                 
                 
 				<!--工作经历-->
-				<section id="job-exp">
-					<h5 class="resume-title"><span>工作经历</span><a class="edit" href="javascript:;">添加</a></h5><!--&javascript:;$item['resume_id']-->
+				<section id="job-exp"  ng-controller="jobexp">
+					<h5 class="resume-title"><span>工作经历</span><a class="edit" href="javascript:;">添加{{ zfc }}</a></h5><!--&javascript:;$item['resume_id']-->
 					
 					<ul class="list">
-                    <if condition="$experience_info">
-                        <foreach name="experience_info" item="item">
-                            <li>
-                                <a class="edit" href="javascript:;"   data-id={$item.resume_id}>修改</a>
-                                <a class="del"   href="javascript:;"   data-id={$item.resume_id}>删除</a>
+                  <!--  <if condition="$experience_info">
+                        <foreach name="experience_info" item="item">-->
+                            <li  ng-repeat="item in exp_list">
+                                <a class="edit"  ng-click="show_form(item)" >修改</a><!-- data-id={$item.resume_id}-->
+                                <a class="del"   href="javascript:;" data-id="{{ item.resume_id }}" >删除</a><!-- data-id={$item.resume_id}-->
                                    
-                                <div class="name rate">{$item.re_company_name}</div>
+                                <div class="name rate">{{ item.re_company_name }}</div><!--{$item.re_company_name}-->
                                 <div >
-                                    <span class="job ">{$item.job_title}</span>
-                                    <span class="fr ">{$item.working_time}</span>
+                                    <span class="job ">{{ item.job_title }}</span><!--{$item.job_title}-->
+                                    <span class="fr ">{{ item.working_time }}</span><!--{$item.working_time}-->
                                 </div>
-                                <p  class="cont rate">{$item.job_description}</p>
+                                <p  class="cont rate">{{ item.job_description }}</p><!--{$item.job_description}-->
                             </li>
                           
-                        </foreach>
-                        <else/>
-							<button class="add">+ 添加工作经历</button>
-                    </if>
+                       <!-- </foreach>
+                        <else/>-->
+							<button class="add"  ng-click="show_form(true)">+ 添加工作经历</button>
+                   <!-- </if>-->
                     
 					</ul>
-					<form id="job-exp-form"   method="post">
+					<form id="job-exp-form"   ng-show="form_info" style="display:block"><!-- method="post" -->
 						<fieldset>
 							<label>公司</label>
-							<input class="input-text" required>
+							<input class="input-text"  ng-model="form_info.re_company_name">
 						</fieldset>
 						<fieldset>
 							<label>职位</label>
-							<input class="input-text" required>
+							<input class="input-text"  ng-model="form_info.job_title">
 						</fieldset>
 						<fieldset>
 							<label>任职时间</label>
-							<input class="input-text" placeholder="如:2010-11-12~至今" required>
+							<input class="input-text" placeholder="如:2010-11-12~至今" ng-model="form_info.working_time">
 						</fieldset>
 						<fieldset>
 							<label class="align-top">工作内容</label>
-							<textarea class="input-text" maxlength="300" rows="5"  placeholder="如:在职期间的工作范围或为公司创造了什么价值"></textarea>
+							<textarea class="input-text" maxlength="300" rows="5"  placeholder="如:在职期间的工作范围或为公司创造了什么价值"  ng-model="form_info.job_description"></textarea>
 						</fieldset>
 						<fieldset>
                            <!-- <input type="hidden" name="what" value="experience" />
                         	<input type="hidden" name="id" value="{$article_info['id']}">-->
-=======
-				<!--工作经历-->
-				<section id="job-exp">
-					<h5 class="resume-title"><span>工作经历</span><a class="edit" href="javascript:;">添加</a></h5>
-					<ul class="list">
-						<if condition="$resumes_jobexp">
-							<foreach name="resumes_jobexp" item="item">
-								<li>
-									<a class="del" href="javascript:;" data-id={$item.jid}>删除</a>
-									<a class="edit" href="javascript:;" data-id={$item.jid}>修改</a>
-									<div class="name">{$item.name}</div>
-									<div>
-										<span class="job">{$item.job}</span>
-										<span class="fr">{$item.time}</span>
-									</div>
-									<p class="cont">{$item.cont}</p>
-								</li>
-							</foreach>
-							<else/>
-							<button class="add">+ 添加工作经历</button>
-						</if>
-					</ul>
-					<form id="job-exp-form">
-						<fieldset>
-							<label>公司</label>
-							<input class="input-text">
-						</fieldset>
-						<fieldset>
-							<label>职位</label>
-							<input class="input-text">
-						</fieldset>
-						<fieldset>
-							<label>任职时间</label>
-							<input class="input-text">
-						</fieldset>
-						<fieldset>
-							<label class="align-top">工作内容</label>
-							<textarea class="input-text" maxlength="300" rows="5"></textarea>
-						</fieldset>
-						<fieldset>
->>>>>>> 52745953a4e8f54f493eca97c12ccde434932b74
-							<input class="btn submit" type="submit" value="保存">
-							<button class="btn cancel">取消</button>
+							<input class="btn submit" type="submit"  ng-click="save_form()" value="保存">
+							<button class="btn cancel"  ng-click="hide_form()">取消</button>
 						</fieldset>
 					</form>
-<<<<<<< HEAD
                    
 				</section>
                 
@@ -360,42 +227,6 @@
 						<fieldset>
 							<label>学历</label>
 							<select class="input-text" required>
-=======
-				</section>
-				<!--教育经历-->
-				<section id="edu-exp">
-					<h5 class="resume-title"><span>教育经历</span><a class="edit" href="javascript:;">添加</a></h5>
-					<ul class="list">
-						<if condition="$resumes_eduexp">
-							<foreach name="resumes_eduexp" item="item">
-								<li>
-									<a class="del" href="javascript:;" data-id={$item.eid}>删除</a>
-									<a class="edit" href="javascript:;" data-id={$item.eid}>修改</a>
-									<div class="name">{$item.name}</div>
-									<div>
-										<span class="xl">{$item.xl}</span> -
-										<span class="major">{$item.major}</span>
-										<span class="grad fr">{$item.grad}</span>
-									</div>
-								</li>
-							</foreach>
-							<else/>
-							<button class="add">+ 添加教育经历</button>
-						</if>
-					</ul>
-					<form id="edu-exp-form">
-						<fieldset>
-							<label>学校名称</label>
-							<input class="input-text">
-						</fieldset>
-						<fieldset>
-							<label>所学专业</label>
-							<input class="input-text">
-						</fieldset>
-						<fieldset>
-							<label>学历</label>
-							<select class="input-text">
->>>>>>> 52745953a4e8f54f493eca97c12ccde434932b74
 								<option>大专</option>
 								<option>本科</option>
 								<option>硕士</option>
@@ -405,7 +236,6 @@
 						</fieldset>
 						<fieldset>
 							<label>毕业时间</label>
-<<<<<<< HEAD
                             <select class="input-text" required>
 								<option>2017-09</option>
 								<option>2016-09</option>
@@ -425,27 +255,6 @@
 								<option>2002-09</option>
 								<option>2001-09</option>
 								<option>2000-09</option>
-=======
-							<select class="input-text">
-								<option>2017</option>
-								<option>2016</option>
-								<option>2015</option>
-								<option>2014</option>
-								<option>2013</option>
-								<option>2012</option>
-								<option>2011</option>
-								<option>2010</option>
-								<option>2009</option>
-								<option>2008</option>
-								<option>2007</option>
-								<option>2006</option>
-								<option>2005</option>
-								<option>2004</option>
-								<option>2003</option>
-								<option>2002</option>
-								<option>2001</option>
-								<option>2000</option>
->>>>>>> 52745953a4e8f54f493eca97c12ccde434932b74
 							</select>
 						</fieldset>
 						<fieldset>
@@ -453,7 +262,6 @@
 							<button class="btn cancel">取消</button>
 						</fieldset>
 					</form>
-<<<<<<< HEAD
                     
 				</section>
                 
@@ -479,27 +287,12 @@
                      <form id="self-des-form"  method="post">
 						<fieldset>
 							<textarea maxlength="300" rows="5" name="describe" vlaue="11" maxlength="250" wrap="hard" placeholder="250字以内" required></textarea>
-=======
-				</section>
-				<!--自我描述-->
-				<section id="self-des">
-					<h5 class="resume-title"><span>自我描述</span><a class="edit" href="javascript:;">修改</a></h5>
-					<if condition="$resumes_basic[0][des]">
-						<p class="list">{$resumes_basic[0][des]}</p>
-						<else/>
-						<button class="add">+ 添加自我描述</button>
-					</if>
-					<form id="self-des-form">
-						<fieldset>
-							<textarea maxlength="300" rows="5"></textarea>
->>>>>>> 52745953a4e8f54f493eca97c12ccde434932b74
 						</fieldset>
 						<fieldset>
 							<input class="btn submit" type="submit" value="保存">
 							<button class="btn cancel">取消</button>
 						</fieldset>
 					</form>
-<<<<<<< HEAD
                     
 					
 				</section>
@@ -533,34 +326,6 @@
 							<label>职位类型</label>
                             <select class="input-text" required>
 								<option selected="selected" >无限</option>
-=======
-					</foreach>
-				</section>
-				<!--求职意向-->
-				<section id="job-career">
-					<h5 class="resume-title"><span>求职意向</span><a class="edit" href="javascript:;">修改</a></h5>
-					<if condition="$resumes_career">
-						<foreach name="resumes_career" item="item">
-							<dl class="list clear">
-								<dd class="name"><i></i>{$item.name}</dd>
-								<dd class="type"><i></i>{$item.type}</dd>
-								<dd class="city"><i></i>{$item.city}</dd>
-								<dd class="wages"><i></i>{$item.wages}</dd>
-							</dl>
-						</foreach>
-						<else/>
-						<button class="add">+ 添加求职意向</button>
-					</if>
-					<form id="job-career-form">
-						<fieldset>
-							<label>期望职位</label>
-							<input class="input-text">
-						</fieldset>
-						<fieldset>
-							<label>职位类型</label>
-							<select class="input-text">
-								<option>无限</option>
->>>>>>> 52745953a4e8f54f493eca97c12ccde434932b74
 								<option>全职</option>
 								<option>兼职</option>
 								<option>实习</option>
@@ -568,13 +333,8 @@
 						</fieldset>
 						<fieldset>
 							<label>期望城市</label>
-<<<<<<< HEAD
                             <select class="input-text"  required>
 								<option selected="selected" >无限</option>
-=======
-							<select class="input-text">
-								<option>无限</option>
->>>>>>> 52745953a4e8f54f493eca97c12ccde434932b74
 								<option>北京</option>
 								<option>上海</option>
 								<option>广州</option>
@@ -584,13 +344,8 @@
 						</fieldset>
 						<fieldset>
 							<label>期望月薪</label>
-<<<<<<< HEAD
                             <select class="input-text" required>
 								<option selected="selected" >无限</option>
-=======
-							<select class="input-text">
-								<option>无限</option>
->>>>>>> 52745953a4e8f54f493eca97c12ccde434932b74
 								<option>5k以下</option>
 								<option>5k-10k</option>
 								<option>10k-15k</option>
@@ -604,7 +359,6 @@
 							<button class="btn cancel">取消</button>
 						</fieldset>
 					</form>
-<<<<<<< HEAD
                    
 				</section>
 				<!--求职状态-->
@@ -622,19 +376,6 @@
                       
 							
 						</if>  
-=======
-				</section>
-				<!--求职状态-->
-				<section class="text-center">
-					<select id="job-state">
-						<if condition="$resumes_basic[0][state]">
-							<option>{$resumes_basic[0][state]}</option>
-							<option>我是应届毕业生</option>
-							<option>我暂时不想找工作</option>
-							<option>我目前已离职，可快速到岗</option>
-							<option>我目前正在职，正考虑换个新环境</option>
-						</if>
->>>>>>> 52745953a4e8f54f493eca97c12ccde434932b74
 					</select>
 				</section>
 			</article>
@@ -643,13 +384,8 @@
 				<nav id="nav-list">
 					<div class="integrity">
 						<div class="top">
-<<<<<<< HEAD
 							<span>简历完整度：<em id="finishing_rate">50%</em></span>
 							<a class="fr" href="{:U('Preview/index')}" target="_blank">预览简历</a>
-=======
-							<span>简历完整度：<em>50%</em></span>
-							<a class="fr" href="Jobseekers/preview">预览简历</a>
->>>>>>> 52745953a4e8f54f493eca97c12ccde434932b74
 						</div>
 					</div>
 					<ul>
@@ -672,10 +408,12 @@
 
 				</nav>
 			</aside>
-<<<<<<< HEAD
            </section> 
+        <script type="text/javascript">
+			var SITE_URL = "__CONTROLLER__";
+		</script>   
 		<script type="text/javascript" src="__PUBLIC__/js/jobseekers/jquery-3.1.1.min.js"></script>
-   
+   		<script type="text/javascript" src="__PUBLIC__/js/angular.min.js"></script>
         <script type="text/javascript" src="__PUBLIC__/js/jobseekers/resume.js"></script>
         <script type="text/javascript" src="__PUBLIC__/css/bootstrap-3.3.0/js/bootstrap.min.js"></script>
    		<script type="text/javascript" src="__PUBLIC__/js/jobseekers/cropper.min.js"></script>
@@ -685,14 +423,3 @@
 
 </html>
          
-=======
-		</section>
-		<script type="text/javascript">
-			var SITE_URL = "__MODULE__";
-		</script>
-		<script src="__PUBLIC__/js/jobseekers/jquery.min.js"></script>
-		<script src="__PUBLIC__/js/jobseekers/resume.js"></script>
-	</body>
-
-</html>
->>>>>>> 52745953a4e8f54f493eca97c12ccde434932b74
