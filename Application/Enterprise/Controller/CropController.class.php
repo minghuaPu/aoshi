@@ -1,5 +1,5 @@
 <?php
-namespace Jobseekers\Controller;
+namespace Enterprise\Controller;
 use Think\Controller;
 session_start();
 class CropAvatar {
@@ -40,8 +40,8 @@ class CropAvatar {
             if ($type) {
                 $extension = image_type_to_extension($type);
                 //unlink('../upload/resume_' . $_SESSION['uid'] . '.original' . $extension);
-                unlink('./Public/upload/resume_'. $_SESSION['id'] .'.original' . $extension);
-                $src = './Public/upload/resume_'. $_SESSION['id'] .'.original' . $extension;////////////////$src = '../upload/' . date('YmdHis') . '.original' . $extension;///////////////
+                unlink('./Public/upload/job_'. $_SESSION['tid'] .'.original' . $extension);
+                $src = './Public/upload/job_'. $_SESSION['tid'] .'.original' . $extension;////////////////$src = '../upload/' . date('YmdHis') . '.original' . $extension;///////////////
 
                 if ($type == IMAGETYPE_GIF || $type == IMAGETYPE_JPEG || $type == IMAGETYPE_PNG) {
                     if (file_exists($src)) {
@@ -68,8 +68,8 @@ class CropAvatar {
     }
     private function setDst() {
         // unlink('__PUBLIC__/upload/resume_' . $_SESSION['uid'] . '.png');
-        unlink('./Public/upload/resume_'. $_SESSION['id'] .'.png');
-        $this -> dst = './Public/upload/resume_'. $_SESSION['id'] .'.png';///////////////////////// $this -> dst = '../upload/' . date('YmdHis') . '.png';//////////////////////////
+        unlink('./Public/upload/job_'. $_SESSION['tid'] .'.png');
+        $this -> dst = './Public/upload/job_'. $_SESSION['tid'] .'.png';///////////////////////// $this -> dst = '../upload/' . date('YmdHis') . '.png';//////////////////////////
 
 
     }
@@ -204,7 +204,7 @@ class CropController extends Controller {
             'result' => __ROOT__. $crop -> getResult().'?'.time()//函数返回路径，这个地址很重要
         );
         //图片路径导入数据库
-        $photosql="UPDATE jobseekers SET Photo ='". __ROOT__.$crop -> getResult()."' where id=". $_SESSION['id'] ;//$_SESSION['uid'];
+        $photosql="UPDATE enterprise SET Photo ='". __ROOT__.$crop -> getResult()."' where id=". $_SESSION['tid'] ;//$_SESSION['uid'];
         mysqli_query(mysqli_connect("127.0.0.1","root","123456","yuanku_job"),$photosql);
 
 

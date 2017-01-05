@@ -70,24 +70,15 @@ body .body .login {
   border-radius: 6px;
 }
 body .body .login .touxiang {
-  /*width: 70px;*/
-  /*height: 70px;*/
-  /*border-radius: 50%;*/
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
   margin: 10px auto;
-  /*background-image: url(../../images/enterprise/boss.png);*/
-  /*background-repeat: no-repeat;*/
-  /*background-position: center;*/
-    text-align: center;
+  background-image: url(../../images/enterprise/boss.png);
+  background-repeat: no-repeat;
+  background-position: center;
 }
-body .body .login .touxiang .default-img{
-    display: inline-block;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background-image: url(../../images/enterprise/boss.png);
-    background-repeat: no-repeat;
-    background-position: center;
-}
+
 body .body .login form .form-group {
   width: 80%;
   margin: 16px auto 0;
