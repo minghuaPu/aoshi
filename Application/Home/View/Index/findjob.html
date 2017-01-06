@@ -86,7 +86,7 @@
 		</div>
 		<div class="position-right">
 			<div class="search-box">
-				<form id="search-form" action="{:U('Index/findjob')}" method="post">
+				<form id="search-form" action="" method="post">
 					<input type="text" name="key" placeholder="请输入职位或公司名称" class="search" value={$_REQUEST['key']}>
 					<input type="submit" value="搜索" class="btn btn-info">
 				</form>
@@ -101,7 +101,7 @@
 <!-- 第四步：遍历模版变量 -->
 		<foreach name="job_info" item="job_item">
 			<div class="job-list">
-				<a href="{:U('Index/jobdetail')}">
+				<a href="#"><!-- {:U('Index/jobdetail')} -->
 					<div class="job-left">
 					<!-- 第五步：给对应信息添加动态数据 -->
 						<p class="job-name">{$job_item['job_name']}</p>

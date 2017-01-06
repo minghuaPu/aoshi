@@ -7,7 +7,11 @@
 		<link rel="stylesheet" href="__PUBLIC__/css/jobseekers/resume.css">
 		<script src="__PUBLIC__/js/angular-1.0.1.min.js"></script>
 	 	<style>
+<<<<<<< HEAD
+			#resume form{display: block;}
+=======
 			#resume form#job-exp-form,#resume form#edu-exp-form{display: block;}
+>>>>>>> 98a4c6f673c957bbb5a114a4277b69c0fd2afe88
 	 	</style>
 	</head>
 
@@ -33,48 +37,48 @@
 					<input id="avatar-upload" class="center" type="file">
 				</aside>
 				<!--基本信息-->
-				<section id="user-info">
+				<section id="user-info" ng-controller="userinfo">
 					<if condition="$resumes_basic">
-						<foreach name="resumes_basic" item="item">
+						<li ng-repeat="item in info_list">
 							<div class="list text-center">
 								<a class="edit" href="javascript:;">修改</a>
-								<span class="name">{$item.name}</span>
-								<span class="intro">{$item.intro}</span>
+								<span class="name">{{item.name}}</span>
+								<span class="intro">{{item.intro}}</span>
 								<span class="base">
-									<em class="sex"><i class="icon"></i>{$item.sex}</em>
-									<em class="birth">{$item.birth}</em>
-									<em class="xl">{$item.xl}</em>
-									<em class="gzjy">{$item.gzjy}</em>
-									<em class="city">{$item.city}</em>
+									<em class="sex"><i class="icon"></i>{{item.sex}}</em>
+									<em class="birth">{{item.birth}}</em>
+									<em class="xl">{{item.xl}}</em>
+									<em class="gzjy">{{item.gzjy}}</em>
+									<em class="city">{{item.city}}</em>
 								</span>
 								<span class="base">
-									<em class="p"><i class="icon phone"></i>{$item.phone}</em>
-									<em class="e"><i class="icon email"></i>{$item.email}</em>
+									<em class="p"><i class="icon phone"></i>{{item.phone}}</em>
+									<em class="e"><i class="icon email"></i>{{item.email}}</em>
 								</span>
 							</div>
-						</foreach>
+						</li>
 						<else/>
-						<button class="add">+ 添加基本资料</button>
+						<button class="add" ng-click="show_form(true)">+ 添加基本资料</button>
 					</if>
-					<form id="user-info-form">
+					<form id="user-info-form" ng-show="user_info_form">
 						<fieldset>
 							<label>姓名</label>
-							<input class="input-text">
+							<input class="input-text" ng-model="user_info_form.name">
 						</fieldset>
 						<fieldset>
 							<label>介绍</label>
-							<input class="input-text">
+							<input class="input-text" ng-model="user_info_form.intro">
 						</fieldset>
 						<fieldset>
 							<label>性别</label>
-							<select class="input-text">
+							<select class="input-text" ng-model="user_info_form.sex">
 								<option>男</option>
 								<option>女</option>
 							</select>
 						</fieldset>
 						<fieldset>
 							<label>出生年份</label>
-							<select class="input-text">
+							<select class="input-text" ng-model="user_info_form.birth">
 								<option>00后</option>
 								<option>90后</option>
 								<option>80后</option>
@@ -82,8 +86,8 @@
 							</select>
 						</fieldset>
 						<fieldset>
-							<label>最高年限</label>
-							<select class="input-text">
+							<label>学历</label>
+							<select class="input-text" ng-model="user_info_form.xl">
 								<option>大专</option>
 								<option>本科</option>
 								<option>硕士</option>
@@ -93,7 +97,7 @@
 						</fieldset>
 						<fieldset>
 							<label>工作年限</label>
-							<select class="input-text">
+							<select class="input-text" ng-model="user_info_form.gzjy">
 								<option>应届毕业生</option>
 								<option>1-3年</option>
 								<option>3-5年</option>
@@ -103,7 +107,7 @@
 						</fieldset>
 						<fieldset>
 							<label>所在城市</label>
-							<select class="input-text">
+							<select class="input-text" ng-model="user_info_form.city">
 								<option>北京</option>
 								<option>上海</option>
 								<option>广州</option>
@@ -114,15 +118,15 @@
 						</fieldset>
 						<fieldset>
 							<label>手机号码</label>
-							<input class="input-text">
+							<input class="input-text" ng-model="user_info_form.phone">
 						</fieldset>
 						<fieldset>
 							<label>联系邮箱</label>
-							<input class="input-text">
+							<input class="input-text" ng-model="user_info_form.email">
 						</fieldset>
 						<fieldset>
-							<input class="btn submit" type="submit" value="保存">
-							<button class="btn cancel">取消</button>
+							<input class="btn submit" type="submit" value="保存" ng-click="save_form()">
+							<button class="btn cancel" ng-click="hide_form()">取消</button>
 						</fieldset>
 					</form>
 				</section>
@@ -168,6 +172,39 @@
 					</form>
 				</section>
 				<!--教育经历-->
+<<<<<<< HEAD
+				<section id="edu-exp" ng-controller="eduexp">
+					<h5 class="resume-title"><span>教育经历</span><a class="edit" href="javascript:;">添加</a></h5>
+					<ul class="list">
+						<if condition="$resumes_eduexp">
+							<li ng-repeat="item in edu_list">
+								
+								<a class="del" href="javascript:;" data-id={{item.eid}}>删除</a>
+								<a class="edit" href="javascript:;" data-id={{item.eid}} ng-click="show_form()">修改</a>
+								<div class="name">{{item.name}}</div>
+								<div>
+									<span class="xl">{{item.xl}}</span> -
+									<span class="major">{{item.major}}</span>
+									<span class="grad fr">{{item.grad}}</span>
+								</div>
+							</li>
+							<else/>
+							<button class="add" ng-click="show_form(true)">+ 添加教育经历</button>
+						</if>
+					</ul>
+					<form id="edu-exp-form" ng-show="edu_exp_form">
+						<fieldset>
+							<label>学校名称</label>
+							<input class="input-text" ng-model="edu_exp_form.name">
+						</fieldset>
+						<fieldset>
+							<label>所学专业</label>
+							<input class="input-text" ng-model="edu_exp_form.major">
+						</fieldset>
+						<fieldset>
+							<label>学历</label>
+							<select class="input-text" ng-model="edu_exp_form.xl">
+=======
 				<section ng-controller="eduexp">
 					<h5 class="resume-title"><span>教育经历</span><a class="edit" href="javascript:;" ng-click="show_form(true)">添加</a></h5>
 					<ul class="list" >
@@ -198,6 +235,7 @@
 						<fieldset>
 							<label>学历</label>
 							<select class="input-text" ng-model="form_info.xl">
+>>>>>>> 98a4c6f673c957bbb5a114a4277b69c0fd2afe88
 								<option>大专</option>
 								<option>本科</option>
 								<option>硕士</option>
@@ -207,7 +245,11 @@
 						</fieldset>
 						<fieldset>
 							<label>毕业时间</label>
+<<<<<<< HEAD
+							<select class="input-text" ng-model="edu_exp_form.grad">
+=======
 							<select class="input-text"  ng-model="form_info.grad">
+>>>>>>> 98a4c6f673c957bbb5a114a4277b69c0fd2afe88
 								<option>2017</option>
 								<option>2016</option>
 								<option>2015</option>
@@ -229,7 +271,11 @@
 							</select>
 						</fieldset>
 						<fieldset>
+<<<<<<< HEAD
+							<input class="btn submit" type="submit" value="保存" ng-click="save_form()">
+=======
 							<input class="btn submit"  ng-click="save_form()" value="保存">
+>>>>>>> 98a4c6f673c957bbb5a114a4277b69c0fd2afe88
 							<button class="btn cancel" ng-click="hide_form()">取消</button>
 						</fieldset>
 					</form>
@@ -237,19 +283,32 @@
 
 
 				<!--自我描述-->
+<<<<<<< HEAD
+				<section id="self-des" ng-controller="selfdes">
+=======
 				<section id="self-des" ng-controller="self_des">
+>>>>>>> b97d4a6a92e89cf32ee984487441fc5e50970bbf
 					<h5 class="resume-title"><span>自我描述</span><a class="edit" href="javascript:;">修改</a></h5>
 					<if condition="$resumes_basic[0][des]">
 						<p class="list">{$resumes_basic[0][des]}</p>
 						<else/>
 						<button class="add" ng-click="show_form(true)">+ 添加自我描述</button>
 					</if>
+<<<<<<< HEAD
+					<form id="self-des-form" ng-show="self_des_form">
+						<fieldset>
+							<textarea maxlength="300" rows="5" ng-model="self_des_form.resumes_basic[0][des]"></textarea>
+						</fieldset>
+						<fieldset>
+							<input class="btn submit" type="submit" value="保存" ng-click="save_form()">
+=======
 					<form id="self-des-form" ng-show="form_info">
 						<fieldset>
 							<textarea maxlength="300" rows="5" ng-model="form_info.des"></textarea>
 						</fieldset>
 						<fieldset>
 							<input class="btn submit" ng-click="save_form()" value="保存">
+>>>>>>> b97d4a6a92e89cf32ee984487441fc5e50970bbf
 							<button class="btn cancel" ng-click="hide_form()">取消</button>
 						</fieldset>
 					</form>
@@ -258,7 +317,11 @@
 
 
 				<!--求职意向-->
+<<<<<<< HEAD
+				<section id="job-career" ng-controller="jobcareer">
+=======
 				<section id="job-career" ng-controller="job_career">
+>>>>>>> b97d4a6a92e89cf32ee984487441fc5e50970bbf
 					<h5 class="resume-title"><span>求职意向</span><a class="edit" href="javascript:;">修改</a></h5>
 					<if condition="$resumes_career">
 						<foreach name="resumes_career" item="item">
@@ -270,7 +333,7 @@
 							</dl>
 						</foreach>
 						<else/>
-						<button class="add">+ 添加求职意向</button>
+						<button class="add" ng-click="show_form(true)">+ 添加求职意向</button>
 					</if>
 					<form id="job-career-form">
 						<fieldset>
@@ -310,8 +373,8 @@
 							</select>
 						</fieldset>
 						<fieldset>
-							<input class="btn submit" type="submit" value="保存">
-							<button class="btn cancel">取消</button>
+							<input class="btn submit" type="submit" value="保存" ng-click="save_form()">
+							<button class="btn cancel" ng-click="hide_form()">取消</button>
 						</fieldset>
 					</form>
 				</section>

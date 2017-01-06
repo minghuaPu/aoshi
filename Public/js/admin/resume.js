@@ -76,7 +76,82 @@ angular.module("myResume",[])
 		});
 	}
 })
+<<<<<<< HEAD
+<<<<<<< HEAD
+.controller("eduexp",function  ($http,$scope) {
+	$http.get(SITE_URL+"/ajaxGet?type=eduexp")
+		.success(function(return_data){
+			$scope.edu_list= return_data;
+		})
+	$scope.show_form=function(item){
+		$scope.edu_exp_form=item;
+	}
+
+	$scope.hide_form=function  () {
+		 
+		  delete $scope.edu_exp_form;
+	}
+	$scope.save_form=function  () {
+		    $http({
+            method:"get",
+            url:SITE_URL+"/update?index=eduexp",
+            params:$scope.edu_exp_form
+            }).success(function(data){ 
+                delete $scope.edu_exp_form;
+           });
+
+	}
+})
+.controller('userinfo',function($http,$scope){
+	$http.get(SITE_URL+"/ajaxGet?type=userinfo")
+		.success(function(return_data){
+			$scope.info_list=return_data;
+		})
+	$scope.show_form=function(item){
+		$scope.user_info_form=item;
+	}
+	$scope.hide_form=function  () {
+		 
+		  delete $scope.user_info_form;
+	}
+	$scope.save_form=function  () {
+		    $http({
+            method:"get",
+            url:SITE_URL+"/update?index=userinfo",
+            params:$scope.user_info_form
+            }).success(function(data){ 
+                delete $scope.user_info_form;
+           });
+
+	}
+})
+.controller('selfdes',function($http,$scope){
+	$http.get(SITE_URL+"/ajaxGet?type=selfdes")
+		.success(function(return_data){
+			$scope.mydes=return_data;
+		})
+	$scope.show_form=function(item){
+		$scope.self_des_form=item;
+	}
+	$scope.hide_form=function  () {
+		 
+		  delete $scope.self_des_form;
+	}
+	$scope.save_form=function  () {
+		    $http({
+            method:"get",
+            url:SITE_URL+"/update?index=selfdes",
+            params:$scope.self_des_form
+            }).success(function(data){ 
+                delete $scope.self_des_form;
+           });
+
+	}
+})
+=======
+=======
 // 教育经历
+>>>>>>> b97d4a6a92e89cf32ee984487441fc5e50970bbf
 .controller("eduexp",function  ($scope,$rootScope,resume) {
 	$scope.show_form=function  (item) {
 		// 要判断是不是添加
@@ -107,6 +182,9 @@ angular.module("myResume",[])
 	}
 	 
 })
+<<<<<<< HEAD
+>>>>>>> 98a4c6f673c957bbb5a114a4277b69c0fd2afe88
+=======
 
 // 自我描述
 .controller("self_des",function ($scope,$rootScope,resume) {
@@ -135,3 +213,4 @@ angular.module("myResume",[])
 
 })
 ;
+>>>>>>> b97d4a6a92e89cf32ee984487441fc5e50970bbf
