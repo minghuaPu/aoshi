@@ -1,8 +1,11 @@
 /**
  * Created by iphone on 2017/1/4.
  */
+if ($(".table th").text()==""){
+    $(".tip").removeClass("hide")
+}
 
-$(".revise").click(function  () {
+$(".revise").dblclick(function  () {
     var this_val=$(this).text();
     var this_id=$(this).parent().attr("id_val");
     var this_name=$(this).attr("name");
@@ -14,6 +17,7 @@ $(".revise").click(function  () {
 
     //怎么去除左右的空格
     // this_val.trim();
+    console.log(SITE_URL)
 
     // 把当前的变成输入框,并且赋上原来的值
     $(this).html("<input value='"+this_val.trim()+"' >");

@@ -27,7 +27,7 @@ class LoginController extends Controller {
         $u_info=$user->where("user_name='$user_name' and  user_pwd='$user_pwd' ")->find();//find 只查询一条  LIMIT 1//
 
         $tid=$user->field("id")->where("user_name='$user_name' and  user_pwd='$user_pwd' ")->find();
-        $t_id = $tid['id'];
+        $enter_id = $tid['id'];
 
         if (empty($u_info)) {
             $this->error('用户名或密码错误！',U('Login/login'));
@@ -36,8 +36,8 @@ class LoginController extends Controller {
         //第三步：登录成功，session记录
 
         session('auth',$u_info);
-        session('tid',$t_id);
-        $this->success('登录成功！',U('Index/index'));
+        session('eid',$enter_id);
+        $this->success('登录成功！',U('Seeker/resume'));
         }else{
             $this->display();
         }
@@ -48,8 +48,7 @@ class LoginController extends Controller {
             $user=D('Enterprise');
 
             $data['user_name']=I('user_name');
-            $data['user_pwd']=I('user_pwd');
-            $data['user_pwd_confirm']=I('user_pwd_confirm');
+            $data['user_pwd']=I('user_pwd_confirm');
 
             $data=$user->create();
 
@@ -69,6 +68,7 @@ class LoginController extends Controller {
     }
     public function logout(){
         session('auth',null);
+        session('eid',null);
 
         $this->success('退出成功！',U('Login/login'));
     }

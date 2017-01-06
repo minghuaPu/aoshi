@@ -6,21 +6,31 @@ use Think\Page;
 class JobController extends Controller{
     public function add_job()
     {
-        $company=M('enterprise');
-        $enterprise_info=$company->where(array("id" => session('tid')))->select();
+        $enterprise_info=M('enterprise_info');
+        $enterprise_info=$enterprise_info->where(array("id" => session('eid')))->find();
+        $com_id=$enterprise_info['company_id'];
         $this->assign("enterprise_info",$enterprise_info);
+
+        $company=M('company');
+        $company_info=$company->where(array("id" => $com_id))->find();
+        $this->assign("company_info",$company_info);
+
         $this->display();
     }
 
     public function job_list()
     {
         $job=M('job');
-        $count=$job->where(array("enterprise_id" => session('tid')))->count();
+        $enterprise_info=M('enterprise_info');
+        $enterprise_info=$enterprise_info->where(array("id" => session('eid')))->find();
+        $com_id=$enterprise_info['company_id'];
+
+        $count=$job->where(array("company_id" => $com_id))->count();
 
         $Page = new Page($count,8);
         $show   = $Page->show();
         $this->assign('page',$show);
-        $info=$job->order('id desc')->limit($Page->firstRow.','.$Page->listRows)->select();
+        $info=$job->where(array("company_id" => $com_id))->order('id desc')->limit($Page->firstRow.','.$Page->listRows)->select();
 
         $this->assign('job_info',$info);
         $this->display();
@@ -47,7 +57,8 @@ class JobController extends Controller{
         $data['company_name']=I('company_name');
         $data['job_name']=I('job_name');
         $data['education']=I('education');
-        $data['money']=I('money');
+        $data['salary_lowLimit']=I('salary_lowLimit');
+        $data['salary_higLimit']=I('salary_higLimit');
         $data['email']=I('email');
         $data['work_time']=I('work_time');
         $data['enterprise_id']= session('tid');
@@ -61,6 +72,7 @@ class JobController extends Controller{
             $this->success('发布成功！',U('job/job_list'));
         }
     }
+
     public function ajax_add(){
         $data['id']=I("id");
 

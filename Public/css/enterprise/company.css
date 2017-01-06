@@ -22,10 +22,12 @@
   margin: 0 0 0 30px;
 }
 .content .content_box {
-  width: 80%;
-  margin-left: 10%;
+  width: 700px;
+  min-width: 700px;
+  margin-left: 80px;
   height: 30px;
   margin-top: 20px;
+  position: relative;
 }
 .content .content_box h3 {
   float: left;
@@ -34,44 +36,50 @@
   font-size: 18px;
   width: 75px;
 }
-.content .content_box input {
-  float: left;
-  height: 30px;
-  margin-left: 30px;
-  width: 500px;
-  padding-left: 10px;
-}
-.content .content_box textarea {
-  float: left;
-  margin-left: 60px;
-  width: 500px;
-  padding-left: 10px;
-  height: 150px;
-  line-height: 20px;
-  resize: none;
-}
 .content .content_box p {
   float: left;
   width: 490px;
   text-align: center;
   font-size: 15px;
   line-height: 30px;
-  margin-left: 40px;
+  margin-left: 70px;
+}
+.content .content_box p input {
+  float: left;
+  width: 500px;
+  padding-left: 10px;
+  height: 30px;
 }
 .content .content_box .introduce {
-  height: 150px;
   float: left;
   width: 520px;
-  overflow: hidden;
-  margin-left: 40px;
-  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  left: 140px;
   padding: 5px;
 }
 .content .content_box .introduce p {
-  margin: 0;
+  margin-left: 0px;
+}
+.content .content_box .introduce textarea {
+  float: left;
+  width: 500px;
+  padding-left: 10px;
+  line-height: 20px;
+  z-index: 100;
+  height: 300px;
+  resize: none;
+  text-align: left;
+}
+.content .content_box .btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 30px;
 }
 .content .introduction {
-  height: 150px;
+  margin-bottom: 10px;
+  position: relative;
 }
 .content #submit {
   width: 30%;

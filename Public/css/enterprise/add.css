@@ -38,6 +38,16 @@
   height: 40px;
   line-height: 40px;
 }
+.content .form .content_box .form-group .salary_limit {
+  width: 100px;
+}
+.content .form .content_box .form-group .salary {
+  display: block;
+  float: left;
+  line-height: 40px;
+  font-size: 20px;
+  margin: 0 5px;
+}
 .content .form .content_box .form-group .sp {
   margin: 0 0 0 18px;
   width: 420px;
@@ -74,7 +84,7 @@
   float: left;
 }
 .content .form .content_box .form-group .dropdown button {
-  width: 100%;
+  width: 158px;
   height: 100%;
   margin: 0;
   line-height: 25px;

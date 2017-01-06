@@ -1,5 +1,5 @@
 <include file="Public:header" />
-    <link rel="stylesheet" href="__PUBLIC__/css/enterprise/job.css?8">
+    <link rel="stylesheet" href="__PUBLIC__/css/enterprise/job.css?2">
 
     <div class="container">
         <div class="content">
@@ -83,6 +83,10 @@
                     </div>
                 </foreach>
             </table>
+            <div class="tip hide">
+                <p>你还没有发布任何职位，赶紧去发布职位吧！</p>
+                <button class="btn btn-primary"><a  href="{:U('job/add_job')}">发布职位</a></button>
+            </div>
             <div class="row page_box">{$page}</div>
         </div>
     </div>
