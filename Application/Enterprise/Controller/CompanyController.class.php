@@ -5,6 +5,13 @@ use Think\Controller;
 
 class CompanyController extends Controller{
     public function index(){
+        //----------数据库enterprise读取头像用户名----------
+        $id=session('tid');
+
+        $user_info= M('enterprise')->where("id =$id")->select();
+
+        $this->assign('user_info',$user_info);
+//--------------------------------------------------
         $company=M('enterprise');
         $enterprise_info=$company->where(array("id" => session('tid')))->select();
         $this->assign("enterprise_info",$enterprise_info);

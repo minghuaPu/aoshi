@@ -80,9 +80,9 @@ body {
 .body .nav_bar .touxiang .box img {
   width: 90px;
   height: 90px;
-  position: absolute;
+  position: relative;
   top: -5px;
-  left: -5px;
+  left: -15px;
 }
 .body .nav_bar .nav_item {
   margin-top: 16px;

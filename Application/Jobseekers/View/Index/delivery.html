@@ -3,24 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <!--<link rel="stylesheet" href="resume.css">-->
+    <link rel="stylesheet" href="__PUBLIC__/css/jobseekers/resume.css">
     <link rel="stylesheet" href="__PUBLIC__/css/jobseekers/resume2.css">
-        <link rel="stylesheet" href="__PUBLIC__/css/bootstrap-3.3.0/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="__PUBLIC__/css/bootstrap-3.3.0/css/bootstrap.min.css">
+	 
 </head>
 <body>
-<header id="header">
-    <nav class="navbar navbar-default " role="navigation">
-
-                <a class="navbar-brand" href="#"><img src="__PUBLIC__/images/logo.png"></a>
-                <ul class="nav navbar-nav  nav-bottom navbar-center">
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                </ul>  
-    </nav>
-</header>
+		<header id="header">
+			<nav class="container">
+				<a class="logo" href=""><img src="__PUBLIC__/images/logo.png"></a>
+				<a class="nav-link selected" href="{:U('Index/index')}">首页</a>
+				<a class="nav-link" href="{:U('Index/delivery')}">投递箱</a>
+                <a class="nav-link fr" href="{:U('Login/log_out')}">退出</a>
+                
+				
+			</nav>
+		</header>
 
 <div class="box">
     <div class="container">
@@ -40,18 +38,64 @@
                 <div class="box-right-content">
                     <div class="bs-example bs-example-tabs">
                         <ul id="myTab" class="nav  tab-ul nav-tabs" role="tablist">
-                            <li role="presentation" class=""><a href="#all" id="all-tab" role="tab" data-toggle="tab" aria-controls="all" aria-expanded="false">全部</a></li>
-                            <li role="presentation" class="active"><a href="#success" role="tab" id="success-tab" data-toggle="tab" aria-controls="success" aria-expanded="true">投递成功</a></li>
+                            <li role="presentation" class="active"><a href="#all" id="all-tab" role="tab" data-toggle="tab" aria-controls="all" aria-expanded="false">全部</a></li>
+                            <li role="presentation" class=""><a href="#success" role="tab" id="success-tab" data-toggle="tab" aria-controls="success" aria-expanded="true">投递成功</a></li>
                             <li role="presentation" class=""><a href="#viewed" role="tab" id="viewed-tab" data-toggle="tab" aria-controls="viewed" aria-expanded="false">被查看</a></li>
                             <li role="presentation" class=""><a href="#communicate" role="tab" id="communicate-tab" data-toggle="tab" aria-controls="communicate" aria-expanded="false">待沟通</a></li>
                             <li role="presentation" class=""><a href="#invited" role="tab" id="invited-tab" data-toggle="tab" aria-controls="invited" aria-expanded="false">邀请面试</a></li>
                             <li role="presentation" class=""><a href="#inappropriate" role="tab" id="inappropriate-tab" data-toggle="tab" aria-controls="inappropriate" aria-expanded="false">不合适</a></li>
                         </ul>
                         <div id="myTabContent" class="tab-content tab-ul-content">
-                            <div role="tabpanel" class="tab-pane fade" id="all" aria-labelledby="all-tab">
-                                <p>全部</p>
+                            <div role="tabpanel" class="tab-pane fade active in" id="all" aria-labelledby="all-tab">
+                                <p>全部  </p>
+                                <ul>
+                                	<li>
+                                    	<div class="d_item">
+                                            <h2 title="web前端开发工程师">
+                                                <a href="#" data-index="0" target="_blank" title="web前端开发工程师">
+                                                    <em>web前端开发工程师</em>
+                                                    <span>（5k-8k）</span>					                        	                                    	</a>
+                                            </h2>
+                                            <a href="#" target="_blank" class="d_jobname" title="放飞科技">
+                                                放飞科技 <span>[广州]</span>
+                                            </a>
+                                            <div class="d_resume">
+                                                使用简历：
+                                                <span>在线简历</span>
+                                            </div>
+                                            <span href="javascript:;" class="btn_showprogress">
+                                                 <span>不合适</span>
+                                             </span>
+                                             <span class="d_time">2016-09-20 19:09</span>
+                                        </div>
+                                    
+                                    </li>
+                                    <li>
+                                    	<div class="d_item">
+                                            <h2 title="web前端开发工程师">
+                                                <a href="#" data-index="0" target="_blank" title="web前端开发工程师">
+                                                    <em>web前端开发工程师</em>
+                                                    <span>（5k-8k）</span>					                        	                                    	</a>
+                                            </h2>
+                                            <a href="#" target="_blank" class="d_jobname" title="放飞科技">
+                                                放飞科技 <span>[广州]</span>
+                                            </a>
+                                            <div class="d_resume">
+                                                使用简历：
+                                                <span>在线简历</span>
+                                            </div>
+                                            <span href="javascript:;" class="btn_showprogress">
+                                                 <span>不合适</span>
+                                             </span>
+                                             <span class="d_time">2016-09-20 19:09</span>
+                                        </div>
+                                    
+                                    </li>
+                                </ul>
+                                
+                              
                             </div>
-                            <div role="tabpanel" class="tab-pane fade active in" id="success" aria-labelledby="success-tab">
+                            <div role="tabpanel" class="tab-pane fade" id="success" aria-labelledby="success-tab">
                                 <p>投递成功</p>
                             </div>
                             <div role="tabpanel" class="tab-pane fade" id="viewed" aria-labelledby="viewed-tab">

@@ -6,6 +6,13 @@ use Think\Page;
 class JobController extends Controller{
     public function add_job()
     {
+//----------数据库enterprise读取头像用户名----------
+        $id=session('tid');
+
+        $user_info= M('enterprise')->where("id =$id")->select();
+
+        $this->assign('user_info',$user_info);
+//--------------------------------------------------
         $company=M('enterprise');
         $enterprise_info=$company->where(array("id" => session('tid')))->select();
         $this->assign("enterprise_info",$enterprise_info);
@@ -14,6 +21,13 @@ class JobController extends Controller{
 
     public function job_list()
     {
+        //----------数据库enterprise读取头像用户名----------
+        $id=session('tid');
+
+        $user_info= M('enterprise')->where("id =$id")->select();
+
+        $this->assign('user_info',$user_info);
+//--------------------------------------------------
         $job=M('job');
         $count=$job->where(array("enterprise_id" => session('tid')))->count();
 
