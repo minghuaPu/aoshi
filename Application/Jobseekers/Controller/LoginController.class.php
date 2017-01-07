@@ -47,7 +47,7 @@ class LoginController extends Controller {
 			}
 		
 			
-//			 echo json_encode($json_str);
+			// echo json_encode($json_str);
 		}
 		else{
 			$this->display();
@@ -83,7 +83,7 @@ class LoginController extends Controller {
 			   
 				$username=I('username');
 				$password=md5(I('password'));
-				$e_mail=I('e_mail');
+				
 	
 				 $select_sql=D('jobseekers')->where("username='$username'")->select();
 	
@@ -99,7 +99,6 @@ class LoginController extends Controller {
 					 mysql_query($insert_sql);*/
 					 $reg_data['username']=$username;
 					 $reg_data['password']=$password;
-					 $reg_data['e_mail']=$e_mail;
 					 $reg_data['create_time']=date('Y-m-d  h:n:s'); 
 					 
 					 M('jobseekers')->add($reg_data);			

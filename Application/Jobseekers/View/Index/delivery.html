@@ -15,6 +15,10 @@
 				<a class="nav-link selected" href="{:U('Index/index')}">首页</a>
 				<a class="nav-link" href="{:U('Index/delivery')}">投递箱</a>
                 <a class="nav-link fr" href="{:U('Login/log_out')}">退出</a>
+                <foreach name="seekers_info" item="item">
+                <a class="nav-link fr" href="{:U('Index/index')}">{$item.nickname}</a>
+                </foreach>
+                
                 
 				
 			</nav>
@@ -47,17 +51,19 @@
                         </ul>
                         <div id="myTabContent" class="tab-content tab-ul-content">
                             <div role="tabpanel" class="tab-pane fade active in" id="all" aria-labelledby="all-tab">
-                                <p>全部  </p>
+                                
                                 <ul>
+                               <if 
+                                 <foreach name="delivery_info" item="item">
                                 	<li>
                                     	<div class="d_item">
                                             <h2 title="web前端开发工程师">
                                                 <a href="#" data-index="0" target="_blank" title="web前端开发工程师">
-                                                    <em>web前端开发工程师</em>
-                                                    <span>（5k-8k）</span>					                        	                                    	</a>
+                                                    <em>{$item.job_name}</em>
+                                                    <span>{$item.money}</span>					                        	                                    	</a>
                                             </h2>
-                                            <a href="#" target="_blank" class="d_jobname" title="放飞科技">
-                                                放飞科技 <span>[广州]</span>
+                                            <a href="#" target="_blank" class="d_jobname" title="{$item.company_name}">
+                                               {$item.company_name} <span>[{$item.address}]</span>
                                             </a>
                                             <div class="d_resume">
                                                 使用简历：
@@ -66,31 +72,11 @@
                                             <span href="javascript:;" class="btn_showprogress">
                                                  <span>不合适</span>
                                              </span>
-                                             <span class="d_time">2016-09-20 19:09</span>
+                                             <span class="d_time">{$item.delivery_time}</span>
                                         </div>
                                     
                                     </li>
-                                    <li>
-                                    	<div class="d_item">
-                                            <h2 title="web前端开发工程师">
-                                                <a href="#" data-index="0" target="_blank" title="web前端开发工程师">
-                                                    <em>web前端开发工程师</em>
-                                                    <span>（5k-8k）</span>					                        	                                    	</a>
-                                            </h2>
-                                            <a href="#" target="_blank" class="d_jobname" title="放飞科技">
-                                                放飞科技 <span>[广州]</span>
-                                            </a>
-                                            <div class="d_resume">
-                                                使用简历：
-                                                <span>在线简历</span>
-                                            </div>
-                                            <span href="javascript:;" class="btn_showprogress">
-                                                 <span>不合适</span>
-                                             </span>
-                                             <span class="d_time">2016-09-20 19:09</span>
-                                        </div>
-                                    
-                                    </li>
+                                   </foreach>
                                 </ul>
                                 
                               

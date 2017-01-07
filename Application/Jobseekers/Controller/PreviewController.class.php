@@ -1,9 +1,10 @@
 <?php
 	
 namespace Jobseekers\Controller;
+use Common\Controller\ResumeController;
 use Think\Controller;
 
-class PreviewController extends Controller {
+class PreviewController extends ResumeController {
 	//预览简历
     public function index(){
 
