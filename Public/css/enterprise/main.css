@@ -1,0 +1,148 @@
+
+.avatar-view {
+  display: block;
+  margin: 0 auto;
+  height: 80px;
+  width: 80px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.avatar-view img {
+    width: 100%;
+    position: absolute;
+    left: 0;
+  top:0
+}
+.modal-content{
+  width: 100%;
+}
+.modal-dialog{
+  width: 750px;
+  min-width: 750px;
+  margin-top: 55px;
+  height: 480px;
+}
+.avatar-body {
+  padding-right: 15px;
+  padding-left: 15px;
+
+}
+.modal-title{
+  font-family: "Microsoft YaHei", sans-serif;
+  font-weight: 600;
+}
+.avatar-upload {
+  overflow: hidden;
+  height: 40px;
+}
+.avatar-upload label {
+  display: block;
+  float: left;
+  clear: left;
+  width: 100px;
+  line-height: 40px;
+  height: 40px;
+  font-family: "Microsoft YaHei", sans-serif;
+}
+
+.avatar-upload input {
+  display: block;
+  margin-left: 110px;
+  width: 75px;
+  height: 80px;
+  position: relative;
+}
+#avatarInput {
+  position: absolute;
+  top: -5px;
+}
+
+.avater-alert {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.avatar-wrapper {
+  height: 230px;
+  width: 100%;
+  margin-top: 15px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,.25);
+  background-color: #fcfcfc;
+  overflow: hidden;
+}
+
+.avatar-wrapper img {
+  position: relative;
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.avatar-preview {
+  float: left;
+  margin-top: 15px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.avatar-preview:hover {
+  border-color: #ccf;
+  box-shadow: 0 0 5px rgba(0,0,0,.15);
+}
+
+.avatar-preview img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.preview-md {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+}
+.preview-sd {
+  margin-top: 30px;
+  height: 80px;
+  width: 80px;
+  margin-left: 20px;
+  border-radius: 50%;
+}
+.avatar-save{
+  height: 45px;
+}
+
+@media (min-width: 992px) {
+  .avatar-preview {
+    float: none;
+  }
+}
+
+.avatar-btns {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.avatar-btns .btn-group {
+  margin-right: 5px;
+}
+
+.loading {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #fff url("../../images/loading.gif") no-repeat center center;
+  opacity: .75;
+  filter: alpha(opacity=75);
+  z-index: 20140628;
+}

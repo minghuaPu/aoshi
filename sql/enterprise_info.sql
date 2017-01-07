@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 2017-01-07 02:18:25
+-- Generation Time: 2017-01-07 02:18:33
 -- 服务器版本： 5.6.17
 -- PHP Version: 5.5.12
 
@@ -23,22 +23,27 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- 表的结构 `enterprise`
+-- 表的结构 `enterprise_info`
 --
 
-CREATE TABLE IF NOT EXISTS `enterprise` (
+CREATE TABLE IF NOT EXISTS `enterprise_info` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_name` varchar(50) NOT NULL,
-  `user_pwd` varchar(255) NOT NULL,
+  `company_id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `job` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `phone` varchar(50) NOT NULL,
+  `photo` varchar(255) NOT NULL,
+  `auditing` int(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
 
 --
--- 转存表中的数据 `enterprise`
+-- 转存表中的数据 `enterprise_info`
 --
 
-INSERT INTO `enterprise` (`id`, `user_name`, `user_pwd`) VALUES
-(18, 'admin', 'e10adc3949ba59abbe56e057f20f883e');
+INSERT INTO `enterprise_info` (`id`, `company_id`, `name`, `job`, `email`, `phone`, `photo`, `auditing`) VALUES
+(18, 25, '史美娜', '阿里巴巴-UC.HR', 'http://www.uc.cn', '1111111111111', '/aoshi/aoshi./Public/upload/avatar.png', 2);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

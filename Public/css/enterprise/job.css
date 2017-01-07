@@ -107,7 +107,7 @@
 .content .detail {
   width: 500px;
   position: absolute;
-  top: 230px;
+  top: 175px;
   left: 200px;
   border-radius: 8px;
   background-color: #53cac3;
@@ -123,6 +123,25 @@
 .content .detail .address {
   margin-top: 30px;
   margin-bottom: 25px;
+}
+.content .tip {
+  margin-top: 20px;
+}
+.content .tip p {
+  text-align: center;
+}
+.content .tip .btn {
+  width: 20%;
+  margin-left: 40%;
+  height: 40px;
+  margin-top: 10px;
+}
+.content .tip .btn a {
+  color: white;
+  font-size: 18px;
+}
+.content .tip .btn a:hover {
+  text-decoration: none;
 }
 .content .page_box {
   height: 25px;
