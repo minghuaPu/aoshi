@@ -44,20 +44,37 @@ class LoginController extends Controller {
     }
     public function register(){
         if (IS_POST){
-
+            // 新建enterprise存储账号密码
             $user=D('Enterprise');
-
             $data['user_name']=I('user_name');
             $data['user_pwd']=I('user_pwd_confirm');
+            $user_name=I('user_name');
 
             $data=$user->create();
 
             if (!$data){
                 echo $user->getError();
             }else{
+                // 添加账号密码到数据库
                 $uid=$user->add($data);
-
                 session('auth',array('user_name'=>$data['user_name'],'uid'=>$uid));
+
+                // 通过用户名获取刚注册账号的id
+                $tid=$user->where("user_name='$user_name'")->find();
+                $enter_id = $tid['id'];
+
+                // 以id为主键，添加到enterprise_info表
+                $enter_data["id"]=$enter_id;
+                $enter_data['name']="欢迎您";
+                $enter_data['auditing']= 0;
+                $enter_data['photo']= "/aoshi/aoshi./Public/upload/avatar.png";
+                $ent=D('enterprise_info');
+                $c_ent=$ent->create($enter_data);
+                if (!$c_ent) {
+                    echo $ent->getError();
+                }else{
+                    $ent->add($enter_data);
+                }
 
                 $this->success('注册成功！',U('login/login'));
             }
@@ -66,18 +83,20 @@ class LoginController extends Controller {
             $this->display();
         }
     }
+
     public function logout(){
         session('auth',null);
         session('eid',null);
 
         $this->success('退出成功！',U('Login/login'));
     }
+
+    // 获取验证码
     public function get_verify()
     {
         $Verify = new \Think\Verify();
-        $Verify->useCurve=true;
-        $Verify->useNoise=true;
-
+        $Verify->useCurve=false;
+//        $Verify->useNoise=false;
         $Verify->entry();
     }
 }

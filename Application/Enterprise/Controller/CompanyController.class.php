@@ -7,10 +7,12 @@ use Think\Page;
 class CompanyController extends Controller {
 
     public function index(){
+        // 通过session的id来搜索enterprise_info表，获取用户信息
         $enterprise_info=M('enterprise_info');
         $enterprise_info=$enterprise_info->where(array("id" => session('eid')))->find();
-        $com_id = $enterprise_info['company_id'];
         $this->assign("enterprise_info",$enterprise_info);
+
+        $com_id = $enterprise_info['company_id'];
 
         $company=M('company');
         $company_info=$company->where(array("id" => $com_id))->find();
@@ -37,7 +39,6 @@ class CompanyController extends Controller {
             $tid=$company->where("company_name= '$company_name'")->find();
             $com_id = $tid['id'];
 
-
             $enter_id = session('eid');
 
             $enter_data["id"]=$enter_id;
@@ -48,13 +49,13 @@ class CompanyController extends Controller {
             $enter_data['phone']=I('phone');
             $enter_data['auditing']=2;
 
-            $ent=M('enterprise_info');
+            $ent=D('enterprise_info');
 
             $c_ent=$ent->create($enter_data);
             if (!$c_ent) {
                 echo $com->getError();
             }else{
-                $ent->add($enter_data);
+                $ent->save($enter_data);
                 $this->success('提交成功！请等待审核结果！',U('company/index'));
             }
         }

@@ -1,5 +1,5 @@
 <include file="Public:header" />
-    <link rel="stylesheet" href="__PUBLIC__/css/enterprise/job.css?2">
+    <link rel="stylesheet" href="__PUBLIC__/css/enterprise/job.css?1">
 
     <div class="container">
         <div class="content">
@@ -51,8 +51,7 @@
             </form>
             <div class="tit_box row">
                 <div class="col-md-2 col-xs-2">职位名称</div>
-                <div class="col-md-1 col-xs-1">类型</div>
-                <div class="col-md-1 col-xs-1">薪资</div>
+                <div class="col-md-2 col-xs-2">薪资</div>
                 <div class="col-md-1 col-xs-1">工作经验</div>
                 <div class="col-md-2 col-xs-2">学历要求</div>
                 <div class="col-md-1 col-xs-1">发布时间</div>
@@ -60,18 +59,23 @@
                 <div class="col-md-1 col-xs-1">职位描述</div>
             </div>
             <table class="table row">
+                {$comid['company_id']}
                 <foreach name="job_info" item="job_item">
                     <tr id_val= "{$job_item['id']} ">
                         <th class="col-md-2 col-xs-2 revise job" name="job_name">{$job_item['job_name']}</th>
-                        <th class="col-md-1 col-xs-1" name="job_type">{$job_item['job_type']}</th>
-                        <th class="col-md-1 col-xs-1 revise money" name="money">￥{$job_item['money']}</th>
+                        <th class="col-md-1 col-xs-1 revise salary_lowLimit" name="salary_lowLimit">{$job_item['salary_low_limit']}</th>
+                        <th class="col-md-1 col-xs-1 revise salary_higLimit" name="salary_higLimit">{$job_item['salary_hig_limit']}</th>
                         <th class="col-md-1 col-xs-1" name="work_time">{$job_item['work_time']}</th>
                         <th class="col-md-2 col-xs-2" name="education">{$job_item['education']}</th>
                         <th class="col-md-1 col-xs-1" name="add_time">{$job_item['add_time']|date='m-d',###} </th>
-                        <th class="col-md-3 col-xs-3 revise require" name="job_require">{$job_item['job_require']}</th>
+                        <th class="col-md-3 col-xs-3 revise require" name="job_require"></th>
                         <th class="col-md-1 col-xs-1"><button type="button" class="btn btn-info info" >点击详情</button></th>
                     </tr>
                     <div class="detail" id="{$job_item['id']}">
+                        <div class="require">
+                            <h3>职位职责：</h3>
+                            <p>{$job_item['job_require']}</p>
+                        </div>
                         <div class="describe">
                             <h3>职位描述：</h3>
                             <p>{$job_item['job_describe']}</p>

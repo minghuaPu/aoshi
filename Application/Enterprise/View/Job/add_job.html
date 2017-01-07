@@ -1,5 +1,5 @@
 <include file="Public:header" />
-<link rel="stylesheet" href="__PUBLIC__/css/enterprise/add.css?5">
+<link rel="stylesheet" href="__PUBLIC__/css/enterprise/add.css?1">
 
     <div class="container">
         <div class="content">
@@ -14,20 +14,6 @@
                 </div>
                 <div class="content_box">
                     <h5>职业基本信息<span style="color: red ;font-weight: 600;font-size: 22px">*</span></h5>
-                        <!--<div class="form-group">-->
-                            <!--<div class="tit">职位类型</div>-->
-                            <!--<input type="text" name="job_type" class="hide">-->
-                            <!--<div class="dropdown choose">-->
-                                <!--<button class="btn btn-default dropdown-toggle" required type="button" id="dropdownMenu1" data-toggle="dropdown">-->
-                                    <!--选择职业类型-->
-                                    <!--<span class="caret"></span>-->
-                                <!--</button>-->
-                                <!--<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">-->
-                                    <!--<li role="presentation"><a role="menuitem" tabindex="-1" href="#">技术</a></li>-->
-                                    <!--<li role="presentation"><a role="menuitem" tabindex="-1" href="#">设计</a></li>-->
-                                <!--</ul>-->
-                            <!--</div>-->
-                        <!--</div>-->
                         <div class="form-group">
                             <div class="tit">职位名称</div>
                             <input type="text" name="job_name" required>
@@ -42,10 +28,10 @@
                         </div>
                         <div class="form-group">
                             <div class="tit">职位月薪</div>
-                            <input type="number" max="5" name="salary_lowLimit" class="salary_limit" required>
+                            <input type="number" max="100" name="salary_lowLimit" class="salary_limit" required>
                             <span class="salary">k</span>
                             <span class="salary">到</span>
-                            <input type="number" max="5" name="salary_higLimit" class="salary_limit" required>
+                            <input type="number" max="100" name="salary_higLimit" class="salary_limit" required>
                             <span class="salary">k</span>
                         </div>
                         <div class="form-group">
@@ -69,7 +55,7 @@
                             <input type="text" name="work_time" class="hide" required>
                             <div class="dropdown">
                                 <button class="btn btn-default dropdown-toggle" required type="button" id="dropdownMenu4" data-toggle="dropdown">
-                                    选择工作时间
+                                    选择工作经验
                                     <span class="caret"></span>
                                 </button>
                                 <ul class="dropdown-menu develop" role="menu" aria-labelledby="dropdownMenu2">
