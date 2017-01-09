@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html  ng-app="myResume" >
+<html  ng-app="resume" >
 
 	<head>
 		<meta charset="utf-8">
@@ -34,8 +34,9 @@
 			<article class="resume-inner">
 				<!--用户头像-->
 				<aside class="avatar" id="crop-avatar">
+                
                   	<img class="absolute" src="__PUBLIC__/images/resume-bg.png">              
-					<img id="avatar-img" class="center hear" src="__PUBLIC__/images/avatar.png">
+					<img id="avatar-img" class="center hear" src="__PUBLIC__/images/avatar.png" ng-src="{{user[0].photo}}">
 					<img id="avatar-bg" class="center" src="__PUBLIC__/images/avatar-bg.png" >
 
 					<input id="avatar-upload" class="center" type="file">
@@ -50,26 +51,26 @@
                     
 				<!--基本信息-->
 				<section id="user-info" ng-controller="resumeBasic">
-               	<button class="add" ng-click="add()" ng-hide="basic">+ 添加基本资料</button>
-				<div class="list text-center"  ng-show="basic">
-						<a class="edit" href="javascript:;"  ng-click="edit(basic)">编辑</a>
-                            <span class="name rate"  ng-bind="basic.nickname"></span>
-                            <span class="intro rate"  ng-bind="basic.peculiarity"></span>
+                <button class="add" ng-click="add()" ng-hide="basic[0]">+ 添加基本资料</button>
+				<div class="list text-center"  ng-show="basic[0]">
+						<a class="edit"  ng-click="edit(basic[0])">编辑</a>
+                            <span class="name rate"  ng-bind="basic[0].nickname"></span>
+                            <span class="intro rate"  ng-bind="basic[0].peculiarity"></span>
                             <span class="base ">
-                                <em class="sex rate"><i class="icon"></i><em  ng-bind="basic.sex"></em></em>
-                                <em class="birth rate"  ng-bind="basic.birth"></em>
-                                <em class="xl rate"  ng-bind="basic.top_edu"></em>
-                                <em class="gzjy rate"  ng-bind="basic.work_years"></em>
-                                <em class="city rate"><i class="icon city"></i><em  ng-bind="basic.current_city"></em></em>
+                                <em class="sex rate"><i class="icon"></i><em  ng-bind="basic[0].sex"></em></em>
+                                <em class="birth rate"  ng-bind="basic[0].birth"></em>
+                                <em class="xl rate"  ng-bind="basic[0].top_edu"></em>
+                                <em class="gzjy rate"  ng-bind="basic[0].work_years"></em>
+                                <em class="city rate"><i class="icon city"></i><em  ng-bind="basic[0].current_city"></em></em>
                             </span>
                             <span class="base">
-                                <em class="p rate" ><i class="icon phone "></i><em   ng-bind="basic.phone"></em></em>
-                                <em class="e rate"><i class="icon email rate"></i><em   ng-bind="basic.e_mail"></em></em>
+                                <em class="p rate" ><i class="icon phone "></i><em   ng-bind="basic[0].phone"></em></em>
+                                <em class="e rate"><i class="icon email rate"></i><em   ng-bind="basic[0].e_mail"></em></em>
                             </span>
                          </foreach>    
 					</div>
-					<form id="user-info-form"  ng-show="form" >
-						<fieldset>
+					<form id="user-info-form"  ng-show="form" style="display:block">
+					<fieldset>
 							<label >姓名</label>
 							<input class="input-text" ng-model="form.nickname"  required>
 						</fieldset>
@@ -138,31 +139,24 @@
 						</fieldset>
 					</form>
 				</section>
-                                
+       			                         
 				<!--工作经历-->
 				<section id="job-exp"  ng-controller="resumeJobexp">
-					<h5 class="resume-title"><span>工作经历</span><a class="edit" href="javascript:;"  ng-click="add(true)">添加</a></h5><!--&javascript:;$item['resume_id']-->
-					
+					<h5 class="resume-title"><span>工作经历</span><a class="edit" href="javascript:;"  ng-click="add()">添加</a></h5><!--&javascript:;$item['resume_id']-->
+					<button class="add" ng-click="add()" ng-hide="experience.length">+ 添加工作经历</button>                 
 					<ul class="list">
-                  <!--  <if condition="$experience_info">
-                        <foreach name="experience_info" item="item">-->
-                            <li  ng-repeat="item in exp_list">
+                            <li  ng-repeat="item in experience">
                                 <a class="edit"  href="javascript:;" ng-click="edit(item)">修改</a><!-- data-id={$item.resume_id}-->
                                 <a class="del"   href="javascript:;" ng-click="remove(item)" >删除</a><!-- data-id={$item.resume_id}-->
                                    
-                                <div class="name rate" ng-bind="item.re_company_name">{{ item.re_company_name }}</div><!--{$item.re_company_name}-->
+                                <div class="name rate" ng-bind="item.re_company_name"></div><!--{$item.re_company_name}-->
                                 <div >
-                                    <span class="job " ng-bind="item.job_title">{{ item.job_title }}</span><!--{$item.job_title}-->
-                                    <span class="fr " ng-bind="item.working_time">{{ item.working_time }}</span><!--{$item.working_time}-->
+                                    <span class="job " ng-bind="item.job_title"></span><!--{$item.job_title}-->
+                                    <span class="fr " ng-bind="item.working_time"></span><!--{$item.working_time}-->
                                 </div>
-                                <p  class="cont rate" ng-bind="item.job_description ">{{ item.job_description }}</p><!--{$item.job_description}-->
+                                <p  class="cont rate" ng-bind="item.job_description "></p><!--{$item.job_description}-->
                             </li>
-                          
-                       <!-- </foreach>
-                        <else/>-->
-							<button class="add" ng-click="add(true)" ng-hide="jobexp.length">+ 添加工作经历</button>
-                   <!-- </if>-->
-                    
+							
 					</ul>
 					<form id="job-exp-form" ng-show="form" style="display:block"><!-- method="post" -->
 						<fieldset>
@@ -193,39 +187,33 @@
                 
                 
 				<!--教育经历-->
-				<section id="edu-exp">
-					<h5 class="resume-title"><span>教育经历</span><a class="edit" href="javascript:;">添加</a></h5>
-					
+				<section id="edu-exp" ng-controller="resumeEduexp">
+					<h5 class="resume-title"><span>教育经历</span><a class="edit" href="javascript:;"  ng-click="add()">添加</a></h5>
+					<button class="add" ng-click="add()" ng-hide="education.length">+ 教育经历</button>
 					<ul class="list">
-                    <if condition="$education_info">
-                     <foreach name="education_info" item="item" >
-						<li >
-                       		 <a class="edit" href="javascript:;" data-id={$item.resume_id}>修改</a>
-                             <a class="del"  href="javascript:;"  data-id={$item.resume_id}>删除</a>
-                            <div class="name rate">{$item.school_name}</div>
+						<li ng-repeat="item in education">
+                       		 <a class="edit" href="javascript:;" ng-click="edit(item)">修改</a>
+                             <a class="del"  href="javascript:;" ng-click="remove(item)">删除</a>
+                            <div class="name rate" ng-bind="item.school_name"></div>
 							<div>
-								<span class="xl ">{$item.degree}</span> -
-								<span class="major rate">{$item.major}</span>
-								<span class="grad fr">{$item.graduated}毕业(预计)</span>
+								<span class="xl " ng-bind="item.degree"></span> -
+								<span class="major rate" ng-bind="item.major"></span>
+								<span class="grad fr" ng-bind="item.graduated">毕业(预计)</span>
 							</div>
 						</li>
-					  </foreach>
-                      <else/>
-							<button class="add">+ 添加教育经历</button>
-                      </if>
 					</ul>
-					<form id="edu-exp-form"  method="post">
+					<form id="edu-exp-form" ng-show="form" style="display:block">
 						<fieldset>
 							<label>学校名称</label>
-							<input class="input-text" required>
+							<input class="input-text"  ng-model="form.school_name" required>
 						</fieldset>
 						<fieldset>
 							<label>所学专业</label>
-							<input class="input-text" >
+							<input class="input-text"  ng-model="form.major"  >
 						</fieldset>
 						<fieldset>
 							<label>学历</label>
-							<select class="input-text" required>
+							<select class="input-text"   ng-model="form.degree"  required>
 								<option>大专</option>
 								<option>本科</option>
 								<option>硕士</option>
@@ -235,7 +223,7 @@
 						</fieldset>
 						<fieldset>
 							<label>毕业时间</label>
-                            <select class="input-text" required>
+                            <select class="input-text"  ng-model="form.graduated"   required>
 								<option>2017-09</option>
 								<option>2016-09</option>
 								<option>2015-09</option>
@@ -257,73 +245,61 @@
 							</select>
 						</fieldset>
 						<fieldset>
-							<input class="btn submit" type="submit" value="保存">
-							<button class="btn cancel">取消</button>
+							<input class="btn submit" type="submit" value="保存" ng-click="submit()">
+							<button class="btn cancel" ng-click="cancel()">取消</button>
 						</fieldset>
 					</form>
                     
 				</section>
                 
-                
+                			
 				<!--自我描述-->
-				<section id="self-des">
-					<h5 class="resume-title"><span>自我描述</span>
-                      
-                     </h5>
-					<if condition="$describe_info">
-                        <foreach name="describe_info" item="item">
-                        	<div class="edit_box_box">
-                            <span class="edit_box">
-                                <a class="edit" href="javascript:;" data-id={$item.resume_id}>修改</a><!--data-id={$item.resume_id}-->
-                               
-                              </span>  
-                            <p class="list rate">{$item.describe}</p>
-                            </div>
-                         </foreach>
-                       	 <else/>
-							<button class="add">+ 添加自我描述</button>
-					</if>  
-                     <form id="self-des-form"  method="post">
+				<section id="self-des"  ng-controller="resumeDes">
+					<h5 class="resume-title"><span>自我描述</span> </h5>
+                     <button class="add" ng-click="add()" ng-hide="describe.length">+ 添加自我描述</button>
+                    <div class="edit_box_box" ng-repeat="item in describe">
+                        <span class="edit_box">
+                        	<a class="edit" href="javascript:;"  ng-click="edit(item)">修改</a><!--data-id={$item.resume_id}-->
+                         </span>  
+                     	<p class="list rate"   ng-bind="item.describe"></p>
+                     </div>
+                    	
+                     <form id="self-des-form" ng-show="form" style="display:block">
 						<fieldset>
-							<textarea maxlength="300" rows="5" name="describe" vlaue="11" maxlength="250" wrap="hard" placeholder="250字以内" required></textarea>
+							<textarea maxlength="300" rows="5" name="describe" vlaue="11" maxlength="250" wrap="hard" placeholder="250字以内"   ng-model="form.describe"  required></textarea>
 						</fieldset>
 						<fieldset>
-							<input class="btn submit" type="submit" value="保存">
-							<button class="btn cancel">取消</button>
+							<input class="btn submit" type="submit" value="保存" ng-click="submit()">
+							<button class="btn cancel" ng-click="cancel()">取消</button>
 						</fieldset>
 					</form>
                     
 					
 				</section>
 				<!--求职意向-->
-				<section id="job-career">
+				<section id="job-career"  ng-controller="resumeCareer">
 					<h5 class="resume-title"> <span>求职意向</span></h5>
-					
-                    <if condition="$prefered_info">
-                        <foreach name="prefered_info" item="item">	
+					<button class="add" ng-click="add(prefered[0])" ng-hide="prefered.length">+ 添加求职意向</button>
+                  
                         
-                            <dl class="list clear">
-                            <span class="edit_box rate">
-                            	<a class="edit" href="javascript:;">修改</a>
-                              
-                            </span>
-                                <dd class="name"><i></i>{$item.expected_position}</dd>
-                                <dd class="type"><i></i>{$item.job_type}</dd>
-                                <dd class="city"><i></i>{$item.expected_location}</dd>
-                                <dd class="wages"><i></i>{$item.expected_monthly_income}</dd>
-                            </dl>
-                         </foreach> 
-                     		<else/>
-							<button class="add">+ 添加求职意向</button>
-						</if>  
-					<form id="job-career-form" method="post" >
+                         <dl class="list clear"  ng-repeat="item in prefered">
+                            	<span class="edit_box rate">
+                            	<a class="edit" href="javascript:;" ng-click="edit(item)">修改</a>
+                             	</span>
+                                <dd class="name"><i></i><span ng-bind="item.expected_position"></span></dd>
+                                <dd class="type"><i></i><span ng-bind="item.job_type"></span></dd>
+                                <dd class="city"><i></i><span ng-bind="item.expected_location"></span></dd>
+                                <dd class="wages"><i></i><span ng-bind="item.expected_monthly_income"></span></dd>
+                          </dl>
+                       
+					<form id="job-career-form" ng-show="form" style="display:block">
 						<fieldset>
 							<label>期望职位</label>
-							<input class="input-text" name="expected_position" required>
+							<input class="input-text" ng-model="form.expected_position" required>
 						</fieldset>
 						<fieldset>
 							<label>职位类型</label>
-                            <select class="input-text" required>
+                            <select class="input-text"  ng-model="form.job_type" required>
 								<option selected="selected" >无限</option>
 								<option>全职</option>
 								<option>兼职</option>
@@ -332,7 +308,7 @@
 						</fieldset>
 						<fieldset>
 							<label>期望城市</label>
-                            <select class="input-text"  required>
+                            <select class="input-text" ng-model="form.expected_location"   required>
 								<option selected="selected" >无限</option>
 								<option>北京</option>
 								<option>上海</option>
@@ -343,7 +319,7 @@
 						</fieldset>
 						<fieldset>
 							<label>期望月薪</label>
-                            <select class="input-text" required>
+                            <select class="input-text" ng-model="form.expected_monthly_income"  required>
 								<option selected="selected" >无限</option>
 								<option>5k以下</option>
 								<option>5k-10k</option>
@@ -354,27 +330,20 @@
 							</select>
 						</fieldset>
 						<fieldset>
-							<input class="btn submit" type="submit" value="保存">
-							<button class="btn cancel">取消</button>
+							<input class="btn submit" type="submit" value="保存" ng-click="submit()">
+							<button class="btn cancel" ng-click="cancel()">取消</button>
 						</fieldset>
 					</form>
                    
 				</section>
 				<!--求职状态-->
-				<section class="text-center">
-					<select id="job-state"  >
-                       
-                         <if condition="$jobseekers_info">
-                        	 <foreach name="jobseekers_info" item="item">
-							<option class="rate" >{$item.current_status}</option>
-                            <option >我是应届毕业生</option>
-							<option >我暂时不想找工作</option>
-							<option >我目前已离职，可快速到岗</option>
-							<option >我目前正在职，正考虑换个新环境</option>
-                            </foreach>
-                      
-							
-						</if>  
+				<section class="text-center"  ng-controller="resumeState">
+                
+					<select id="job-state"  ng-model="basic[0].current_status" ng-change="change()" ng-disabled="!basic[0]" >
+                        <option >我是应届毕业生</option>
+						<option >我暂时不想找工作</option>
+						<option >我目前已离职，可快速到岗</option>
+						<option >我目前正在职，正考虑换个新环境</option>
 					</select>
 				</section>
 			</article>
@@ -410,7 +379,8 @@
            </section> 
 
         <script type="text/javascript">
-			var SITE_URL = "__CONTROLLER__";
+		var SITE_URL = "__MODULE__";
+			<!--var SITE_URL = "__CONTROLLER__";-->
 		</script>   
 		<script type="text/javascript" src="__PUBLIC__/js/jobseekers/jquery-3.1.1.min.js"></script>
    		<script type="text/javascript" src="__PUBLIC__/js/angular.min.js"></script>
@@ -418,6 +388,7 @@
         <script type="text/javascript" src="__PUBLIC__/css/bootstrap-3.3.0/js/bootstrap.min.js"></script>
    		<script type="text/javascript" src="__PUBLIC__/js/jobseekers/cropper.min.js"></script>
 <!--  		<script type="text/javascript" src="__PUBLIC__/js/jobseekers/main.js"></script>-->
+
 
 	</body>
 

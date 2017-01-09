@@ -68,7 +68,7 @@ class IndexController extends ResumeController {
 		echo json_encode(
    			array(
    				
-		    	'jobseekers'=>$jobseekers_info,
+		    	'user'=>$jobseekers_info,
 				'basic'=>$basic_info,
 		    	'experience'=>$experience_info,
 		    	'education'=>$education_info,
@@ -116,7 +116,7 @@ class IndexController extends ResumeController {
     
    		//简历添加
    		if(I('index') == "basic"){
-			$resumes_basic = M('jobseekers');
+			$resumes_basic = M('resume_basic');
 			$data['id'] = $id;
 			$data['nickname'] = I('nickname');
 			$data['peculiarity'] = I('peculiarity');
@@ -125,7 +125,7 @@ class IndexController extends ResumeController {
 			$data['top_edu'] = I('top_edu');
 			$data['work_years'] = I('work_years');
 			$data['current_city'] = I('current_city');
-			$data['e_mail'] = I('email');
+			$data['e_mail'] = I('e_mail');
 			if(I('basic_id')){
 				$resumes_basic->where("id=$id")->save($data);
 				echo true;
@@ -143,6 +143,7 @@ class IndexController extends ResumeController {
 			$data['working_time'] = I('working_time');
 			$data['job_description'] = I('job_description');
 			if(I('experience_id')){
+				$experience_id=I('experience_id');
 				$resumes_jobexp->where("experience_id=$experience_id")->save($data);
 				echo true;
 			} 
@@ -154,11 +155,12 @@ class IndexController extends ResumeController {
 		elseif(I('index') == "education") {
 			$resumes_eduexp = M('resume_education');
 			$data['id'] = $id;
-			$data['school_name'] = I('name');
+			$data['school_name'] = I('school_name');
 			$data['major'] = I('major');
 			$data['degree'] = I('degree');
-			$data['graduated'] = I('grad');
+			$data['graduated'] = I('graduated');
 			if(I('education_id')){
+				$education_id=I('education_id');
 				$resumes_eduexp->where("education_id=$education_id")->save($data);
 				echo true;
 			} 
@@ -167,13 +169,27 @@ class IndexController extends ResumeController {
 				echo $education_id;
 			}
    		} 
+		elseif(I('index') == "describe") {
+			$resumes_describe = M('jobseekers_describe');
+			$data['id']=$id;
+			$data['describe'] = I('describe');
+			
+			if(I('describe_id')){
+				$resumes_describe->where("id=$id")->save($data);
+				echo true;
+			} 
+			else {
+				$describe_id = $resumes_describe->data($data)->add();
+				echo $describe_id;
+			}
+   		}
 		elseif(I('index') == "prefered") {
    			$resumes_career = M('resume_prefered');
 			$data['id'] = $id;
-			$data['expected_position'] = I('name');
-			$data['job_type'] = I('type');
-			$data['expected_location'] = I('city');
-			$data['expected_monthly_income'] = I('wages');
+			$data['expected_position'] = I('expected_position');
+			$data['job_type'] = I('job_type');
+			$data['expected_location'] = I('expected_location');
+			$data['expected_monthly_income'] = I('expected_monthly_income');
 			if(I('prefered_id')){
 				$resumes_career->where("id=$id")->save($data);
 				echo true;
@@ -183,20 +199,12 @@ class IndexController extends ResumeController {
 				echo $prefered_id;
 			}
    		} 
-		elseif(I('index') == "describe") {
-			$resumes_describe = M('jobseekers_describe');
-			$data['id']=$id;
-			$data['describe'] = I('des');
-			if(I('describe')){
-				$resumes_describe->where("id=$id")->save($data);
-				echo true;
-			} 
-			else {
-				$describe_id = $resumes_describe->data($data)->add();
-				echo $describe_id;
-			}
-   		}
-		
+		 elseif(I('index') == "status") {
+   			$resumes_basic = M('resume_basic');
+			$data['current_status'] = I('current_status');
+			$resumes_basic->where("id=$id")->save($data);
+			echo I('current_status');
+		 }
 		
     }
 
@@ -336,16 +344,21 @@ class IndexController extends ResumeController {
 	
 	 public function delete()
     {
-		$resume_id = I('resume_id');
-		if(I('index') == "jobexp"){
+		
+		if(I('index') == "experience"){
+			$resume_id = I('experience_id');
 			$resumes_eduexp = M('resume_experience');
+			$resumes_eduexp->where("experience_id=$resume_id")->delete();
 		} 
 		
 		else {
+			$resume_id = I('education_id');
 			$resumes_eduexp = M('resume_education');
+			$resumes_eduexp->where("education_id=$resume_id")->delete();
 		}
-		$resumes_eduexp->where("resume_id=$resume_id")->delete();
 		
+		
+	
         /*$resume_id=I('resume_id');
 		$servers_date=I('server_date');
 		
