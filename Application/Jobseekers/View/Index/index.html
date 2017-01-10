@@ -36,7 +36,7 @@
 				<aside class="avatar" id="crop-avatar">
                 
                   	<img class="absolute" src="__PUBLIC__/images/resume-bg.png">              
-					<img id="avatar-img" class="center hear" src="__PUBLIC__/images/avatar.png" ng-src="{{user[0].photo}}">
+					<img id="avatar-img" class="center hear" src="__PUBLIC__/images/avatar.png" >
 					<img id="avatar-bg" class="center" src="__PUBLIC__/images/avatar-bg.png" >
 
 					<input id="avatar-upload" class="center" type="file">
@@ -72,11 +72,11 @@
 					<form id="user-info-form"  ng-show="form" style="display:block">
 					<fieldset>
 							<label >姓名</label>
-							<input class="input-text" ng-model="form.nickname"  required>
+							<input class="input-text" ng-model="form.nickname" maxlength="10" required>
 						</fieldset>
 						<fieldset>
 							<label>介绍</label>
-							<input class="input-text" ng-model="form.peculiarity"  required>
+							<input class="input-text" ng-model="form.peculiarity"  maxlength="15" required>
 						</fieldset
 						><fieldset>
 							<label>性别</label>
@@ -144,8 +144,8 @@
 				<section id="job-exp"  ng-controller="resumeJobexp">
 					<h5 class="resume-title"><span>工作经历</span><a class="edit" href="javascript:;"  ng-click="add()">添加</a></h5><!--&javascript:;$item['resume_id']-->
 					<button class="add" ng-click="add()" ng-hide="experience.length">+ 添加工作经历</button>                 
-					<ul class="list">
-                            <li  ng-repeat="item in experience">
+					<ul class="list" ng-hide="list">
+                            <li  ng-repeat="item in experience" >
                                 <a class="edit"  href="javascript:;" ng-click="edit(item)">修改</a><!-- data-id={$item.resume_id}-->
                                 <a class="del"   href="javascript:;" ng-click="remove(item)" >删除</a><!-- data-id={$item.resume_id}-->
                                    
@@ -161,19 +161,19 @@
 					<form id="job-exp-form" ng-show="form" style="display:block"><!-- method="post" -->
 						<fieldset>
 							<label>公司</label>
-							<input class="input-text"  ng-model="form.re_company_name">
+							<input class="input-text"  ng-model="form.re_company_name" maxlength="30">
 						</fieldset>
 						<fieldset>
 							<label>职位</label>
-							<input class="input-text"  ng-model="form.job_title">
+							<input class="input-text"  ng-model="form.job_title" maxlength="6">
 						</fieldset>
 						<fieldset>
 							<label>任职时间</label>
-							<input class="input-text" placeholder="如:2010-11-12~至今" ng-model="form.working_time">
+							<input class="input-text" placeholder="如:2010-11-12~至今" ng-model="form.working_time" maxlength="21">
 						</fieldset>
 						<fieldset>
 							<label class="align-top">工作内容</label>
-							<textarea class="input-text" maxlength="300" rows="5"  placeholder="如:在职期间的工作范围或为公司创造了什么价值"  ng-model="form.job_description"></textarea>
+							<textarea class="input-text" maxlength="300" rows="5"  placeholder="如:在职期间的工作范围或为公司创造了什么价值"  ng-model="form.job_description" maxlength="500"></textarea>
 						</fieldset>
 						<fieldset>
                            <!-- <input type="hidden" name="what" value="experience" />
@@ -190,7 +190,7 @@
 				<section id="edu-exp" ng-controller="resumeEduexp">
 					<h5 class="resume-title"><span>教育经历</span><a class="edit" href="javascript:;"  ng-click="add()">添加</a></h5>
 					<button class="add" ng-click="add()" ng-hide="education.length">+ 教育经历</button>
-					<ul class="list">
+					<ul class="list"  ng-hide="list">
 						<li ng-repeat="item in education">
                        		 <a class="edit" href="javascript:;" ng-click="edit(item)">修改</a>
                              <a class="del"  href="javascript:;" ng-click="remove(item)">删除</a>
@@ -205,11 +205,11 @@
 					<form id="edu-exp-form" ng-show="form" style="display:block">
 						<fieldset>
 							<label>学校名称</label>
-							<input class="input-text"  ng-model="form.school_name" required>
+							<input class="input-text"  ng-model="form.school_name" maxlength="10" required>
 						</fieldset>
 						<fieldset>
 							<label>所学专业</label>
-							<input class="input-text"  ng-model="form.major"  >
+							<input class="input-text"  ng-model="form.major" maxlength="10" >
 						</fieldset>
 						<fieldset>
 							<label>学历</label>
@@ -257,7 +257,7 @@
 				<section id="self-des"  ng-controller="resumeDes">
 					<h5 class="resume-title"><span>自我描述</span> </h5>
                      <button class="add" ng-click="add()" ng-hide="describe.length">+ 添加自我描述</button>
-                    <div class="edit_box_box" ng-repeat="item in describe">
+                    <div class="edit_box_box" ng-repeat="item in describe"   ng-hide="list">
                         <span class="edit_box">
                         	<a class="edit" href="javascript:;"  ng-click="edit(item)">修改</a><!--data-id={$item.resume_id}-->
                          </span>  
@@ -266,7 +266,7 @@
                     	
                      <form id="self-des-form" ng-show="form" style="display:block">
 						<fieldset>
-							<textarea maxlength="300" rows="5" name="describe" vlaue="11" maxlength="250" wrap="hard" placeholder="250字以内"   ng-model="form.describe"  required></textarea>
+							<textarea maxlength="300" rows="5" name="describe" vlaue="11" maxlength="250" wrap="hard" placeholder="250字以内"   ng-model="form.describe" maxlength="250" required></textarea>
 						</fieldset>
 						<fieldset>
 							<input class="btn submit" type="submit" value="保存" ng-click="submit()">
@@ -282,7 +282,7 @@
 					<button class="add" ng-click="add(prefered[0])" ng-hide="prefered.length">+ 添加求职意向</button>
                   
                         
-                         <dl class="list clear"  ng-repeat="item in prefered">
+                         <dl class="list clear"  ng-repeat="item in prefered"  ng-hide="list">
                             	<span class="edit_box rate">
                             	<a class="edit" href="javascript:;" ng-click="edit(item)">修改</a>
                              	</span>
@@ -295,7 +295,7 @@
 					<form id="job-career-form" ng-show="form" style="display:block">
 						<fieldset>
 							<label>期望职位</label>
-							<input class="input-text" ng-model="form.expected_position" required>
+							<input class="input-text" ng-model="form.expected_position" maxlength="10" required>
 						</fieldset>
 						<fieldset>
 							<label>职位类型</label>
@@ -387,7 +387,7 @@
         <script type="text/javascript" src="__PUBLIC__/js/jobseekers/resume.js"></script>
         <script type="text/javascript" src="__PUBLIC__/css/bootstrap-3.3.0/js/bootstrap.min.js"></script>
    		<script type="text/javascript" src="__PUBLIC__/js/jobseekers/cropper.min.js"></script>
-<!--  		<script type="text/javascript" src="__PUBLIC__/js/jobseekers/main.js"></script>-->
+  		<script type="text/javascript" src="__PUBLIC__/js/jobseekers/main.js"></script>
 
 
 	</body>

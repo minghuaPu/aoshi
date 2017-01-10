@@ -8,8 +8,8 @@ class DeliveryController extends Controller {
     public function index(){
 		
 		$job_id = 24;
-		$jobseekers_id=session('id');
-    	$de_info = M('job')->where("id =$job_id")->select();
+		$jobseekers_id=session('uid');
+    	$de_info = M('job')->where("uid =$job_id")->select();
         $this->assign('de_info',$de_info);
 		$this->display(); 
 		}
@@ -20,7 +20,7 @@ class DeliveryController extends Controller {
 		 $have = M('resume_delivery')->where("jobseeker_id =$jobseeker_id")->select();
 		 if( $have.length<5)
 		 {
-		 $de_data['job_id']= I('id'); 
+		 $de_data['job_id']= I('uid'); 
 		 $de_data['jobseeker_id']= $jobseeker_id; 
 		 $de_data['delivery_time']=date('Y-m-d  h:n:s'); 
 		 $de_data['delivery_job']= I('delivery_job'); 

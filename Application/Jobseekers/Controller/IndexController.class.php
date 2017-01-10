@@ -20,50 +20,32 @@ class IndexController extends ResumeController {
 		//如果没有登录，就提示请登录
 		//获取模版数据
  		//原生查询法
-		//当前id
-		//$id=session('id');
-		/*$sql1 ="select * from  jobseekers where  id =". $id .$pageObj -> limit;
+		//当前uid
+		$uid=session('uid');
+		/*$sql1 ="select * from  jobseekers where  uid =". $uid .$pageObj -> limit;
 		$jobseekers_info=D("jobseekers")->query($sql1);	*/
 			
-		/*$jobseekers_info= M('jobseekers')->where("id =$id")->select();//简历基本信息
+		$jobseekers_info= M('jobseekers')->where("uid =$uid")->select();//简历基本信息
 		
-		$experience_info= M('resume_experience')->where("id =$id")->select();//简历工作经历
-		
-		$education_info= M('resume_education')->where("id =$id")->select(); //简历教育经历
-		$describe_info= M('jobseekers_describe')->where("id =$id")->select(); //简历自我描述
-		$prefered_info= M('resume_prefered')->where("id =$id")->select(); //简历求职意向
-			
-		echo json_encode(
-   			array(
-   				
-		    	'jobseekers'=>$jobseekers_info,
-		    	'experience'=>$experience_info,
-		    	'education'=>$education_info,
-				'describe'=>$describe_info,
-		    	'prefered'=>$prefered_info,
-		 	)
-   		);
+	
 
         // 第二步：模版赋值
         $this->assign('jobseekers_info',$jobseekers_info);
-		$this->assign('experience_info',$experience_info);
-		$this->assign('education_info',$education_info);
-		$this->assign('describe_info',$describe_info);
-		$this->assign('prefered_info',$prefered_info);*/
+	
         $this->display();
 		
 		
    		
     }
 	public function select(){
-		$id=session('id');
+		$uid=session('uid');
 			
-		$jobseekers_info= M('jobseekers')->where("id =$id")->select();//简历基本信息
-		$basic_info= M('resume_basic')->where("id =$id")->select();//简历基本信息
-		$experience_info= M('resume_experience')->where("id =$id")->select();//简历工作经历
-		$education_info= M('resume_education')->where("id =$id")->select(); //简历教育经历
-		$describe_info= M('jobseekers_describe')->where("id =$id")->select(); //简历自我描述
-		$prefered_info= M('resume_prefered')->where("id =$id")->select(); //简历求职意向
+		$jobseekers_info= M('jobseekers')->where("uid =$uid")->select();//简历基本信息
+		$basic_info= M('resume_basic')->where("uid =$uid")->select();//简历基本信息
+		$experience_info= M('resume_experience')->where("uid =$uid")->select();//简历工作经历
+		$education_info= M('resume_education')->where("uid =$uid")->select(); //简历教育经历
+		$describe_info= M('jobseekers_describe')->where("uid =$uid")->select(); //简历自我描述
+		$prefered_info= M('resume_prefered')->where("uid =$uid")->select(); //简历求职意向
 			
 		echo json_encode(
    			array(
@@ -82,27 +64,27 @@ class IndexController extends ResumeController {
 	public function ajaxGet()
     {
     	
-    	$id = session('id');
+    	$uid = session('uid');
     	$getType=I('type');
     	if ($getType==1) {
 	    		//简历基本信息
-	    	$resumes_basic = M('jobseekers')->where("id =$id")->select();
+	    	$resumes_basic = M('jobseekers')->where("uid =$uid")->select();
 	        $this->assign('jobseekers_info', $jobseekers_info);
         
     	}elseif ($getType=='jobexp') {
     		 //简历工作经历
-	    	$experience_info = M('resume_experience')->where("id =$id")->select();
+	    	$experience_info = M('resume_experience')->where("uid =$uid")->select();
 	    	echo json_encode($experience_info);
     	}else{
     		  //简历教育经历
-	    	$education_info = M('resume_education')->where("id =$id")->select();
+	    	$education_info = M('resume_education')->where("uid =$uid")->select();
 	        $this->assign('education_info', $education_info);
 			
-			$describe_info = M('jobseekers_describe')->where("id =$id")->select();
+			$describe_info = M('jobseekers_describe')->where("uid =$uid")->select();
 	        $this->assign('describe_info', $describe_info);
 	        
 	        //简历求职意向
-	        $prefered_info = M('resume_prefered')->where("id =$id")->select();
+	        $prefered_info = M('resume_prefered')->where("uid =$uid")->select();
 	        $this->assign('prefered_info', $prefered_info);
     	}
     	
@@ -112,12 +94,12 @@ class IndexController extends ResumeController {
     }
     public function save() {
     	
-    	$id=session('id');
+    	$uid=session('uid');
     
    		//简历添加
    		if(I('index') == "basic"){
 			$resumes_basic = M('resume_basic');
-			$data['id'] = $id;
+			$data['uid'] = $uid;
 			$data['nickname'] = I('nickname');
 			$data['peculiarity'] = I('peculiarity');
 			$data['sex'] = I('sex');
@@ -127,7 +109,7 @@ class IndexController extends ResumeController {
 			$data['current_city'] = I('current_city');
 			$data['e_mail'] = I('e_mail');
 			if(I('basic_id')){
-				$resumes_basic->where("id=$id")->save($data);
+				$resumes_basic->where("uid=$uid")->save($data);
 				echo true;
 			} 
 			else {
@@ -137,7 +119,7 @@ class IndexController extends ResumeController {
    		} 
 		elseif(I('index') == "experience") {
    			$resumes_jobexp = M('resume_experience');
-			$data['id'] = $id;
+			$data['uid'] = $uid;
 			$data['re_company_name'] = I('re_company_name');
 			$data['job_title'] = I('job_title');
 			$data['working_time'] = I('working_time');
@@ -154,7 +136,7 @@ class IndexController extends ResumeController {
    		} 
 		elseif(I('index') == "education") {
 			$resumes_eduexp = M('resume_education');
-			$data['id'] = $id;
+			$data['uid'] = $uid;
 			$data['school_name'] = I('school_name');
 			$data['major'] = I('major');
 			$data['degree'] = I('degree');
@@ -171,11 +153,11 @@ class IndexController extends ResumeController {
    		} 
 		elseif(I('index') == "describe") {
 			$resumes_describe = M('jobseekers_describe');
-			$data['id']=$id;
+			$data['uid']=$uid;
 			$data['describe'] = I('describe');
 			
 			if(I('describe_id')){
-				$resumes_describe->where("id=$id")->save($data);
+				$resumes_describe->where("uid=$uid")->save($data);
 				echo true;
 			} 
 			else {
@@ -185,13 +167,13 @@ class IndexController extends ResumeController {
    		}
 		elseif(I('index') == "prefered") {
    			$resumes_career = M('resume_prefered');
-			$data['id'] = $id;
+			$data['uid'] = $uid;
 			$data['expected_position'] = I('expected_position');
 			$data['job_type'] = I('job_type');
 			$data['expected_location'] = I('expected_location');
 			$data['expected_monthly_income'] = I('expected_monthly_income');
 			if(I('prefered_id')){
-				$resumes_career->where("id=$id")->save($data);
+				$resumes_career->where("uid=$uid")->save($data);
 				echo true;
 			} 
 			else {
@@ -202,7 +184,7 @@ class IndexController extends ResumeController {
 		 elseif(I('index') == "status") {
    			$resumes_basic = M('resume_basic');
 			$data['current_status'] = I('current_status');
-			$resumes_basic->where("id=$id")->save($data);
+			$resumes_basic->where("uid=$uid")->save($data);
 			echo I('current_status');
 		 }
 		
@@ -214,11 +196,11 @@ class IndexController extends ResumeController {
 		 
 	public function update() //编辑
 	{
-		$id=session('id');
+		$uid=session('uid');
 		$resume_id=I('resume_id');
     if(I('index') == "basic"){
 			$resumes_basic = M('jobseekers');
-			$data['id'] = $id;
+			$data['uid'] = $uid;
 			$data['nickname'] = I('name');
 			$data['peculiarity'] = I('intro');
 			$data['sex'] = I('sex');
@@ -228,12 +210,12 @@ class IndexController extends ResumeController {
 			$data['current_city'] = I('city');
 			$data['phone'] = I('phone');
 			$data['e_mail'] = I('email');
-			$resumes_basic->where("id=$id")->save($data);
+			$resumes_basic->where("uid=$uid")->save($data);
 			echo true;
 		}
    		elseif(I('index') == "jobexp") {
    			$resumes_jobexp = M('resume_experience');
-			$data['id'] = $id;
+			$data['uid'] = $uid;
 			$data['re_company_name'] = I('re_company_name');
 			$data['job_title'] = I('job_title');
 			$data['working_time'] = I('working_time');
@@ -242,7 +224,7 @@ class IndexController extends ResumeController {
 			echo true;
    		} elseif(I('index') == "eduexp") {
 			$resumes_eduexp = M('resume_education');
-			$data['id'] = $id;
+			$data['uid'] = $uid;
 			$data['school_name'] = I('name');
 			$data['major'] = I('major');
 			$data['degree'] = I('degree');
@@ -251,7 +233,7 @@ class IndexController extends ResumeController {
 			echo true;
    		}elseif(I('index') == "career") {
    			$resumes_career = M('resume_prefered');
-			$data['id'] = $id;
+			$data['uid'] = $uid;
 			$data['expected_position'] = I('name');
 			$data['job_type'] = I('type');
 			$data['expected_location'] = I('city');
@@ -262,18 +244,18 @@ class IndexController extends ResumeController {
 			
    			$jobseekers = M('jobseekers');
 			$data['current_status'] = I('state');
-			$jobseekers->where("id=$id")->save($data);
+			$jobseekers->where("uid=$uid")->save($data);
 			echo true;
    		} else {
    			$resumes_describe = M('jobseekers_describe');
-			$data['id']=$id;
+			$data['uid']=$uid;
 			$data['describe'] = I('des');
 			$resumes_describe->where("resume_id=$resume_id")->save($data);
 			echo true;
    		}
 			/*
 			$resume_id=I('resume_id');
-			$id=session('id');
+			$uid=session('uid');
 			$server=I('what');
 			
 			
@@ -325,7 +307,7 @@ class IndexController extends ResumeController {
 				$up_data['e_mail']=I('e_mail');
 			
 				
-				 //$where="id=$id";
+				 //$where="uid=$uid";
 				  $where="resume_id=$resume_id";
 				 
 				 }
@@ -389,22 +371,22 @@ class IndexController extends ResumeController {
     }
 	public function delivery() //编辑
 	{
-/*SELECT * FROM resume_delivery left join job on resume_delivery.job_id=job.id left join company on job.enterprise_id=company.enterprise_id where jobseeker_id=5*/		
+/*SELECT * FROM resume_delivery left join job on resume_delivery.job_id=job.uid left join company on job.enterprise_id=company.enterprise_id where jobseeker_id=5*/		
 		
 		
-		$id=session('id');
-		$seekers_info = M('jobseekers')->where("id =$id")->select();
+		$uid=session('uid');
+		$seekers_info = M('jobseekers')->where("uid =$uid")->select();
 	    $this->assign('seekers_info', $seekers_info);
 		
-/*		$delivery_info = M('resume_delivery')->where("jobseeker_id =$id")->select();
+/*		$delivery_info = M('resume_delivery')->where("jobseeker_id =$uid")->select();
 */		
 		 $delivery_info=M('resume_delivery')
                 ->join("left join job on resume_delivery.job_id=job.id")//join是关联查询
 				->join("left join company on job.enterprise_id=company.enterprise_id")//join是关联查询
-                ->where("jobseeker_id =$id")
+                ->where("jobseeker_id =$uid")
                 ->select();
 	
-		print_r($delivery_info);
+		
 		$this->assign('delivery_info', $delivery_info);
 		$this->display();
 	}
