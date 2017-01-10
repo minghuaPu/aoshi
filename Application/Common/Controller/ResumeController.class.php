@@ -7,10 +7,13 @@ class ResumeController extends Controller{
 
 	protected function _initialize() {
 
-		 $userinfo=session('id');
-       
-         if (!$userinfo) {
-         	$this->error('请先登录！',U('Login/login'));
+		 $usersession=session('uid');
+		 $userinfo=session('user_login_status');
+		 
+		 
+         if (!$userinfo || !$usersession) {
+			 $this->error('非法操作！',U('Login/login'));
+			
          }
 	}
 
