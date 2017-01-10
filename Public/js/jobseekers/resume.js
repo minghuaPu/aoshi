@@ -13,10 +13,7 @@ $("#avatar-img");*/ //可更改简历头像src
 
 
 /*简历管理*/
-var $jobExp = $("#job-exp"),
-	$jEdit = $jLi.find(".edit"),
-	$eduExp = $("#edu-exp"),
-	$eDel = $eduExp.find(".del")
+
 var resume = angular.module('resume', []);
 resume.run(function($rootScope, service) {
 	service.load().then(function(data) {
@@ -123,8 +120,12 @@ resume.controller('resumeJobexp', function($scope, service) {
 			}
 	};
 	$scope.remove = function(experience) {
-		$scope.experience.splice($scope.experience.indexOf(experience), 1);
-		service.remove('experience', experience);
+		if(confirm("确认删除"))
+		{
+			$scope.experience.splice($scope.experience.indexOf(experience), 1);
+			service.remove('experience', experience);
+		}
+		else{}
 	};
 	$scope.cancel = function() {
 		$scope.list = false;
@@ -158,8 +159,8 @@ resume.controller('resumeEduexp', function($scope, service) {
 		}
 	};
 	$scope.remove = function(education) {
-		var mymessage= confirm("确认删除");
-		if(mymessage==true)
+		
+		if(confirm("确认删除"))
 		{
 					$scope.education.splice($scope.education.indexOf(education), 1);
 		service.remove('education', education);
