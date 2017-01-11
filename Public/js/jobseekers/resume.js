@@ -1,122 +1,260 @@
-﻿angular.module("myResume",[])
+/*简历头像*/
+/*$("#avatar-upload").on("mouseenter", function() {
+	$("#avatar-bg").show();
+});
+$("#avatar-upload").on("mouseleave", function() {
+	$("#avatar-bg").hide();
+});
+$("#avatar-upload").on("change", function() { //图片选中后触发事件
+	alert("已选择文件" + this.value);
+});
+$("#avatar-img");*/ //可更改简历头像src
 
-.run(function  ($rootScope, resume) {
-	// 一跑起来异步加载简历信息
-	resume.all().then(function  (rtn_data) {
-		$rootScope.exp_list=rtn_data['data']['jobexp'];//工作经历
 
-		$rootScope.edu_list=rtn_data['data']['eduexp'];//教育经历
+
+/*简历管理*/
+
+var resume = angular.module('resume', []);
+resume.run(function($rootScope, service) {
+	service.load().then(function(data) {
+		$rootScope.integrity = 0;
+		
+		$rootScope.user = data['user'];
+		$rootScope.basic = data['basic'];
+		$rootScope.experience = data['experience'];
+		$rootScope.education = data['education'];
+		$rootScope.describe = data['describe'];
+		$rootScope.prefered = data['prefered'];
+		
+		/*if(data['basic'][0]) {
+			$rootScope.integrity += 20
+		}
+		if(data['experience'][0]) {
+			$rootScope.integrity += 20
+		}
+		if(data['describe'][0]) {
+			$rootScope.integrity += 20
+		}
+		if(data['career'][0]) {
+			$rootScope.integrity += 20
+		}
+		if(data['prefered'][0].des) {
+			$rootScope.integrity += 20
+		}*/
 	})
-})
+});
 
-.factory("resume",function  ($http) {
-	// 简历工厂
+resume.factory('service', function($http) {
 	return {
-		all: function() {
-			return   $http.get(SITE_URL+"/ajaxGet")
-				.then(function  (rtn_data) {
-					return  rtn_data;
-				});
-
+		load: function() {
+			return $http.get(SITE_URL + '?a=select')
+				.then(function(response) {
+					
+					return response['data'];
+				})
 		},
-		remove: function(controllerName,info) {
+		save: function(index, data) {
+			return $http({
+				method: 'get',
+				url: SITE_URL+ '?a=save&index=' + index,
+				params: data
+			}).then(function(data) {
+				return data;
+			})
+		},
+		remove: function(index, data) {
 			$http({
-				method:"get",
-				url:SITE_URL+"/delete?index="+  controllerName,
-				params:info
-			}).success(function(data){
-				return data;
-			});
-
-		},
-		save: function(controllerName,form_info) {
-			return  $http({
-				method:"get",
-				url:SITE_URL+"/update?index="+  controllerName,
-				params:form_info
-			}).then(function(data){
-				return data;
-			});
+				method: 'get',
+				url: SITE_URL + '?a=delete&index=' + index,
+				params: data
+			})
+		}
+	}
+});
+//基本信息
+resume.controller('resumeBasic', function($scope, service) {
+	$scope.edit = function(basic) {
+		$scope.form = basic;
+		<!--$scope.form = basic;
+		-->
+	};
+	$scope.add = function() {
+		$scope.form = {
+			nickname: '',
+			peculiarity: '',
+			sex: '',
+			birth: '',
+			top_edu: '',
+			work_years: '',
+			current_city: '',
+			phone: '',
+			e_mail: ''
 		}
 	};
-
-})
-
-
-.controller("jobexp",function  ($scope,$rootScope,resume) {
-
-	$scope.show_form=function  (item) {
-		if (item==1) {
-			$scope.form_info={job:'',name:'',time:'',cont:''};
-		}else{
-			$scope.form_info=item;
-		}
-	}
-
-	$scope.hide_form=function  () {
-		delete $scope.form_info;
-	}
-
-	$scope.delete_info=function  (item) {
-		$rootScope.exp_list.splice($rootScope.exp_list.indexOf(item), 1);
-
-		resume.remove('jobexp',item);
-	}
-
-
-	$scope.save_form=function  () {
-		resume.save('jobexp',$scope.form_info).then(function  (rtn_data) {
-			if ($scope.form_info.jid==undefined) {
-
-				$scope.form_info.jid=rtn_data.data.msg;//获取添加数据库后的ID，进行赋值
-				$rootScope.exp_list.push($scope.form_info);
+	$scope.cancel = function() {
+		delete $scope.form;
+	};
+	$scope.submit = function() {
+		service.save('basic', $scope.form).then(function(response) {
+			if(!$scope.form.basic_id) {
+				$scope.form.basic_id = response['data'];
+				$scope.basic.push($scope.form);
 			}
-
-			delete $scope.form_info;
-		});
-	}
-})
-.controller("eduexp",function  ($scope,$rootScope,resume) {
-	$scope.show_form=function  (item) {
-		// 要判断是不是添加
-		if (item==1) {
-			$scope.form_info={name:'',xl:'',major:'',grad:''};
-		}else{
-			$scope.form_info=item;
-		}
-
-	}
-	$scope.delete_info=function  (item) {
-		$rootScope.edu_list.splice($rootScope.edu_list.indexOf(item), 1);
-
-		resume.remove('eduexp',item);
-	}
-	$scope.hide_form=function  () {
-		delete $scope.form_info;
-	}
-	$scope.save_form=function  () {
-		resume.save('eduexp',$scope.form_info).then(function  (rtn_data) {
-			if ($scope.form_info.eid==undefined) {
-				$scope.form_info.eid=rtn_data.data.msg;//获取添加数据库后的ID，进行赋值
-				$rootScope.edu_list.push($scope.form_info);
+			delete $scope.form;
+		})
+	};
+});
+//工作经历
+resume.controller('resumeJobexp', function($scope, service) {
+	$scope.edit = function(experience) {
+		$scope.form = experience;
+		$scope.list = true;
+	};
+	$scope.add = function() {
+		$scope.list = true;
+			$scope.form = {
+				re_company_name: '',
+				job_title: '',
+				working_time: '',
+				job_description: ''
 			}
+	};
+	$scope.remove = function(experience) {
+		if(confirm("确认删除"))
+		{
+			$scope.experience.splice($scope.experience.indexOf(experience), 1);
+			service.remove('experience', experience);
+		}
+		else{}
+	};
+	$scope.cancel = function() {
+		$scope.list = false;
+		delete $scope.form;
+	};
+	$scope.submit = function() {
+		$scope.list = false;
+		service.save('experience', $scope.form).then(function(response) {
+			console.log($scope.form.experience_id)
+			if(!$scope.form.experience_id) {
+				$scope.form.experience_id = response['data'];
+				$scope.experience.push($scope.form);
+			}
+			delete $scope.form;
+		})
+	};
+});
+//教育经历
+resume.controller('resumeEduexp', function($scope, service) {
+	$scope.edit = function(education) {
+		$scope.form = education;
+		$scope.list = true;
+	};
+	$scope.add = function() {
+		$scope.list = true;
+		$scope.form = {
+			school_name: '',
+			degree: '',
+			major: '',
+			graduated: ''
+		}
+	};
+	$scope.remove = function(education) {
+		
+		if(confirm("确认删除"))
+		{
+					$scope.education.splice($scope.education.indexOf(education), 1);
+		service.remove('education', education);
+		}
+		else{}
 
-			delete $scope.form_info;
-		});
+	};
+	$scope.cancel = function() {
+		$scope.list = false;
+		delete $scope.form;
+	};
+	$scope.submit = function() {
+		$scope.list = false;
+		service.save('education', $scope.form).then(function(response) {
+			if(!$scope.form.education_id) {
+				$scope.form.education_id = response['data'];
+				$scope.education.push($scope.form);
+			}
+			delete $scope.form;
+		})
+	};
+});
+
+//自我描述
+resume.controller('resumeDes', function($scope, service) {
+	$scope.integrity = 20;
+	$scope.edit = function(describe) {
+		$scope.list = true;
+		$scope.form = describe;
+	};
+	$scope.add = function() {
+		$scope.list = true;
+		$scope.form = {
+			describe: ''
+		}
+	};
+	$scope.cancel = function() {
+		$scope.list = false;
+		delete $scope.form;
+	};
+	$scope.submit = function() {
+		$scope.list = false;
+		service.save('describe', $scope.form).then(function(response) {
+			if(!$scope.form.describe_id) {
+				$scope.form.describe_id = response['data'];
+				$scope.describe.push($scope.form);
+			}
+			delete $scope.form;
+		})
+	};});
+//求职意向
+resume.controller('resumeCareer', function($scope, service) {
+	$scope.edit = function(prefered) {
+		$scope.list = true;
+		$scope.form = prefered;
+	};
+	$scope.add = function() {
+		$scope.list = true;
+		$scope.form = {
+			expected_position: '',
+			job_type: '',
+			expected_location: '',
+			expected_monthly_income: ''
+		}
+	};
+	$scope.cancel = function() {
+		$scope.list = false;
+		delete $scope.form;
+	};
+	$scope.submit = function() {
+		$scope.list = false;
+		service.save('prefered', $scope.form).then(function(response) {
+			if(!$scope.form.prefered_id) {
+				$scope.form.prefered_id = response['data'];
+				$scope.prefered.push($scope.form);
+			}
+			delete $scope.form;
+		})
+	};
+});
+//求职状态
+resume.controller('resumeState', function($scope, service) {
+	$scope.change = function() {
+		service.save('status', $scope.basic[0])
+		
 	}
+});
 
-})
-// .controller("jobexp",function  ($http,$scope) {
+
+
+
+
+
 //
-// })
-
-
-
-
-
-
-
-
 //var $one=$("#user-info .rate"),
 //    $two=$("#job-exp .rate"),
 //	$three=$("#edu-exp .rate"),

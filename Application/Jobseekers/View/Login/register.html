@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>用户登录注册页面</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/jobseekers/register-login.css">
+    <style type="text/css">
+       @charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-start{clip:rect(0,auto,auto,0);-ms-zoom:1.0001;}.ng-animate-active{clip:rect(-1px,auto,auto,0);-ms-zoom:1;}
+    </style>
+
+</head>
+<body >
+<div class="cent-box register-box" >
+	<div class="cont-main clearfix">
+		<div class="index-tab">
+			<div class="index-slide-nav">
+				<a href="login.html">登录</a>
+				<a href="register.html" class="active">注册</a>
+				<div class="slide-bar slide-bar1"></div>				
+			</div>
+		</div>
+	<form action="{:U('Login/register')}" method="post" name="myForm"  ng-app="register" ng-controller="reg">
+		<div class="login form">
+			<div class="group">
+				<div class="group-ipt user"  >
+					<input type="text" name="username" id="user" class="ipt username" ng-model="username" ng-pattern="/^[A-Za-z0-9]\w{4,8}$/"  style=" border-top:0px solid #d5d5d5;" placeholder="设置帐号" required>
+				</div>
+                <div class=" user_tip" style="color:#e83636;font-size:12px;" ng-cloak>
+					<span   ng-show="myForm.username.$dirty && myForm.username.$invalid">
+                        <span class="text-danger glyphicon  glyphicon-remove" ng-show="myForm.username.$error.required">帐号是必须的。</span>
+                        <span class="text-danger glyphicon  glyphicon-remove" ng-if="(myForm.username.$error.pattern)&&myForm.username.$touched">*只能为英文或数字，且不能以数字打头并长度为5-8个字符!</sapn>
+					</span>
+				</div>
+                
+                
+				<div class="group-ipt password">
+					<input type="password" name="password" id="password" class="ipt password" placeholder="设置登录密码" ng-model="password" ng-maxlength="18" ng-minlength="6" required>
+				</div>
+                <div class=" user_tip" style="color:#e83636;font-size:12px;" ng-cloak>
+					<span   ng-show="myForm.password.$dirty && myForm.password.$invalid">
+                        <span class="text-danger glyphicon  glyphicon-remove" ng-show="myForm.password.$error.required">帐号是必须的。</span>
+                        <span class="text-danger glyphicon  glyphicon-remove" ng-if="(myForm.password.$error.minlength||myForm.password.$error.maxlength)&&myForm.password.$touched">*长度为6-18个字符!</sapn>
+					</span>
+				</div>                
+                
+                
+				<div class="group-ipt password1">
+					<input type="password" name="password agpwd" id="password1" class="ipt" ng-model="agpassword" placeholder="重复密码" required>
+				</div>
+                <div class=" user_tip" style="color:#e83636;font-size:12px;" ng-cloak>
+					<span   ng-show="myForm.agpwd.$dirty && myForm.agpwd.$invalid">
+                        <span class="text-danger glyphicon  glyphicon-remove" ng-show="myForm.agpwd.$error.required">帐号是必须的。</span>
+                        <span class="text-danger glyphicon  glyphicon-remove" ng-show="(agpwd != password)">*密码不一致!</sapn>
+					</span>
+				</div>              
+                
+                  
+                <div class="group-ipt "style=" border-top:1px solid #d5d5d5;" >
+                	<input type="text" name="verify_val" placeholder="请证明你不是机器人"style=" width: 127px;" required><img src="{:U('Login/get_verify')}" style="width:174px;position: absolute;" onclick="this.src=this.src+'?'"/>
+                </div>
+			</div>
+		</div>
+		<div class="button">
+			<button type="submit" class="login-btn register-btn" id="button" ng-disabled="myForm.username.$dirty && myForm.username.$invalid || myForm.password.$dirty && myForm.password.$invalid ">注册</button>
+		</div>
+	
+	</form>
+   </div>
+  </div>
+  
+<script src="__PUBLIC__/js/jobseekers/jquery-3.1.1.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="__PUBLIC__/js/angular.min.js"></script>
+<script src="__PUBLIC__/js/jobseekers/index.js" type="text/javascript"></script>
+<script>
+var app = angular.module('register', []);
+app.controller('reg', function($scope) {
+ 
+});
+
+
+
+
+	function use(){
+		var yhm=$('.username').val(); //获取文本框的用户名
+		   var patten =/^[a-zA-Z]\w{5,15}$/; 
+			if(yhm){
+				$(".user_tip").css({borderTop:'1px solid #d5d5d5'});
+			     if(!patten.test(yhm)) {   //如果没有匹配到，那么就错误
+			    	$(".user_tip").html("*只能为英文或数字，且不能以数字打头，长度为5-15个字符!");
+			    	return false;
+			  	} else{
+				$(".user_tip").css({borderTop:''});
+				$(".user_tip").html("");
+				return true};
+			}
+			else{
+				
+				$(".user_tip").html("");
+				}
+	}
+
+
+	$("#remember-me").click(function(){
+		var n = document.getElementById("remember-me").checked;
+		if(n){
+			$(".zt").show();
+		}else{
+			$(".zt").hide();
+		}
+	})
+</script>
+</body>
+</html>
