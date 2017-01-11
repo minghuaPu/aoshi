@@ -1,72 +1,79 @@
 <include file="Public:header" />
-<link rel="stylesheet" href="__PUBLIC__/css/enterprise/company.css?5">
+<link rel="stylesheet" href="__PUBLIC__/css/enterprise/company.css?6">
 
 <div class="container">
     <form action="{:U('Company/save')}" method="post">
-     <foreach name="enterprise_info" item="enterprise_item">
         <div class="content">
             <h1>公司信息</h1>
             <div class="content_box">
                 <h3>公司全称</h3>
-                <p>{$enterprise_item['company_name']}</p>
-                <input type="text" name="company_name" class="hide">
+                <p class="info_item" id="company_name">{$company_info['company_name']}</p>
             </div>
             <div class="content_box">
                 <h3>公司地址</h3>
-                <p>{$enterprise_item['address']}</p>
-                <input type="text" name="address" class="hide">
+                <p class="info_item" id="address">{$company_info['address']}</p>
             </div>
             <div class="content_box introduction">
                 <h3>公司简介</h3>
                 <div class="introduce">
-                    <p>{$enterprise_item['introduction']}</p>
+                    <p class="info_item" id="introduction">{$company_info['introduction']}</p>
                 </div>
-                <textarea class="hide" name="introduction"></textarea>
             </div>
         </div>
         <div class="content">
             <h1>您的信息</h1>
             <div class="content_box">
                 <h3>姓名</h3>
-                <p>{$enterprise_item['name']}</p>
-                <input type="text" name="name" class="hide">
+                <p class="info_item" id="name">{$enterprise_info['name']}</p>
             </div>
             <div class="content_box">
                 <h3>职位</h3>
-                <p>{$enterprise_item['job']}</p>
-                <input type="text" name="job" class="hide">
+                <p class="info_item" id="job">{$enterprise_info['job']}</p>
             </div>
             <div class="content_box">
                 <h3>默认邮箱</h3>
-                <p>{$enterprise_item['email']}</p>
-                <input type="text" name="email" class="hide">
+                <p class="info_item" id="email">{$enterprise_info['email']}</p>
             </div>
             <div class="content_box">
                 <h3>电话</h3>
-                <p>{$enterprise_item['phone']}</p>
-                <input type="text" name="phone" class="hide">
+                <p class="info_item" id="phone">{$enterprise_info['phone']}</p>
             </div>
         </div>
         <div class="content">
-            <input type="submit"  id_val= "{$enterprise_item['id']}" id="submit" class="btn">
+            <input type="submit"  id_val= "{$enterprise_info['enterprise_id']}" id="submit" class="btn">
         </div>
-     </foreach>
     </form>
 </div>
 
 <include file="Public:footer" />
-<script src="__PUBLIC__/js/enterprise/company.js"></script>
 <script>
-    if ({$enterprise_item['auditing']}==1){
+    if ({$enterprise_info['auditing']}==1){
         $("#submit").attr("disabled",true);
         $("#submit").attr("value","正在审核中");
-    }else if({$enterprise_item['auditing']}==0){
+        $(".btn-info").hide();
+    }else if({$enterprise_info['auditing']}==0){
         $("#submit").attr("disabled",false);
         $("#submit").attr("value","申请审核");
+        $("#submit").css({
+            backgroundColor:"#53cac3",
+            color:"white"
+        });
         $(".hide").removeClass("hide");
-        $(".content_box p").hide()
-    }else if({$enterprise_item['auditing']}==2){
+        $(".info_item").html("<input type='text'>");
+        for (var i=0;i<$(".info_item").length;i++){
+            $(".info_item input").eq(i).attr("name",$(".info_item").eq(i).attr("id"));
+        }
+        $("#introduction").html("<textarea name='introduction'></textarea>");
+        $("#introduction").css({
+            paddingLeft:"0px"
+        })
+    }else if({$enterprise_info['auditing']}==2){
         $("#submit").attr("disabled",true);
         $("#submit").attr("value","已通过官方认证");
+        $("#submit").css({
+            color:"red",
+            fontSize:"20px"
+        });
     }
 </script>
+<script src="__PUBLIC__/js/enterprise/company.js?1"></script>

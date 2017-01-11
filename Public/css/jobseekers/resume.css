@@ -186,12 +186,26 @@ button {
 
 
 /*简历编辑*/
+#resume .tip {
+	text-align:center!important;
+	}
+#resume .tip span{
+	
+	padding-bottom:0 !important;
+	text-align:center!important;
+	}
 #job-career .list{
 	position:relative;
 	}
 #self-des .edit_box_box{
 	position:relative;
-	}	
+	}
+#self-des .edit_box_box textarea{
+	    width: 100%;
+    background-color: transparent;
+    border: 0px;
+    resize: none;
+	}		
 #resume .edit_box{
 	width: 86px;
     height: 19px;
@@ -226,7 +240,7 @@ button {
 }
 
 #resume form {
-	display: none;
+	
 	padding: 30px 50px 10px;
 	background-color: #fff;
 }

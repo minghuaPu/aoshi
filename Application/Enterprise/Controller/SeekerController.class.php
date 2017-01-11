@@ -4,12 +4,20 @@ use Think\Controller;
 
 class SeekerController extends Controller{
     public function resume(){
-		$id=session('tid');
-           
-		$user_info= M('enterprise')->where("id =$id")->select();
-      
-		$this->assign('user_info',$user_info);
-	
+        $userInfo=session('auth');
+        if ($userInfo) {
+            $this->display();
+        }else{
+            $this->error('请先登录！',U('Login/login'));
+        }
+
+
+
+        // 通过session的id来搜索enterprise_info表，获取用户信息
+        $enterprise_info=M('enterprise_info');
+        $enterprise_info=$enterprise_info->where(array("id" => session('eid')))->find();
+        $this->assign("enterprise_info",$enterprise_info);
+
         $this->display();
     }
 }

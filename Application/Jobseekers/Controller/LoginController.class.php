@@ -10,15 +10,13 @@ use Think\Verify;
 class LoginController extends Controller {
 
     public function index()
-    {
-		// session版登录
-		//include("../Conf/init.php");                
+    {           
 		if (IS_POST) { 
-			//验证码校验
+				//验证码校验
 			   $Verify = new \Think\Verify();
 			   if (!$Verify->check(I('verify_val'))) {
 				  $this->error('验证码错误！',U('Login/login'));
-			   }
+			   }			
 		
 			 //查询用户表，加上用户名和密码两个条件，如果两个条件和数据库一样就登录成功
 			 $pwd=md5($_POST['password']);
@@ -26,18 +24,15 @@ class LoginController extends Controller {
 			 // 如果info有值条件一样，没有的话就是
 			 $log_data['username']=$_POST[username];
 			 $log_data['password']=$pwd;
-		
-			$log_sql=D('jobseekers')->where($log_data)->select();
+			 $log_sql=D('jobseekers')->where($log_data)->select();
 			if ($log_sql) {
 				$json_str=array('status'=>1,'msg'=>'登录成功');
 				// 记住我，7天免登录 
-				$log_id="SELECT id FROM jobseekers WHERE username='". $_POST[username]."'";
+				$log_id="SELECT uid FROM jobseekers WHERE username='". $_POST[username]."'";
 				$log_info=D("jobseekers")->query($log_id);
 				
-				session('user_login_status','1',time()+(3600*24*7));
-				session('id',$log_info[0][id],time()+(3600*24*7));
-				
-			
+				session('uid',$log_info[0][uid]);
+				session('user_login_status','1');
 				
 				$this->success('登录成功！','../Index/index');//跳转的方法
 			}else{ 
@@ -47,7 +42,7 @@ class LoginController extends Controller {
 			}
 		
 			
-//			 echo json_encode($json_str);
+			// echo json_encode($json_str);
 		}
 		else{
 			$this->display();
@@ -61,12 +56,8 @@ class LoginController extends Controller {
 		header("Content-type: text/html; charset=utf-8");                 
 	
 		// session登录怎么退出
-		
 		session('user_login_status',null);
-		session('id',null);
-		
-		$this->success('退出成功！','login');//跳转的方法
-
+		$this->success('退出成功！','login');//跳转的方法	
 		 }
 		 
 		 
@@ -83,7 +74,7 @@ class LoginController extends Controller {
 			   
 				$username=I('username');
 				$password=md5(I('password'));
-				$e_mail=I('e_mail');
+				
 	
 				 $select_sql=D('jobseekers')->where("username='$username'")->select();
 	
@@ -99,7 +90,6 @@ class LoginController extends Controller {
 					 mysql_query($insert_sql);*/
 					 $reg_data['username']=$username;
 					 $reg_data['password']=$password;
-					 $reg_data['e_mail']=$e_mail;
 					 $reg_data['create_time']=date('Y-m-d  h:n:s'); 
 					 
 					 M('jobseekers')->add($reg_data);			
