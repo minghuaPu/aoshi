@@ -4,7 +4,7 @@
 	<link rel="stylesheet" href="__PUBLIC__/css/common.css">
 	<link rel="stylesheet" href="__PUBLIC__/css/jobdetail.css">
 	 <div class="content">
-	 <foreach name="job_detail" item="job_item">
+	 <volist name="job_detail" id="job_item">
 	 	<div class="container">
 			<div class="con-l">
 				<div class="chat-content">
@@ -85,7 +85,7 @@
 						
 					</div>
 					<sup>职信道</sup>
-					<label>{$job_item[add_time]}<span>更新</span></label>
+					<label>{$job_item[add_time]|date='Y-m-d',###}<span>&nbsp;更新</span></label>
 				</div>
 				<!-- 公司显示表-->
 				<div class="company-dec">
@@ -97,20 +97,21 @@
 							<p>{$job_item[company_name]}<span>招聘中</span></p>
 							<span class="company-status">在线</span>
 						</div>
+						<a href="{:U('Index/findjob')}" class="btn-deliveryresume">投递简历</a>
 					</div>
 				</div>
 				<!-- 职位详情-->
 				<div class="job-detail">
 					<p class="job-describe">职位描述</p>
-					<p class="con-dec">{$job_item[job_describe]}</p>
+					<div class="con-dec">{$job_item[job_describe]}</div>
 					<p class="job-require">岗位要求</p>
-					<p class="con-dec">{$job_item[job_require]}</p>
+					<div class="con-dec">{$job_item[job_require]}</div>
 					<p class="company-address">公司地址</p>
-					<p class="con-dec">{$job_item[place]}</p>
+					<div class="con-dec">{$job_item[place]}</div>
 				</div>
 			</div>
 		</div>
-	</foreach>
+	</volist>
 	</div>
 	
 </body>

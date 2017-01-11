@@ -92,19 +92,19 @@
 				</form>
 			</div>
 			<div class="search-tip">
-				<p>{$_REQUEST['key']}&nbsp;相关搜索结果</p>
+				<p>{$_REQUEST['key']}&nbsp;相关结果</p>
 
 			</div>
 			<!-- 职位详情表 -->
 
 
 <!-- 第四步：遍历模版变量 -->
-		<foreach name="job_info" item="job_item">
+		<volist name="job_info" id="job_item">
 			<div class="job-list">
-				<a href="#"><!-- {:U('Index/jobdetail')} -->
+				<a href="{:U('Index/jobdetail',array('id'=>$job_item['id']))}"><!-- {:U('Index/jobdetail',array(id=>$id))} -->
 					<div class="job-left">
 					<!-- 第五步：给对应信息添加动态数据 -->
-						<p class="job-name">{$job_item['job_name']}</p>
+						<p class="job-name">{$job_item.job_name}</p>
 						<p class="word-red"><strong>￥{$job_item['money']}</strong></p>
 						<ul>
 							<li>广州</li>
@@ -120,7 +120,7 @@
 					</div>
 				</a>
 			</div>
-			</foreach>
+			</volist>
 
 			<div class="next-page">
 				<a href="#">下一页</a>
