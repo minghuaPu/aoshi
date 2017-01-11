@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 2017-01-07 02:18:33
+-- Generation Time: 2017-01-11 02:37:54
 -- 服务器版本： 5.6.17
 -- PHP Version: 5.5.12
 
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `enterprise_info` (
 --
 
 INSERT INTO `enterprise_info` (`id`, `company_id`, `name`, `job`, `email`, `phone`, `photo`, `auditing`) VALUES
-(18, 25, '史美娜', '阿里巴巴-UC.HR', 'http://www.uc.cn', '1111111111111', '/aoshi/aoshi./Public/upload/avatar.png', 2);
+(18, 35, '', '', '', '', '/aoshi/aoshi./Public/upload/enterprise_18.png', 2);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

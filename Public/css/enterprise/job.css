@@ -78,8 +78,22 @@
   list-style: none;
   line-height: 50px;
   font-size: 14px;
+  height: 50px;
   text-align: center;
   padding: 0;
+}
+.content .tit_box div input[type=checkbox] {
+  width: 15px;
+  height: 15px;
+  margin-top: 17px;
+  cursor: pointer;
+}
+.content .tit_box .control {
+  padding-left: 40px;
+}
+.content .tit_box .delete_all {
+  cursor: pointer;
+  color: red;
 }
 .content .row {
   width: 100%;
@@ -89,40 +103,59 @@
 .content .table {
   max-width: 900px;
 }
-.content .table th {
+.content .table tr {
+  position: relative;
+}
+.content .table tr td {
   padding: 0;
-  height: 35px;
-  line-height: 35px;
+  height: 40px;
+  line-height: 40px;
+  overflow: hidden;
   text-align: center;
   font-weight: normal;
+  border-bottom: 1px solid #ccc;
 }
-.content .table th input {
+.content .table tr td input {
   width: 100%;
-  height: 100%;
+  height: 35px;
 }
-.content .table th .btn-info {
-  height: 31px;
-  margin-top: -3px;
+.content .table tr td input[type=checkbox] {
+  width: 15px;
+  height: 15px;
+  margin-top: 10px;
+  cursor: pointer;
 }
-.content .detail {
-  width: 500px;
-  position: absolute;
-  top: 175px;
-  left: 200px;
-  border-radius: 8px;
-  background-color: #53cac3;
-  color: white;
+.content .table tr td .btn {
+  height: 30px;
+  margin-top: -5px;
+  padding: 0;
+  text-align: center;
+  width: 55px;
 }
-.content .detail h3 {
-  font-size: 16px;
-  margin-left: 30px;
+.content .table tr .status {
+  font-weight: 600;
 }
-.content .detail p {
-  padding: 0 30px;
+.content .table tr .detail {
+  margin: 0 30px;
 }
-.content .detail .address {
-  margin-top: 30px;
-  margin-bottom: 25px;
+.content .table tr .detail h3 {
+  text-align: left;
+  height: 18px;
+  line-height: 18px;
+  font-size: 13px;
+  margin: 5px 0;
+}
+.content .table tr .detail p {
+  text-align: left;
+  margin: 0 0 5px 0;
+  line-height: 18px;
+  font-size: 12px;
+}
+.content .table tr .detail .address {
+  float: left;
+}
+.content .table .detail_box {
+  display: none;
 }
 .content .tip {
   margin-top: 20px;
@@ -159,4 +192,26 @@
 }
 .content .page_box div span {
   margin: 0 10px;
+}
+.modal-dialog {
+  margin-top: 200px;
+  min-width: 200px;
+  height: 150px;
+  width: 300px;
+}
+.modal-dialog .modal-content {
+  width: 100%;
+  height: 100%;
+}
+.modal-dialog .modal-content .warning {
+  margin: 30px 0;
+}
+.modal-dialog .modal-content .warning p {
+  text-align: center;
+  line-height: 30px;
+  font-size: 20px;
+}
+.modal-dialog .modal-content .btn {
+  width: 90px;
+  margin: 0 0 0 38px ;
 }

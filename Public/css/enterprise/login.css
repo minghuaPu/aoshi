@@ -78,7 +78,6 @@ body .body .login .touxiang {
   background-repeat: no-repeat;
   background-position: center;
 }
-
 body .body .login form .form-group {
   width: 80%;
   margin: 16px auto 0;
@@ -107,14 +106,10 @@ body .body .login ul {
   padding: 0;
 }
 body .body .login ul li {
-  width: 50%;
+  width: 100%;
   list-style: none;
   float: left;
   padding: 0 8px;
-  text-align: right;
+  text-align: center;
   font-size: 12px;
-}
-body .body .login ul li + li {
-  border-left: blue 1px solid;
-  text-align: left;
 }

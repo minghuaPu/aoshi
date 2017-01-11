@@ -16,7 +16,9 @@ class CompanyController extends Controller {
 
         $company=M('company');
         $company_info=$company->where(array("id" => $com_id))->find();
+        $area=json_decode($company_info['area'],true);
         $this->assign("company_info",$company_info);
+        $this->assign("area",$area);
 
         $this->display();
     }
@@ -26,6 +28,9 @@ class CompanyController extends Controller {
         $com_data['address']=I('address');
         $company_name=I('company_name');
         $com_data['introduction']=I('introduction');
+        $com_data['scale']=I('scale');
+//        $arr = array ('province'=>I('area_province'),'city'=>I('area_city'),'area'=>I('area_area'));
+        $com_data['area']=I('province')."#".I('city').'#'.I('area');
 
         $com=D('company');
 
@@ -99,6 +104,5 @@ class CompanyController extends Controller {
             $com->save($com_data);
             $this->ajaxReturn(array('status'=>1),'json');
         }
-
     }
 }

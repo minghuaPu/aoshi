@@ -1,0 +1,34 @@
+
+<link rel="stylesheet" href="__PUBLIC__/css/enterprise/demo.css">
+<link rel="stylesheet" href="__PUBLIC__/css/enterprise/layout.css">
+<div class="wrap">
+	<div class="main">
+		<div class="inwrap">
+
+			<div class="example">
+			
+				<fieldset id="city_china_val">
+					<p>所在地区：
+						<select class="province cxselect" data-value="浙江省" data-first-title="选择省" disabled="disabled"></select>
+						<select class="city cxselect" data-value="杭州市" data-first-title="选择市" disabled="disabled"></select>
+						<select class="area cxselect" data-value="西湖区" data-first-title="选择地区" disabled="disabled"></select>
+					</p>
+				</fieldset>
+			</div>
+			
+		</div>
+	</div>
+</div>
+<script src="__PUBLIC__/js/enterprise/jquery.cxselect.min.js"></script>
+<script>
+$.cxSelect.defaults.url = '__PUBLIC__/js/enterprise/cityData.min.json';
+
+$('#city_china').cxSelect({
+	selects: ['province', 'city', 'area']
+});
+
+$('#city_china_val').cxSelect({
+	selects: ['province', 'city', 'area'],
+	nodata: 'none'
+});
+</script>

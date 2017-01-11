@@ -1,10 +1,92 @@
 /**
  * Created by iphone on 2017/1/4.
  */
-if ($(".table th").text()==""){
+// 读取每个div中的宽度
+var aTh = $(".row div[width$='w']");
+for (var i = 0 ;i < aTh.length; i++){
+    var thWidth = parseInt(aTh.eq(i).attr("width"));
+    aTh.eq(i).css({
+        width:thWidth
+    })
+}
+//  判断是否有最少一条职位信息
+if ($(".table tr").html()==""){
     $(".tip").removeClass("hide")
 }
+//  判断是否有超过8条信息，不超过则隐藏分页
+if ($(".row tr").length<16){
+    $(".page_box").hide()
+}
+//  判断每一个职位信息的状态，并显示不同的文字
+for (var i = 0;i < $(".status").length;i++){
+    if ($(".status").eq(i).text()==1){
+        $(".status").eq(i).text("正在招聘中");
+        $(".status").eq(i).css({
+            color:"green"
+        })
+    }else {
+        $(".status").eq(i).text("已结束招聘");
+        $(".status").eq(i).css({
+            color:"grey"
+        });
+        $(".close_job").eq(i).attr("disabled","disabled")
+    }
+}
+//  全选菜单
+$("#all_check").click(function  () {
+    if($(this).is(':checked') ){
+        $('.delete').prop('checked',true);
+        $(".delete_all").text("删除");
+    }
+    else {
+        $('.delete').prop('checked',false);
+        $(".delete_all").text("");
+    }
+})
+//  删除
+$(".delete_all").on("click",function () {
+    alert()
+    $('#myModal').modal();
+})
+$(".delete").on("click",function () {
+    var deleted = $(this);
+    $('#confirm').on("click",function () {
+        deleted.parent().parent().remove()
+        var this_id = deleted.parent().parent().attr("id_val");
+        $.post(SITE_URL + "/List/delete", {
+            "id": this_id,
+        }, function (rtn) {
 
+        }, "json")
+    })
+})
+//  点击详情显示
+$(".info").on("click",function () {
+    var detail = $(this).parent().parent().next();
+    if (detail.attr("open")){
+        detail.hide();
+        detail.attr("open",false);
+    }else {
+        detail.show();
+        detail.attr("open",true);
+    }
+})
+//  结束招聘
+$(".close_job").on("click",function () {
+    var status = $(this).parent().parent().children().eq(6);
+    status.text("已结束招聘");
+    status.css({
+        color:"grey"
+    })
+    $(this).attr("disabled","disabled")
+    var this_id = $(this).parent().parent().attr("id_val");
+    $.post(SITE_URL + "/List/close_job", {
+        "id": this_id,
+    }, function (rtn) {
+
+    }, "json")
+})
+//  双击修改
 $(".revise").dblclick(function  () {
     var this_val=$(this).text();
     var this_id=$(this).parent().attr("id_val");
@@ -17,14 +99,11 @@ $(".revise").dblclick(function  () {
 
     //怎么去除左右的空格
     // this_val.trim();
-    console.log(SITE_URL)
 
     // 把当前的变成输入框,并且赋上原来的值
     $(this).html("<input value='"+this_val.trim()+"' >");
     //为什么输入不了内容？
     $(this).find('input').focus();
-
-
 
     // 是在当前文本框失去焦点的时候执行
     $(this).find("input").blur(function  () {
@@ -42,7 +121,7 @@ $(".revise").dblclick(function  () {
         } else if (this_name == "job_require") {
             require_val = input_val
         }
-        $.post(SITE_URL + "/job/ajax_add", {
+        $.post(SITE_URL + "/List/ajax_add", {
             "id": this_id,
             "job_name": job_val,
             "place": place_val,
@@ -51,17 +130,5 @@ $(".revise").dblclick(function  () {
         }, function (rtn) {
 
         }, "json")
-
-
-
     })
 })
-$(".detail").hide();
-$(".info").click(function (event) {
-    event.stopPropagation();
-    $(".detail").hide();
-    $("#"+$(this).parent().parent().attr("id_val")).show();
-})
-document.onclick=function () {
-    $(".detail").hide();
-}
