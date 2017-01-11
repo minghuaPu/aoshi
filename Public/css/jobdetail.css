@@ -338,6 +338,7 @@
     margin: 20px 30px;
 }
 .con-r .job-detail .con-dec{
+	word-break:break-all;
 	margin: 0px 30px;
 	margin-bottom: 20px;
 }

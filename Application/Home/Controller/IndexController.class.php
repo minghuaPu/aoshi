@@ -54,9 +54,8 @@ class IndexController extends Controller {
        
         if ($_REQUEST['key']) {//如果有搜索，就再添加一个条件
                 $keys=$_REQUEST['key'];
-                $where['job_name|company_name']=array('like',"%$keys%",);
+                $where['job_name|company_name']=array('like',"%$keys%");
             
-                // $where['_string']='job_name like "%$keys%" OR company_name like "%$keys%"';
                 //模糊查询条件，匹配输入框内的相关字段
                 $job_info=$job
                 ->field("job.id,job_name,money,company_name")//查询指定的字段
@@ -92,7 +91,7 @@ class IndexController extends Controller {
        if ($_REQUEST['key']) {
 
           $keys=$_REQUEST['key'];
-                $where['job_name|company_name']=array('like',"%$keys%",);
+                $where['job_name|company_name']=array('like',"%$keys%");
             
                 // $where['_string']='job_name like "%$keys%" OR company_name like "%$keys%"';
                 //模糊查询条件，匹配输入框内的相关字段
@@ -103,19 +102,17 @@ class IndexController extends Controller {
                 ->select();
        }
        else{
-        //echo $url = location.search;
-       
-        $where['job_name']= $_REQUEST["value"];
+        
+        $value=I('id');    //获取职位列表传来的id
+        $where['job.id']= $value;
         $job_detail=$job
                 ->field("job.id,job_name,money,job_require,job_describe,job.add_time,place,company_name")//查询指定的字段
                 ->join("company on job.enterprise_id=company.enterprise_id")//join是关联查询
-                // ->where($where)
-                // ->where('job.id=14')
+                ->where($where)
                 ->select();
        }
        
-       //print_r($where['job_name']);
-       echo $job->getLastSql();//获取上一次执行的sql语句
+       // echo $job->getLastSql();//获取上一次执行的sql语句
       
        // 作关联查询
 
@@ -124,13 +121,13 @@ class IndexController extends Controller {
 
           $this->display();
 
-          session_start();  
+          // session_start();  
    
         //检测是否登录，若没登录则转向登录界面  
-        if(!isset($_SESSION['userid'])){
-            header("Location:index/index");
-            exit();
-}
+        // if(!isset($_SESSION['userid'])){
+        //     header("Location:index/index");
+        //     exit();
+//}
     }
 
 }

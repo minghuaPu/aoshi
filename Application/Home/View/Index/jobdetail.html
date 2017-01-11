@@ -4,7 +4,7 @@
 	<link rel="stylesheet" href="__PUBLIC__/css/common.css">
 	<link rel="stylesheet" href="__PUBLIC__/css/jobdetail.css">
 	 <div class="content">
-	 <volist name="job_detail" id="job_item" offset="1" length="1">
+	 <volist name="job_detail" id="job_item">
 	 	<div class="container">
 			<div class="con-l">
 				<div class="chat-content">
@@ -103,11 +103,11 @@
 				<!-- 职位详情-->
 				<div class="job-detail">
 					<p class="job-describe">职位描述</p>
-					<p class="con-dec">{$job_item[job_describe]}</p>
+					<div class="con-dec">{$job_item[job_describe]}</div>
 					<p class="job-require">岗位要求</p>
-					<p class="con-dec">{$job_item[job_require]}</p>
+					<div class="con-dec">{$job_item[job_require]}</div>
 					<p class="company-address">公司地址</p>
-					<p class="con-dec">{$job_item[place]}</p>
+					<div class="con-dec">{$job_item[place]}</div>
 				</div>
 			</div>
 		</div>
