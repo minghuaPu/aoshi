@@ -246,7 +246,8 @@ class IndexController extends ResumeController {
 			$data['current_status'] = I('state');
 			$jobseekers->where("uid=$uid")->save($data);
 			echo true;
-   		} else {
+   		}
+		 else {
    			$resumes_describe = M('jobseekers_describe');
 			$data['uid']=$uid;
 			$data['describe'] = I('des');
@@ -371,23 +372,51 @@ class IndexController extends ResumeController {
     }
 	public function delivery() //编辑
 	{
-/*SELECT * FROM resume_delivery left join job on resume_delivery.job_id=job.uid left join company on job.enterprise_id=company.enterprise_id where jobseeker_id=5*/		
-		
-		
-		$uid=session('uid');
-		$seekers_info = M('jobseekers')->where("uid =$uid")->select();
-	    $this->assign('seekers_info', $seekers_info);
-		
-/*		$delivery_info = M('resume_delivery')->where("jobseeker_id =$uid")->select();
+/*SELECT resume_delivery.delivery_time,resume_delivery.delivery_status,job.id,job.job_name,job.enterprise_id,job.money,job.place,company.id,company.company_name FROM resume_delivery left join job on resume_delivery.job_id=job.id left join company on job.enterprise_id=company.enterprise_id where jobseeker_id=5		
 */		
-		 $delivery_info=M('resume_delivery')
+
+
+		$uid=session('uid');
+		$seekers_info = M('resume_basic')->field("resume_basic.nickname")->where("uid =$uid")->select();
+	    $this->assign('seekers_info', $seekers_info);
+		$times = I('times');
+		if($times)
+		{
+			print_r($seekers_info);
+			}
+		
+		echo $time;
+		
+		
+		 $where_all=M('resume_delivery')
+		 		->field("resume_delivery.delivery_time,resume_delivery.delivery_status,job.id,job.job_name,job.enterprise_id,job.money,job.place,company.id,company.company_name")
                 ->join("left join job on resume_delivery.job_id=job.id")//join是关联查询
 				->join("left join company on job.enterprise_id=company.enterprise_id")//join是关联查询
-                ->where("jobseeker_id =$uid")
+                ->where("jobseeker_id = $uid")
                 ->select();
-	
+
 		
-		$this->assign('delivery_info', $delivery_info);
+		$where_succeed=M('resume_delivery')
+		 		->field("resume_delivery.delivery_time,resume_delivery.delivery_status,job.id,job.job_name,job.enterprise_id,job.money,job.place,company.id,company.company_name")
+                ->join("left join job on resume_delivery.job_id=job.id")//join是关联查询
+				->join("left join company on job.enterprise_id=company.enterprise_id")//join是关联查询
+                ->where("jobseeker_id = $uid and delivery_status=1")
+                ->select();		
+
+
+		$where_failure=M('resume_delivery')
+		 		->field("resume_delivery.delivery_time,resume_delivery.delivery_status,job.id,job.job_name,job.enterprise_id,job.money,job.place,company.id,company.company_name")
+                ->join("left join job on resume_delivery.job_id=job.id")//join是关联查询
+				->join("left join company on job.enterprise_id=company.enterprise_id")//join是关联查询
+                ->where("jobseeker_id = $uid and delivery_status=0")
+                ->select();	
+				
+				
+					
+		$this->assign('where_all', $where_all);		
+		$this->assign('where_succeed', $where_succeed);			
+		$this->assign('where_failure', $where_failure);			
+		
 		$this->display();
 	}
 

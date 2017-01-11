@@ -9,11 +9,13 @@ class PreviewController extends ResumeController {
     public function index(){
 
        	$uid = session('uid');
-    	
-    	//简历基本信息
-    	$jobseekers_info = M('resume_basic')->where("uid =$uid")->select();
+    	$jobseekers_info = M('jobseekers')->field("jobseekers.photo")->where("uid =$uid")->select();
         $this->assign('jobseekers_info', $jobseekers_info);
-        
+		
+    	//简历基本信息
+    	$basic_info = M('resume_basic')->where("uid =$uid")->select();
+        $this->assign('basic_info', $basic_info);
+       
         //简历工作经历
     	$experience_info = M('resume_experience')->where("uid =$uid")->select();
         $this->assign('experience_info', $experience_info);

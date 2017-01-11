@@ -15,7 +15,7 @@ class LoginController extends Controller {
 				//验证码校验
 			   $Verify = new \Think\Verify();
 			   if (!$Verify->check(I('verify_val'))) {
-				  $this->error('验证码错误！',U('Login/register'));
+				  $this->error('验证码错误！',U('Login/login'));
 			   }			
 		
 			 //查询用户表，加上用户名和密码两个条件，如果两个条件和数据库一样就登录成功

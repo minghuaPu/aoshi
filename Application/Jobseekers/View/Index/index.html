@@ -10,11 +10,15 @@
         <link rel="stylesheet" href="__PUBLIC__/css/jobseekers/main.css" rel="stylesheet"/>
 		<script>
         var SITE_URL="__MODULE__";
-        </script>       
+        </script>  
+	   <style type="text/css">
+       @charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-start{clip:rect(0,auto,auto,0);-ms-zoom:1.0001;}.ng-animate-active{clip:rect(-1px,auto,auto,0);-ms-zoom:1;}
+        </style>
+   
 
 	</head>
 
-	<body>
+	<body id="resume">
     <!--头部-->
     <img src="__PUBLIC__/images/Top.jpg" id="imgs">
 		<header id="header">
@@ -22,14 +26,15 @@
 				<a class="logo" href=""><img src="__PUBLIC__/images/logo.png"></a>
 				<a class="nav-link selected" href="{:U('Index/index')}">首页</a>
 				<a class="nav-link" href="{:U('Index/delivery')}">投递箱</a>
-                <a class="nav-link fr" href="{:U('Login/log_out')}">退出</a>
-                
+ 				<a class="nav-link fr" href="{:U('Login/log_out')}">退出</a>
+
+                <a class="nav-link fr" href="{:U('Index/index')}"  ng-bind="basic[0].nickname"></a>
 				
 			</nav>
 		</header>
         <!--简历-->
         
-		<section id="resume" class="container">
+		<section id="resume" class="container" ng-cloak>
 			<!--简历信息-->
 			<article class="resume-inner">
 				<!--用户头像-->
@@ -69,7 +74,7 @@
                             </span>
                          </foreach>    
 					</div>
-					<form id="user-info-form"  ng-show="form" style="display:block">
+					<form id="user-info-form"  ng-show="form" name="myForm" style="display:block" novalidate>
 					<fieldset>
 							<label >姓名</label>
 							<input class="input-text" ng-model="form.nickname" maxlength="10" required>
@@ -127,14 +132,28 @@
 						</fieldset>
 						<fieldset>
 							<label>手机号码</label>
-							<input class="input-text"   ng-model="form.phone" required>
+							<input type="tel" class="input-text" ng-minlength="11" ng-maxlength="11" ng-pattern="/^1[3|5|8][0-9]\d{4,8}$/" name="phone" ng-model="form.phone"  required>
+                            <div class="tip" >
+                               <span   ng-show="myForm.phone.$dirty && myForm.phone.$invalid">
+                                	<span class="text-danger glyphicon  glyphicon-remove" ng-show="myForm.phone.$error.required">号码是必须的。</span>
+                                	<span class="text-danger glyphicon  glyphicon-remove" ng-if="(myForm.phone.$error.pattern||myForm.phone.$error.minlength||myForm.phone.$error.maxlength)&&myForm.phone.$touched">请输入以1、3、5、8开头的有效手机号且11位数！</sapn>
+							   </span>
+								
+                           </div>
 						</fieldset>
 						<fieldset>
 							<label>联系邮箱</label>
-							<input class="input-text"   ng-model="form.e_mail" >
+							<input type="email" class="input-text" name="e_mail" ng-model="form.e_mail" required>
+                            <div class="tip">
+                               <span ng-show="myForm.e_mail.$dirty && myForm.e_mail.$invalid">
+                                	<span class="text-danger glyphicon glyphicon-remove"  ng-show="myForm.e_mail.$error.required">邮箱是必须的。</span>
+                                	<span class="text-danger glyphicon glyphicon-remove" ng-show="myForm.e_mail.$error.email">非法的邮箱地址。</span>
+								</span>
+                            </div>
 						</fieldset>
 						<fieldset>
-							<input class="btn submit" type="submit" value="保存" ng-click="submit()">
+							<input class="btn submit" type="submit" value="保存" ng-click="submit()" ng-disabled="myForm.phone.$dirty && myForm.phone.$invalid ||  
+myForm.e_mail.$dirty && myForm.e_mail.$invalid">
 							<button class="btn cancel" ng-click="cancel()">取消</button>
 						</fieldset>
 					</form>
@@ -158,10 +177,18 @@
                             </li>
 							
 					</ul>
-					<form id="job-exp-form" ng-show="form" style="display:block"><!-- method="post" -->
+					<form id="job-exp-form" name="jobexp" ng-show="form" style="display:block"><!-- method="post" -->
 						<fieldset>
 							<label>公司</label>
-							<input class="input-text"  ng-model="form.re_company_name" maxlength="30">
+							<input type="text" name="c_n" class="input-text"  ng-model="form.re_company_name" ng-maxlength="30" required>
+                          	 <div class="tip" >
+                                 <span ng-show="jobexp.c_n.$dirty && jobexp.c_n.$invalid">
+                                   <span class="text-danger glyphicon glyphicon-remove"  ng-show="jobexp.c_n.$error.required">公司名必须的。</span>
+                                    <span class="text-danger glyphicon  glyphicon-remove" ng-if="jobexp.c_n.$error.maxlength&&jobexp.c_n.$touched">最多只能输入30个字！</sapn>
+                                </span>
+                            </div>
+                            
+                            
 						</fieldset>
 						<fieldset>
 							<label>职位</label>
@@ -176,9 +203,7 @@
 							<textarea class="input-text" maxlength="300" rows="5"  placeholder="如:在职期间的工作范围或为公司创造了什么价值"  ng-model="form.job_description" maxlength="500"></textarea>
 						</fieldset>
 						<fieldset>
-                           <!-- <input type="hidden" name="what" value="experience" />
-                        	<input type="hidden" name="id" value="{$article_info['id']}">-->
-							<input class="btn submit" type="submit" value="保存"  ng-click="submit()" >
+							<input class="btn submit" type="submit" value="保存"  ng-click="submit()" ng-disabled="jobexp.c_n.$dirty && jobexp.c_n.$invalid "  >
 							<button class="btn cancel"  ng-click="cancel()">取消</button>
 						</fieldset>
 					</form>
@@ -202,11 +227,18 @@
 							</div>
 						</li>
 					</ul>
-					<form id="edu-exp-form" ng-show="form" style="display:block">
+					<form id="edu-exp-form" name="eduexp" ng-show="form" style="display:block">
 						<fieldset>
 							<label>学校名称</label>
-							<input class="input-text"  ng-model="form.school_name" maxlength="10" required>
-						</fieldset>
+							<input class="input-text" name="s_n" ng-model="form.school_name" ng-maxlength="10" required>
+							<div class="tip" >
+                               <span   ng-show="eduexp.s_n.$dirty && eduexp.s_n.$invalid">
+                                	<span class="text-danger glyphicon  glyphicon-remove" ng-show="eduexp.s_n.$error.required">学校名必须的。</span>
+                                	<span class="text-danger glyphicon  glyphicon-remove" ng-if="eduexp.s_n.$error.maxlength&&eduexp.s_n.$touched">最多只能输入10个字！</sapn>
+							   </span>
+								
+                           </div>
+                        </fieldset>
 						<fieldset>
 							<label>所学专业</label>
 							<input class="input-text"  ng-model="form.major" maxlength="10" >
@@ -245,7 +277,7 @@
 							</select>
 						</fieldset>
 						<fieldset>
-							<input class="btn submit" type="submit" value="保存" ng-click="submit()">
+							<input class="btn submit" type="submit" value="保存" ng-click="submit()" ng-disabled="eduexp.s_c.$dirty && eduexp.s_c.$invalid ">
 							<button class="btn cancel" ng-click="cancel()">取消</button>
 						</fieldset>
 					</form>
@@ -261,12 +293,13 @@
                         <span class="edit_box">
                         	<a class="edit" href="javascript:;"  ng-click="edit(item)">修改</a><!--data-id={$item.resume_id}-->
                          </span>  
-                     	<p class="list rate"   ng-bind="item.describe"></p>
+                     	<textarea class="list rate ng-binding" rows="5" ng-bind="item.describe" style="width: 100%;background-color: transparent;border: 0px;resize: none;" readonly>
+                        </textarea>
                      </div>
                     	
                      <form id="self-des-form" ng-show="form" style="display:block">
 						<fieldset>
-							<textarea maxlength="300" rows="5" name="describe" vlaue="11" maxlength="250" wrap="hard" placeholder="250字以内"   ng-model="form.describe" maxlength="250" required></textarea>
+							<textarea rows="5" name="describe" vlaue="11" maxlength="250" wrap="hard" placeholder="250字以内"   ng-model="form.describe" maxlength="250" minlength="10" required></textarea>
 						</fieldset>
 						<fieldset>
 							<input class="btn submit" type="submit" value="保存" ng-click="submit()">
@@ -352,7 +385,8 @@
 				<nav id="nav-list">
 					<div class="integrity">
 						<div class="top">
-							<span>简历完整度：<em id="finishing_rate">50%</em></span>
+							<span>简历完整度：<em id="finishing_rate" ng-bind="integrity">50%</em></span>
+                           
 							<a class="fr" href="{:U('Preview/index')}" target="_blank">预览简历</a>
 						</div>
 					</div>
@@ -378,16 +412,12 @@
 			</aside>
            </section> 
 
-        <script type="text/javascript">
-		var SITE_URL = "__MODULE__";
-			<!--var SITE_URL = "__CONTROLLER__";-->
-		</script>   
 		<script type="text/javascript" src="__PUBLIC__/js/jobseekers/jquery-3.1.1.min.js"></script>
    		<script type="text/javascript" src="__PUBLIC__/js/angular.min.js"></script>
         <script type="text/javascript" src="__PUBLIC__/js/jobseekers/resume.js"></script>
         <script type="text/javascript" src="__PUBLIC__/css/bootstrap-3.3.0/js/bootstrap.min.js"></script>
    		<script type="text/javascript" src="__PUBLIC__/js/jobseekers/cropper.min.js"></script>
-  		<script type="text/javascript" src="__PUBLIC__/js/jobseekers/main.js"></script>
+  		<script type="text/javascript" src="__PUBLIC__/js/jobseekers/main.js"></script>  
 
 
 	</body>

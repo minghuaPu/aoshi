@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="__PUBLIC__/css/jobseekers/resume.css">
     <link rel="stylesheet" href="__PUBLIC__/css/jobseekers/resume2.css">
     <link rel="stylesheet" href="__PUBLIC__/css/bootstrap-3.3.0/css/bootstrap.min.css">
-	 
+	 <script>
+        var SITE_URL="__MODULE__";
+      </script> 
 </head>
 <body>
 		<header id="header">
@@ -30,10 +32,10 @@
             <!--<div class="col-md-2 col-md-offset-2">-->
             <!--</div>-->
             <div class="right col-md-8 box-right">
-                <div class="box-right-top">
+                <div class="box-right-top" >
 
                         <h1>已投递简历状态</h1>
-                        <select>
+                        <select id="times">
                             <option>2个月内投递</option>
                             <option>1个星期内投递</option>
                         </select>
@@ -52,41 +54,27 @@
                         <div id="myTabContent" class="tab-content tab-ul-content">
                             <div role="tabpanel" class="tab-pane fade active in" id="all" aria-labelledby="all-tab">
                                 
-                                <ul>
-                               <if condition="$delivery_info">
-                                 <foreach name="delivery_info" item="item">
-                                	<li>
-                                    	<div class="d_item">
-                                            <h2 title="web前端开发工程师">
-                                                <a href="#" data-index="0" target="_blank" title="web前端开发工程师">
-                                                    <em>{$item.job_name}</em>
-                                                    <span>{$item.money}</span>					                        	                                    	</a>
-                                            </h2>
-                                            <a href="#" target="_blank" class="d_jobname" title="{$item.company_name}">
-                                               {$item.company_name} <span>[{$item.address}]</span>
-                                            </a>
-                                            <div class="d_resume">
-                                                使用简历：
-                                                <span>在线简历</span>
-                                            </div>
-                                            <span href="javascript:;" class="btn_showprogress">
-                                                 <span>不合适</span>
-                                             </span>
-                                             <span class="d_time">{$item.delivery_time}</span>
-                                        </div>
-                                    
-                                    </li>
-                                   </foreach>
-                                 
-                                   <else/>
+                              <ul>
+                            		<if condition="$where_all">
+                                 		<foreach name="where_all" item="item">
+                                			<include file="public/delivery"  />
+                                   		</foreach>
+                                    <else/>
                                      尚未投递简历
-                                 </if>  
+                                 	</if>  
                                 </ul>
-                                
-                              
                             </div>
                             <div role="tabpanel" class="tab-pane fade" id="success" aria-labelledby="success-tab">
-                                <p>投递成功</p>
+                                
+                             	<ul>
+                               		<if condition="$where_succeed">
+                                 		<foreach name="where_succeed" item="item">
+                                			<include file="public/delivery"  />
+                                   		</foreach>
+                                   <else/>
+                                     尚未投递简历成功
+                                 	</if>  
+                                 </ul>
                             </div>
                             <div role="tabpanel" class="tab-pane fade" id="viewed" aria-labelledby="viewed-tab">
                                 <p>被查看</p>
@@ -98,7 +86,16 @@
                                 <p>邀请面试</p>
                             </div>
                             <div role="tabpanel" class="tab-pane fade" id="inappropriate" aria-labelledby="inappropriate-tab">
-                                <p>不合适</p>
+                             <ul>
+                               <if condition="$where_failure">
+                                 <foreach name="where_failure" item="item">
+										<include file="public/delivery"  />
+                                   </foreach>
+                                 
+                                   <else/>
+                                     尚未投递简历成功
+                                 </if>  
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -145,6 +142,8 @@
 
 </div>
 		<script type="text/javascript" src="__PUBLIC__/js/jobseekers/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/js/angular.min.js"></script>
         <script type="text/javascript" src="__PUBLIC__/css/bootstrap-3.3.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/js/jobseekers/delivery.js"></script>
 </body>
 </html>
