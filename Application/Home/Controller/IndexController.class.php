@@ -110,12 +110,12 @@ class IndexController extends Controller {
                 ->field("job.id,job_name,money,job_require,job_describe,job.add_time,place,company_name")//查询指定的字段
                 ->join("company on job.enterprise_id=company.enterprise_id")//join是关联查询
                 // ->where($where)
-                ->where('job.id=14')
+                // ->where('job.id=14')
                 ->select();
        }
        
        //print_r($where['job_name']);
-       // echo $job->getLastSql();//获取上一次执行的sql语句
+       echo $job->getLastSql();//获取上一次执行的sql语句
       
        // 作关联查询
 
@@ -123,6 +123,14 @@ class IndexController extends Controller {
         $this->assign("job_detail",$job_detail);
 
           $this->display();
+
+          session_start();  
+   
+        //检测是否登录，若没登录则转向登录界面  
+        if(!isset($_SESSION['userid'])){
+            header("Location:index/index");
+            exit();
+}
     }
 
 }

@@ -161,11 +161,11 @@
 
 
 <!-- 第四步：遍历模版变量 -->
-		<?php if(is_array($job_info)): foreach($job_info as $key=>$job_item): ?><div class="job-list">
-				<a href="#"><!-- <?php echo U('Index/jobdetail');?> -->
+		<?php if(is_array($job_info)): $k = 0; $__LIST__ = $job_info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$job_item): $mod = ($k % 2 );++$k;?><div class="job-list">
+				<a href="<?php echo U('Index/jobdetail');?>"><!-- <?php echo U('Index/jobdetail',array(id=>$id));?> -->
 					<div class="job-left">
 					<!-- 第五步：给对应信息添加动态数据 -->
-						<p class="job-name"><?php echo ($job_item['job_name']); ?></p>
+						<p class="job-name"><?php echo ($job_item["job_name"]); ?></p>
 						<p class="word-red"><strong>￥<?php echo ($job_item['money']); ?></strong></p>
 						<ul>
 							<li>广州</li>
@@ -180,7 +180,7 @@
 						<span><?php echo ($job_item['company_name']); ?></span>
 					</div>
 				</a>
-			</div><?php endforeach; endif; ?>
+			</div><?php endforeach; endif; else: echo "" ;endif; ?>
 
 			<div class="next-page">
 				<a href="#">下一页</a>

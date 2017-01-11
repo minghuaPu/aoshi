@@ -178,6 +178,7 @@ body{
 	margin:15px 0px;
 	color: #53cac3;
     font-size: 18px;
+    /*display:none;*/
 }
 .position-right .job-list{
 	position: relative;
@@ -186,6 +187,7 @@ body{
 	background: #fff;
 	border: 1px solid #53cac3;
 	margin-bottom: 15px;
+	margin-top: 5px;
 }
 .position-right .job-list a{
 	width:100%;
