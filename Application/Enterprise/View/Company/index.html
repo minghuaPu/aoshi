@@ -15,7 +15,7 @@
                 <h3>公司地点</h3>
                 <fieldset id="city_china_val">
                     <p id="area">
-                        {$company_info['area']}
+                        {$company_info['province']}{$company_info['city']}{$company_info['area']}
                     </p>
                     <input type="text" name="province" class="iProvince hiden">
                     <input type="text" name="city" class="iCity hiden">
@@ -72,12 +72,9 @@
 <script>
 
 </script>
-<script src="__PUBLIC__/js/enterprise/company.js?1"></script>
+<script src="__PUBLIC__/js/enterprise/company.js?2"></script>
 <script src="__PUBLIC__/js/enterprise/jquery.cxselect.min.js"></script>
 <script>
-    var text=$("#area").text().replace(/#/g,"");
-    $("#area").text(text);
-    console.log(text)
     if ({$enterprise_info['auditing']}==1){
         $("#submit").attr("disabled",true);
         $("#submit").attr("value","正在审核中");
@@ -91,9 +88,9 @@
         });
         $(".hide").removeClass("hide");
         $(".info_item").html("<input type='text'>");
-        $("#city_china_val p").html("<select class='province cxselect' data-value='{$area['province']}' data-first-title='选择省' disabled='disabled'></select>" +
-            "<select class='city cxselect' data-value='{$area['city']}' data-first-title='选择市' disabled='disabled'></select>" +
-            "<select class='area cxselect' data-value='{$area['area']}' data-first-title='选择地区' disabled='disabled'></select>"
+        $("#city_china_val p").html("<select class='province cxselect'  data-first-title='选择省' disabled='disabled'></select>" +
+            "<select class='city cxselect'  data-first-title='选择市' disabled='disabled'></select>" +
+            "<select class='area cxselect'  data-first-title='选择地区' disabled='disabled'></select>"
         )
         $(".company_scale p").html("<select data-first-title='选择规模' class='scale'>"+
             "<option value ='选择规模'>选择规模</option>"+
@@ -120,6 +117,10 @@
             fontSize:"20px"
         });
     }
+    var inHeight = parseInt($("#introduction").height())+10;
+    $(".introduction").css({
+        height:inHeight+"px"
+    })
     $.cxSelect.defaults.url = '__PUBLIC__/js/enterprise/cityData.min.json';
 
     $('#city_china').cxSelect({

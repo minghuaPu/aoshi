@@ -1,10 +1,11 @@
 <include file="Public:header" />
 <link rel="stylesheet" href="__PUBLIC__/css/enterprise/layout.css">
-<link rel="stylesheet" href="__PUBLIC__/css/enterprise/add.css?1">
+<link rel="stylesheet" href="__PUBLIC__/css/enterprise/add.css?4">
 
 
     <div class="container">
         <div class="content">
+
             <form action="{:U('Add/save')}" method="post" class="form">
                 <div class="content_box qu">
                     <h5>公司基本信息<span style="color: red ;font-weight: 600;font-size: 22px">*</span></h5>
@@ -19,37 +20,39 @@
                     <h5>职业基本信息<span style="color: red ;font-weight: 600;font-size: 22px">*</span></h5>
                         <div class="form-group">
                             <div class="tit">职位名称</div>
-                            <input type="text" name="job_name" required>
+                            <input type="text" name="job_name" >
                         </div>
                         <div class="form-group">
                             <div class="tit">工作地点</div>
-                            <input type="text"  name="province" class="hide" id="province" required>
-                            <input type="text"  name="city" class="hide" id="city" required>
-                            <input type="text"  name="area" class="hide" id="area" required>
+                            <input type="text"  name="province" class="hide" value="{$company_info['province']}">
+                            <input type="text"  name="city" class="hide" value="{$company_info['city']}">
+                            <input type="text"  name="area" class="hide" value="{$company_info['area']}">
                             <fieldset id="city_china_val">
-                                <p>
-                                    <select class="province cxselect" data-first-title="{$area['province']}" disabled="disabled"></select>
-                                    <select class="city cxselect" data-first-title="{$area['city']}" disabled="disabled"></select>
-                                    <select class="area cxselect" data-first-title="{$area['area']}" disabled="disabled"></select>
+                                <p class="sp">
+                                    {$company_info['province']}{$company_info['city']}{$company_info['area']}
                                 </p>
                             </fieldset>
                         </div>
                         <div class="form-group">
                             <div class="tit">工作地址</div>
-                            <input type="text" name="place" value="{$company_info['address']}" required>
+                            <input type="text" name="address" value="{$company_info['address']}" >
 
                         </div>
                         <div class="form-group">
                             <div class="tit">职位月薪</div>
-                            <input type="number" max="100" name="salary_lowLimit" class="salary_limit" required>
-                            <span class="salary">k</span>
+                            <input type="text" name="salary_lowLimit" class="hide salary_lowLimit" >
+                            <select data-first-title="选择最低薪资" id="salary_lowLimit">
+                                <option value="选择最低薪资">选择最低薪资</option>
+                            </select>
                             <span class="salary">到</span>
-                            <input type="number" max="100" name="salary_higLimit" class="salary_limit" required>
-                            <span class="salary">k</span>
+                            <input type="text" name="salary_higLimit" class="hide salary_higLimit" >
+                            <select data-first-title="选择最高薪资" id="salary_higLimit">
+                                <option value="选择最高薪资">选择最高薪资</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <div class="tit">学历要求</div>
-                            <input type="text" name="education" class="hide education" required>
+                            <input type="text" name="education" class="hide education" >
                             <select data-first-title="选择学历" id="education">
                                 <option value="选择学历">选择学历</option>
                                 <option value="不限">不限</option>
@@ -61,7 +64,7 @@
                         </div>
                         <div class="form-group">
                             <div class="tit">经验要求</div>
-                            <input type="text" name="work_time" class="hide work_time" required>
+                            <input type="text" name="work_time" class="hide work_time" >
                             <select data-first-title="选择工作经验" id="work_time">
                                 <option value="选择时间">选择时间</option>
                                 <option value="不限">不限</option>
@@ -75,18 +78,18 @@
                         </div>
                         <div class="form-group job-require">
                             <div class="tit">技能要求</div>
-                            <textarea  name="job_require" required></textarea>
+                            <textarea  name="job_require" ></textarea>
                         </div>
                         <div class="form-group job-require">
                             <div class="tit">职业描述</div>
-                            <textarea  name="job_describe" required></textarea>
+                            <textarea  name="job_describe" ></textarea>
                         </div>
                 </div>
                 <div class="content_box">
                     <h5>其他信息<span style="color: red ;font-weight: 600;font-size: 22px">*</span></h5>
                     <div class="form-group">
                         <div class="tit">简历接收邮箱</div>
-                        <input type="text" name="email" value="{$enterprise_info['email']}" required>
+                        <input type="text" name="email" value="{$enterprise_info['email']}" >
                     </div>
                 </div>
                 <div class="content_box qu">
@@ -98,7 +101,7 @@
     </div>
 </div>
 <include file="Public:footer" />
-<script src="__PUBLIC__/js/enterprise/add_job.js"></script>
+<script src="__PUBLIC__/js/enterprise/add_job.js?33"></script>
 <script>
     if({$enterprise_info['auditing']}==2){
         $(".tip").html("");
@@ -106,12 +109,6 @@
     } else {
         $(".tip").html("您的公司信息还未通过审核，请尽快通过审核，否则您将不能发布招聘信息！！");
         $(".submit").attr("disabled",true);
-    }
-    var area = "{$area['province']}";
-    if(area == ""){
-        $(".province").attr("data-first-title","选择省");
-        $(".city").attr("data-first-title","选择市");
-        $(".area").attr("data-first-title","选择区")
     }
 </script>
 <script src="__PUBLIC__/js/enterprise/jquery.cxselect.min.js"></script>

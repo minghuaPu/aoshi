@@ -43,6 +43,8 @@
   color: #000000;
   padding-left: 5px;
   width: 145px;
+  display: block;
+  float: left;
   margin-left: 20px;
 }
 .content .form .content_box .form-group #city_china_val {
@@ -53,15 +55,12 @@
 .content .form .content_box .form-group #city_china_val p {
   margin: 0;
 }
-.content .form .content_box .form-group .salary_limit {
-  width: 100px;
-}
 .content .form .content_box .form-group .salary {
   display: block;
-  float: left;
   line-height: 40px;
   font-size: 20px;
-  margin: 0 5px;
+  float: left;
+  margin: 0 0 0 20px;
 }
 .content .form .content_box .form-group .sp {
   margin: 0 0 0 18px;

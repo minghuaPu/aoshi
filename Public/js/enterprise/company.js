@@ -2,10 +2,7 @@
  * Created by iphone on 2017/1/4.
  */
 
-var inHeight = parseInt($("#introduction").height())+10;
-$(".introduction").css({
-    height:inHeight+"px"
-})
+
 $("#company_name input").attr("placeholder","公司全称为您所在公司的营业执照上的名称");
 $("#address input").attr("placeholder","公司地址为您所在公司的详细地址");
 $("#name input").attr("placeholder","请输入您的名字");

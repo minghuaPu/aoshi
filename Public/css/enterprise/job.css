@@ -213,5 +213,12 @@
 }
 .modal-dialog .modal-content .btn {
   width: 90px;
-  margin: 0 0 0 38px ;
+  position: absolute;
+  bottom: 30px;
+}
+.modal-dialog .modal-content .confirm {
+  left: 38px;
+}
+.modal-dialog .modal-content .cancel {
+  right: 38px;
 }

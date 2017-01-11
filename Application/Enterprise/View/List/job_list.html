@@ -1,5 +1,5 @@
 <include file="Public:header" />
-    <link rel="stylesheet" href="__PUBLIC__/css/enterprise/job.css?1">
+    <link rel="stylesheet" href="__PUBLIC__/css/enterprise/job.css?3">
 
     <div class="container">
         <div class="content">
@@ -51,8 +51,8 @@
                     </div>
                 </div>
                 <div class="search_box">
-                    <input type="text" placeholder="输入关键词：职位名称或者地点等，例如：JAVA工程师，广州天河" name="key">
-                    <input type="button" value="筛 选" class="btn btn-primary">
+                    <input type="text" placeholder="输入关键词：职位名称，例如：JAVA工程师" name="key">
+                    <input type="button" value="筛 选" class="btn btn-primary search">
                 </div>
             </form>
             <div class="tit_box row">
@@ -64,23 +64,23 @@
                 <div width="90w">发布时间</div>
                 <div width="100w">状态</div>
                 <div width="140w" class="control">操作</div>
-                <div width="40w"><a class="delete_all"></a></div>
-                <div width="20w"><input type="checkbox" id="all_check"></div>
+                <div width="40w"><a class="delete_all" data-toggle="modal" data-target=".bs-example-modal-sm"></a></div>
+                <div width="20w"><input type="checkbox" id="all_check"  ></div>
             </div>
             <table class="table row">
                 <foreach name="job_info" item="job_item">
-                    <tr id_val= "{$job_item['id']} ">
+                    <tr id_val= "{$job_item['id']}">
                         <td width="160w" class="revise job" name="job_name">{$job_item['job_name']}</td>
-                        <td width="75w" class="revise salary">{$job_item['salary_low_limit']}k--{$job_item['salary_hig_limit']}k</td>
+                        <td width="75w" class="revise salary">{$job_item['salary_low']}--{$job_item['salary_hig']}</td>
                         <td width="75w" name="work_time">{$job_item['work_time']}</td>
-                        <td width="65w" name="work_time">{$job_item['education']}</td>
-                        <td width="135w" class="revise place" name="job_require">{$job_item['area']}</td>
+                        <td width="65w" name="education">{$job_item['education']}</td>
+                        <td width="135w" class="revise area">{$job_item['city']}{$job_item['area']}</td>
                         <td width="90w" name="add_time">{$job_item['add_time']|date='m'.'月'.'d'.'日',###} </td>
                         <td width="100w" name="status" class="status">{$job_item['status']}</td>
                         <td width="60w"><button type="button" class="btn btn-info info">详情</button></td>
-                        <td width="60"><button type="button" class="btn btn-warning close_job">结束</button></td>
-                        <td width="60w"><button type="button" class="btn btn-danger delete" data-toggle="modal" data-target=".bs-example-modal-sm">删除</button></td>
-                        <td width="20w" name="work_time"><input type="checkbox" class="delete"></td>
+                        <td width="60"><button type="button" class="btn btn-warning close_job"  data-toggle="modal" data-target=".bs-example-modal-sm">结束</button></td>
+                        <td width="60w"><button type="button" class="btn btn-danger delete"  data-toggle="modal" data-target=".bs-example-modal-sm">删除</button></td>
+                        <td width="20w"><input type="checkbox" class="delete"></td>
                     </tr>
                     <tr class="detail_box">
                         <td colspan="11">
@@ -105,9 +105,11 @@
             <div class="modal-dialog modal-sm">
                 <div class="modal-content">
                     <div class="warning">
-                        <p>是否要修改该内容</p>
+                        <p>是否要删除被选中的招聘信息</p>
                     </div>
-                    <button class="btn btn-warning" id="confirm" data-dismiss="modal">确认</button>
+                    <button class="btn btn-warning confirm" id="confirm_delete_all"  data-dismiss="modal">确认</button>
+                    <button class="btn btn-warning confirm" id="confirm_delete"  data-dismiss="modal">确认</button>
+                    <button class="btn btn-warning confirm" id="confirm_close"  data-dismiss="modal">确认</button>
                     <button class="btn btn-warning cancel" data-dismiss="modal">取消</button>
                 </div>
             </div>
@@ -116,8 +118,7 @@
 </div>
 <include file="Public:footer" />
 <script src="__PUBLIC__/js/enterprise/search.js"></script>
-<script src="__PUBLIC__/js/enterprise/job_list.js?8"></script>
+<script src="__PUBLIC__/js/enterprise/job_list.js?39"></script>
 <script>
-
 
 </script>

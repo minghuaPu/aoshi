@@ -29,8 +29,9 @@ class CompanyController extends Controller {
         $company_name=I('company_name');
         $com_data['introduction']=I('introduction');
         $com_data['scale']=I('scale');
-//        $arr = array ('province'=>I('area_province'),'city'=>I('area_city'),'area'=>I('area_area'));
-        $com_data['area']=I('province')."#".I('city').'#'.I('area');
+        $com_data['province']=I('province');
+        $com_data['city']=I('city');
+        $com_data['area']=I('area');
 
         $com=D('company');
 
