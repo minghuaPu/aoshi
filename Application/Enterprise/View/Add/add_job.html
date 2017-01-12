@@ -1,0 +1,127 @@
+<include file="Public:header" />
+<link rel="stylesheet" href="__PUBLIC__/css/enterprise/layout.css">
+<link rel="stylesheet" href="__PUBLIC__/css/enterprise/add.css?4">
+
+
+    <div class="container">
+        <div class="content">
+
+            <form action="{:U('Add/save')}" method="post" class="form">
+                <div class="content_box qu">
+                    <h5>公司基本信息<span style="color: red ;font-weight: 600;font-size: 22px">*</span></h5>
+                    <p class="tip"></p>
+                        <div class="form-group">
+                            <div class="tit">公司全称</div>
+                            <p class="sp">{$company_info['company_name']}</p>
+                            <input type="text" name="company_name" value="{$company_info['company_name']}" class="hide">
+                        </div>
+                </div>
+                <div class="content_box">
+                    <h5>职业基本信息<span style="color: red ;font-weight: 600;font-size: 22px">*</span></h5>
+                        <div class="form-group">
+                            <div class="tit">职位名称</div>
+                            <input type="text" name="job_name" >
+                        </div>
+                        <div class="form-group">
+                            <div class="tit">工作地点</div>
+                            <input type="text"  name="province" class="hide" value="{$company_info['province']}">
+                            <input type="text"  name="city" class="hide" value="{$company_info['city']}">
+                            <input type="text"  name="area" class="hide" value="{$company_info['area']}">
+                            <fieldset id="city_china_val">
+                                <p class="sp">
+                                    {$company_info['province']}{$company_info['city']}{$company_info['area']}
+                                </p>
+                            </fieldset>
+                        </div>
+                        <div class="form-group">
+                            <div class="tit">工作地址</div>
+                            <input type="text" name="address" value="{$company_info['address']}" >
+
+                        </div>
+                        <div class="form-group">
+                            <div class="tit">职位月薪</div>
+                            <input type="text" name="salary_lowLimit" class="hide salary_lowLimit" >
+                            <select data-first-title="选择最低薪资" id="salary_lowLimit">
+                                <option value="选择最低薪资">选择最低薪资</option>
+                            </select>
+                            <span class="salary">到</span>
+                            <input type="text" name="salary_higLimit" class="hide salary_higLimit" >
+                            <select data-first-title="选择最高薪资" id="salary_higLimit">
+                                <option value="选择最高薪资">选择最高薪资</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <div class="tit">学历要求</div>
+                            <input type="text" name="education" class="hide education" >
+                            <select data-first-title="选择学历" id="education">
+                                <option value="选择学历">选择学历</option>
+                                <option value="不限">不限</option>
+                                <option value="大专">大专</option>
+                                <option value="本科">本科</option>
+                                <option value="博士">博士</option>
+                                <option value="硕士">硕士</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <div class="tit">经验要求</div>
+                            <input type="text" name="work_time" class="hide work_time" >
+                            <select data-first-title="选择工作经验" id="work_time">
+                                <option value="选择时间">选择时间</option>
+                                <option value="不限">不限</option>
+                                <option value="应届生">应届生</option>
+                                <option value="1年以内">1年以内</option>
+                                <option value="1-3年">1-3年</option>
+                                <option value="3-5年">3-5年</option>
+                                <option value="5-10年">5-10年</option>
+                                <option value="10年以上">10年以上</option>
+                            </select>
+                        </div>
+                        <div class="form-group job-require">
+                            <div class="tit">技能要求</div>
+                            <textarea  name="job_require" ></textarea>
+                        </div>
+                        <div class="form-group job-require">
+                            <div class="tit">职业描述</div>
+                            <textarea  name="job_describe" ></textarea>
+                        </div>
+                </div>
+                <div class="content_box">
+                    <h5>其他信息<span style="color: red ;font-weight: 600;font-size: 22px">*</span></h5>
+                    <div class="form-group">
+                        <div class="tit">简历接收邮箱</div>
+                        <input type="text" name="email" value="{$enterprise_info['email']}" >
+                    </div>
+                </div>
+                <div class="content_box qu">
+                    <input type="hidden" name="company_id"  value="{$enterprise_info['company_id']}">
+                    <input type="submit" value="发 布" class="btn submit">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<include file="Public:footer" />
+<script src="__PUBLIC__/js/enterprise/add_job.js?33"></script>
+<script>
+    if({$enterprise_info['auditing']}==2){
+        $(".tip").html("");
+        $(".submit").attr("disabled",false);
+    } else {
+        $(".tip").html("您的公司信息还未通过审核，请尽快通过审核，否则您将不能发布招聘信息！！");
+        $(".submit").attr("disabled",true);
+    }
+</script>
+<script src="__PUBLIC__/js/enterprise/jquery.cxselect.min.js"></script>
+<script>
+    $.cxSelect.defaults.url = '__PUBLIC__/js/enterprise/cityData.min.json';
+
+    $('#city_china').cxSelect({
+        selects: ['province', 'city', 'area']
+    });
+
+    $('#city_china_val').cxSelect({
+        selects: ['province', 'city', 'area'],
+        nodata: 'none'
+    });
+</script>
+

@@ -39,8 +39,8 @@ class CropAvatar {
             $type = exif_imagetype($file['tmp_name']);
             if ($type) {
                 $extension = image_type_to_extension($type);
-                unlink('./Public/upload/enterprise_'. $_SESSION['tid'] .'.original' . $extension);
-                $src = './Public/upload/enterprise_'. $_SESSION['tid'] .'.original' . $extension;////////////////$src = '../upload/' . date('YmdHis') . '.original' . $extension;///////////////
+                unlink('./Public/upload/enterprise_'. $_SESSION['eid'] .'.original' . $extension);
+                $src = './Public/upload/enterprise_'. $_SESSION['eid'] .'.original' . $extension;////////////////$src = '../upload/' . date('YmdHis') . '.original' . $extension;///////////////
 
                 if ($type == IMAGETYPE_GIF || $type == IMAGETYPE_JPEG || $type == IMAGETYPE_PNG) {
                     if (file_exists($src)) {
@@ -53,10 +53,10 @@ class CropAvatar {
                         $this -> extension = $extension;
                         $this -> setDst();
                     } else {
-                        $this -> msg = 'Failed to save file';
+                        $this -> msg = '上传失败';
                     }
                 } else {
-                    $this -> msg = 'Please upload image with the following types: JPG, PNG, GIF';
+                    $this -> msg = '只能上传格式为: JPG, PNG, GIF 的照片';
                 }
             } else {
                 $this -> msg = 'Please upload image file';
@@ -67,8 +67,8 @@ class CropAvatar {
     }
     private function setDst() {
         // unlink('__PUBLIC__/upload/resume_' . $_SESSION['uid'] . '.png');
-        unlink('./Public/upload/enterprise_'. $_SESSION['tid'] .'.png');
-        $this -> dst = './Public/upload/enterprise_'. $_SESSION['tid'] .'.png';///////////////////////// $this -> dst = '../upload/' . date('YmdHis') . '.png';//////////////////////////
+        unlink('./Public/upload/enterprise_'. $_SESSION['eid'] .'.png');
+        $this -> dst = './Public/upload/enterprise_'. $_SESSION['eid'] .'.png';///////////////////////// $this -> dst = '../upload/' . date('YmdHis') . '.png';//////////////////////////
 
 
     }

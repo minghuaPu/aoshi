@@ -73,8 +73,22 @@
             list-style: none;
             line-height: 50px;
             font-size: 14px;
+            height: 50px;
             text-align: center;
             padding: 0;
+            input[type=checkbox]{
+                width: 15px;
+                height: 15px;
+                margin-top: 17px;
+                cursor: pointer;
+            }
+        }
+        .control{
+            padding-left: 40px;
+        }
+        .delete_all{
+            cursor: pointer;
+            color: red;
         }
     }
     .row{
@@ -84,40 +98,59 @@
     }
     .table{
         max-width: 900px;
-        th{
-            padding: 0;
-            height: 35px;
-            line-height: 35px;
-            text-align: center;
-            font-weight: normal;
-            input{
-                width: 100%;
-                height: 100%;
+        tr{
+            position: relative;
+            td{
+                padding: 0;
+                height: 40px;
+                line-height: 40px;
+                overflow: hidden;
+                text-align: center;
+                font-weight: normal;
+                border-bottom: 1px solid #ccc;
+                input{
+                    width: 100%;
+                    height: 35px;
+                }
+                input[type=checkbox]{
+                    width: 15px;
+                    height: 15px;
+                    margin-top: 10px;
+                    cursor: pointer;
+                }
+                .btn{
+                    height: 30px;
+                    margin-top: -5px;
+                    padding: 0;
+                    text-align: center;
+                    width: 55px;
+                }
             }
-            .btn-info{
-                height: 31px;
-                margin-top: -3px;
+            .status{
+                font-weight: 600;
+            }
+            .detail{
+                margin: 0 30px;
+                h3{
+                    text-align: left;
+                    height: 18px;
+                    line-height: 18px;
+                    font-size: 13px;
+                    margin: 5px 0;
+                }
+                p{
+                    text-align: left;
+                    margin: 0 0 5px 0;
+                    line-height: 18px;
+                    font-size: 12px;
+                }
+                .address{
+                    float: left;
+                }
             }
         }
-    }
-    .detail{
-        width: 500px;
-        position: absolute;
-        top: 175px;
-        left: 200px;
-        border-radius: 8px;
-        background-color: #53cac3;
-        color: white;
-        h3{
-            font-size: 16px;
-            margin-left: 30px;
-        }
-        p{
-            padding: 0 30px;
-        }
-        .address{
-            margin-top: 30px;
-            margin-bottom: 25px;
+        .detail_box{
+            display: none;
         }
     }
     .tip{
@@ -154,6 +187,35 @@
             span{
                 margin: 0 10px;
             }
+        }
+    }
+}
+.modal-dialog{
+    margin-top: 200px;
+    min-width: 200px;
+    height: 150px;
+    width: 300px;
+    .modal-content{
+        width: 100%;
+        height: 100%;
+        .warning{
+            margin: 30px 0;
+            p{
+                text-align: center;
+                line-height: 30px;
+                font-size: 20px;
+            }
+        }
+        .btn{
+            width: 90px;
+            position: absolute;
+            bottom: 30px;
+        }
+        .confirm{
+            left: 38px;
+        }
+        .cancel{
+            right: 38px;
         }
     }
 }

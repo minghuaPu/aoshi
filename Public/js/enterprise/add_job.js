@@ -1,24 +1,19 @@
 /**
  * Created by iphone on 2016/12/23.
  */
-$(".dropdown-menu li").on("click",function () {
-    $(this).parent().parent().children().eq(0).text($(this).text());
-    $(this).parent().parent().parent().children().eq(1).val($(this).text());
+for(var i=0;i<51;i++){
+    $("#salary_lowLimit").append("<option value='"+i+"k'>"+i+"k</option>")
+    $("#salary_higLimit").append("<option value='"+i+"k'>"+i+"k</option>")
+}
+$("#salary_lowLimit").append()
+$(".submit").on("click",function () {
+    $(".work_time").val($("#work_time").val());
+    $(".education").val($("#education").val());
+    $(".salary_lowLimit").val($("#salary_lowLimit").val());
+    $(".salary_higLimit").val($("#salary_higLimit").val());
+    $(".iprovince").val($(".province").val());
+    $(".icity").val($(".city").val());
+    $(".iarea").val($(".area").val())
 })
 
 
-// $(".choose li").on("click",function () {
-//     if ($(this).text()=="技术"){
-//         $(".design").addClass("hide");
-//         $(".develop").removeClass("hide");
-//         // $(".choose").parent().children().eq(1).val("技术");
-//         $("#dropdownMenu2").text("选择职业名称");
-//         $("#dropdownMenu2").removeAttr("disabled");
-//     }else if ($(this).text()=="设计"){
-//         $(".develop").addClass("hide");
-//         $(".design").removeClass("hide");
-//         // $(".choose").parent().children().eq(1).val("设计");
-//         $("#dropdownMenu2").text("选择职业名称");
-//         $("#dropdownMenu2").removeAttr("disabled");
-//     }
-// })

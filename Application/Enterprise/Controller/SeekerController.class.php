@@ -4,6 +4,12 @@ use Think\Controller;
 
 class SeekerController extends Controller{
     public function resume(){
+
+        // 通过session的id来搜索enterprise_info表，获取用户信息
+        $enterprise_info=M('enterprise_info');
+        $enterprise_info=$enterprise_info->where(array("id" => session('eid')))->find();
+        $this->assign("enterprise_info",$enterprise_info);
+
         $userInfo=session('auth');
         if ($userInfo) {
             $this->display();
@@ -13,11 +19,7 @@ class SeekerController extends Controller{
 
 
 
-        // 通过session的id来搜索enterprise_info表，获取用户信息
-        $enterprise_info=M('enterprise_info');
-        $enterprise_info=$enterprise_info->where(array("id" => session('eid')))->find();
-        $this->assign("enterprise_info",$enterprise_info);
 
-        $this->display();
     }
 }
+?>

@@ -2,3 +2,13 @@
 </body>
 </html>
 <script src="__PUBLIC__/js/enterprise/index.js?5"></script>
+<script>
+    var photo = "{$enterprise_info['photo']}";
+    var user_name="{$enterprise_info['user_name']}";
+    if (photo==""){
+        $("#avatar-img").attr("src","__PUBLIC__/upload/avatar.png")
+    }
+    if (user_name==""){
+        $(".touxiang p").text("欢迎您")
+    }
+</script>
