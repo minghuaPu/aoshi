@@ -1,16 +1,22 @@
-/*简历头像*/
-/*$("#avatar-upload").on("mouseenter", function() {
-	$("#avatar-bg").show();
-});
-$("#avatar-upload").on("mouseleave", function() {
-	$("#avatar-bg").hide();
-});
-$("#avatar-upload").on("change", function() { //图片选中后触发事件
-	alert("已选择文件" + this.value);
-});
-$("#avatar-img");*/ //可更改简历头像src
+/*简历导航*/
+var $rNav =$("#nav-list"),
+	$rNavTop=100;
+	//$rNavTop = $rNav.offset().top;
 
-
+$(window).scroll(function() {
+	
+	if($(window).scrollTop() >= $rNavTop) {	
+		
+		$rNav.addClass("fixed");
+	} else {
+		$rNav.removeClass("fixed");
+	}
+});
+$('#nav-list li').each(function() {
+	$(this).click(function() {
+		$(this).addClass('selected').siblings().removeClass('selected')
+	})
+});
 
 /*简历管理*/
 
