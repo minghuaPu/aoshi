@@ -64,9 +64,9 @@ CREATE TABLE IF NOT EXISTS `resume_experience` (
   `experience_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '序号',
   `uid` int(11) NOT NULL COMMENT '所属者',
   `re_company_name` varchar(60) NOT NULL COMMENT '公司名称',
-  `job_description` varchar(320) NOT NULL COMMENT '行业类别',
   `job_title` varchar(12) NOT NULL COMMENT '职位名称',
-  `working_time` varchar(21) NOT NULL COMMENT '工作时间',
+  `job_description` varchar(1000) NOT NULL COMMENT '工作描述',
+  `working_time` varchar(21) NOT NULL COMMENT '开始工作时间',
   PRIMARY KEY (`experience_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='简历_最近工作/实习经历' AUTO_INCREMENT=1 ;
 
@@ -133,6 +133,6 @@ CREATE TABLE IF NOT EXISTS `resume_delivery` (
   `jobseeker_id` int(11) NOT NULL COMMENT '求职者ID',
   `job_id` int(11) NOT NULL COMMENT '职位序号',
   `delivery_time` varchar(21) NOT NULL COMMENT '投递时间',
-  `delivery_job` varchar(50) NOT NULL COMMENT ' 投递职位',
-  `jobseeker_degree` varchar(10) NOT NULL COMMENT '求职者学历'
+  `delivery_status` varchar(1) NOT NULL COMMENT ' 投递状态',
+  
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='投递中转站';

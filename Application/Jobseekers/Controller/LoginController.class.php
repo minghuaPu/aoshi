@@ -5,12 +5,13 @@ use Think\Verify;
 
 
 /**
- * jobseekers登录用的控制器
+ * jobseekers登录用的控制器print_r($_SERVER);exit();
  */
 class LoginController extends Controller {
 
     public function index()
     {           
+			
 		if (IS_POST) { 
 				//验证码校验
 			   $Verify = new \Think\Verify();
@@ -20,7 +21,7 @@ class LoginController extends Controller {
 		
 			 //查询用户表，加上用户名和密码两个条件，如果两个条件和数据库一样就登录成功
 			 $pwd=md5($_POST['password']);
-		
+			$job_id=I('befor');
 			 // 如果info有值条件一样，没有的话就是
 			 $log_data['username']=$_POST[username];
 			 $log_data['password']=$pwd;
@@ -34,7 +35,12 @@ class LoginController extends Controller {
 				session('uid',$log_info[0][uid]);
 				session('user_login_status','1');
 				
-				$this->success('登录成功！','../Index/index');//跳转的方法
+				if($job_id){
+					$this->success('登录成功！',$job_id);//跳转的方法
+					}
+				else{	
+					$this->success('登录成功！','../Index/index');//跳转的方法
+				}
 			}else{ 
 				$json_str=array('status'=>0,'msg'=>'用户名或密码不正确！');
 				
@@ -45,7 +51,10 @@ class LoginController extends Controller {
 			// echo json_encode($json_str);
 		}
 		else{
-			$this->display();
+			if(I('job_id')){
+			 $this->assign('info',$_SERVER[HTTP_REFERER]);
+			}
+			$this->display("login");
 			}
 	}
 		 /*-----------------退出登录---------------------------*/
