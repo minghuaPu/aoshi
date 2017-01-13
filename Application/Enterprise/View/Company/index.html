@@ -1,6 +1,6 @@
 <include file="Public:header" />
 <link rel="stylesheet" href="__PUBLIC__/css/enterprise/layout.css">
-<link rel="stylesheet" href="__PUBLIC__/css/enterprise/company.css?3">
+<link rel="stylesheet" href="__PUBLIC__/css/enterprise/company.css?5">
 
 <div class="container">
     <form action="{:U('Company/save')}" method="post">
@@ -63,16 +63,13 @@
             </div>
         </div>
         <div class="content">
+            <p class="bottom_tip"></p>
             <input type="submit"  id_val= "{$enterprise_info['enterprise_id']}" id="submit" class="btn">
         </div>
     </form>
 </div>
 
 <include file="Public:footer" />
-<script>
-
-</script>
-<script src="__PUBLIC__/js/enterprise/company.js?2"></script>
 <script src="__PUBLIC__/js/enterprise/jquery.cxselect.min.js"></script>
 <script>
     if ({$enterprise_info['auditing']}==1){
@@ -121,6 +118,7 @@
     $(".introduction").css({
         height:inHeight+"px"
     })
+
     $.cxSelect.defaults.url = '__PUBLIC__/js/enterprise/cityData.min.json';
 
     $('#city_china').cxSelect({
@@ -132,3 +130,4 @@
         nodata: 'none'
     });
 </script>
+<script src="__PUBLIC__/js/enterprise/company.js?3"></script>

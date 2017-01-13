@@ -1,26 +1,26 @@
 <include file="Public:header" />
 <link rel="stylesheet" href="__PUBLIC__/css/enterprise/layout.css">
-<link rel="stylesheet" href="__PUBLIC__/css/enterprise/add.css?4">
+<link rel="stylesheet" href="__PUBLIC__/css/enterprise/add.css?7">
 
 
     <div class="container">
         <div class="content">
-
             <form action="{:U('Add/save')}" method="post" class="form">
                 <div class="content_box qu">
                     <h5>公司基本信息<span style="color: red ;font-weight: 600;font-size: 22px">*</span></h5>
                     <p class="tip"></p>
-                        <div class="form-group">
-                            <div class="tit">公司全称</div>
-                            <p class="sp">{$company_info['company_name']}</p>
-                            <input type="text" name="company_name" value="{$company_info['company_name']}" class="hide">
-                        </div>
+                    <div class="form-group">
+                        <div class="tit">公司全称</div>
+                        <p class="sp">{$company_info['company_name']}</p>
+                        <input type="text" name="company_name" value="{$company_info['company_name']}" class="hide">
+                    </div>
                 </div>
                 <div class="content_box">
                     <h5>职业基本信息<span style="color: red ;font-weight: 600;font-size: 22px">*</span></h5>
                         <div class="form-group">
                             <div class="tit">职位名称</div>
-                            <input type="text" name="job_name" >
+                            <input type="text" name="job_name" id="jobName">
+                            <span class="job_tip"></span>
                         </div>
                         <div class="form-group">
                             <div class="tit">工作地点</div>
@@ -35,24 +35,23 @@
                         </div>
                         <div class="form-group">
                             <div class="tit">工作地址</div>
-                            <input type="text" name="address" value="{$company_info['address']}" >
+                            <input type="text" name="address" value="{$company_info['address']}" id="address">
 
                         </div>
                         <div class="form-group">
                             <div class="tit">职位月薪</div>
-                            <input type="text" name="salary_lowLimit" class="hide salary_lowLimit" >
-                            <select data-first-title="选择最低薪资" id="salary_lowLimit">
+                            <input type="text" name="salary_lowLimit" class="hide salary_lowLimit">
+                            <select data-first-title="选择最低薪资" id="salary_lowLimit" required>
                                 <option value="选择最低薪资">选择最低薪资</option>
                             </select>
-                            <span class="salary">到</span>
-                            <input type="text" name="salary_higLimit" class="hide salary_higLimit" >
-                            <select data-first-title="选择最高薪资" id="salary_higLimit">
-                                <option value="选择最高薪资">选择最高薪资</option>
+                            <span class="salary hide">到</span>
+                            <input type="text" name="salary_higLimit" class="hide salary_higLimit">
+                            <select id="salary_higLimit" class="hide">
                             </select>
                         </div>
                         <div class="form-group">
                             <div class="tit">学历要求</div>
-                            <input type="text" name="education" class="hide education" >
+                            <input type="text" name="education" class="hide education" required>
                             <select data-first-title="选择学历" id="education">
                                 <option value="选择学历">选择学历</option>
                                 <option value="不限">不限</option>
@@ -65,7 +64,7 @@
                         <div class="form-group">
                             <div class="tit">经验要求</div>
                             <input type="text" name="work_time" class="hide work_time" >
-                            <select data-first-title="选择工作经验" id="work_time">
+                            <select data-first-title="选择工作经验" id="work_time" required>
                                 <option value="选择时间">选择时间</option>
                                 <option value="不限">不限</option>
                                 <option value="应届生">应届生</option>
@@ -78,30 +77,31 @@
                         </div>
                         <div class="form-group job-require">
                             <div class="tit">技能要求</div>
-                            <textarea  name="job_require" ></textarea>
+                            <textarea  name="job_require" id="jobReq"></textarea>
                         </div>
                         <div class="form-group job-require">
                             <div class="tit">职业描述</div>
-                            <textarea  name="job_describe" ></textarea>
+                            <textarea  name="job_describe" id="jobDes"></textarea>
                         </div>
                 </div>
                 <div class="content_box">
                     <h5>其他信息<span style="color: red ;font-weight: 600;font-size: 22px">*</span></h5>
                     <div class="form-group">
                         <div class="tit">简历接收邮箱</div>
-                        <input type="text" name="email" value="{$enterprise_info['email']}" >
+                        <input type="text" name="email" value="{$enterprise_info['email']}" id="email">
                     </div>
                 </div>
+                <p class="bottom_tip"></p>
                 <div class="content_box qu">
-                    <input type="hidden" name="company_id"  value="{$enterprise_info['company_id']}">
                     <input type="submit" value="发 布" class="btn submit">
                 </div>
             </form>
+
         </div>
     </div>
 </div>
 <include file="Public:footer" />
-<script src="__PUBLIC__/js/enterprise/add_job.js?33"></script>
+<script src="__PUBLIC__/js/enterprise/add_job.js?38"></script>
 <script>
     if({$enterprise_info['auditing']}==2){
         $(".tip").html("");

@@ -127,3 +127,8 @@
   height: 50px;
   font-size: 20px;
 }
+.content .bottom_tip {
+  color: red;
+  text-align: center;
+  font-size: 18px;
+}
