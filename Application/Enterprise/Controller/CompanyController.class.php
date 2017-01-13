@@ -1,10 +1,10 @@
 <?php
 
 namespace Enterprise\Controller;
-use Think\Controller;
+use Enterprise\Controller\BaseController;
 use Think\Page;
 
-class CompanyController extends Controller {
+class CompanyController extends BaseController {
 
     public function index(){
         // 通过session的id来搜索enterprise_info表，获取用户信息

@@ -1,8 +1,9 @@
 <?php
 namespace Enterprise\Controller;
-use Think\Controller;
+use Enterprise\Controller\BaseController;
 
-class AddController extends Controller{
+
+class AddController extends BaseController{
     public function add_job()
     {
         // 通过session的id来搜索enterprise_info表，获取用户信息

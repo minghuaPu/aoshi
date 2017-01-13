@@ -6,20 +6,13 @@
  * Time: 10:25
  */
 namespace Enterprise\Controller;
-use Think\Controller;
+use Enterprise\Controller\BaseController;
 use Think\Page;
 
-class ListController extends Controller{
+class ListController extends BaseController{
     public function job_list()
     {
-        // 通过session的id来搜索enterprise_info表，获取用户信息
-        $enterprise_info=M('enterprise_info');
-        $enterprise_info=$enterprise_info->where(array("id" => session('eid')))->find();
-        $this->assign("enterprise_info",$enterprise_info);
-
         $job=M('job');
-
-//        $job_info=$job->where(array("enterprise_id" => session('eid')))->select();
 
         $key="";
         $work_time="选择时间";
@@ -27,7 +20,7 @@ class ListController extends Controller{
 
         if (I('key')){
             $key=I('key');
-            $where['job_name|province|city|area']=array('like',"%$key%",);
+            $where['job_name']=array('like',"%$key%",);
         }
         if (I('work_time')){
             if (trim(I('work_time'))!="选择时间"){
@@ -43,7 +36,6 @@ class ListController extends Controller{
         }
         $where['enterprise_id']=session('eid');
         $job_info=$job->where($where)->order('id desc')->select();
-//        echo $job->getLastSql();
 
         $search_info['key']=$key;
         $search_info['work_time']=$work_time;

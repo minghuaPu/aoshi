@@ -64,7 +64,7 @@
   margin: 0 0 0 20px;
 }
 .content .form .content_box .form-group .sp {
-  margin: 0 0 0 18px;
+  margin-left: 18px;
   width: 420px;
   text-align: center;
   color: #000000;
@@ -119,9 +119,4 @@
 }
 .content .form .qu {
   border-top: none;
-}
-.content .form .bottom_tip {
-  text-align: center;
-  color: red;
-  font-size: 18px;
 }

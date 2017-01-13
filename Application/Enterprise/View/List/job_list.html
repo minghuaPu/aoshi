@@ -1,5 +1,5 @@
 <include file="Public:header" />
-    <link rel="stylesheet" href="__PUBLIC__/css/enterprise/job.css?20">
+    <link rel="stylesheet" href="__PUBLIC__/css/enterprise/job.css?32">
 
     <div class="container">
         <div class="content">
@@ -59,12 +59,15 @@
                 <div class="search_box">
                     <input type="text" placeholder="输入关键词：职位名称，例如：JAVA工程师" name="key" value="{$search_info['key']}">
                     <input type="submit" value="筛 选" class="btn btn-primary search">
+                    <a href="{:U('List/job_list',array('key'=>'','work_time'=>'选择时间','education'=>'选择学历'))}" class="back_up">返回全部列表</a>
                 </div>
-                <div class="hot">热门关键字：<a href="">java</a>
+                <div class="hot">热门关键字：
+                    <a href="{:U('List/job_list',array('key'=>'java'))}">java</a>
                     <a href="{:U('List/job_list',array('key'=>'php'))}">php</a>
                     <a href="{:U('List/job_list',array('key'=>'html'))}">html</a>
                     <a href="{:U('List/job_list',array('key'=>'Android'))}">Android</a>
-                    <a href="{:U('List/job_list',array('key'=>'测试'))}">测试</a></div>
+                    <a href="{:U('List/job_list',array('key'=>'测试'))}">测试</a>
+                </div>
             </form>
             <div class="tit_box row">
                 <div width="160w">职位名称</div>
@@ -88,7 +91,7 @@
                         <td width="135w" class="area">{$job_item['city']}{$job_item['area']}</td>
                         <td width="90w" name="add_time">{$job_item['add_time']} </td>
                         <td width="100w" name="status" class="status">{$job_item['status']}</td>
-                        <td width="60w"><button type="button" class="btn btn-info info">详情</button></td>
+                        <td width="60w"><a type="button" class="btn btn-info info">详情</a></td>
                         <td width="60"><button type="button" class="btn btn-warning close_job"  data-toggle="modal" data-target=".bs-example-modal-sm">结束</button></td>
                         <td width="60w"><button type="button" class="btn btn-danger delete"  data-toggle="modal" data-target=".bs-example-modal-sm">删除</button></td>
                         <td width="20w"><input type="checkbox" class="delete"></td>
@@ -109,7 +112,7 @@
             </table>
             <div class="tip hide">
                 <p></p>
-                <button class="btn btn-primary"><a  href="{:U('Add/add_job')}">发布职位</a></button>
+                <a class="btn btn-primary" href="{:U('Add/add_job')}">发布职位</a>
             </div>
         </div>
         <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">

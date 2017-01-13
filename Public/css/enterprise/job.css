@@ -40,6 +40,7 @@
 .content form .search_box {
   width: 100%;
   margin-top: 20px;
+  position: relative;
   height: 40px;
 }
 .content form .search_box input[type='text'] {
@@ -55,6 +56,12 @@
   height: 40px;
   width: 20%;
   border: none;
+}
+.content form .search_box .back_up {
+  position: absolute;
+  bottom: 3px;
+  right: 10px;
+  color: white;
 }
 .content form .hot {
   position: absolute;
@@ -143,6 +150,7 @@
   height: 30px;
   margin-top: -5px;
   padding: 0;
+  line-height: 30px;
   text-align: center;
   width: 55px;
 }
@@ -186,17 +194,17 @@
 .content .tip p {
   text-align: center;
 }
-.content .tip .btn {
+.content .tip a {
   width: 20%;
   margin-left: 40%;
   height: 40px;
   margin-top: 10px;
-}
-.content .tip .btn a {
+  line-height: 40px;
   color: white;
+  padding: 0;
   font-size: 18px;
 }
-.content .tip .btn a:hover {
+.content .tip a:hover {
   text-decoration: none;
 }
 .content .page_box {

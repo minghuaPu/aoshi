@@ -12,6 +12,9 @@ $("#salary_lowLimit").on("change",function () {
 function higLimit() {
     var lowLimit=parseInt($("#salary_lowLimit").val())+1;
     $("#salary_higLimit").html("");
+    if (lowLimit==51){
+        $("#salary_higLimit").append("<option value='100k'>100k</option>")
+    }
     for (var i=lowLimit;i<51;i++){
         $("#salary_higLimit").append("<option value='"+i+"k'>"+i+"k</option>")
     }
@@ -32,28 +35,28 @@ $("#jobName").blur(function () {
 $(".submit").on("click",function () {
     $(".bottom_tip").text("");
     if ($("#jobName").val()==""){
-        $(".bottom_tip").text("未填写工作名称")
+        $("#jobName").focus();
         return false;
     } else if ($("#address").val()==""){
-        $(".bottom_tip").text("未填写详细地址")
+        $("#address").focus();
         return false;
     }else if ($("#salary_lowLimit").val()=="选择最低薪资"){
-        $(".bottom_tip").text("未选择薪资")
+        $("#salary_lowLimit").focus();
         return false;
     }else if ($("#education").val()=="选择学历"){
-        $(".bottom_tip").text("未选择学历要求")
+        $("#education").focus();
         return false;
     }else if($("#work_time").val()=="选择时间"){
-        $(".bottom_tip").text("未选择工作经验时间")
+        $("#work_time").focus();
         return false;
     }else if ($("#jobReq").val()=="") {
-        $(".bottom_tip").text("未填写技能要求")
+        $("#jobReq").focus();
         return false;
     }else if ($("#jobDes").val()==""){
-        $(".bottom_tip").text("未填写职位描述")
+        $("#jobDes").focus();
         return false;
     }else if ($("#email").val()==""){
-        $(".bottom_tip").text("未填写简历接收邮箱")
+        $("#email").focus();
         return false;
     }
     $(".work_time").val($("#work_time").val());

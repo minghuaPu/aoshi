@@ -1,14 +1,6 @@
 /**
  * Created by iphone on 2017/1/4.
  */
-// 读取每个div中的宽度
-var aTh = $(".row div[width$='w']");
-for (var i = 0 ;i < aTh.length; i++){
-    var thWidth = parseInt(aTh.eq(i).attr("width"));
-    aTh.eq(i).css({
-        width:thWidth
-    })
-}
 //  判断每一个职位信息的状态，并显示不同的文字
 for (var i = 0;i < $(".status").length;i++){
     if ($(".status").eq(i).text()==0){

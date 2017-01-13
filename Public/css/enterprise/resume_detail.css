@@ -1,0 +1,38 @@
+#status{
+    background-color: #286090;
+    color: white;
+    display: block;
+    margin: 10px auto;
+    width: 200px;
+    height: 60px;
+    font-size: 25px;
+    border-color: #285e8e;
+    font-weight: 600;
+}
+#resume{
+    padding-bottom: 30px;
+}
+.back{
+    position: fixed;
+    top: calc(50% - 150px);
+    left: 0;
+    width: 60px;
+    height: 300px;
+    background-color: #53cac3;
+    font-size: 20px;
+    padding:44px 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+}
+.unmatch{
+    position: fixed;
+    top: calc(50% - 150px);
+    right: 0;
+    width: 60px;
+    height: 300px;
+    background-color: #53cac3;
+    font-size: 20px;
+    padding: 33px 20px;
+    color: white;
+    border-radius: 5px 0  0 5px;
+}

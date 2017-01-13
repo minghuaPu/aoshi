@@ -2,7 +2,6 @@
   width: 900px;
   max-width: 900px;
   margin: 30px auto;
-  padding-bottom: 10px;
   background-color: #ffffff;
 }
 .content form {
@@ -33,6 +32,7 @@
   width: 100%;
   margin-top: 20px;
   height: 40px;
+  position: relative;
 }
 .content form .search_box input[type='text'] {
   margin-left: 3%;
@@ -42,18 +42,23 @@
   padding-left: 10px;
   border-radius: 3px;
 }
-.content form .search_box input[type='button'] {
+.content form .search_box input[type='submit'] {
   margin-left: 3%;
   height: 40px;
   width: 20%;
   border: none;
 }
+.content form .search_box .back_up {
+  position: absolute;
+  bottom: 3px;
+  right: 10px;
+  color: white;
+}
 .content .tit_box {
   width: 100%;
   position: relative;
-  max-width: 900px;
+  width: 900px;
   margin: 0;
-  padding: 7px 0;
   moz-user-select: -moz-none;
   -moz-user-select: none;
   -o-user-select: none;
@@ -65,6 +70,11 @@
   user-select: none;
 }
 .content .tit_box div {
+  float: left;
+  list-style: none;
+  line-height: 50px;
+  font-size: 14px;
+  height: 50px;
   text-align: center;
   padding: 0;
 }
@@ -83,8 +93,7 @@
   user-select: none;
 }
 .content .table tr {
-  margin-top: 5px;
-  height: 20px;
+  position: relative;
   width: 100%;
 }
 .content .table tr th {
@@ -97,4 +106,27 @@
 .content .table tr th .btn-info {
   height: 31px;
   margin-top: -3px;
+}
+.content .table tr th button {
+  width: 80px;
+  height: 29px;
+  padding: 0;
+}
+.content .table tr th button a {
+  width: 100%;
+  line-height: 29px;
+  height: 100%;
+  display: block;
+  color: white;
+}
+.content .table tr th button a:hover {
+  text-decoration: none;
+}
+.content .tip {
+  margin-top: 20px;
+}
+.content .tip p {
+  text-align: center;
+  font-size: 18px;
+  padding-bottom: 8px;
 }

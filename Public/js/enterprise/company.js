@@ -23,37 +23,37 @@ $("#job input").blur(function () {
 $("#submit").on("click",function () {
     $(".bottom_tip").text("");
     if ($("#company_name input").val() == "") {
-        $(".bottom_tip").text("未填写公司名称")
+        $("#company_name input").focus();
         return false;
     } else if ($(".province").val() == "0") {
-        $(".bottom_tip").text("未选择省")
+        $(".province").focus();
         return false;
     } else if ($(".city").val() == "0") {
-        $(".bottom_tip").text("未选择城市")
+        $(".city").focus();
         return false;
     } else if ($(".area").val() == "0") {
-        $(".bottom_tip").text("未选择地区")
+        $(".area").focus();
         return false;
     } else if ($("#address input").val() == "") {
-        $(".bottom_tip").text("未填写详细地址")
+        $("#address input").focus();
         return false;
     } else if ($(".scale").val() == "选择规模") {
-        $(".bottom_tip").text("未选择公司规模")
+        $(".scale").focus();
         return false;
     } else if ($("#introduction textarea").val() == "") {
-        $(".bottom_tip").text("未填写公司简介")
+        $("#introduction textarea").focus();
         return false;
     } else if ($("#name input").val() == "") {
-        $(".bottom_tip").text("未填写姓名")
+        $("#name input").focus();
         return false;
     } else if ($("#job input").val() == "") {
-        $(".bottom_tip").text("未填写职位")
+        $("#job input").focus();
         return false;
     } else if ($("#email input").val() == "") {
-        $(".bottom_tip").text("未填写简历接收邮箱")
+        $("#email input").focus();
         return false;
     } else if ($("#phone input").val() == "") {
-        $(".bottom_tip").text("未填写电话")
+        $("#phone input").focus();
         return false;
     }
     if ($(".area").val()){
