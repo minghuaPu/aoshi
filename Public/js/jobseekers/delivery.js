@@ -1,22 +1,26 @@
 (function() {
-	var $send = $("#delivery"),
-		$job_name=$("#delivery").text()
+	var $times=$("#times");
+		
+		
 
+	$times.on("change", function(e) { //AJAX更新
+	console.log($times.val()+"sssssssssssssss")
 
-	$send.on("submit", function(e) { //AJAX更新
-	
 		$.ajax({
 			type: "post",
-			url: SITE_URL +"?a=send",
+			url: SITE_URL +"?a=delivery",
 			data: {
-				job_name:$job_name
+				times: $times.val()
 				
 			},
-			success: function(e) {
-				alert("has send");
+			success: function(s) {
+				location.href=SITE_URL+'/Index/delivery.html';
+				console.log(s)
 			}
+			
 		});
-		
+
+	
 	});
 
 })();
