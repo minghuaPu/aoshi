@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>我的简历</title>
-		<link rel="stylesheet" href="__PUBLIC__/css/jobseekers/resume.css">
+		<link rel="stylesheet" href="__PUBLIC__/css/jobseekers/resume.css">     
         <link rel="stylesheet" href="__PUBLIC__/css/bootstrap-3.3.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="__PUBLIC__/css/jobseekers/cropper.min.css" rel="stylesheet"/>
         <link rel="stylesheet" href="__PUBLIC__/css/jobseekers/main.css" rel="stylesheet"/>
@@ -20,14 +20,13 @@
 
 	<body id="resume">
     <!--头部-->
-    <img src="__PUBLIC__/images/Top.jpg" id="imgs">
 		<header id="header">
 			<nav class="container">
 				<a class="logo" href=""><img src="__PUBLIC__/images/logo.png"></a>
 				<a class="nav-link selected" href="{:U('Home/Index/index')}">首页</a>
-				<a class="nav-link" href="{:U('Index/delivery')}">投递箱</a>
- 				<a class="nav-link fr" href="{:U('Login/log_out')}">退出</a>
-
+				<a class="nav-link" href="{:U('Index/index')}">简历管理</a>
+				<a class="nav-link" href="{:U('Index/delivery')}">投递箱</a> 
+                <a class="nav-link fr" href="{:U('Login/log_out')}">退出</a>
                 <a class="nav-link fr" href="{:U('Index/index')}"  ng-bind="basic[0].nickname"></a>
 				
 			</nav>
@@ -59,10 +58,10 @@
                 <button class="add" ng-click="add()" ng-hide="basic[0]">+ 添加基本资料</button>
 				<div class="list text-center"  ng-show="basic[0]">
 						<a class="edit"  ng-click="edit(basic[0])">编辑</a>
-                            <span class="name rate"  ng-bind="basic[0].nickname"  href="javascript:" data-rate="2" ></span>
-                            <span class="intro rate"  ng-bind="basic[0].peculiarity"></span>
+                            <span class="name rate" <if condition="basic.nickname"> href="javascript:" </if>   ng-bind="basic[0].nickname"></span>
+                            <span class="intro rate"  ng-bind="basic[0].peculiarity"  ></span>
                             <span class="base ">
-                                <em class="sex rate"><i class="icon"></i><em  ng-bind="basic[0].sex"></em></em>
+                                <em class="sex rate"  ><i class="icon"></i><em  ng-bind="basic[0].sex"></em></em>
                                 <em class="birth rate"  ng-bind="basic[0].birth"></em>
                                 <em class="xl rate"  ng-bind="basic[0].top_edu"></em>
                                 <em class="gzjy rate"  ng-bind="basic[0].work_years"></em>
@@ -86,15 +85,15 @@
 						><fieldset>
 							<label>性别</label>
 							<select class="input-text" ng-model="form.sex"  required>
-								<option >男</option>
+								<option ng-selected="true ">男</option>
 								<option>女</option>
 							</select>
 						</fieldset>
 						<fieldset>
 							<label>出生年份</label>
-                            <select class="input-text" ng-model="form.birth"   >
+                            <select class="input-text" ng-model="form.birth"   required>
 								<option>00后</option>
-								<option>90后</option>
+								<option ng-selected="true">90后</option>
 								<option>80后</option>
 								<option>其他</option>
 							</select>
@@ -103,7 +102,7 @@
 							<label>最高学历</label>
 							<select class="input-text" ng-model="form.top_edu"  required>
 								<option>大专</option>
-								<option>本科</option>
+								<option ng-selected="true">本科</option>
 								<option>硕士</option>
 								<option>博士</option>
 								<option>其他</option>
@@ -113,7 +112,7 @@
 							<label>工作年限</label>
 							<select class="input-text"  ng-model="form.work_years" required>
 								<option>应届毕业生</option>
-								<option>1-3年</option>
+								<option ng-selected="true ">1-3年</option>
 								<option>3-5年</option>
 								<option>5-10年</option>
 								<option>10年以上</option>
@@ -121,10 +120,10 @@
 						</fieldset>
 						<fieldset>
 							<label>所在城市</label>
-                            <select class="input-text"   ng-model="form.current_city"  >
+                            <select class="input-text"   ng-model="form.current_city"  required>
 								<option>北京</option>
 								<option>上海</option>
-								<option>广州</option>
+								<option  ng-selected="true">广州</option>
 								<option>深圳</option>
 								<option>杭州</option>
 								<option>其它</option>
@@ -245,7 +244,7 @@
 							<label>学历</label>
 							<select class="input-text"   ng-model="form.degree"  required>
 								<option>大专</option>
-								<option>本科</option>
+								<option  ng-selected="true">本科</option>
 								<option>硕士</option>
 								<option>博士</option>
 								<option>其他</option>
@@ -254,7 +253,7 @@
 						<fieldset>
 							<label>毕业时间</label>
                             <select class="input-text"  ng-model="form.graduated"   required>
-								<option>2017-09</option>
+								<option  ng-selected="true">2017-09</option>
 								<option>2016-09</option>
 								<option>2015-09</option>
 								<option>2014-09</option>
@@ -342,8 +341,8 @@
 						<fieldset>
 							<label>职位类型</label>
                             <select class="input-text"  ng-model="form.job_type" required>
-								<option selected="selected" >无限</option>
-								<option>全职</option>
+								<option>无限</option>
+								<option  ng-selected="true">全职</option>
 								<option>兼职</option>
 								<option>实习</option>
 							</select>
@@ -351,7 +350,7 @@
 						<fieldset>
 							<label>期望城市</label>
                             <select class="input-text" ng-model="form.expected_location"   required>
-								<option selected="selected" >无限</option>
+								<option  ng-selected="true">无限</option>
 								<option>北京</option>
 								<option>上海</option>
 								<option>广州</option>
@@ -362,7 +361,7 @@
 						<fieldset>
 							<label>期望月薪</label>
                             <select class="input-text" ng-model="form.expected_monthly_income"  required>
-								<option selected="selected" >无限</option>
+								<option ng-selected="true" >无限</option>
 								<option>5k以下</option>
 								<option>5k-10k</option>
 								<option>10k-15k</option>
