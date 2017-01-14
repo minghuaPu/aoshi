@@ -392,7 +392,7 @@ class IndexController extends ResumeController {
 			}
 			
 		$where_all=M('resume_delivery')
-		 		->field("resume_delivery.delivery_time,resume_delivery.delivery_status,job.id,job.job_name,job.enterprise_id,job.company_name,job.city,job.salary_low,job.salary_hig")
+		 		->field("resume_delivery.delivery_time,resume_delivery.delivery_status,job.id,job.job_name,job.enterprise_id,job.company_name,job.city,job.area,job.salary_low,job.salary_hig")
                 ->join("left join job on resume_delivery.job_id=job.id")//join是关联查询
                 ->where("jobseeker_id = $uid  and  (DATEDIFF(delivery_time,NOW()) >= $m )")	//	DATEDIFF(time1,time2) = time2 - time1
                 ->order('delivery_time DESC')
@@ -403,7 +403,7 @@ class IndexController extends ResumeController {
 
 		$where_see=M('resume_delivery')
 		
-		 		->field("resume_delivery.delivery_time,resume_delivery.delivery_status,job.id,job.job_name,job.enterprise_id,job.company_name,job.city,job.salary_low,job.salary_hig")
+		 		->field("resume_delivery.delivery_time,resume_delivery.delivery_status,job.id,job.job_name,job.enterprise_id,job.company_name,job.city,job.area,job.salary_low,job.salary_hig")
                 ->join("left join job on resume_delivery.job_id=job.id")//join是关联查询
                 ->where("jobseeker_id = $uid and delivery_status >0 and  DATEDIFF(delivery_time,NOW()) >= $m")
                 ->order('delivery_time DESC')
@@ -411,14 +411,14 @@ class IndexController extends ResumeController {
 				
 				
 		$where_invite=M('resume_delivery')
-		 		->field("resume_delivery.delivery_time,resume_delivery.delivery_status,job.id,job.job_name,job.enterprise_id,job.company_name,job.city,job.salary_low,job.salary_hig")
+		 		->field("resume_delivery.delivery_time,resume_delivery.delivery_status,job.id,job.job_name,job.enterprise_id,job.company_name,job.city,job.area,job.salary_low,job.salary_hig")
                 ->join("left join job on resume_delivery.job_id=job.id")//join是关联查询
                 ->where("jobseeker_id = $uid and delivery_status=2 and  DATEDIFF(delivery_time,NOW()) >= $m")
                 ->order('delivery_time DESC')
 				->select();					
 
 		$where_failure=M('resume_delivery')
-		 		->field("resume_delivery.delivery_time,resume_delivery.delivery_status,job.id,job.job_name,job.enterprise_id,job.company_name,job.city,job.salary_low,job.salary_hig")
+		 		->field("resume_delivery.delivery_time,resume_delivery.delivery_status,job.id,job.job_name,job.enterprise_id,job.company_name,job.city,job.area,job.salary_low,job.salary_hig")
                 ->join("left join job on resume_delivery.job_id=job.id")//join是关联查询
                 ->where("jobseeker_id = $uid and delivery_status = 3 and  DATEDIFF(delivery_time,NOW()) >= $m")
                 ->order('delivery_time DESC')
