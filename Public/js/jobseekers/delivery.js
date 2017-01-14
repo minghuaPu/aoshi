@@ -1,26 +1,12 @@
 (function() {
 	var $times=$("#times");
-		
-		
-
-	$times.on("change", function(e) { //AJAX更新
-	console.log($times.val()+"sssssssssssssss")
-
-		$.ajax({
-			type: "post",
-			url: SITE_URL +"?a=delivery",
-			data: {
-				times: $times.val()
-				
-			},
-			success: function(s) {
-				location.href=SITE_URL+'/Index/delivery.html';
-				console.log(s)
-			}
-			
-		});
-
 	
+	$times.on("change", function() { //时间筛选
+		$("#timesf").submit()
+	});
+	$(".box-right-top .sx").on("click", function() { //刷新
+		
+		$("#timesf").submit()
 	});
 
 })();

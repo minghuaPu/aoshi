@@ -13,7 +13,15 @@
                                                 <span>在线简历</span>
                                             </div>
                                             <span href="javascript:;" class="btn_showprogress">
-                                                 <span class="d_status">{$item.delivery_status}</span>
+                                            <if condition="$item['delivery_status'] eq 0 ">
+                                                 <span class="d_status">投递成功</span>
+                                                 <elseif condition="$item['delivery_status'] eq 1 "/>
+                                                 <span class="d_status">被查看</span>
+                                                 <elseif condition="$item['delivery_status'] eq 2 "/>
+                                                 <span class="d_status">邀请面试</span> 
+                                                 <elseif condition="$item['delivery_status'] eq 3 "/>
+                                                 <span class="d_status">不合适</span>                                                       
+                                                 </if>
                                              </span>
                                              <span class="d_time">{$item.delivery_time}</span>
                                         </div>

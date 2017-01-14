@@ -473,7 +473,7 @@ button {
 
 #resume .resume-nav .fixed {
 	position: fixed;
-	top: 0;
+	top: 85px;
 }
 
 #resume .resume-nav ul {

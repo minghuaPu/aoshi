@@ -49,7 +49,7 @@ session_start();
           $extension = image_type_to_extension($type);
 			 //unlink('../upload/resume_' . $_SESSION['uid'] . '.original' . $extension);
 			 unlink('./Public/upload/resume_'. $_SESSION['uid'] .'.original' . $extension);
-          $src = './Public/upload/resume_'. $_SESSION['uid'] .'.original' . $extension;////////////////$src = '../upload/' . date('YmdHis') . '.original' . $extension;///////////////
+          	$src = './Public/upload/resume_'. $_SESSION['uid'] .'.original' . $extension;////////////////$src = '../upload/' . date('YmdHis') . '.original' . $extension;///////////////
  		
           if ($type == IMAGETYPE_GIF || $type == IMAGETYPE_JPEG || $type == IMAGETYPE_PNG) {
 

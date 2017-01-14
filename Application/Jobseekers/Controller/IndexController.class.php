@@ -107,6 +107,7 @@ class IndexController extends ResumeController {
 			$data['top_edu'] = I('top_edu');
 			$data['work_years'] = I('work_years');
 			$data['current_city'] = I('current_city');
+			$data['phone'] = I('phone');
 			$data['e_mail'] = I('e_mail');
 			if(I('basic_id')){
 				$resumes_basic->where("uid=$uid")->save($data);
@@ -370,57 +371,70 @@ class IndexController extends ResumeController {
             $this->error('删除错误，原因：'.$article->getError(),U('Index/index'));
         }*/
     }
-// 	public function delivery() //编辑
-// 	{
-// /*SELECT resume_delivery.delivery_time,resume_delivery.delivery_status,job.id,job.job_name,job.enterprise_id,job.money,job.place,company.id,company.company_name FROM resume_delivery left join job on resume_delivery.job_id=job.id left join company on job.enterprise_id=company.enterprise_id where jobseeker_id=5		
-// */		
+	public function delivery() //编辑
+	{
+/*原生：SELECT resume_delivery.delivery_time,resume_delivery.delivery_status,job.id,job.job_name,job.enterprise_id,job.money,job.place,company.id,company.company_name FROM resume_delivery left join job on resume_delivery.job_id=job.id left join company on job.enterprise_id=company.enterprise_id where jobseeker_id=5		
+*/		
 
-
-// 		$uid=session('uid');
-// 		$seekers_info = M('resume_basic')->field("resume_basic.nickname")->where("uid =$uid")->select();
-// 	    $this->assign('seekers_info', $seekers_info);
-// 		$times = I('times');
-// 		if($times)
-// 		{
-// 			print_r($seekers_info);
-// 			}
-		
-// 		echo $time;
-		
-		
-// 		 $where_all=M('resume_delivery')
-// 		 		->field("resume_delivery.delivery_time,resume_delivery.delivery_status,job.id,job.job_name,job.enterprise_id,job.money,job.place,company.id,company.company_name")
-//                 ->join("left join job on resume_delivery.job_id=job.id")//join是关联查询
-// 				->join("left join company on job.enterprise_id=company.enterprise_id")//join是关联查询
-//                 ->where("jobseeker_id = $uid")
-//                 ->select();
-
-		
-// 		$where_succeed=M('resume_delivery')
-// 		 		->field("resume_delivery.delivery_time,resume_delivery.delivery_status,job.id,job.job_name,job.enterprise_id,job.money,job.place,company.id,company.company_name")
-//                 ->join("left join job on resume_delivery.job_id=job.id")//join是关联查询
-// 				->join("left join company on job.enterprise_id=company.enterprise_id")//join是关联查询
-//                 ->where("jobseeker_id = $uid and delivery_status=1")
-//                 ->select();		
-
-
-// 		$where_failure=M('resume_delivery')
-// 		 		->field("resume_delivery.delivery_time,resume_delivery.delivery_status,job.id,job.job_name,job.enterprise_id,job.money,job.place,company.id,company.company_name")
-//                 ->join("left join job on resume_delivery.job_id=job.id")//join是关联查询
-// 				->join("left join company on job.enterprise_id=company.enterprise_id")//join是关联查询
-//                 ->where("jobseeker_id = $uid and delivery_status=0")
-//                 ->select();	
-				
-				
-					
-// 		$this->assign('where_all', $where_all);		
-// 		$this->assign('where_succeed', $where_succeed);			
-// 		$this->assign('where_failure', $where_failure);			
-		
-// 		$this->display();
-// 	}
-
-
+		//显示用户名
+		$uid=session('uid');
+		$seekers_info = M('resume_basic')->field("resume_basic.nickname")->where("uid =$uid")->select();
+	    $this->assign('seekers_info', $seekers_info);
+		//筛选id、状态、投递时间输出数据
+		$timess_info = M('resume_delivery')->field("resume_delivery.delivery_time")->where("jobseeker_id =$uid")->select();
+		$times = I('times');
+		if($times=='7')
+		{
+			$m='-7';
+		}
+		 else {
+			$m='-60';
+			}
+			
+		$where_all=M('resume_delivery')
+		 		->field("resume_delivery.delivery_time,resume_delivery.delivery_status,job.id,job.job_name,job.enterprise_id,job.company_name,job.city,job.salary_low,job.salary_hig")
+                ->join("left join job on resume_delivery.job_id=job.id")//join是关联查询
+                ->where("jobseeker_id = $uid  and  (DATEDIFF(delivery_time,NOW()) >= $m )")	//	DATEDIFF(time1,time2) = time2 - time1
+                ->order('delivery_time DESC')
+				->select();
 
 	
+
+
+		$where_see=M('resume_delivery')
+		
+		 		->field("resume_delivery.delivery_time,resume_delivery.delivery_status,job.id,job.job_name,job.enterprise_id,job.company_name,job.city,job.salary_low,job.salary_hig")
+                ->join("left join job on resume_delivery.job_id=job.id")//join是关联查询
+                ->where("jobseeker_id = $uid and delivery_status >0 and  DATEDIFF(delivery_time,NOW()) >= $m")
+                ->order('delivery_time DESC')
+			    ->select();	
+				
+				
+		$where_invite=M('resume_delivery')
+		 		->field("resume_delivery.delivery_time,resume_delivery.delivery_status,job.id,job.job_name,job.enterprise_id,job.company_name,job.city,job.salary_low,job.salary_hig")
+                ->join("left join job on resume_delivery.job_id=job.id")//join是关联查询
+                ->where("jobseeker_id = $uid and delivery_status=2 and  DATEDIFF(delivery_time,NOW()) >= $m")
+                ->order('delivery_time DESC')
+				->select();					
+
+		$where_failure=M('resume_delivery')
+		 		->field("resume_delivery.delivery_time,resume_delivery.delivery_status,job.id,job.job_name,job.enterprise_id,job.company_name,job.city,job.salary_low,job.salary_hig")
+                ->join("left join job on resume_delivery.job_id=job.id")//join是关联查询
+                ->where("jobseeker_id = $uid and delivery_status = 3 and  DATEDIFF(delivery_time,NOW()) >= $m")
+                ->order('delivery_time DESC')
+				->select();	
+				
+				
+		$this->assign('times', $times);				
+		$this->assign('where_all', $where_all);	
+		$this->assign('where_see', $where_see);
+		$this->assign('where_invite', $where_invite);		
+		$this->assign('where_failure', $where_failure);			
+
+			$this->display();
+		
+			
+		
+	}
+
 }
