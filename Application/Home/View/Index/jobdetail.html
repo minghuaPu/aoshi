@@ -9,15 +9,16 @@
 			<div class="con-l">
 				<div class="chat-content">
 					<div class="company-word">
-						<i></i>{$job_item['company_name']}希望与您沟通以下职位<i></i>
+						<i></i>{$job_item['company_name']}<i></i><br>
+						<p class="word-red">希望与您沟通以下职位</p>
 					</div>		
 					<div class="job-profile">
 						<p>{$job_item['job_name']}</p>
-						<p class="word-red">￥{$job_item['money']}</p>
+						<p class="word-red">￥{$job_item['salary_low']}-{$job_item['salary_hig']}</p>
 						<ul>
-							<li>广州</li>
-							<li>1-3年</li>
-							<li>本科</li>
+							<li>{$job_item['city']}</li>
+							<li>{$job_item['work_time']}</li>
+							<li>{$job_item['education']}</li>
 						</ul>
 					</div>
 					<p class="local-time"></p>
@@ -40,7 +41,7 @@
 							</div>
 							<p>
 								<i class="i-left-jian"></i>
-								{$job_item['company_name']}公司欢迎你！
+								{$job_item['company_name']}欢迎你！
 							</p>
 						</div>
 						
@@ -63,7 +64,7 @@
 			
 			<div class="con-r">
 				<div class="search-box">
-					<form action="findjob.html" method="post">
+					<form action="{:U('Index/findjob')}" method="post">
 						<input type="text" name="key" placeholder="请输入职位或公司名称" class="search">
 						<input type="submit" value="搜索" class="btn btn-info">
 					</form>
@@ -73,19 +74,19 @@
 				
 				<div class="job-list">
 					<div class="job-left">
-						<p>{$job_item[job_name]}</p>
-						<p class="word-red"><strong>￥{$job_item[money]}</strong></p>
+						<p>{$job_item['job_name']}</p>
+						<p class="word-red"><strong>￥{$job_item['salary_low']}-{$job_item['salary_hig']}</strong></p>
 						<ul>
-							<li>广州</li>
-							<li>1-3年</li>
-							<li>本科</li>
+							<li>{$job_item['city']}</li>
+							<li>{$job_item['work_time']}</li>
+							<li>{$job_item['education']}</li>
 						</ul>
 					</div>
 					<div class="job-coner">
 						
 					</div>
 					<sup>职信道</sup>
-					<label>{$job_item[add_time]|date='Y-m-d',###}<span>&nbsp;更新</span></label>
+					<label>{$job_item[add_time]}<span>&nbsp;更新</span></label>
 				</div>
 				<!-- 公司显示表-->
 				<div class="company-dec">
@@ -97,7 +98,9 @@
 							<p>{$job_item[company_name]}<span>招聘中</span></p>
 							<span class="company-status">在线</span>
 						</div>
-						<a href="{:U('Index/findjob')}" class="btn-deliveryresume">投递简历</a>
+						 <input type="hidden" value="{$job_item[id]}" id="job_ids"/>
+
+						<a id="delivery_send" class="btn-deliveryresume">投递简历</a>
 					</div>
 				</div>
 				<!-- 职位详情-->
@@ -107,12 +110,12 @@
 					<p class="job-require">岗位要求</p>
 					<div class="con-dec">{$job_item[job_require]}</div>
 					<p class="company-address">公司地址</p>
-					<div class="con-dec">{$job_item[place]}</div>
+					<div class="con-dec">{$job_item[address]}</div>
 				</div>
 			</div>
 		</div>
 	</volist>
 	</div>
-	
+	<script src="__PUBLIC__/js/enterprise/jobdetail.js"></script>
 </body>
 </html>

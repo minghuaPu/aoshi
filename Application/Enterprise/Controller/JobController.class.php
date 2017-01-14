@@ -69,8 +69,8 @@ class JobController extends Controller{
         $data['company_name']=I('company_name');
         $data['job_name']=I('job_name');
         $data['education']=I('education');
-        $data['salary_low_limit']=I('salary_lowLimit');
-        $data['salary_hig_limit']=I('salary_higLimit');
+        $data['salary_low']=I('salary_lowLimit');
+        $data['salary_hig']=I('salary_higLimit');
         $data['email']=I('email');
         $data['work_time']=I('work_time');
         $data['company_id'] = "25";

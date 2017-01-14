@@ -55,6 +55,15 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#"><i class="icon-ios"></i>iOS</a></li>
                     <li><a href="#"><i class="icon-android"></i>Android</a></li>
+
+                    <if condition="$name">
+    <foreach name="name" item="name" >
+       <li> <a href="{:U('Jobseekers/Index/index')}">{$name.nickname}</a></li>
+       <li><a href="{:U('Jobseekers/Login/log_out')}">退出</a></li>
+     </foreach>  
+    <else/>   
+         <li><a href="{:U('Jobseekers/Login/login')}">登录/注册</a></li>
+    </if>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
