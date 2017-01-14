@@ -1,15 +1,16 @@
 /*简历导航*/
 var $rNav =$("#nav-list"),
-	$rNavTop=100;
-	//$rNavTop = $rNav.offset().top;
+	$rNavTop = $rNav.offset().top;
 
 $(window).scroll(function() {
 	
-	if($(window).scrollTop() >= $rNavTop) {	
+	if($(document).scrollTop() >= $rNavTop) {	
 		
 		$rNav.addClass("fixed");
 	} else {
+		
 		$rNav.removeClass("fixed");
+		
 	}
 });
 $('#nav-list li').each(function() {
@@ -17,6 +18,9 @@ $('#nav-list li').each(function() {
 		$(this).addClass('selected').siblings().removeClass('selected')
 	})
 });
+
+
+
 
 /*简历管理*/
 
@@ -98,6 +102,7 @@ resume.controller('resumeBasic', function($scope, service) {
 		}
 	};
 	$scope.cancel = function() {
+		
 		delete $scope.form;
 	};
 	$scope.submit = function() {
@@ -134,6 +139,7 @@ resume.controller('resumeJobexp', function($scope, service) {
 		else{}
 	};
 	$scope.cancel = function() {
+		$("#job-exp-c_n").attr("required",false);
 		$scope.list = false;
 		delete $scope.form;
 	};
@@ -175,6 +181,7 @@ resume.controller('resumeEduexp', function($scope, service) {
 
 	};
 	$scope.cancel = function() {
+		$("#edu-exp-s_n").attr("required",false);
 		$scope.list = false;
 		delete $scope.form;
 	};
@@ -194,6 +201,7 @@ resume.controller('resumeEduexp', function($scope, service) {
 resume.controller('resumeDes', function($scope, service) {
 	$scope.integrity = 20;
 	$scope.edit = function(describe) {
+		//$("#ss").attr("required",true);
 		$scope.list = true;
 		$scope.form = describe;
 	};
@@ -204,8 +212,10 @@ resume.controller('resumeDes', function($scope, service) {
 		}
 	};
 	$scope.cancel = function() {
+		$("#self-des-describe").attr("required",false);
 		$scope.list = false;
 		delete $scope.form;
+		
 	};
 	$scope.submit = function() {
 		$scope.list = false;
@@ -233,6 +243,7 @@ resume.controller('resumeCareer', function($scope, service) {
 		}
 	};
 	$scope.cancel = function() {
+		$("#job-career-career").attr("required",false);
 		$scope.list = false;
 		delete $scope.form;
 	};
@@ -260,63 +271,62 @@ resume.controller('resumeState', function($scope, service) {
 
 
 
-//
-//var $one=$("#user-info .rate"),
-//    $two=$("#job-exp .rate"),
-//	$three=$("#edu-exp .rate"),
-//	$four=$("#job-career .rate"),
-//	$five=$("#job-state .rate"),
-//	$photo=$("#crop-avatar .rate");
-//var $photo_rate=$one_rate=$five_rate=$two_rate=$three_rate=$four_rate=0;
-//
-///*简历完成率*/
-//	
-//if($photo.attr("src"))
-//{	$(".hear").hide();
-//	$photo_rate=2;
-//	}
-//else{
-//		$(".hear").show();
-//		}	
-//for(var i=0; i<$one.length;i++){
-//	if($one.eq(i).text()!=""){
-//		$one_rate=$one_rate+2;
-//	}
-//}
-//
-//for(var i=0; i<$two.length;i++){
-//	if($two.eq(i).text()!=""){
-//		
-//		if($two_rate>=20){
-//			$two_rate=20
-//		}
-//		else{
-//			$two_rate=$two_rate+10
-//			}
-//	}
-//}
-//
-//for(var i=0; i<$three.length;i++){
-//	if($three.eq(i).text()!=""){
-//		
-//		if($three_rate>=20){
-//			$three_rate=20
-//		}
-//		else{
-//			$three_rate=$three_rate+10
-//			}
-//	}
-//}
-//
-//	if($four.length){
-//		$four_rate=20
-//	}
-//	if($five.text()){
-//		$five_rate=20
-//	}
-//
-//$("#finishing_rate").text(($photo_rate+$five_rate+$four_rate+$three_rate+$two_rate+$one_rate)+"%");
-//
+/*
+var $one=$("#user-info .rate"),
+    $two=$("#job-exp .rate"),
+	$three=$("#edu-exp .rate"),
+	$four=$("#job-career .rate"),
+	$five=$("#job-state .rate"),
+	$photo=$("#crop-avatar .rate");
+var $photo_rate=$one_rate=$five_rate=$two_rate=$three_rate=$four_rate=0;
+
+/*简历完成率*/
+/*	
+if($photo.attr("src"))
+{	$(".hear").hide();
+	$photo_rate=2;
+	}
+else{
+		$(".hear").show();
+		}	
+for(var i=0; i<$one.length;i++){
+	if($one.eq(i).text()!=""){
+		$one_rate=$one_rate+2;
+	}
+}
+
+for(var i=0; i<$two.length;i++){
+	if($two.eq(i).text()!=""){
+		
+		if($two_rate>=20){
+			$two_rate=20
+		}
+		else{
+			$two_rate=$two_rate+10
+			}
+	}
+}
+
+for(var i=0; i<$three.length;i++){
+	if($three.eq(i).html()!=""){
+		
+		if($three_rate>=20){
+			$three_rate=20
+		}
+		else{
+			$three_rate=$three_rate+10
+			}
+	}
+}
+
+	if($four.length){
+		$four_rate=20
+	}
+	if($five.text()){
+		$five_rate=20
+	}
+$("#finishing_rate").text(($photo_rate+$five_rate+$four_rate+$three_rate+$two_rate+$one_rate)+"%");*/
+
 //
 ///*简历导航*/
 //var $rNav = $("#nav-list"),

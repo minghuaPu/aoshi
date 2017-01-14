@@ -154,18 +154,18 @@
 				</form>
 			</div>
 			<div class="search-tip">
-				<p><?php echo ($_REQUEST['key']); ?>&nbsp;相关搜索结果</p>
+				<p><?php echo ($_REQUEST['key']); ?>&nbsp;相关结果</p>
 
 			</div>
 			<!-- 职位详情表 -->
 
 
 <!-- 第四步：遍历模版变量 -->
-		<?php if(is_array($job_info)): foreach($job_info as $key=>$job_item): ?><div class="job-list">
-				<a href="#"><!-- <?php echo U('Index/jobdetail');?> -->
+		<?php if(is_array($job_info)): $i = 0; $__LIST__ = $job_info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$job_item): $mod = ($i % 2 );++$i;?><div class="job-list">
+				<a href="<?php echo U('Index/jobdetail',array('id'=>$job_item['id']));?>"><!-- <?php echo U('Index/jobdetail',array(id=>$id));?> -->
 					<div class="job-left">
 					<!-- 第五步：给对应信息添加动态数据 -->
-						<p class="job-name"><?php echo ($job_item['job_name']); ?></p>
+						<p class="job-name"><?php echo ($job_item["job_name"]); ?></p>
 						<p class="word-red"><strong>￥<?php echo ($job_item['money']); ?></strong></p>
 						<ul>
 							<li>广州</li>
@@ -180,7 +180,7 @@
 						<span><?php echo ($job_item['company_name']); ?></span>
 					</div>
 				</a>
-			</div><?php endforeach; endif; ?>
+			</div><?php endforeach; endif; else: echo "" ;endif; ?>
 
 			<div class="next-page">
 				<a href="#">下一页</a>

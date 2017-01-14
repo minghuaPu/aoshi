@@ -65,8 +65,9 @@ class LoginController extends Controller {
 		header("Content-type: text/html; charset=utf-8");                 
 	
 		// session登录怎么退出
+		
 		session('user_login_status',null);
-		$this->success('退出成功！','login');//跳转的方法	
+		$this->success('退出成功！',U('Home/Index/index'));
 		 }
 		 
 		 

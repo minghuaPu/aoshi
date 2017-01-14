@@ -66,7 +66,7 @@
 	<link rel="stylesheet" href="/aoshi/Public/css/common.css">
 	<link rel="stylesheet" href="/aoshi/Public/css/jobdetail.css">
 	 <div class="content">
-	 <?php if(is_array($job_detail)): foreach($job_detail as $key=>$job_item): ?><div class="container">
+	 <?php if(is_array($job_detail)): $i = 0; $__LIST__ = $job_detail;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$job_item): $mod = ($i % 2 );++$i;?><div class="container">
 			<div class="con-l">
 				<div class="chat-content">
 					<div class="company-word">
@@ -146,7 +146,7 @@
 						
 					</div>
 					<sup>职信道</sup>
-					<label><?php echo ($job_item[add_time]); ?><span>更新</span></label>
+					<label><?php echo (date('Y-m-d',$job_item[add_time])); ?><span>&nbsp;更新</span></label>
 				</div>
 				<!-- 公司显示表-->
 				<div class="company-dec">
@@ -158,19 +158,20 @@
 							<p><?php echo ($job_item[company_name]); ?><span>招聘中</span></p>
 							<span class="company-status">在线</span>
 						</div>
+						<a href="<?php echo U('Index/findjob');?>" class="btn-deliveryresume">投递简历</a>
 					</div>
 				</div>
 				<!-- 职位详情-->
 				<div class="job-detail">
 					<p class="job-describe">职位描述</p>
-					<p class="con-dec"><?php echo ($job_item[job_describe]); ?></p>
+					<div class="con-dec"><?php echo ($job_item[job_describe]); ?></div>
 					<p class="job-require">岗位要求</p>
-					<p class="con-dec"><?php echo ($job_item[job_require]); ?></p>
+					<div class="con-dec"><?php echo ($job_item[job_require]); ?></div>
 					<p class="company-address">公司地址</p>
-					<p class="con-dec"><?php echo ($job_item[place]); ?></p>
+					<div class="con-dec"><?php echo ($job_item[place]); ?></div>
 				</div>
 			</div>
-		</div><?php endforeach; endif; ?>
+		</div><?php endforeach; endif; else: echo "" ;endif; ?>
 	</div>
 	
 </body>

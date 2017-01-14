@@ -96,9 +96,7 @@
 					<section id="self-des">
 						<h5 class="resume-title"><span>自我描述</span></h5>
 						<foreach name="describe_info" item="item">
-                         <textarea class="list " rows="5"  style="width: 100%;color:#333;background-color: transparent;border: 0px;resize: none;" readonly>
-                        	{$item.describe}
-                        </textarea>
+                         <textarea class="list " rows="5"  style="width: 100%;color:#333;background-color: transparent;border: 0px;resize: none;" readonly>{$item.describe} </textarea>
 						</foreach>
 					</section>
                     <else/>
@@ -119,9 +117,9 @@
                     <else/>
 				</if>					
 				<!--求职状态-->
-				 <if condition="$jobseekers_info.current_status">	
+				 <if condition="$basic_info.current_status">	
 					<section class="text-center preview-state">
-                    	<foreach name="jobseekers_info" item="item">
+                    	<foreach name="basic_info" item="item">
 						<span id="job-state" class="preview-resume">{$item.current_status}</span>
                         </foreach>
 					</section>

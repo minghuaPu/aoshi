@@ -24,7 +24,7 @@
 		<header id="header">
 			<nav class="container">
 				<a class="logo" href=""><img src="__PUBLIC__/images/logo.png"></a>
-				<a class="nav-link selected" href="{:U('Index/index')}">首页</a>
+				<a class="nav-link selected" href="{:U('Home/Index/index')}">首页</a>
 				<a class="nav-link" href="{:U('Index/delivery')}">投递箱</a>
  				<a class="nav-link fr" href="{:U('Login/log_out')}">退出</a>
 
@@ -77,7 +77,7 @@
 					<form id="user-info-form"  ng-show="form" name="myForm" style="display:block" novalidate>
 					<fieldset>
 							<label >姓名</label>
-							<input class="input-text" ng-model="form.nickname" maxlength="10" required>
+							<input class="input-text" ng-model="form.nickname" maxlength="10"  required>
 						</fieldset>
 						<fieldset>
 							<label>介绍</label>
@@ -179,7 +179,7 @@
 					<form id="job-exp-form" name="jobexp" ng-show="form" style="display:block"><!-- method="post" -->
 						<fieldset>
 							<label>公司</label>
-							<input type="text" name="c_n" class="input-text"  ng-model="form.re_company_name" ng-maxlength="30" required>
+							<input type="text" id="job-exp-c_n" name="c_n" class="input-text"  ng-model="form.re_company_name" ng-maxlength="30" required>
                           	 <div class="tip" >
                                  <span ng-show="(jobexp.c_n.$dirty || jobexp.c_n.$pristine) && jobexp.c_n.$invalid">
                                    <span class="text-danger "  ng-show="jobexp.c_n.$error.required && jobexp.c_n.$touched">* 公司名必须的。</span>
@@ -214,12 +214,12 @@
 				<section id="edu-exp" ng-controller="resumeEduexp">
 					<h5 class="resume-title"><span>教育经历</span><a class="edit" href="javascript:;"  ng-click="add()">添加</a></h5>
 					<button class="add" ng-click="add()" ng-hide="education.length">+ 教育经历</button>
-					<ul class="list"  ng-hide="list">
+					<ul class="list "  ng-hide="list">
 						<li ng-repeat="item in education">
                        		 <a class="edit" href="javascript:;" ng-click="edit(item)">修改</a>
                              <a class="del"  href="javascript:;" ng-click="remove(item)">删除</a>
-                            <div class="name rate" ng-bind="item.school_name"></div>
-							<div>
+                            <div class="name" ng-bind="item.school_name"></div>
+							<div class="rate">
 								<span class="xl " ng-bind="item.degree"></span> -
 								<span class="major rate" ng-bind="item.major"></span>
 								<span class="grad fr" ng-bind="item.graduated">毕业(预计)</span>
@@ -229,7 +229,7 @@
 					<form id="edu-exp-form" name="eduexp" ng-show="form" style="display:block">
 						<fieldset>
 							<label>学校名称</label>
-							<input class="input-text" name="s_n" ng-model="form.school_name" ng-maxlength="10" required>
+							<input class="input-text" id="edu-exp-s_n" name="s_n" ng-model="form.school_name" ng-maxlength="10" required>
                           	 <div class="tip" >
                                 <span ng-show="(eduexp.s_n.$dirty || eduexp.s_n.$pristine) && eduexp.s_n.$invalid">
                                    <span class="text-danger "  ng-show="eduexp.s_n.$error.required && eduexp.s_n.$touched">* 公司名必须的。</span>
@@ -297,7 +297,7 @@
                     	
                      <form id="self-des-form" ng-show="form" name="selfdes" style="display:block">
 						<fieldset>
-							<textarea rows="5" name="describe" vlaue="11" maxlength="250" wrap="hard" placeholder="250字以内"   ng-model="form.describe" maxlength="250" minlength="10" required></textarea>
+							<textarea  id="self-des-describe" rows="5" name="describe" vlaue="11" maxlength="250" wrap="hard" placeholder="250字以内"    ng-model="form.describe" maxlength="250" minlength="10"  required></textarea>
 						</fieldset>
                              <div class="tip" >
                                  <span ng-show="(selfdes.describe.$dirty || selfdes.describe.$pristine) && selfdes.describe.$invalid">
@@ -329,10 +329,15 @@
                                 <dd class="wages"><i></i><span ng-bind="item.expected_monthly_income"></span></dd>
                           </dl>
                        
-					<form id="job-career-form" ng-show="form" style="display:block">
+					<form id="job-career-form" name="jobcareer" ng-show="form" style="display:block">
 						<fieldset>
 							<label>期望职位</label>
-							<input class="input-text" ng-model="form.expected_position" maxlength="10" required>
+							<input class="input-text" id="job-career-career" name="career" ng-model="form.expected_position" maxlength="10" required>
+                             <div class="tip" >
+                                 <span ng-show="(jobcareer.career.$dirty || jobcareer.career.$pristine) && jobcareer.career.$invalid">
+                                   <span class="text-danger "  ng-show="jobcareer.career.$error.required ">* 请输入自我描述。</span>
+                                </span>
+                            </div>
 						</fieldset>
 						<fieldset>
 							<label>职位类型</label>
@@ -367,7 +372,7 @@
 							</select>
 						</fieldset>
 						<fieldset>
-							<input class="btn submit" type="submit" value="保存" ng-click="submit()">
+							<input class="btn submit" type="submit" value="保存" ng-click="submit()" ng-disabled="jobcareer.career.$dirty && jobcareer.career.$invalid ">
 							<button class="btn cancel" ng-click="cancel()">取消</button>
 						</fieldset>
 					</form>
