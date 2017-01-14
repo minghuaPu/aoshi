@@ -2,7 +2,6 @@
     width: 900px;
     max-width: 900px;
     margin: 30px auto;
-    padding-bottom: 10px;
     background-color: #ffffff;
     form{
         background-color: #53cac3;
@@ -31,6 +30,7 @@
             width: 100%;
             margin-top: 20px;
             height: 40px;
+            position: relative;
             input[type='text']{
                 margin-left: 3%;
                 width: 61%;
@@ -39,20 +39,25 @@
                 padding-left: 10px;
                 border-radius: 3px;
             }
-            input[type='button']{
+            input[type='submit']{
                 margin-left: 3%;
                 height: 40px;
                 width: 20%;
                 border: none;
+            }
+            .back_up{
+                position: absolute;
+                bottom: 3px;
+                right: 10px;
+                color: white;
             }
         }
     }
     .tit_box{
         width: 100%;
         position: relative;
-        max-width: 900px;
+        width: 900px;
         margin: 0;
-        padding: 7px 0;
         moz-user-select: -moz-none;
         -moz-user-select: none;
         -o-user-select:none;
@@ -61,6 +66,11 @@
         -ms-user-select:none;
         user-select:none;
         div{
+            float: left;
+            list-style: none;
+            line-height: 50px;
+            font-size: 14px;
+            height: 50px;
             text-align: center;
             padding: 0;
         }
@@ -77,8 +87,7 @@
         -ms-user-select:none;
         user-select:none;
         tr{
-            margin-top: 5px;
-            height: 20px;
+            position: relative;
             width: 100%;
             th{
                 padding: 0;
@@ -90,7 +99,30 @@
                     height: 31px;
                     margin-top: -3px;
                 }
+                button{
+                    width: 80px;
+                    height: 29px;
+                    padding: 0;
+                    a{
+                        width: 100%;
+                        line-height: 29px;
+                        height: 100%;
+                        display: block;
+                        color: white;
+                    }
+                    a:hover{
+                        text-decoration: none;
+                    }
+                }
             }
+        }
+    }
+    .tip {
+        margin-top: 20px;
+        p {
+            text-align: center;
+            font-size: 18px;
+            padding-bottom: 8px;
         }
     }
 }

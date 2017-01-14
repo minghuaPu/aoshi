@@ -1,77 +1,102 @@
 <include file="Public:header" />
-<link rel="stylesheet" href="__PUBLIC__/css/enterprise/resume.css?3">
+<link rel="stylesheet" href="__PUBLIC__/css/enterprise/resume.css?9">
 <div class="container">
     <div class="content">
-        <form action="#">
+        <form action="" method="post">
             <div class="search_nav">
                 <div class="dropdown">
-                    <h5>职位类别</h5>
-                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                        选择职业
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Web前端开发工程师</a></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Java后台架构师</a></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">更多以后再完善</a></li>
-                    </ul>
-                </div>
-                <div class="dropdown">
-                    <h5>投递时间</h5>
+                    <h5>工作经验</h5>
                     <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">
-                        所有时间
+                        {$search_info['work_time']}
                         <span class="caret"></span>
                     </button>
+                    <input type="hidden" name="work_time" id="workTime">
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">所有时间</a></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">今天</a></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">最近三天</a></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">最近一周</a></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">最近一个月</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">选择时间</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">不限</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">应届生</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1年以内</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1-3年</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3-5年</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">5-10年</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">10年以上</a></li>
                     </ul>
                 </div>
                 <div class="dropdown">
                     <h5>学历</h5>
                     <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown">
-                        选择学历
+                        {$search_info['education']}
                         <span class="caret"></span>
                     </button>
+                    <input type="hidden" name="education" id="education">
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">研究生</a></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">本科</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">选择学历</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">不限</a></li>
                         <li role="presentation"><a role="menuitem" tabindex="-1" href="#">大专</a></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">其他</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">本科</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">博士</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">硕士</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <h5>状态</h5>
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu4" data-toggle="dropdown">
+                        {$search_info['status']}
+                        <span class="caret"></span>
+                    </button>
+                    <input type="hidden" name="status" id="status">
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">选择状态</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">尚未查看</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">已经查看</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">正在沟通</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">关系破裂</a></li>
                     </ul>
                 </div>
             </div>
             <div class="search_box">
-                <input type="text" placeholder="输入关键词：职业类型或者地点等，例如：JAVA，广州天河">
-                <input type="button" value="筛 选" class="btn btn-primary">
+                <input type="text" placeholder="输入关键词：职业名称，例如：JAVA工程师">
+                <input type="submit" value="筛 选" class="btn btn-primary search">
+                <a href="{:U('Seeker/resume',array('key'=>'','work_time'=>'选择时间','education'=>'选择学历','status'=>'选择状态'))}" class="back_up">返回全部列表</a>
             </div>
         </form>
         <div class="tit_box row">
-            <div class="col-md-3 col-xs-3">职位名称</div>
-            <div class="col-md-1 col-xs-1">姓名</div>
-            <div class="col-md-1 col-xs-1">性别</div>
-            <div class="col-md-1 col-xs-1">薪资</div>
-            <div class="col-md-1 col-xs-1">学历</div>
-            <div class="col-md-2 col-xs-2">投递时间</div>
-            <div class="col-md-2 col-xs-2">联系电话</div>
-            <div class="col-md-1 col-xs-1">详情</div>
+            <div width="160w">职位名称</div>
+            <div width="80w">姓名</div>
+            <div width="60w">性别</div>
+            <div width="85w">学历</div>
+            <div width="90w">工作经验</div>
+            <div width="115w">联系电话</div>
+            <!--<div width="100w">联系邮箱</div>-->
+            <div width="100w">投递时间</div>
+            <div width="90w">状态</div>
+            <div width="120w">详情</div>
         </div>
         <table class="table row">
+            <foreach name="resume_info" item="resume_item">
                 <tr>
-                    <th class="col-md-3 col-xs-3">Web前端开发工程师</th>
-                    <th class="col-md-1 col-xs-1">陈小明</th>
-                    <th class="col-md-1 col-xs-1">男</th>
-                    <th class="col-md-1 col-xs-1">￥5555</th>
-                    <th class="col-md-1 col-xs-1">本科大学</th>
-                    <th class="col-md-2 col-xs-2">16年10月26日</th>
-                    <th class="col-md-2 col-xs-2">18888888888</th>
-                    <th class="col-md-1  col-xs-1 state"><input type="button" value="点击查看" class="btn btn-info"></th>
+                    <th width="160w">{$resume_item['job_name']}</th>
+                    <th width="80w">{$resume_item['nickname']}</th>
+                    <th width="60w">{$resume_item['sex']}</th>
+                    <th width="85w">{$resume_item['top_edu']}</th>
+                    <th width="90w">{$resume_item['work_years']}</th>
+                    <th width="115w">12345678910</th>
+                    <!--<th width="100w">chenxiaoming@163.com</th>-->
+                    <th width="100w">16-12-03</th>
+                    <th width="90w" class="status">{$resume_item['deli_status']}</th>
+                    <th width="120w" class="state"><button class="btn btn-info"><a
+                            href="{:U('Seeker/resume_detail',array('did'=>$resume_item['did'],'uid'=>$resume_item['uid']))}">点击查看</a></button></th>
                 </tr>
+            </foreach>
+            <div class="tip hide">
+                <p>查询不到您所要的信息</p>
+            </div>
         </table>
     </div>
 </div>
 <include file="Public:footer" />
-<script src="__PUBLIC__/js/enterprise/search.js"></script>
+<script src="__PUBLIC__/js/enterprise/search.js?7"></script>
+<script src="__PUBLIC__/js/enterprise/resume.js?6"></script>
+<script>
+
+</script>

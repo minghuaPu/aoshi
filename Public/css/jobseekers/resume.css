@@ -80,6 +80,9 @@ button {
 	background-color: #fff;
 	cursor: pointer;
 }
+.btn:focus {
+	outline: none!important;
+}
 
 .icon {
 	display: inline-block;

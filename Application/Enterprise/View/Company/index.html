@@ -1,24 +1,46 @@
 <include file="Public:header" />
-<link rel="stylesheet" href="__PUBLIC__/css/enterprise/company.css?6">
+<link rel="stylesheet" href="__PUBLIC__/css/enterprise/layout.css">
+<link rel="stylesheet" href="__PUBLIC__/css/enterprise/company.css?5">
 
 <div class="container">
     <form action="{:U('Company/save')}" method="post">
         <div class="content">
+            <span class="top-tip">温馨提示 ：公司信息完善后，如需更改，请到APP上完成操作</span>
             <h1>公司信息</h1>
             <div class="content_box">
                 <h3>公司全称</h3>
                 <p class="info_item" id="company_name">{$company_info['company_name']}</p>
             </div>
             <div class="content_box">
+                <h3>公司地点</h3>
+                <fieldset id="city_china_val">
+                    <p id="area">
+                        {$company_info['province']}{$company_info['city']}{$company_info['area']}
+                    </p>
+                    <input type="text" name="province" class="iProvince hiden">
+                    <input type="text" name="city" class="iCity hiden">
+                    <input type="text" name="area" class="iArea hiden">
+                </fieldset>
+            </div>
+            <div class="content_box">
                 <h3>公司地址</h3>
                 <p class="info_item" id="address">{$company_info['address']}</p>
             </div>
+            <div class="content_box company_scale">
+                <h3>公司规模</h3>
+                <p>
+                    {$company_info['scale']}
+                </p>
+                <input type="text" name="scale" class="iScale hiden">
+            </div>
+
             <div class="content_box introduction">
                 <h3>公司简介</h3>
                 <div class="introduce">
                     <p class="info_item" id="introduction">{$company_info['introduction']}</p>
                 </div>
             </div>
+
         </div>
         <div class="content">
             <h1>您的信息</h1>
@@ -29,9 +51,10 @@
             <div class="content_box">
                 <h3>职位</h3>
                 <p class="info_item" id="job">{$enterprise_info['job']}</p>
+                <span class="job_tip"></span>
             </div>
             <div class="content_box">
-                <h3>默认邮箱</h3>
+                <h3>邮箱</h3>
                 <p class="info_item" id="email">{$enterprise_info['email']}</p>
             </div>
             <div class="content_box">
@@ -40,12 +63,14 @@
             </div>
         </div>
         <div class="content">
+            <p class="bottom_tip"></p>
             <input type="submit"  id_val= "{$enterprise_info['enterprise_id']}" id="submit" class="btn">
         </div>
     </form>
 </div>
 
 <include file="Public:footer" />
+<script src="__PUBLIC__/js/enterprise/jquery.cxselect.min.js"></script>
 <script>
     if ({$enterprise_info['auditing']}==1){
         $("#submit").attr("disabled",true);
@@ -60,6 +85,20 @@
         });
         $(".hide").removeClass("hide");
         $(".info_item").html("<input type='text'>");
+        $("#city_china_val p").html("<select class='province cxselect'  data-first-title='选择省' disabled='disabled'></select>" +
+            "<select class='city cxselect'  data-first-title='选择市' disabled='disabled'></select>" +
+            "<select class='area cxselect'  data-first-title='选择地区' disabled='disabled'></select>"
+        )
+        $(".company_scale p").html("<select data-first-title='选择规模' class='scale'>"+
+            "<option value ='选择规模'>选择规模</option>"+
+            "<option value ='0-20人'>0-20人</option>"+
+            "<option value ='20-90人'>20-90人</option>"+
+            "<option value ='100-499人'>100-499人</option>"+
+            "<option value ='500-999人'>500-999人</option>"+
+            "<option value ='1000-9999人'>1000-9999人</option>"+
+            "<option value ='10000人以上'>10000人以上</option>"+
+            "</select>"
+        )
         for (var i=0;i<$(".info_item").length;i++){
             $(".info_item input").eq(i).attr("name",$(".info_item").eq(i).attr("id"));
         }
@@ -75,5 +114,20 @@
             fontSize:"20px"
         });
     }
+    var inHeight = parseInt($("#introduction").height())+10;
+    $(".introduction").css({
+        height:inHeight+"px"
+    })
+
+    $.cxSelect.defaults.url = '__PUBLIC__/js/enterprise/cityData.min.json';
+
+    $('#city_china').cxSelect({
+        selects: ['province', 'city', 'area']
+    });
+
+    $('#city_china_val').cxSelect({
+        selects: ['province', 'city', 'area'],
+        nodata: 'none'
+    });
 </script>
-<script src="__PUBLIC__/js/enterprise/company.js?1"></script>
+<script src="__PUBLIC__/js/enterprise/company.js?3"></script>

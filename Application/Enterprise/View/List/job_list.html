@@ -1,0 +1,149 @@
+<include file="Public:header" />
+    <link rel="stylesheet" href="__PUBLIC__/css/enterprise/job.css?32">
+
+    <div class="container">
+        <div class="content">
+            <form action="" method="post">
+                <div class="search_nav">
+                    <!--<div class="dropdown">-->
+                        <!--<h5>发布时间</h5>-->
+                        <!--<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">-->
+                            <!--选择发布时间-->
+                            <!--<span class="caret"></span>-->
+                            <!--<input type="hidden" name="add_time" value="">-->
+                        <!--</button>-->
+                        <!--<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">-->
+                            <!--<li role="presentation"><a role="menuitem" tabindex="-1" href="#">今天</a></li>-->
+                            <!--<li role="presentation"><a role="menuitem" tabindex="-1" href="#">最近3天</a></li>-->
+                            <!--<li role="presentation"><a role="menuitem" tabindex="-1" href="#">最近一周</a></li>-->
+                            <!--<li role="presentation"><a role="menuitem" tabindex="-1" href="#">最近一个月</a></li>-->
+                            <!--<li role="presentation"><a role="menuitem" tabindex="-1" href="#">最近三个月</a></li>-->
+                            <!--<li role="presentation"><a role="menuitem" tabindex="-1" href="#">三个月以上</a></li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                    <div class="dropdown">
+                        <h5>工作经验</h5>
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">
+                            {$search_info['work_time']}
+                            <span class="caret"></span>
+                        </button>
+                        <input type="hidden" name="work_time" id="workTime">
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">选择时间</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">不限</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">应届生</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1年以内</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1-3年</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3-5年</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">5-10年</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">10年以上</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <h5>学历</h5>
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown">
+                            {$search_info['education']}
+                            <span class="caret"></span>
+                        </button>
+                        <input type="hidden" name="education" id="education">
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">选择学历</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">不限</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">大专</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">本科</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">博士</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">硕士</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="search_box">
+                    <input type="text" placeholder="输入关键词：职位名称，例如：JAVA工程师" name="key" value="{$search_info['key']}">
+                    <input type="submit" value="筛 选" class="btn btn-primary search">
+                    <a href="{:U('List/job_list',array('key'=>'','work_time'=>'选择时间','education'=>'选择学历'))}" class="back_up">返回全部列表</a>
+                </div>
+                <div class="hot">热门关键字：
+                    <a href="{:U('List/job_list',array('key'=>'java'))}">java</a>
+                    <a href="{:U('List/job_list',array('key'=>'php'))}">php</a>
+                    <a href="{:U('List/job_list',array('key'=>'html'))}">html</a>
+                    <a href="{:U('List/job_list',array('key'=>'Android'))}">Android</a>
+                    <a href="{:U('List/job_list',array('key'=>'测试'))}">测试</a>
+                </div>
+            </form>
+            <div class="tit_box row">
+                <div width="160w">职位名称</div>
+                <div width="75w">薪资</div>
+                <div width="75w">经验要求</div>
+                <div width="65w">学历</div>
+                <div width="135w">工作地点</div>
+                <div width="90w">发布时间</div>
+                <div width="100w">状态</div>
+                <div width="140w" class="control">操作</div>
+                <div width="40w"><a class="delete_all" data-toggle="modal" data-target=".bs-example-modal-sm"></a></div>
+                <div width="20w"><input type="checkbox" id="all_check"  ></div>
+            </div>
+            <table class="table row">
+                <foreach name="job_info" item="job_item">
+                    <tr id_val= "{$job_item['id']}">
+                        <td width="160w" class="job" name="job_name">{$job_item['job_name']}</td>
+                        <td width="75w" class="salary">{$job_item['salary_low']}--{$job_item['salary_hig']}</td>
+                        <td width="75w" name="work_time">{$job_item['work_time']}</td>
+                        <td width="65w" name="education">{$job_item['education']}</td>
+                        <td width="135w" class="area">{$job_item['city']}{$job_item['area']}</td>
+                        <td width="90w" name="add_time">{$job_item['add_time']} </td>
+                        <td width="100w" name="status" class="status">{$job_item['status']}</td>
+                        <td width="60w"><a type="button" class="btn btn-info info">详情</a></td>
+                        <td width="60"><button type="button" class="btn btn-warning close_job"  data-toggle="modal" data-target=".bs-example-modal-sm">结束</button></td>
+                        <td width="60w"><button type="button" class="btn btn-danger delete"  data-toggle="modal" data-target=".bs-example-modal-sm">删除</button></td>
+                        <td width="20w"><input type="checkbox" class="delete"></td>
+                    </tr>
+                    <tr class="detail_box" id_val= "{$job_item['id']}">
+                        <td colspan="11">
+                            <div class="detail" open=false>
+                                <h3>详细地址：&nbsp;&nbsp;{$job_item['address']}</h3>
+                                <h3>技能要求：</h3>
+                                <p>{$job_item['job_require']}</p>
+                                <h3>职业描述：</h3>
+                                <p>{$job_item['job_describe']}</p>
+                                <button type="button" class="btn btn-primary revise"><a  href="{:U('Add/revise',array('id'=>$job_item['id']))}">修改</a></button>
+                            </div>
+                        </td>
+                    </tr>
+                </foreach>
+            </table>
+            <div class="tip hide">
+                <p></p>
+                <a class="btn btn-primary" href="{:U('Add/add_job')}">发布职位</a>
+            </div>
+        </div>
+        <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="warning">
+                        <p>是否要删除被选中的招聘信息</p>
+                    </div>
+                    <button class="btn btn-warning confirm" id="confirm_delete_all"  data-dismiss="modal">确认</button>
+                    <button class="btn btn-warning confirm" id="confirm_delete"  data-dismiss="modal">确认</button>
+                    <button class="btn btn-warning confirm" id="confirm_close"  data-dismiss="modal">确认</button>
+                    <button class="btn btn-warning cancel" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public:footer" />
+<script src="__PUBLIC__/js/enterprise/search.js?3"></script>
+<script src="__PUBLIC__/js/enterprise/job_list.js?66"></script>
+<script>
+    //  判断是否有最少一条职位信息
+    if ($(".table tr").text() == "") {
+        $(".tip").removeClass("hide")
+        $(".content").css({
+            paddingBottom: "20px"
+        })
+        if ("{$search_info[key]}{$search_info['work_time']}{$search_info['education']}"=="选择时间选择学历") {
+            $(".tip p").text("你还没有发布任何职位，赶紧去发布职位吧！");
+        }else {
+            $(".tip p").text("你还没有发布该职位，现在去发布吧！");
+        }
+    }
+</script>

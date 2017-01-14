@@ -132,11 +132,11 @@
 						</fieldset>
 						<fieldset>
 							<label>手机号码</label>
-							<input type="tel" class="input-text" ng-minlength="11" ng-maxlength="11" ng-pattern="/^1[3|5|8][0-9]\d{4,8}$/" name="phone" ng-model="form.phone"  required>
+							<input type="tel" class="input-text" ng-minlength="11" ng-maxlength="11" ng-pattern="/^1[3|5|8][0-9]\d{8}$/" name="phone" ng-model="form.phone"  required>
                             <div class="tip" >
-                               <span   ng-show="myForm.phone.$dirty && myForm.phone.$invalid">
-                                	<span class="text-danger glyphicon  glyphicon-remove" ng-show="myForm.phone.$error.required">号码是必须的。</span>
-                                	<span class="text-danger glyphicon  glyphicon-remove" ng-if="(myForm.phone.$error.pattern||myForm.phone.$error.minlength||myForm.phone.$error.maxlength)&&myForm.phone.$touched">请输入以1、3、5、8开头的有效手机号且11位数！</sapn>
+                               <span   ng-show="(myForm.phone.$dirty || myForm.phone.$pristine) && myForm.phone.$invalid">
+                                	<span class="text-danger" ng-show="myForm.phone.$error.required  ">* 手机号码是必须的。</span>
+                                	<span class="text-danger glyphicon  glyphicon-remove" ng-if="myForm.phone.$error.pattern  && myForm.phone.$touched">请输入以1、3、5、8开头的有效手机号且11位数！</sapn>
 							   </span>
 								
                            </div>
@@ -145,15 +145,14 @@
 							<label>联系邮箱</label>
 							<input type="email" class="input-text" name="e_mail" ng-model="form.e_mail" required>
                             <div class="tip">
-                               <span ng-show="myForm.e_mail.$dirty && myForm.e_mail.$invalid">
-                                	<span class="text-danger glyphicon glyphicon-remove"  ng-show="myForm.e_mail.$error.required">邮箱是必须的。</span>
-                                	<span class="text-danger glyphicon glyphicon-remove" ng-show="myForm.e_mail.$error.email">非法的邮箱地址。</span>
+                               <span ng-show="(myForm.e_mail.$dirty || myForm.e_mail.$pristine) && myForm.e_mail.$invalid">
+                                	<span class="text-danger "  ng-show="myForm.e_mail.$error.required ">* 邮箱是必须的。</span>
+                                	<span class="text-danger glyphicon glyphicon-remove" ng-show="myForm.e_mail.$error.email && myForm.e_mail.$touched">非法的邮箱地址。</span>
 								</span>
                             </div>
 						</fieldset>
 						<fieldset>
-							<input class="btn submit" type="submit" value="保存" ng-click="submit()" ng-disabled="myForm.phone.$dirty && myForm.phone.$invalid ||  
-myForm.e_mail.$dirty && myForm.e_mail.$invalid">
+							<input class="btn submit" type="submit" value="保存" ng-click="submit()" ng-disabled="((myForm.phone.$dirty || myForm.phone.$pristine) && myForm.phone.$invalid) || ((myForm.e_mail.$dirty || myForm.e_mail.$pristine)&& myForm.e_mail.$invalid)">
 							<button class="btn cancel" ng-click="cancel()">取消</button>
 						</fieldset>
 					</form>
@@ -182,9 +181,9 @@ myForm.e_mail.$dirty && myForm.e_mail.$invalid">
 							<label>公司</label>
 							<input type="text" name="c_n" class="input-text"  ng-model="form.re_company_name" ng-maxlength="30" required>
                           	 <div class="tip" >
-                                 <span ng-show="jobexp.c_n.$dirty && jobexp.c_n.$invalid">
-                                   <span class="text-danger glyphicon glyphicon-remove"  ng-show="jobexp.c_n.$error.required">公司名必须的。</span>
-                                    <span class="text-danger glyphicon  glyphicon-remove" ng-if="jobexp.c_n.$error.maxlength&&jobexp.c_n.$touched">最多只能输入30个字！</sapn>
+                                 <span ng-show="(jobexp.c_n.$dirty || jobexp.c_n.$pristine) && jobexp.c_n.$invalid">
+                                   <span class="text-danger "  ng-show="jobexp.c_n.$error.required && jobexp.c_n.$touched">* 公司名必须的。</span>
+                                    <span class="text-danger glyphicon  glyphicon-remove" ng-if="jobexp.c_n.$error.maxlength && jobexp.c_n.$touched">最多只能输入30个字！</sapn>
                                 </span>
                             </div>
                             
@@ -203,7 +202,7 @@ myForm.e_mail.$dirty && myForm.e_mail.$invalid">
 							<textarea class="input-text" maxlength="300" rows="5"  placeholder="如:在职期间的工作范围或为公司创造了什么价值"  ng-model="form.job_description" maxlength="500"></textarea>
 						</fieldset>
 						<fieldset>
-							<input class="btn submit" type="submit" value="保存"  ng-click="submit()" ng-disabled="jobexp.c_n.$dirty && jobexp.c_n.$invalid "  >
+							<input class="btn submit" type="submit" value="保存"  ng-click="submit()" ng-disabled="(jobexp.c_n.$dirty || jobexp.c_n.$pristine) && jobexp.c_n.$invalid "  >
 							<button class="btn cancel"  ng-click="cancel()">取消</button>
 						</fieldset>
 					</form>
@@ -231,13 +230,12 @@ myForm.e_mail.$dirty && myForm.e_mail.$invalid">
 						<fieldset>
 							<label>学校名称</label>
 							<input class="input-text" name="s_n" ng-model="form.school_name" ng-maxlength="10" required>
-							<div class="tip" >
-                               <span   ng-show="eduexp.s_n.$dirty && eduexp.s_n.$invalid">
-                                	<span class="text-danger glyphicon  glyphicon-remove" ng-show="eduexp.s_n.$error.required">学校名必须的。</span>
-                                	<span class="text-danger glyphicon  glyphicon-remove" ng-if="eduexp.s_n.$error.maxlength&&eduexp.s_n.$touched">最多只能输入10个字！</sapn>
-							   </span>
-								
-                           </div>
+                          	 <div class="tip" >
+                                <span ng-show="(eduexp.s_n.$dirty || eduexp.s_n.$pristine) && eduexp.s_n.$invalid">
+                                   <span class="text-danger "  ng-show="eduexp.s_n.$error.required && eduexp.s_n.$touched">* 公司名必须的。</span>
+                                   <span class="text-danger glyphicon  glyphicon-remove" ng-if="eduexp.s_n.$error.maxlength && eduexp.s_n.$touched">最多只能输入10个字！</sapn>
+                                </span>
+                            </div>
                         </fieldset>
 						<fieldset>
 							<label>所学专业</label>
@@ -277,7 +275,7 @@ myForm.e_mail.$dirty && myForm.e_mail.$invalid">
 							</select>
 						</fieldset>
 						<fieldset>
-							<input class="btn submit" type="submit" value="保存" ng-click="submit()" ng-disabled="eduexp.s_c.$dirty && eduexp.s_c.$invalid ">
+							<input class="btn submit" type="submit" value="保存" ng-click="submit()" ng-disabled="(eduexp.s_n.$dirty || eduexp.s_n.$pristine)  && eduexp.s_n.$invalid ">
 							<button class="btn cancel" ng-click="cancel()">取消</button>
 						</fieldset>
 					</form>
@@ -297,12 +295,18 @@ myForm.e_mail.$dirty && myForm.e_mail.$invalid">
                         </textarea>
                      </div>
                     	
-                     <form id="self-des-form" ng-show="form" style="display:block">
+                     <form id="self-des-form" ng-show="form" name="selfdes" style="display:block">
 						<fieldset>
 							<textarea rows="5" name="describe" vlaue="11" maxlength="250" wrap="hard" placeholder="250字以内"   ng-model="form.describe" maxlength="250" minlength="10" required></textarea>
 						</fieldset>
+                             <div class="tip" >
+                                 <span ng-show="(selfdes.describe.$dirty || selfdes.describe.$pristine) && selfdes.describe.$invalid">
+                                   <span class="text-danger "  ng-show="selfdes.describe.$error.required ">* 请输入自我描述。</span>
+                                    <span class="text-danger glyphicon  glyphicon-remove" ng-if="selfdes.describe.$error.minlength && selfdes.describe.$touched">最少输入10个字！</sapn>
+                                </span>
+                            </div>
 						<fieldset>
-							<input class="btn submit" type="submit" value="保存" ng-click="submit()">
+							<input class="btn submit" type="submit" value="保存" ng-click="submit()" ng-disabled="selfdes.describe.$dirty && selfdes.describe.$invalid ">
 							<button class="btn cancel" ng-click="cancel()">取消</button>
 						</fieldset>
 					</form>
@@ -413,7 +417,7 @@ myForm.e_mail.$dirty && myForm.e_mail.$invalid">
            </section> 
 
 		<script type="text/javascript" src="__PUBLIC__/js/jobseekers/jquery-3.1.1.min.js"></script>
-   		<script type="text/javascript" src="__PUBLIC__/js/angular.min.js"></script>
+   		<script type="text/javascript" src="__PUBLIC__/js/angular-1.0.1.min.js"></script>
         <script type="text/javascript" src="__PUBLIC__/js/jobseekers/resume.js"></script>
         <script type="text/javascript" src="__PUBLIC__/css/bootstrap-3.3.0/js/bootstrap.min.js"></script>
    		<script type="text/javascript" src="__PUBLIC__/js/jobseekers/cropper.min.js"></script>

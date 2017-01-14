@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{$Think.const.ACTION_NAME}</title>
+    <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="stylesheet" href="__PUBLIC__/css/bootstrap-3.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="__PUBLIC__/css/enterprise/index.css?2">
@@ -34,7 +34,7 @@
             <div class="box">
  		<include file="Public:crop" />
             </div>
-            <p style="color:#fff;text-align: center">{$enterprise_info.name}</p>
+            <p style="color:#fff;text-align: center">{$enterprise_info['name']}</p>
         </div>
 
         <div class="nav_item">
@@ -44,7 +44,7 @@
                 class="tit">
                     <span class="icon_job"></span>
                     <p>发布职位</p>
-                    <a href="{:U('Job/add_job')}"></a>
+                    <a href="{:U('Add/add_job')}"></a>
                 </div>
             </div>
             <div class="item list">
@@ -53,7 +53,7 @@
                 class="tit">
                     <span class="icon_list"></span>
                     <p>已有职位</p>
-                    <a href="{:U('Job/job_list')}"></a>
+                    <a href="{:U('List/job_list')}"></a>
                 </div>
              </div>
             <div class="item seeker">
@@ -78,7 +78,7 @@
         <div class="tool">
             <div class="logout">
                 <span class="i_logout"></span>
-                <p><a href="{:U('login/logout')}">退出登陆</a></p>
+                <p><a href="{:U('Login/logout')}">退出登陆</a></p>
             </div>
         </div>
     </div>

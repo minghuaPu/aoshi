@@ -3,6 +3,7 @@
   max-width: 900px;
   margin: 30px auto;
   padding: 20px 0;
+  position: relative;
   background-color: #ffffff;
   border-radius: 6px;
   moz-user-select: -moz-none;
@@ -12,23 +13,54 @@
   -webkit-user-select:none;/* and add the CSS class here instead */
   -ms-user-select:none;
   user-select:none;
+  .top-tip{
+    color: #b9b9b9;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 14px;
+  }
   h1{
     color: #53cac3;
     font-size: 23px;
     font-weight: 600;
-    margin: 0 0 0 30px;
+    margin: 10px 0 20px 30px;
   }
   .content_box {
     width: 700px;
     min-width: 700px;
     margin-left: 80px;
-    height: 30px;
+    height: 40px;
     margin-top: 20px;
     position: relative;
+    .hiden{
+      display: none;
+    }
+    .job_tip{
+      display: block;
+      position: absolute;
+      right: 75px;
+      top: 0;
+      line-height: 40px;
+      color: red;
+      font-size: 15px;
+    }
+    #city_china_val{
+      height: 40px;
+      margin: 0;
+      padding: 0;
+      border: none;
+      p{
+        height: 40px;
+        select + select{
+          margin-left: 20px;
+        }
+      }
+    }
     h3 {
       float: left;
       margin: 0;
-      line-height: 30px;
+      line-height: 40px;
       font-size: 18px;
       width: 75px;
     }
@@ -37,13 +69,19 @@
       width: 490px;
       text-align: center;
       font-size: 15px;
-      line-height: 30px;
+      line-height: 40px;
       margin-left: 70px;
       input{
         float: left;
         width: 500px;
         padding-left: 10px;
-        height: 30px;
+        height: 40px;
+      }
+      select{
+        float: left;
+        width: 150px;
+        height: 40px;
+        padding-left: 5px;
       }
     }
     .introduce{
@@ -65,6 +103,7 @@
         height: 300px;
         resize: none;
         text-align: left;
+        border-radius: 5px;
       }
     }
     .btn{
@@ -82,6 +121,12 @@
     width: 30%;
     display: block;
     margin-left: 35%;
-    height: 40px;
+    height: 50px;
+    font-size: 20px;
+  }
+  .bottom_tip{
+    color: red;
+    text-align: center;
+    font-size: 18px;
   }
 }

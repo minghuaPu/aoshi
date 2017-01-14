@@ -1,11 +1,8 @@
 .reg form .form-group {
-  margin: 20px auto 0;
+  margin: 16px auto 0;
 }
 .reg form p {
   text-align: center;
   color: red;
-  margin-top: 9px;
-}
-.reg form .sub {
-  margin-top: 11px;
+  margin: 3px 0;
 }

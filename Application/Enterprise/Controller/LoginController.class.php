@@ -49,6 +49,7 @@ class LoginController extends Controller {
             $data['user_name']=I('user_name');
             $data['user_pwd']=I('user_pwd_confirm');
             $user_name=I('user_name');
+            $data['add_time']= date('Y-m-d');
 
             $data=$user->create();
 
@@ -65,9 +66,7 @@ class LoginController extends Controller {
 
                 // 以id为主键，添加到enterprise_info表
                 $enter_data["id"]=$enter_id;
-                $enter_data['name']="欢迎您";
                 $enter_data['auditing']= 0;
-                $enter_data['photo']= "/aoshi/aoshi./Public/upload/avatar.png";
                 $ent=D('enterprise_info');
                 $c_ent=$ent->create($enter_data);
                 if (!$c_ent) {
@@ -76,11 +75,24 @@ class LoginController extends Controller {
                     $ent->add($enter_data);
                 }
 
-                $this->success('注册成功！',U('login/login'));
+                $this->success('注册成功！',U('Login/login'));
             }
 
         }else{
             $this->display();
+        }
+    }
+    public function check(){
+        $name=I("name");
+
+        $enterprise=D('enterprise');
+
+        $name_info=$enterprise->where("user_name='$name'")->find();
+
+        if (empty($name_info)) {
+            $this->ajaxReturn(array('msg'=>'没有这个用户','status'=>1),'json');
+        }else{
+            $this->ajaxReturn(array('msg'=>'该用户名已存在！','status'=>0),'json');
         }
     }
 

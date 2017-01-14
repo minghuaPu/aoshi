@@ -1,4 +1,26 @@
 </div>
 </body>
 </html>
-<script src="__PUBLIC__/js/enterprise/index.js?5"></script>
+<script src="__PUBLIC__/js/enterprise/index.js?8"></script>
+<script>
+    var photo = "{$enterprise_info['photo']}";
+    var user_name="{$enterprise_info['name']}";
+    if (photo==""){
+        $("#avatar-img").attr("src","__PUBLIC__/upload/avatar.png")
+    }
+    if (user_name==""){
+        $(".touxiang p").text("欢迎您")
+    }
+    var action="{$Think.const.ACTION_NAME}";
+    if (action=="add_job"){
+        $(document).attr("title","添加职位");
+    }else if(action=="job_list"){
+        $(document).attr("title","职位列表");
+    }else if(action=="resume"){
+        $(document).attr("title","简历管理");
+    }else if(action=="index"){
+        $(document).attr("title","公司信息");
+    }else if(action=="revise"){
+        $(document).attr("title","修改职位");
+    }
+</script>
