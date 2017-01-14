@@ -1,8 +1,6 @@
 /**
  * Created by iphone on 2017/1/4.
  */
-
-
 $("#company_name input").attr("placeholder","公司全称为您所在公司的营业执照上的名称");
 $("#address input").attr("placeholder","公司地址为您所在公司的详细地址");
 $("#name input").attr("placeholder","请输入您的名字");
@@ -23,9 +21,48 @@ $("#job input").blur(function () {
     $(".job_tip").html("");
 })
 $("#submit").on("click",function () {
-    $(".iProvince").attr("value",$(".province").val());
-    $(".iCity").attr("value",$(".city").val());
-    $(".iArea").attr("value",$(".area").val());
+    $(".bottom_tip").text("");
+    if ($("#company_name input").val() == "") {
+        $("#company_name input").focus();
+        return false;
+    } else if ($(".province").val() == "0") {
+        $(".province").focus();
+        return false;
+    } else if ($(".city").val() == "0") {
+        $(".city").focus();
+        return false;
+    } else if ($(".area").val() == "0") {
+        $(".area").focus();
+        return false;
+    } else if ($("#address input").val() == "") {
+        $("#address input").focus();
+        return false;
+    } else if ($(".scale").val() == "选择规模") {
+        $(".scale").focus();
+        return false;
+    } else if ($("#introduction textarea").val() == "") {
+        $("#introduction textarea").focus();
+        return false;
+    } else if ($("#name input").val() == "") {
+        $("#name input").focus();
+        return false;
+    } else if ($("#job input").val() == "") {
+        $("#job input").focus();
+        return false;
+    } else if ($("#email input").val() == "") {
+        $("#email input").focus();
+        return false;
+    } else if ($("#phone input").val() == "") {
+        $("#phone input").focus();
+        return false;
+    }
+    if ($(".area").val()){
+        $(".iProvince").attr("value", $(".province").val());
+        $(".iCity").attr("value", $(".city").val());
+        $(".iArea").attr("value", $(".area").val());
+    }else {
+        $(".iCity").attr("value", $(".province").val());
+        $(".iArea").attr("value", $(".city").val());
+    }
     $(".iScale").attr("value",$(".scale").val());
 })
-$("#area").text()

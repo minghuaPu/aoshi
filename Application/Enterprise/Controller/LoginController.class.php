@@ -49,7 +49,7 @@ class LoginController extends Controller {
             $data['user_name']=I('user_name');
             $data['user_pwd']=I('user_pwd_confirm');
             $user_name=I('user_name');
-            $data['add_time']= time();
+            $data['add_time']= date('Y-m-d');
 
             $data=$user->create();
 
@@ -80,6 +80,19 @@ class LoginController extends Controller {
 
         }else{
             $this->display();
+        }
+    }
+    public function check(){
+        $name=I("name");
+
+        $enterprise=D('enterprise');
+
+        $name_info=$enterprise->where("user_name='$name'")->find();
+
+        if (empty($name_info)) {
+            $this->ajaxReturn(array('msg'=>'没有这个用户','status'=>1),'json');
+        }else{
+            $this->ajaxReturn(array('msg'=>'该用户名已存在！','status'=>0),'json');
         }
     }
 

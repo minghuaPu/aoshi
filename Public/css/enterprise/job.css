@@ -40,6 +40,7 @@
 .content form .search_box {
   width: 100%;
   margin-top: 20px;
+  position: relative;
   height: 40px;
 }
 .content form .search_box input[type='text'] {
@@ -50,11 +51,31 @@
   padding-left: 10px;
   border-radius: 3px;
 }
-.content form .search_box input[type='button'] {
+.content form .search_box .search {
   margin-left: 3%;
   height: 40px;
   width: 20%;
   border: none;
+}
+.content form .search_box .back_up {
+  position: absolute;
+  bottom: 3px;
+  right: 10px;
+  color: white;
+}
+.content form .hot {
+  position: absolute;
+  top: 50px;
+  width: 250px;
+  line-height: 23px;
+  right: 3%;
+  color: #3e50cc;
+  font-size: 15px;
+}
+.content form .hot a {
+  color: white;
+  font-size: 15px;
+  margin: 0 5px;
 }
 .content .tit_box {
   background-color: #f8f8f8;
@@ -129,6 +150,7 @@
   height: 30px;
   margin-top: -5px;
   padding: 0;
+  line-height: 30px;
   text-align: center;
   width: 55px;
 }
@@ -137,22 +159,31 @@
 }
 .content .table tr .detail {
   margin: 0 30px;
+  position: relative;
 }
 .content .table tr .detail h3 {
   text-align: left;
   height: 18px;
   line-height: 18px;
-  font-size: 13px;
+  font-size: 14px;
   margin: 5px 0;
 }
 .content .table tr .detail p {
   text-align: left;
   margin: 0 0 5px 0;
   line-height: 18px;
-  font-size: 12px;
+  font-size: 13px;
 }
-.content .table tr .detail .address {
-  float: left;
+.content .table tr .detail .revise {
+  position: absolute;
+  top: 3px;
+  right: -7px;
+}
+.content .table tr .detail .revise a {
+  color: white;
+}
+.content .table tr .detail .revise a:hover {
+  text-decoration: none;
 }
 .content .table .detail_box {
   display: none;
@@ -163,17 +194,17 @@
 .content .tip p {
   text-align: center;
 }
-.content .tip .btn {
+.content .tip a {
   width: 20%;
   margin-left: 40%;
   height: 40px;
   margin-top: 10px;
-}
-.content .tip .btn a {
+  line-height: 40px;
   color: white;
+  padding: 0;
   font-size: 18px;
 }
-.content .tip .btn a:hover {
+.content .tip a:hover {
   text-decoration: none;
 }
 .content .page_box {

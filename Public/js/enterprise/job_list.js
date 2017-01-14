@@ -1,25 +1,6 @@
 /**
  * Created by iphone on 2017/1/4.
  */
-// 读取每个div中的宽度
-var aTh = $(".row div[width$='w']");
-for (var i = 0 ;i < aTh.length; i++){
-    var thWidth = parseInt(aTh.eq(i).attr("width"));
-    aTh.eq(i).css({
-        width:thWidth
-    })
-}
-//  判断是否有最少一条职位信息
-if ($(".table tr").text()==""){
-    $(".tip").removeClass("hide")
-    $(".content").css({
-        paddingBottom:"20px"
-    })
-}
-//  判断是否有超过8条信息，不超过则隐藏分页
-if ($(".row tr").length<16){
-    $(".page_box").hide()
-}
 //  判断每一个职位信息的状态，并显示不同的文字
 for (var i = 0;i < $(".status").length;i++){
     if ($(".status").eq(i).text()==0){
@@ -35,6 +16,7 @@ for (var i = 0;i < $(".status").length;i++){
         $(".close_job").eq(i).attr("disabled","disabled")
     }
 }
+
 
 //  全选菜单
 $("#all_check").on("click",function  () {
@@ -143,46 +125,3 @@ $(".info").on("click",function () {
         detail.attr("open",true);
     }
 })
-// //  双击修改
-// $(".revise").dblclick(function  () {
-//     var this_val=$(this).text();
-//     var this_id=$(this).parent().attr("id_val");
-//     var this_name=$(this).attr("name");
-//
-//     var job_val=$(this).parent().children().eq(0).text();
-//     var money_val=$(this).parent().children().eq(2).text();
-//     var place_val=$(this).parent().children().eq(3).text();
-//     var require_val=$(this).parent().children().eq(7).text();
-//
-//     //怎么去除左右的空格
-//     // this_val.trim();
-//
-//     // 把当前的变成输入框,并且赋上原来的值
-//     $(this).html("<input value='"+this_val.trim()+"' >");
-//     //为什么输入不了内容？
-//     $(this).find('input').focus();
-//
-//     // 是在当前文本框失去焦点的时候执行
-//     $(this).find("input").blur(function  () {
-//         //$(this)  //td盒子  还是  input
-//         var input_val=$(this).val();
-//         // 还原，就是把当前td的input还原为纯文本的
-//         $(this).parent().html(input_val);//td对象
-//
-//         if (this_name == "job_name") {
-//             job_val = input_val
-//         } else if (this_name == "money") {
-//             money_val = input_val
-//         } else if (this_name == "place") {
-//             place_val = input_val
-//         } else if (this_name == "job_require") {
-//             require_val = input_val
-//         }
-//         $.post(SITE_URL + "/List/ajax_add", {
-//             "id": this_id,
-//             "job_name": job_val
-//         }, function (rtn) {
-//
-//         }, "json")
-//     })
-// })

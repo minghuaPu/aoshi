@@ -1,0 +1,99 @@
+<include file="Public:header" />
+<link rel="stylesheet" href="__PUBLIC__/css/enterprise/add.css?1">
+
+    <div class="container">
+        <div class="content">
+            <form action="{:U('Job/save')}" method="post" class="form">
+                <div class="content_box qu">
+                    <h5>公司基本信息<span style="color: red ;font-weight: 600;font-size: 22px">*</span></h5>
+                    <p class="tip"></p>
+                        <div class="form-group">
+                            <div class="tit">公司全称</div>
+                            <p class="sp">{$company_info['company_name']}</p>
+                        </div>
+                </div>
+                <div class="content_box">
+                    <h5>职业基本信息<span style="color: red ;font-weight: 600;font-size: 22px">*</span></h5>
+                        <div class="form-group">
+                            <div class="tit">职位名称</div>
+                            <input type="text" name="job_name" required>
+                        </div>
+                        <div class="form-group">
+                            <div class="tit">技能要求</div>
+                            <input type="text" name="job_require" required>
+                        </div>
+                        <div class="form-group">
+                            <div class="tit">工作地点</div>
+                            <input type="text" name="place" value="{$company_info['address']}" required>
+                        </div>
+                        <div class="form-group">
+                            <div class="tit">职位月薪</div>
+                            <input type="number" max="100" name="salary_low" class="salary_limit" required>
+                            <span class="salary">k</span>
+                            <span class="salary">到</span>
+                            <input type="number" max="100" name="salary_hig" class="salary_limit" required>
+                            <span class="salary">k</span>
+                        </div>
+                        <div class="form-group">
+                            <div class="tit">学历要求</div>
+                            <input type="text" name="education" class="hide" required>
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" required type="button" id="dropdownMenu3" data-toggle="dropdown">
+                                    选择学历
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu develop" role="menu" aria-labelledby="dropdownMenu2">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">博士</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">本科及以上</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">大专及以上</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">学历不限</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="tit">工作经验</div>
+                            <input type="text" name="work_time" class="hide" required>
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" required type="button" id="dropdownMenu4" data-toggle="dropdown">
+                                    选择工作经验
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu develop" role="menu" aria-labelledby="dropdownMenu2">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">大于3年</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">大于2年</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">大于1年</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">不限</a></li>
+                            </div>
+                        </div>
+                        <div class="form-group job-require">
+                            <div class="tit">职业描述</div>
+                            <textarea  name="job_describe" required></textarea>
+                        </div>
+                </div>
+                <div class="content_box">
+                    <h5>其他信息<span style="color: red ;font-weight: 600;font-size: 22px">*</span></h5>
+                    <div class="form-group">
+                        <div class="tit">简历接收邮箱</div>
+                        <input type="text" name="email" value="{$enterprise_info['email']}" required>
+                    </div>
+                </div>
+                <div class="content_box qu">
+                    <input type="hidden" name="enterprise_id"  value="<?php echo session('tid')?>">
+                    <input type="submit" value="发 布" class="btn submit">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<include file="Public:footer" />
+<script src="__PUBLIC__/js/enterprise/add_job.js"></script>
+<script>
+    if({$enterprise_info['auditing']}==2){
+        $(".tip").html("");
+        $(".submit").attr("disabled",false);
+    } else {
+        $(".tip").html("您的公司信息还未通过审核，请尽快通过审核，否则您将不能发布招聘信息！！");
+        $(".submit").attr("disabled",true);
+    }
+</script>
+
