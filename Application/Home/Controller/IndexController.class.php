@@ -42,27 +42,16 @@ class IndexController extends Controller {
 
         // 第二步：查询职位列表信息
        
-        if ($_REQUEST['key']) {//如果有搜索，就再添加一个条件
-                $keys=$_REQUEST['key'];
-                $where['job_name|job.company_name']=array('like',"%$keys%");
+        $keys=$_REQUEST['key'];
+        $where['job_name|job.company_name']=array('like',"%$keys%");
             
-                //模糊查询条件，匹配输入框内的相关字段
-                $job_info=$job
-                ->field("job.id,job_name,job.company_name,salary_low,salary_hig,job.city,work_time,education")//查询指定的字段
-                ->join("company on job.enterprise_id=company.id")//join是关联查询
-                ->where($where)
-                ->select();
-              }
-       
-        else{
-          $job_info=$job
-                ->field("job.id,job_name,job.company_name,salary_low,salary_hig,job.city,work_time,education")//查询指定的字段
-                ->join("company on job.enterprise_id=company.id")//join是关联查询
-                ->select();
-        }
-       
-       //echo $job->getLastSql();//获取上一次执行的sql语句
-      
+        //模糊查询条件，匹配输入框内的相关字段
+        $job_info=$job
+            ->field("id,job_name,job.company_name,salary_low,salary_hig,city,work_time,education")//查询指定的字段
+            ->where($where)
+            ->select();
+
+//       echo $job->getLastSql();//获取上一次执行的sql语句
        // 作关联查询
 
         // 第三步：赋值到模版变量
@@ -87,8 +76,7 @@ class IndexController extends Controller {
         $value=I('id');    //获取职位列表传来的id
         $where['job.id']= $value;
         $job_detail=$job
-                ->field("job.id,job_name,job_require,job_describe,job.add_time,job.address,job.company_name,salary_low,salary_hig,job.city,work_time,education")//查询指定的字段
-                ->join("company on job.enterprise_id=company.id")//join是关联查询
+                ->field("id,job_name,job_require,job_describe,add_time,address,company_name,salary_low,salary_hig,city,work_time,education")//查询指定的字段
                 ->where($where)
                 ->select();
        }
@@ -102,7 +90,7 @@ class IndexController extends Controller {
 
         $this->display();
 
-          // session_start();  
+        session_start();
    
     }
 
