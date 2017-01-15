@@ -17,15 +17,13 @@
 				<!--用户头像-->
 				<aside class="avatar" id="crop-avatar">
                   	             
-                     <img class="absolute" src="__PUBLIC__/images/resume-bg.png"> 
+                    <img class="absolute" src="__PUBLIC__/images/resume-bg.png"> 
                     <img id="avatar-img " class="center hear" src="__PUBLIC__/images/avatar.png">
-                   <div class="avatar-view center">
-                            <foreach name="jobseekers_info" item="item">
+                   	<div class="avatar-view center">
+                    	<foreach name="jobseekers_info" item="item">
                           <img src="{$item.photo}"  id="avatar-img myhear" class="myhear" style="border-radius:50%;background-image:none"/ >
-                            </foreach>
-                        </div>
-                   
-                    
+                        </foreach>
+                     </div>
 					<img id="avatar-bg" class="center" src="__PUBLIC__/images/avatar-bg.png" style="display: none;">
 					
 					

@@ -25,7 +25,7 @@ class IndexController extends ResumeController {
 		/*$sql1 ="select * from  jobseekers where  uid =". $uid .$pageObj -> limit;
 		$jobseekers_info=D("jobseekers")->query($sql1);	*/
 			
-		$jobseekers_info= M('jobseekers')->where("uid =$uid")->select();//简历基本信息
+		$jobseekers_info= M('jobseekers')->field("photo")->where("uid =$uid")->select();//简历基本信息
 		
 	
 
@@ -38,8 +38,7 @@ class IndexController extends ResumeController {
    		
     }
 	public function select(){
-		$uid=session('uid');
-			
+		$uid=session('uid');			
 		$jobseekers_info= M('jobseekers')->where("uid =$uid")->select();//简历基本信息
 		$basic_info= M('resume_basic')->where("uid =$uid")->select();//简历基本信息
 		$experience_info= M('resume_experience')->where("uid =$uid")->select();//简历工作经历
@@ -95,18 +94,27 @@ class IndexController extends ResumeController {
     public function save() {
     	
     	$uid=session('uid');
-    
+    	if(I('sex')){ $sex=I('sex');}
+			else{ $sex='男';}
+    	if(I('birth')){ $birth=I('birth');}
+			else{ $birth='90后';}    					
+    	if(I('top_edu')){ $top_edu=I('top_edu');}
+			else{ $top_edu='大专';}
+    	if(I('work_years')){ $work_years=I('work_years');}
+			else{ $work_years='1-3年';}	
+    	if(I('current_city')){ $current_city=I('current_city');}
+			else{ $current_city='1-3年';}								
    		//简历添加
    		if(I('index') == "basic"){
 			$resumes_basic = M('resume_basic');
 			$data['uid'] = $uid;
 			$data['nickname'] = I('nickname');
 			$data['peculiarity'] = I('peculiarity');
-			$data['sex'] = I('sex');
-			$data['birth'] = I('birth');
-			$data['top_edu'] = I('top_edu');
-			$data['work_years'] = I('work_years');
-			$data['current_city'] = I('current_city');
+			$data['sex'] = $sex;
+			$data['birth'] = $birth;
+			$data['top_edu'] = $top_edu;
+			$data['work_years'] = $work_years;
+			$data['current_city'] = $current_city;
 			$data['phone'] = I('phone');
 			$data['e_mail'] = I('e_mail');
 			if(I('basic_id')){
@@ -379,6 +387,9 @@ class IndexController extends ResumeController {
 		//显示用户名
 		$uid=session('uid');
 		$seekers_info = M('resume_basic')->field("resume_basic.nickname")->where("uid =$uid")->select();
+		$jobseekers_info= M('jobseekers')->field("photo")->where("uid =$uid")->select();//简历基本信息
+
+        $this->assign('jobseekers_info',$jobseekers_info);		
 	    $this->assign('seekers_info', $seekers_info);
 		//筛选id、状态、投递时间输出数据
 		$timess_info = M('resume_delivery')->field("resume_delivery.delivery_time")->where("jobseeker_id =$uid")->select();
