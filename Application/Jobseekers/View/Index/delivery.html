@@ -19,11 +19,9 @@
 				<a class="nav-link" href="{:U('Index/delivery')}">投递箱</a>                                
                 <a class="nav-link fr" href="{:U('Login/log_out')}">退出</a>
                 <foreach name="seekers_info" item="item">
-                <a class="nav-link fr" href="{:U('Index/index')}"  style="padding: 0 4px;color: #000;font-weight: 600;">{$item.nickname}</a>
+                <a class="nav-link fr" href="{:U('Index/index')}"  style="padding: 0 4px;color: #000;">{$item.nickname}</a>
                 </foreach>                
-                <foreach name="jobseekers_info" item="item">
-                  <a href="{:U('Index/index')}" > <img class=" fr" src="{$item.photo}"   style="border-radius:50%;width:37px;border: 2px solid #fff;margin: 6.5px 0;"/ ></a>
-                </foreach>                 
+                
 
                 
                 

@@ -3,14 +3,13 @@
 namespace Jobseekers\Controller;
 use Think\Controller;
 use Common\Controller\ResumeController;
-
+use Common\Controller\JobseekersController;
 
 
 class IndexController extends ResumeController {
 
 
     public function index(){
-		// 个人主页
 		/*if (session('user_login_status')) {
 		
 		}else{
@@ -18,18 +17,13 @@ class IndexController extends ResumeController {
 			 
 		}*/
 		//如果没有登录，就提示请登录
-		//获取模版数据
- 		//原生查询法
 		//当前uid
 		$uid=session('uid');
 		/*$sql1 ="select * from  jobseekers where  uid =". $uid .$pageObj -> limit;
 		$jobseekers_info=D("jobseekers")->query($sql1);	*/
 			
 		$jobseekers_info= M('jobseekers')->field("photo")->where("uid =$uid")->select();//简历基本信息
-		
-	
 
-        // 第二步：模版赋值
         $this->assign('jobseekers_info',$jobseekers_info);
 	
         $this->display();
@@ -93,28 +87,25 @@ class IndexController extends ResumeController {
     }
     public function save() {
     	
-    	$uid=session('uid');
-    	if(I('sex')){ $sex=I('sex');}
-			else{ $sex='男';}
-    	if(I('birth')){ $birth=I('birth');}
-			else{ $birth='90后';}    					
-    	if(I('top_edu')){ $top_edu=I('top_edu');}
-			else{ $top_edu='大专';}
-    	if(I('work_years')){ $work_years=I('work_years');}
-			else{ $work_years='1-3年';}	
-    	if(I('current_city')){ $current_city=I('current_city');}
-			else{ $current_city='1-3年';}								
+    	$uid=session('uid');		
+									
    		//简历添加
    		if(I('index') == "basic"){
 			$resumes_basic = M('resume_basic');
 			$data['uid'] = $uid;
 			$data['nickname'] = I('nickname');
-			$data['peculiarity'] = I('peculiarity');
-			$data['sex'] = $sex;
-			$data['birth'] = $birth;
-			$data['top_edu'] = $top_edu;
-			$data['work_years'] = $work_years;
-			$data['current_city'] = $current_city;
+			if(I('peculiarity')){ $data['peculiarity'] =I('peculiarity');}
+				else{ $data['peculiarity'] ='用一句话介绍自己';} 			
+			if(I('sex')){ $data['sex'] =I('sex');}
+				else{}
+			if(I('birth')){ $data['birth'] =I('birth');}
+				else{}
+			if(I('top_edu')){ $data['top_edu']=I('top_edu');}
+				else{}
+			if(I('work_years')){ $data['work_years'] =I('work_years');}
+				else{}	
+			if(I('current_city')){ $data['current_city'] =I('current_city');}
+				else{}
 			$data['phone'] = I('phone');
 			$data['e_mail'] = I('e_mail');
 			if(I('basic_id')){
@@ -148,8 +139,10 @@ class IndexController extends ResumeController {
 			$data['uid'] = $uid;
 			$data['school_name'] = I('school_name');
 			$data['major'] = I('major');
-			$data['degree'] = I('degree');
-			$data['graduated'] = I('graduated');
+			if(I('degree')){ $data['degree'] =I('degree');}
+				else{}
+			if(I('graduated')){$data['graduated'] =I('graduated');}
+				else{}
 			if(I('education_id')){
 				$education_id=I('education_id');
 				$resumes_eduexp->where("education_id=$education_id")->save($data);
@@ -178,9 +171,13 @@ class IndexController extends ResumeController {
    			$resumes_career = M('resume_prefered');
 			$data['uid'] = $uid;
 			$data['expected_position'] = I('expected_position');
-			$data['job_type'] = I('job_type');
-			$data['expected_location'] = I('expected_location');
-			$data['expected_monthly_income'] = I('expected_monthly_income');
+			if(I('job_type')){ $data['curjob_typerent_city'] =I('curjob_typerent_city');}
+				else{}
+			if(I('expected_location')){$data['expected_location'] =I('expected_location');}
+				else{}
+			if(I('expected_monthly_income')){ $data['expected_monthly_income'] =I('expected_monthly_income');}
+				else{}
+
 			if(I('prefered_id')){
 				$resumes_career->where("uid=$uid")->save($data);
 				echo true;

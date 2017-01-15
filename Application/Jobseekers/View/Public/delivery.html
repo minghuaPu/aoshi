@@ -1,7 +1,7 @@
                                 	<li>
                                     	<div class="d_item">
                                             <h2 title="{$item.job_name}">
-                                                <a href="#" data-index="0" target="_blank" title="{$item.job_name}">
+                                                <a href="{:U('Home/Index/jobdetail',array('id'=>$item['id']))}" data-index="0" target="_blank" title="{$item.job_name}">
                                                     <em>{$item.job_name}</em>
                                                     <span>{$item.salary_low}-{$item.salary_hig}</span>					                        	                                    	</a>
                                             </h2>
