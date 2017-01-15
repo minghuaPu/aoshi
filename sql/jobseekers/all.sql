@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS `jobseekers` (
   UNIQUE KEY `username` (`username`),
   UNIQUE KEY `username_2` (`username`),
   UNIQUE KEY `username_3` (`username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=103 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 
 
@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS `jobseekers_describe` (
   `describe` varchar(500) NOT NULL COMMENT '自我描述',
   `uid` int(11) NOT NULL,
   PRIMARY KEY (`describe_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=21 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 
 
@@ -53,24 +53,21 @@ CREATE TABLE IF NOT EXISTS `resume_basic` (
   `e_mail` varchar(30) DEFAULT NULL COMMENT '用户邮箱',
   `current_status` varchar(20) DEFAULT NULL COMMENT '工作状态',
   PRIMARY KEY (`basic_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 
 
 
 
---
--- 表的结构 `resume_delivery`
---
 
 CREATE TABLE IF NOT EXISTS `resume_delivery` (
   `jobseeker_id` int(11) NOT NULL COMMENT '求职者ID',
   `job_id` int(11) NOT NULL COMMENT '职位序号',
   `delivery_time` varchar(21) NOT NULL COMMENT '投递时间',
   `delivery_status` tinytext NOT NULL COMMENT '投递状态',
-  `xh` int(11) NOT NULL AUTO_INCREMENT COMMENT '序号',
-  UNIQUE KEY `xh` (`xh`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='投递中转站' AUTO_INCREMENT=20 ;
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '序号',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='投递中转站' AUTO_INCREMENT=1 ;
 
 
 
@@ -88,7 +85,7 @@ CREATE TABLE IF NOT EXISTS `resume_education` (
   `school_name` varchar(20) NOT NULL COMMENT '学校名称',
   `major` varchar(10) NOT NULL COMMENT '专业名称',
   PRIMARY KEY (`education_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='简历_教育经历' AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='简历_教育经历' AUTO_INCREMENT=1 ;
 
 
 
@@ -106,7 +103,7 @@ CREATE TABLE IF NOT EXISTS `resume_experience` (
   `job_title` varchar(12) NOT NULL COMMENT '职位名称',
   `working_time` varchar(21) NOT NULL COMMENT '工作时间',
   PRIMARY KEY (`experience_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='简历_最近工作/实习经历' AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='简历_最近工作/实习经历' AUTO_INCREMENT=1 ;
 
 
 
@@ -125,4 +122,4 @@ CREATE TABLE IF NOT EXISTS `resume_prefered` (
   `expected_position` varchar(20) NOT NULL COMMENT '期望从事职业',
   `expected_monthly_income` varchar(10) NOT NULL COMMENT '期望月薪（税前）',
   PRIMARY KEY (`prefered_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='简历_求职意向' AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='简历_求职意向' AUTO_INCREMENT=1 ;
