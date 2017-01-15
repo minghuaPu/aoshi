@@ -5,12 +5,9 @@ var $rNav =$("#nav-list"),
 $(window).scroll(function() {
 	
 	if($(document).scrollTop() >= $rNavTop) {	
-		
 		$rNav.addClass("fixed");
 	} else {
-		
-		$rNav.removeClass("fixed");
-		
+		$rNav.removeClass("fixed");	
 	}
 });
 $('#nav-list li').each(function() {
@@ -21,9 +18,11 @@ $('#nav-list li').each(function() {
 
 
 /*简历管理*/
-
+public $rate;
 var resume = angular.module('resume', []);
+var $rate=0;
 resume.run(function($rootScope, service) {
+	
 	service.load().then(function(data) {
 		$rootScope.integrity = 0;
 		
@@ -33,7 +32,7 @@ resume.run(function($rootScope, service) {
 		$rootScope.education = data['education'];
 		$rootScope.describe = data['describe'];
 		$rootScope.prefered = data['prefered'];
-		
+		//$rootScope.integrity=$rate
 /*		if(data['basic']) {
 			$rootScope.integrity += 20
 		}
@@ -50,6 +49,7 @@ resume.run(function($rootScope, service) {
 			$rootScope.integrity += 20
 		}*/
 	})
+console.log($one_rate+$two_rate+"$rate")
 });
 
 resume.factory('service', function($http) {
@@ -68,6 +68,7 @@ resume.factory('service', function($http) {
 				params: data
 			}).then(function(data) {
 				
+				
 				return data;
 			})
 		},
@@ -76,10 +77,15 @@ resume.factory('service', function($http) {
 				method: 'get',
 				url: SITE_URL + '?a=delete&index=' + index,
 				params: data
+			}).then(function() {
+				
+			
 			})
 		}
 	}
+	
 });
+
 //基本信息
 resume.controller('resumeBasic', function($scope, service) {
 	$scope.edit = function(basic) {
@@ -88,44 +94,48 @@ resume.controller('resumeBasic', function($scope, service) {
 		-->
 	};
 	$scope.add = function() {
+		
+	
 		$scope.form = {
 			nickname: '',
-			peculiarity: '',
-			sex: '',
-			birth: '',
-			top_edu: '',
-			work_years: '',
-			current_city: '',
+			peculiarity: '请用一句话介绍自己',
+			sex: '男',
+			birth: '90后',
+			top_edu: '大专',
+			work_years: '1-3年',
+			current_city: '广州',
 			phone: '',
 			e_mail: ''
 		}
 	};
 	$scope.cancel = function() {
-		
 		delete $scope.form;
 	};
 	$scope.submit = function() {
-		console.log($scope.form.sex)
-		
+		if($scope.form.peculiarity)
+		{	
+			$one_rate=20			
+			}
+		else{
+			$one_rate=0
+			}
+			//////////////////////////////////////	
+														
 		service.save('basic', $scope.form).then(function(response) {
 			if(!$scope.form.basic_id) {
 				$scope.form.basic_id = response['data'];
 				$scope.basic.push($scope.form);
+				
 			}
 			delete $scope.form;
 		})
-	};
-	$scope.top_edu = [
-            {name:'大专'},
-            {name:'本科'},
-            {name:'硕士'},
-            {name:'博士'},
-            {name:'其他'}
-        ];
+		//$scope.integrity= $one_rate
 		
-		$scope.selected=$scope.top_edu[0].name
+	};
 
 });
+	
+
 //工作经历
 resume.controller('resumeJobexp', function($scope, service) {
 	$scope.edit = function(experience) {
@@ -143,7 +153,8 @@ resume.controller('resumeJobexp', function($scope, service) {
 	};
 	$scope.remove = function(experience) {
 		if(confirm("确认删除"))
-		{
+		{	
+			$two_rate=0;
 			$scope.experience.splice($scope.experience.indexOf(experience), 1);
 			service.remove('experience', experience);
 		}
@@ -156,6 +167,12 @@ resume.controller('resumeJobexp', function($scope, service) {
 	};
 	$scope.submit = function() {
 		$scope.list = false;
+		if($scope.form.school_name){
+			$two_rate=20;
+			}
+		else{
+			$two_rate=0;
+			}	
 		service.save('experience', $scope.form).then(function(response) {
 			console.log($scope.form.experience_id)
 			if(!$scope.form.experience_id) {
@@ -176,9 +193,9 @@ resume.controller('resumeEduexp', function($scope, service) {
 		$scope.list = true;
 		$scope.form = {
 			school_name: '',
-			degree: '',
 			major: '',
-			graduated: ''
+			degree: '大专',
+			graduated: '2017-09'
 		}
 	};
 	$scope.remove = function(education) {
@@ -248,9 +265,9 @@ resume.controller('resumeCareer', function($scope, service) {
 		$scope.list = true;
 		$scope.form = {
 			expected_position: '',
-			job_type: '',
-			expected_location: '',
-			expected_monthly_income: ''
+			job_type: '全职',
+			expected_location: '无限',
+			expected_monthly_income: '无限'
 		}
 	};
 	$scope.cancel = function() {
@@ -303,7 +320,7 @@ console.log($resumess)
 
 
 
-
+/*
 var $one=$("#user-info .rate"),
     $two=$("#job-exp .rate"),
 	$three=$("#edu-exp .rate"),
@@ -312,7 +329,7 @@ var $one=$("#user-info .rate"),
 	$photo=$("#crop-avatar .rate");
 var $photo_rate=$one_rate=$five_rate=$two_rate=$three_rate=$four_rate=0;
 
-/*简历完成率*/
+简历完成率
 
 if($photo.attr("src"))
 {	$(".hear").hide();
@@ -358,7 +375,7 @@ for(var i=0; i<$three.length;i++){
 	if($five.text()){
 		$five_rate=20
 	}
-$("#finishing_rate").text(($photo_rate+$five_rate+$four_rate+$three_rate+$two_rate+$one_rate)+"%");
+$("#finishing_rate").text(($photo_rate+$five_rate+$four_rate+$three_rate+$two_rate+$one_rate)+"%");*/
 
 //
 ///*简历导航*/
