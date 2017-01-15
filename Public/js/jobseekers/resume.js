@@ -20,8 +20,6 @@ $('#nav-list li').each(function() {
 });
 
 
-
-
 /*简历管理*/
 
 var resume = angular.module('resume', []);
@@ -36,19 +34,19 @@ resume.run(function($rootScope, service) {
 		$rootScope.describe = data['describe'];
 		$rootScope.prefered = data['prefered'];
 		
-		/*if(data['basic'][0]) {
+/*		if(data['basic']) {
 			$rootScope.integrity += 20
 		}
-		if(data['experience'][0]) {
+		if(data['experience']) {
 			$rootScope.integrity += 20
 		}
-		if(data['describe'][0]) {
+		if(data['describe']) {
 			$rootScope.integrity += 20
 		}
-		if(data['career'][0]) {
+		if(data['career']) {
 			$rootScope.integrity += 20
 		}
-		if(data['prefered'][0].des) {
+		if(data['prefered'].des) {
 			$rootScope.integrity += 20
 		}*/
 	})
@@ -69,6 +67,7 @@ resume.factory('service', function($http) {
 				url: SITE_URL+ '?a=save&index=' + index,
 				params: data
 			}).then(function(data) {
+				
 				return data;
 			})
 		},
@@ -106,6 +105,8 @@ resume.controller('resumeBasic', function($scope, service) {
 		delete $scope.form;
 	};
 	$scope.submit = function() {
+		console.log($scope.form.sex)
+		
 		service.save('basic', $scope.form).then(function(response) {
 			if(!$scope.form.basic_id) {
 				$scope.form.basic_id = response['data'];
@@ -114,6 +115,16 @@ resume.controller('resumeBasic', function($scope, service) {
 			delete $scope.form;
 		})
 	};
+	$scope.top_edu = [
+            {name:'大专'},
+            {name:'本科'},
+            {name:'硕士'},
+            {name:'博士'},
+            {name:'其他'}
+        ];
+		
+		$scope.selected=$scope.top_edu[0].name
+
 });
 //工作经历
 resume.controller('resumeJobexp', function($scope, service) {
@@ -261,17 +272,38 @@ resume.controller('resumeCareer', function($scope, service) {
 //求职状态
 resume.controller('resumeState', function($scope, service) {
 	$scope.change = function() {
+		console.log(23)
 		service.save('status', $scope.basic[0])
 		
 	}
+
 });
 
 
+//console.log($("#nametip").val().trigger('input'))
 
 
 
 
-/*
+
+
+
+
+
+
+
+
+
+	
+
+
+
+$resumess = $("#user-info .name").data('rate');
+console.log($resumess)
+
+
+
+
 var $one=$("#user-info .rate"),
     $two=$("#job-exp .rate"),
 	$three=$("#edu-exp .rate"),
@@ -281,7 +313,7 @@ var $one=$("#user-info .rate"),
 var $photo_rate=$one_rate=$five_rate=$two_rate=$three_rate=$four_rate=0;
 
 /*简历完成率*/
-/*	
+
 if($photo.attr("src"))
 {	$(".hear").hide();
 	$photo_rate=2;
@@ -290,6 +322,7 @@ else{
 		$(".hear").show();
 		}	
 for(var i=0; i<$one.length;i++){
+console.log($one.eq(i).val()+"$one_rate")
 	if($one.eq(i).text()!=""){
 		$one_rate=$one_rate+2;
 	}
@@ -325,7 +358,7 @@ for(var i=0; i<$three.length;i++){
 	if($five.text()){
 		$five_rate=20
 	}
-$("#finishing_rate").text(($photo_rate+$five_rate+$four_rate+$three_rate+$two_rate+$one_rate)+"%");*/
+$("#finishing_rate").text(($photo_rate+$five_rate+$four_rate+$three_rate+$two_rate+$one_rate)+"%");
 
 //
 ///*简历导航*/
