@@ -2,6 +2,7 @@
 	
 namespace Jobseekers\Controller;
 use Common\Controller\ResumeController;
+use Common\Controller\JobseekersController;
 use Think\Controller;
 
 class PreviewController extends ResumeController {

@@ -3,14 +3,13 @@
 namespace Jobseekers\Controller;
 use Think\Controller;
 use Common\Controller\ResumeController;
-
+use Common\Controller\JobseekersController;
 
 
 class IndexController extends ResumeController {
 
 
     public function index(){
-		// 个人主页
 		/*if (session('user_login_status')) {
 		
 		}else{
@@ -18,18 +17,13 @@ class IndexController extends ResumeController {
 			 
 		}*/
 		//如果没有登录，就提示请登录
-		//获取模版数据
- 		//原生查询法
 		//当前uid
 		$uid=session('uid');
 		/*$sql1 ="select * from  jobseekers where  uid =". $uid .$pageObj -> limit;
 		$jobseekers_info=D("jobseekers")->query($sql1);	*/
 			
-		$jobseekers_info= M('jobseekers')->where("uid =$uid")->select();//简历基本信息
-		
-	
+		$jobseekers_info= M('jobseekers')->field("photo")->where("uid =$uid")->select();//简历基本信息
 
-        // 第二步：模版赋值
         $this->assign('jobseekers_info',$jobseekers_info);
 	
         $this->display();
@@ -38,8 +32,7 @@ class IndexController extends ResumeController {
    		
     }
 	public function select(){
-		$uid=session('uid');
-			
+		$uid=session('uid');			
 		$jobseekers_info= M('jobseekers')->where("uid =$uid")->select();//简历基本信息
 		$basic_info= M('resume_basic')->where("uid =$uid")->select();//简历基本信息
 		$experience_info= M('resume_experience')->where("uid =$uid")->select();//简历工作经历
@@ -94,19 +87,25 @@ class IndexController extends ResumeController {
     }
     public function save() {
     	
-    	$uid=session('uid');
-    
+    	$uid=session('uid');		
+									
    		//简历添加
    		if(I('index') == "basic"){
 			$resumes_basic = M('resume_basic');
 			$data['uid'] = $uid;
 			$data['nickname'] = I('nickname');
-			$data['peculiarity'] = I('peculiarity');
-			$data['sex'] = I('sex');
-			$data['birth'] = I('birth');
-			$data['top_edu'] = I('top_edu');
-			$data['work_years'] = I('work_years');
-			$data['current_city'] = I('current_city');
+			if(I('peculiarity')){ $data['peculiarity'] =I('peculiarity');}
+				else{ $data['peculiarity'] ='用一句话介绍自己';} 			
+			if(I('sex')){ $data['sex'] =I('sex');}
+				else{}
+			if(I('birth')){ $data['birth'] =I('birth');}
+				else{}
+			if(I('top_edu')){ $data['top_edu']=I('top_edu');}
+				else{}
+			if(I('work_years')){ $data['work_years'] =I('work_years');}
+				else{}	
+			if(I('current_city')){ $data['current_city'] =I('current_city');}
+				else{}
 			$data['phone'] = I('phone');
 			$data['e_mail'] = I('e_mail');
 			if(I('basic_id')){
@@ -140,8 +139,10 @@ class IndexController extends ResumeController {
 			$data['uid'] = $uid;
 			$data['school_name'] = I('school_name');
 			$data['major'] = I('major');
-			$data['degree'] = I('degree');
-			$data['graduated'] = I('graduated');
+			if(I('degree')){ $data['degree'] =I('degree');}
+				else{}
+			if(I('graduated')){$data['graduated'] =I('graduated');}
+				else{}
 			if(I('education_id')){
 				$education_id=I('education_id');
 				$resumes_eduexp->where("education_id=$education_id")->save($data);
@@ -170,9 +171,13 @@ class IndexController extends ResumeController {
    			$resumes_career = M('resume_prefered');
 			$data['uid'] = $uid;
 			$data['expected_position'] = I('expected_position');
-			$data['job_type'] = I('job_type');
-			$data['expected_location'] = I('expected_location');
-			$data['expected_monthly_income'] = I('expected_monthly_income');
+			if(I('job_type')){ $data['curjob_typerent_city'] =I('curjob_typerent_city');}
+				else{}
+			if(I('expected_location')){$data['expected_location'] =I('expected_location');}
+				else{}
+			if(I('expected_monthly_income')){ $data['expected_monthly_income'] =I('expected_monthly_income');}
+				else{}
+
 			if(I('prefered_id')){
 				$resumes_career->where("uid=$uid")->save($data);
 				echo true;
@@ -379,6 +384,9 @@ class IndexController extends ResumeController {
 		//显示用户名
 		$uid=session('uid');
 		$seekers_info = M('resume_basic')->field("resume_basic.nickname")->where("uid =$uid")->select();
+		$jobseekers_info= M('jobseekers')->field("photo")->where("uid =$uid")->select();//简历基本信息
+
+        $this->assign('jobseekers_info',$jobseekers_info);		
 	    $this->assign('seekers_info', $seekers_info);
 		//筛选id、状态、投递时间输出数据
 		$timess_info = M('resume_delivery')->field("resume_delivery.delivery_time")->where("jobseeker_id =$uid")->select();
@@ -392,7 +400,7 @@ class IndexController extends ResumeController {
 			}
 			
 		$where_all=M('resume_delivery')
-		 		->field("resume_delivery.delivery_time,resume_delivery.delivery_status,job.id,job.job_name,job.enterprise_id,job.company_name,job.city,job.salary_low,job.salary_hig")
+		 		->field("resume_delivery.delivery_time,resume_delivery.delivery_status,job.id,job.job_name,job.enterprise_id,job.company_name,job.city,job.area,job.salary_low,job.salary_hig")
                 ->join("left join job on resume_delivery.job_id=job.id")//join是关联查询
                 ->where("jobseeker_id = $uid  and  (DATEDIFF(delivery_time,NOW()) >= $m )")	//	DATEDIFF(time1,time2) = time2 - time1
                 ->order('delivery_time DESC')
@@ -403,7 +411,7 @@ class IndexController extends ResumeController {
 
 		$where_see=M('resume_delivery')
 		
-		 		->field("resume_delivery.delivery_time,resume_delivery.delivery_status,job.id,job.job_name,job.enterprise_id,job.company_name,job.city,job.salary_low,job.salary_hig")
+		 		->field("resume_delivery.delivery_time,resume_delivery.delivery_status,job.id,job.job_name,job.enterprise_id,job.company_name,job.city,job.area,job.salary_low,job.salary_hig")
                 ->join("left join job on resume_delivery.job_id=job.id")//join是关联查询
                 ->where("jobseeker_id = $uid and delivery_status >0 and  DATEDIFF(delivery_time,NOW()) >= $m")
                 ->order('delivery_time DESC')
@@ -411,14 +419,14 @@ class IndexController extends ResumeController {
 				
 				
 		$where_invite=M('resume_delivery')
-		 		->field("resume_delivery.delivery_time,resume_delivery.delivery_status,job.id,job.job_name,job.enterprise_id,job.company_name,job.city,job.salary_low,job.salary_hig")
+		 		->field("resume_delivery.delivery_time,resume_delivery.delivery_status,job.id,job.job_name,job.enterprise_id,job.company_name,job.city,job.area,job.salary_low,job.salary_hig")
                 ->join("left join job on resume_delivery.job_id=job.id")//join是关联查询
                 ->where("jobseeker_id = $uid and delivery_status=2 and  DATEDIFF(delivery_time,NOW()) >= $m")
                 ->order('delivery_time DESC')
 				->select();					
 
 		$where_failure=M('resume_delivery')
-		 		->field("resume_delivery.delivery_time,resume_delivery.delivery_status,job.id,job.job_name,job.enterprise_id,job.company_name,job.city,job.salary_low,job.salary_hig")
+		 		->field("resume_delivery.delivery_time,resume_delivery.delivery_status,job.id,job.job_name,job.enterprise_id,job.company_name,job.city,job.area,job.salary_low,job.salary_hig")
                 ->join("left join job on resume_delivery.job_id=job.id")//join是关联查询
                 ->where("jobseeker_id = $uid and delivery_status = 3 and  DATEDIFF(delivery_time,NOW()) >= $m")
                 ->order('delivery_time DESC')

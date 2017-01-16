@@ -11,7 +11,7 @@ class ResumeController extends Controller{
 		 $userinfo=session('user_login_status');
 		 
 		 
-         if (!$userinfo || !$usersession) {
+         if (!$userinfo && !$usersession) {
 			 $this->error('非法操作！',U('Login/login'));
 			
          }

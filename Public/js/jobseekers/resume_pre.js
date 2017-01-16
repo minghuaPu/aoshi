@@ -7,5 +7,3 @@ if($("#crop-avatar .myhear").attr('src')){
 	else{
 		$(".hear").show();
 		}	
-		
-	

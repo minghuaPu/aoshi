@@ -1,12 +1,12 @@
                                 	<li>
                                     	<div class="d_item">
-                                            <h2 title="web前端开发工程师">
-                                                <a href="#" data-index="0" target="_blank" title="web前端开发工程师">
+                                            <h2 title="{$item.job_name}">
+                                                <a href="{:U('Home/Index/jobdetail',array('id'=>$item['id']))}" data-index="0" target="_blank" title="{$item.job_name}">
                                                     <em>{$item.job_name}</em>
-                                                    <span>{$item.money}</span>					                        	                                    	</a>
+                                                    <span>{$item.salary_low}-{$item.salary_hig}</span>					                        	                                    	</a>
                                             </h2>
                                             <a href="#" target="_blank" class="d_jobname" title="{$item.company_name}">
-                                               {$item.company_name} <span>[{$item.place}]</span>
+                                               {$item.company_name} <span>[{$item.city}-{$item.area}]</span>
                                             </a>
                                             <div class="d_resume">
                                                 使用简历：

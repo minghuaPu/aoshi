@@ -256,7 +256,7 @@ class CropController extends Controller {
 			'result' => __ROOT__. $crop -> getResult().'?'.time()//函数返回路径，这个地址很重要
 		  );
 			//图片路径导入数据库
-			 $photosql="UPDATE jobseekers SET Photo ='". __ROOT__.$crop -> getResult()."' where uid=". $_SESSION['uid'] ;//$_SESSION['uid'];
+			 $photosql="UPDATE jobseekers SET Photo ='". __ROOT__.$crop -> getResult().'?'.time()."' where uid=". $_SESSION['uid'] ;//$_SESSION['uid'];
 			mysqli_query(mysqli_connect("127.0.0.1","root","","yuanku_job"),$photosql);
 			
 	
