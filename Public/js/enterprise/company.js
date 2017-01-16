@@ -25,14 +25,14 @@ $("#submit").on("click",function () {
     if ($("#company_name input").val() == "") {
         $("#company_name input").focus();
         return false;
-    } else if ($(".province").val() == "0") {
-        $(".province").focus();
+    } else if ($("#s_province").val() == "省份") {
+        $("#s_province").focus();
         return false;
-    } else if ($(".city").val() == "0") {
-        $(".city").focus();
+    } else if ($("#s_city").val() == "地级市") {
+        $("#s_city").focus();
         return false;
-    } else if ($(".area").val() == "0") {
-        $(".area").focus();
+    } else if ($("#s_county").val() == "市、县级市") {
+        $("#s_county").focus();
         return false;
     } else if ($("#address input").val() == "") {
         $("#address input").focus();
@@ -56,13 +56,9 @@ $("#submit").on("click",function () {
         $("#phone input").focus();
         return false;
     }
-    if ($(".area").val()){
-        $(".iProvince").attr("value", $(".province").val());
-        $(".iCity").attr("value", $(".city").val());
-        $(".iArea").attr("value", $(".area").val());
-    }else {
-        $(".iCity").attr("value", $(".province").val());
-        $(".iArea").attr("value", $(".city").val());
-    }
+    $(".iProvince").attr("value", $("#s_province").val());
+    $(".iCity").attr("value", $("#s_city").val());
+    $(".iArea").attr("value", $("#s_county").val());
+
     $(".iScale").attr("value",$(".scale").val());
 })

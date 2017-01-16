@@ -48,14 +48,6 @@
   float: left;
   margin-left: 20px;
 }
-.content .form .content_box .form-group #city_china_val {
-  height: 40px;
-  padding: 0;
-  border: none;
-}
-.content .form .content_box .form-group #city_china_val p {
-  margin: 0;
-}
 .content .form .content_box .form-group .salary {
   display: block;
   line-height: 40px;
@@ -103,6 +95,9 @@
   position: absolute;
   top: 0;
   right: 250px;
+}
+.content .form .content_box .form-group p {
+  margin: 0;
 }
 .content .form .content_box .job-require {
   height: 200px;

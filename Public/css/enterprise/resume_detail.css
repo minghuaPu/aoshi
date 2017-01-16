@@ -3,7 +3,7 @@
     color: white;
     display: block;
     margin: 10px auto;
-    width: 200px;
+    width: 250px;
     height: 60px;
     font-size: 25px;
     border-color: #285e8e;
@@ -14,25 +14,79 @@
 }
 .back{
     position: fixed;
-    top: calc(50% - 150px);
-    left: 0;
+    top: calc(50% - 42px);
+    left: 150px;
     width: 60px;
-    height: 300px;
+    height: 60px;
     background-color: #53cac3;
-    font-size: 20px;
-    padding:44px 20px;
+    margin: 0;
+    font-size: 18px;
     color: white;
-    border-radius: 0 5px 5px 0;
+    transform: rotate(45deg);
+}
+.back:hover{
+    color: white;
+}
+.back p{
+    position: absolute;
+    color: white;
+    font-size: 18px;
+    margin: 0;
+    top: 16px;
+    left: 10px;
+    transform: rotate(-45deg);
+}
+.rope {
+    position: fixed;
+    width: 4px;
+    height: calc(50% - 42px);
+    background-color: #53cac3;
+    top: 0;
+    left: 178px;
 }
 .unmatch{
     position: fixed;
-    top: calc(50% - 150px);
-    right: 0;
-    width: 60px;
-    height: 300px;
+    top: calc(50% - 100px);
+    right: 40px;
+    width: 250px;
     background-color: #53cac3;
-    font-size: 20px;
-    padding: 33px 20px;
+    font-size: 15px;
+    padding: 20px 15px;
+    line-height: 26px;
     color: white;
-    border-radius: 5px 0  0 5px;
+    border-radius: 5px;
+}
+.unmatch .btn{
+    position: absolute;
+    bottom: -60px;
+    height: 40px;
+    width: 100px;
+    padding: 0;
+    line-height: 40px;
+    font-weight: 600;
+    font-size: 16px;
+}
+.unmatch .success{
+    left: 10px;
+    color: #286090;
+}
+.unmatch .abandon{
+    right: 10px;
+    color: #c9302c;
+}
+.unmatch .btn:hover{
+    color: white;
+}
+.unmatch .tail{
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 15px solid #53cac3;
+    position: absolute;
+    bottom: -15px;
+    left: 60px;
+}
+.unmatch p{
+    margin: 0;
 }

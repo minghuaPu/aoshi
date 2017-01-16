@@ -20,7 +20,7 @@ class ListController extends BaseController{
 
         if (I('key')){
             $key=I('key');
-            $where['job_name']=array('like',"%$key%",);
+            $where['job_name']=array('like',"%$key%");
         }
         if (I('work_time')){
             if (trim(I('work_time'))!="选择时间"){
