@@ -14,13 +14,16 @@
                                             </div>
                                             <span href="javascript:;" class="btn_showprogress">
                                             <if condition="$item['delivery_status'] eq 0 ">
-                                                 <span class="d_status">投递成功</span>
+                                                 <div class="d_status" style="width: 101px;display: inline-flex;">投递成功<div style="background-image:url(__PUBLIC__/images/delivery.jpg);width: 25px;height: 25px;margin-top: -5px;background-size: 80px;background-position: 25px 0px;"></div></div>
                                                  <elseif condition="$item['delivery_status'] eq 1 "/>
-                                                 <span class="d_status">被查看</span>
+                                                 <div class="d_status" style="width: 101px;display: inline-flex;">被查看<div style="background-image:url(__PUBLIC__/images/delivery.jpg);width: 25px;height: 25px;margin-top: -5px;background-size: 80px;    background-position: -25px -22px;"></div></div>
                                                  <elseif condition="$item['delivery_status'] eq 2 "/>
-                                                 <span class="d_status">邀请面试</span> 
+                                                 <div class="d_status" style="width: 101px;display: inline-flex;">邀请面试<div style="background-image:url(__PUBLIC__/images/delivery.jpg);width: 25px;height: 25px;margin-top: -5px; background-size: 80px;   background-position: -53px -23px;"></div> </div> 
                                                  <elseif condition="$item['delivery_status'] eq 3 "/>
-                                                 <span class="d_status">不合适</span>                                                       
+                                                 <div class="d_status" style="width: 101px;display: inline-flex;">不合适<div style="background-image:url(__PUBLIC__/images/delivery.jpg);width: 25px;height: 25px;margin-top: -5px; background-size: 80px;   background-position: -79px -23px;"></div> </div>                                                       
+                                                 <elseif condition="$item['delivery_status'] eq 4 "/>
+                                                 <div class="d_status" style="width: 101px;display: inline-flex;">求职成功<div style="background-image:url(__PUBLIC__/images/delivery.jpg);width: 25px;height: 25px;margin-top: -5px; background-size: 80px;  "></div> </div>                                                       
+
                                                  </if>
                                              </span>
                                              <span class="d_time">{$item.delivery_time}</span>

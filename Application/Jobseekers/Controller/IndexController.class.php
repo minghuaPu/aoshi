@@ -67,7 +67,7 @@ class IndexController extends ResumeController {
     	}elseif ($getType=='jobexp') {
     		 //简历工作经历
 	    	$experience_info = M('resume_experience')->where("uid =$uid")->select();
-	    	echo json_encode($experience_info);
+	    	echo true;
     	}else{
     		  //简历教育经历
 	    	$education_info = M('resume_education')->where("uid =$uid")->select();
@@ -110,7 +110,7 @@ class IndexController extends ResumeController {
 			$data['e_mail'] = I('e_mail');
 			if(I('basic_id')){
 				$resumes_basic->where("uid=$uid")->save($data);
-				echo true;
+				echo json_encode($data);
 			} 
 			else {
 				$basic_id = $resumes_basic->data($data)->add();
@@ -127,7 +127,7 @@ class IndexController extends ResumeController {
 			if(I('experience_id')){
 				$experience_id=I('experience_id');
 				$resumes_jobexp->where("experience_id=$experience_id")->save($data);
-				echo true;
+				echo json_encode($data);
 			} 
 			else {
 				$experience_id = $resumes_jobexp->data($data)->add();
@@ -217,7 +217,7 @@ class IndexController extends ResumeController {
 			$data['phone'] = I('phone');
 			$data['e_mail'] = I('email');
 			$resumes_basic->where("uid=$uid")->save($data);
-			echo true;
+			echo json_encode($data);
 		}
    		elseif(I('index') == "jobexp") {
    			$resumes_jobexp = M('resume_experience');
@@ -431,14 +431,20 @@ class IndexController extends ResumeController {
                 ->where("jobseeker_id = $uid and delivery_status = 3 and  DATEDIFF(delivery_time,NOW()) >= $m")
                 ->order('delivery_time DESC')
 				->select();	
-				
+
+		$where_success=M('resume_delivery')
+		 		->field("resume_delivery.delivery_time,resume_delivery.delivery_status,job.id,job.job_name,job.enterprise_id,job.company_name,job.city,job.area,job.salary_low,job.salary_hig")
+                ->join("left join job on resume_delivery.job_id=job.id")//join是关联查询
+                ->where("jobseeker_id = $uid and delivery_status = 4 and  DATEDIFF(delivery_time,NOW()) >= $m")
+                ->order('delivery_time DESC')
+				->select();				
 				
 		$this->assign('times', $times);				
 		$this->assign('where_all', $where_all);	
 		$this->assign('where_see', $where_see);
 		$this->assign('where_invite', $where_invite);		
 		$this->assign('where_failure', $where_failure);			
-
+		$this->assign('where_success', $where_success);	
 			$this->display();
 		
 			

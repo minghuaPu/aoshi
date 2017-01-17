@@ -27,7 +27,7 @@
 				<a class="nav-link" href="{:U('Index/index')}">简历管理</a>
 				<a class="nav-link" href="{:U('Index/delivery')}">投递箱</a> 
                 <a class="nav-link fr" href="{:U('Login/log_out')}">退出</a>
-				<a class="nav-link fr" href="{:U('Index/index')}"  ng-bind="basic[0].nickname" style="padding: 0 4px;color: #000;"></a>   
+				<a class="nav-link fr" href="{:U('Index/index')}"  ng-bind="basic[0].nickname" style="padding: 0 4px;color: #7b7b7b;"></a>   
 
 
 				
@@ -52,17 +52,15 @@
                      
  			<!---------------------------------------------------------img(end)------------------------------------------>
 
-                    </aside>
- 			<!-- --------------------------------------------------------Cropping modal -->
-                    
+                    </aside>                    
 				<!--基本信息-->
 				<section id="user-info" ng-controller="resumeBasic">
                 <button class="add" ng-click="add()" ng-hide="basic[0]">+ 添加基本资料</button>
 				<div class="list text-center"  ng-show="basic[0]">
 						<a class="edit"  ng-click="edit(basic[0])">编辑</a>
-                            <span class="name "  ng-bind="basic[0].nickname" ng-if="basic[0].nickname" href="javascript:" data-rate="2" ></span>
+                            <span class="name "  ng-bind="basic[0].nickname" ng-if="basic[0].nickname"></span>
                             
-                            <span class="intro rate"  ng-bind="basic[0].peculiarity"  ></span>
+                            <span class="intro "  ng-bind="basic[0].peculiarity"  ></span>
                             <span class="base ">
                                 <em class="sex "  ><i class="icon"></i><em  ng-bind="basic[0].sex"></em></em>
                                 <em class="birth "  ng-bind="basic[0].birth"></em>
@@ -72,7 +70,7 @@
                             </span>
                             <span class="base">
                                 <em class="p " ><i class="icon phone "></i><em   ng-bind="basic[0].phone"></em></em>
-                                <em class="e "><i class="icon email rate"></i><em   ng-bind="basic[0].e_mail"></em></em>
+                                <em class="e "><i class="icon email "></i><em   ng-bind="basic[0].e_mail"></em></em>
                             </span>
                          </foreach>    
 					</div>
@@ -173,12 +171,12 @@
                                 <a class="edit"  href="javascript:;" ng-click="edit(item)">修改</a>
                                 <a class="del"   href="javascript:;" ng-click="remove(item)" >删除</a>
                                    
-                                <div class="name rate" ng-bind="item.re_company_name"></div>
+                                <div class="name " ng-bind="item.re_company_name"></div>
                                 <div >
                                     <span class="job " ng-bind="item.job_title"></span>
                                     <span class="fr " ng-bind="item.working_time"></span>
                                 </div>
-                                <p  class="cont rate" ng-bind="item.job_description "></p>
+                                <p  class="cont " ng-bind="item.job_description "></p>
                             </li>
 							
 					</ul>
@@ -225,9 +223,9 @@
                        		 <a class="edit" href="javascript:;" ng-click="edit(item)">修改</a>
                              <a class="del"  href="javascript:;" ng-click="remove(item)">删除</a>
                             <div class="name" ng-bind="item.school_name"></div>
-							<div class="rate">
+							<div >
 								<span class="xl " ng-bind="item.degree"></span> -
-								<span class="major rate" ng-bind="item.major"></span>
+								<span class="major " ng-bind="item.major"></span>
 								<span class="grad fr" ng-bind="item.graduated">毕业(预计)</span>
 							</div>
 						</li>
@@ -297,7 +295,7 @@
                         <span class="edit_box">
                         	<a class="edit" href="javascript:;"  ng-click="edit(item)">修改</a><!--data-id={$item.resume_id}-->
                         </span>  
-                     	<textarea class="list rate ng-binding" rows="5" ng-bind="item.describe" style="width: 100%;background-color: transparent;border: 0px;resize: none;" readonly>
+                     	<textarea class="list  ng-binding" rows="5" ng-bind="item.describe" style="width: 100%;background-color: transparent;border: 0px;resize: none;" readonly>
                         </textarea>
                      </div>
                     	
@@ -326,7 +324,7 @@
                   
                         
                          <dl class="list clear"  ng-repeat="item in prefered"  ng-hide="list">
-                            	<span class="edit_box rate">
+                            	<span class="edit_box ">
                             	<a class="edit" href="javascript:;" ng-click="edit(item)">修改</a>
                              	</span>
                                 <dd class="name"><i></i><span ng-bind="item.expected_position"></span></dd>
@@ -399,7 +397,7 @@
 				<nav id="nav-list">
 					<div class="integrity">
 						<div class="top">
-							<span>简历完整度：<em id="finishing_rate" >50%</em></span><!--/*ng-bind="integrity"*/-->
+							<span>简历完整度：<em id="finishing_rate" ng-bind="photo_rate+one_rate+two_rate+three_rate+four_rate+five_rate-integrity+'%'"></em></span>
                            
 							<a class="fr" href="{:U('Preview/index')}" target="_blank">预览简历</a>
 						</div>
