@@ -78,6 +78,20 @@
   text-align: center;
   padding: 0;
 }
+.content .tit_box #all_check {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+.content .tit_box .delete_all {
+  cursor: pointer;
+  color: red;
+  position: absolute;
+  width: 30px;
+  line-height: 50px;
+  top: 0;
+  right: 23px;
+}
 .content .table {
   margin: 0;
   width: 100%;
@@ -107,6 +121,10 @@
   height: 31px;
   margin-top: -3px;
 }
+.content .table tr th .btn-danger {
+  height: 31px;
+  margin-top: -3px;
+}
 .content .table tr th button {
   width: 80px;
   height: 29px;
@@ -121,6 +139,12 @@
 }
 .content .table tr th button a:hover {
   text-decoration: none;
+}
+.content .table tr th input[type=checkbox] {
+  width: 15px;
+  height: 15px;
+  margin: 10px 0 0 0;
+  cursor: pointer;
 }
 .content .tip {
   margin-top: 20px;

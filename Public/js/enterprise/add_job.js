@@ -37,7 +37,7 @@ $(".submit").on("click",function () {
     if ($("#jobName").val()==""){
         $("#jobName").focus();
         return false;
-    } else if ($("#address").val()==""){
+    }else if ($("#address").val()==""){
         $("#address").focus();
         return false;
     }else if ($("#salary_lowLimit").val()=="选择最低薪资"){
@@ -63,9 +63,10 @@ $(".submit").on("click",function () {
     $(".education").val($("#education").val());
     $(".salary_lowLimit").val($("#salary_lowLimit").val());
     $(".salary_higLimit").val($("#salary_higLimit").val());
-    $(".iprovince").val($(".province").val());
-    $(".icity").val($(".city").val());
-    $(".iarea").val($(".area").val())
+    $(".iprovince").val($("#s_province").val());
+    $(".icity").val($("#s_city").val());
+    $(".iarea").val($("#s_county").val())
 })
+
 
 

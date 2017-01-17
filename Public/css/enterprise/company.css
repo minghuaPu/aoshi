@@ -49,18 +49,6 @@
   color: red;
   font-size: 15px;
 }
-.content .content_box #city_china_val {
-  height: 40px;
-  margin: 0;
-  padding: 0;
-  border: none;
-}
-.content .content_box #city_china_val p {
-  height: 40px;
-}
-.content .content_box #city_china_val p select + select {
-  margin-left: 20px;
-}
 .content .content_box h3 {
   float: left;
   margin: 0;
@@ -70,7 +58,7 @@
 }
 .content .content_box p {
   float: left;
-  width: 490px;
+  width: 520px;
   text-align: center;
   font-size: 15px;
   line-height: 40px;
@@ -87,6 +75,9 @@
   width: 150px;
   height: 40px;
   padding-left: 5px;
+}
+.content .content_box p select + select {
+  margin-left: 20px;
 }
 .content .content_box .introduce {
   float: left;
@@ -126,9 +117,4 @@
   margin-left: 35%;
   height: 50px;
   font-size: 20px;
-}
-.content .bottom_tip {
-  color: red;
-  text-align: center;
-  font-size: 18px;
 }

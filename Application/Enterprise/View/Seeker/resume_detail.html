@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>我的简历</title>
+    <title>简历详情</title>
     <link rel="stylesheet" href="__PUBLIC__/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="__PUBLIC__/css/jobseekers/resume.css">
     <link rel="stylesheet" href="__PUBLIC__/css/jobseekers/cropper.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="__PUBLIC__/css/jobseekers/main.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="__PUBLIC__/css/enterprise/resume_detail.css?3" rel="stylesheet"/>
+    <link rel="stylesheet" href="__PUBLIC__/css/enterprise/resume_detail.css?18" rel="stylesheet"/>
 </head>
 
 <body>
@@ -128,19 +128,47 @@
             </section>
             <else/>
         </if>
-        <a class="btn" id="status" href="{:U('Seeker/match',array('id'=>$delivery['id']))}">{$delivery['delivery_status']}</a>
+        <!--<a class="btn" id="status" href="{:U('Seeker/match',array('id'=>$delivery['id']))}">{$delivery['delivery_status']}</a>-->
     </article>
 
 </section>
-    <a href="{:U('Seeker/resume')}" class="back">返回求职者列表</a>
-    <a href="{:U('Seeker/unmatch',array('id'=>$delivery['id']))}" class="unmatch hide">已面试此人不合适</a>
+<div class="sp">
+    <div class="rope"></div>
+    <a href="{:U('Seeker/resume')}" class="back"><p>返回</p></a>
+    <div class="unmatch">
+        <p>{$delivery['delivery_status']}</p>
+        <div class="tail"></div>
+
+    </div>
+</div>
 
 <script type="text/javascript" src="__PUBLIC__/js/jobseekers/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="__PUBLIC__/css/bootstrap-3.3.0/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="__PUBLIC__/js/jobseekers/cropper.min.js"></script>
 <script type="text/javascript" src="__PUBLIC__/js/jobseekers/main.js"></script>
 <script type="text/javascript" src="__PUBLIC__/js/jobseekers/resume_pre.js"></script>
-<script type="text/javascript" src="__PUBLIC__/js/enterprise/resume_detail.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/enterprise/resume_detail.js?9"></script>
 </body>
 
 </html>
+<script>
+    if ($('.unmatch p').text()==1){
+        $('.unmatch p').html("觉得这个人如何？"+"<br>"+"是否能入您的法眼？"+"<br>"+"要尝试招纳Ta吗？");
+        $(".unmatch").append(""+
+            "<a href='{:U('Seeker/suit',array('id'=>$delivery['id']))}' class='btn btn-primary success'>来试试吧</a>"+
+            "<a href='{:U('Seeker/resume')}' class='btn btn-danger abandon'>再想想吧</a>")
+    }else if ($('.unmatch p').text()==2){
+        $('.unmatch p').html("听说您已经面试过这个人了。"+"<br>"+"感觉如何？"+"<br>"+"是否适合您这个职位呢？"+"<br>"+"来告诉我们结果吧！");
+        $(".unmatch").append(""+
+            "<a href='{:U('Seeker/match',array('id'=>$delivery['id']))}' class='btn btn-primary success'>成功聘请</a>"+
+            "<a href='{:U('Seeker/unmatch',array('id'=>$delivery['id']))}' class='btn btn-danger abandon'>遗憾放弃</a>")
+    }else if ($('.unmatch p').text()==3){
+        $('.unmatch p').html("很遗憾这个人不是你想要的人。"+"<br>"+"不过只要有恒心"+"<br>"+"就一定能招到你想要的人！"+"<br>"+"继续寻找下一位吧！");
+        $(".unmatch").append(""+
+            "<a href='{:U('Seeker/resume')}' class='btn btn-primary success'>去寻找吧</a>")
+    }else if ($('.unmatch p').text()==4){
+        $('.unmatch p').html("恭喜您为自己的公司"+"<br>"+"招纳了一员猛将啊！"+"<br>"+"您是否还需要更多的人呢？"+"<br>"+"去找下一位吧！");
+        $(".unmatch").append(""+
+            "<a href='{:U('Seeker/resume')}' class='btn btn-primary success'>返回列表</a>")
+    }
+</script>

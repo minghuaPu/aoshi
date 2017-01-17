@@ -1,6 +1,5 @@
 <include file="Public:header" />
-<link rel="stylesheet" href="__PUBLIC__/css/enterprise/layout.css">
-<link rel="stylesheet" href="__PUBLIC__/css/enterprise/company.css?5">
+<link rel="stylesheet" href="__PUBLIC__/css/enterprise/company.css?9">
 
 <div class="container">
     <form action="{:U('Company/save')}" method="post">
@@ -11,16 +10,14 @@
                 <h3>公司全称</h3>
                 <p class="info_item" id="company_name">{$company_info['company_name']}</p>
             </div>
-            <div class="content_box">
+            <div class="content_box area">
                 <h3>公司地点</h3>
-                <fieldset id="city_china_val">
-                    <p id="area">
-                        {$company_info['province']}{$company_info['city']}{$company_info['area']}
-                    </p>
+                <p>
+                    {$company_info['city']}{$company_info['area']}
+                </p>
                     <input type="text" name="province" class="iProvince hiden">
                     <input type="text" name="city" class="iCity hiden">
                     <input type="text" name="area" class="iArea hiden">
-                </fieldset>
             </div>
             <div class="content_box">
                 <h3>公司地址</h3>
@@ -70,13 +67,12 @@
 </div>
 
 <include file="Public:footer" />
-<script src="__PUBLIC__/js/enterprise/jquery.cxselect.min.js"></script>
 <script>
-    if ({$enterprise_info['auditing']}==1){
+    if ("{$enterprise_info['auditing']}"=="1"){
         $("#submit").attr("disabled",true);
         $("#submit").attr("value","正在审核中");
         $(".btn-info").hide();
-    }else if({$enterprise_info['auditing']}==0){
+    }else if("{$enterprise_info['auditing']}"=="0"){
         $("#submit").attr("disabled",false);
         $("#submit").attr("value","申请审核");
         $("#submit").css({
@@ -85,9 +81,12 @@
         });
         $(".hide").removeClass("hide");
         $(".info_item").html("<input type='text'>");
-        $("#city_china_val p").html("<select class='province cxselect'  data-first-title='选择省' disabled='disabled'></select>" +
-            "<select class='city cxselect'  data-first-title='选择市' disabled='disabled'></select>" +
-            "<select class='area cxselect'  data-first-title='选择地区' disabled='disabled'></select>"
+        $(".area p").html(""+
+            '<select id="s_province" name="s_province"></select>'+
+
+            '<select id="s_city" name="s_city" ></select>'+
+
+            '<select id="s_county" name="s_county"></select>'
         )
         $(".company_scale p").html("<select data-first-title='选择规模' class='scale'>"+
             "<option value ='选择规模'>选择规模</option>"+
@@ -106,7 +105,7 @@
         $("#introduction").css({
             paddingLeft:"0px"
         })
-    }else if({$enterprise_info['auditing']}==2){
+    }else if("{$enterprise_info['auditing']}" =="2"){
         $("#submit").attr("disabled",true);
         $("#submit").attr("value","已通过官方认证");
         $("#submit").css({
@@ -119,15 +118,20 @@
         height:inHeight+"px"
     })
 
-    $.cxSelect.defaults.url = '__PUBLIC__/js/enterprise/cityData.min.json';
-
-    $('#city_china').cxSelect({
-        selects: ['province', 'city', 'area']
-    });
-
-    $('#city_china_val').cxSelect({
-        selects: ['province', 'city', 'area'],
-        nodata: 'none'
-    });
+//    var Gid  = document.getElementById ;
+//
+//    var showArea = function(){
+//
+//        Gid('show').innerHTML = "<h3>省" + Gid('s_province').value + " - 市" +
+//
+//            Gid('s_city').value + " - 县/区" +
+//
+//            Gid('s_county').value + "</h3>"
+//
+//    }
+//
+//    $('#s_county').attr('onchange','showArea()');
 </script>
-<script src="__PUBLIC__/js/enterprise/company.js?3"></script>
+<script src="__PUBLIC__/js/enterprise/company.js?6"></script>
+<script class="resources library" src="__PUBLIC__/js/enterprise/area1.js" type="text/javascript"></script>
+<script type="text/javascript">_init_area();</script>
