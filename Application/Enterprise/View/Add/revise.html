@@ -27,11 +27,9 @@
                     <input type="text"  name="province" class="hide" value="{$job_info['province']}">
                     <input type="text"  name="city" class="hide" value="{$job_info['city']}">
                     <input type="text"  name="area" class="hide" value="{$job_info['area']}">
-                    <fieldset id="city_china_val">
-                        <p class="sp">
-                            {$job_info['province']}{$job_info['city']}{$job_info['area']}
-                        </p>
-                    </fieldset>
+                    <select id="s_province" name="s_province" data-value="{$company_info['province']}"></select>
+                    <select id="s_city" name="s_city" ></select>
+                    <select id="s_county" name="s_county"></select>
                 </div>
                 <div class="form-group">
                     <div class="tit">工作地址</div>
@@ -42,18 +40,19 @@
                     <div class="tit">职位月薪</div>
                     <input type="text" name="salary_lowLimit" class="hide salary_lowLimit">
                     <select data-first-title="选择最低薪资" id="salary_lowLimit" data-value="{$job_info['salary_low']}" required>
-                        <option value="选择最低薪资">选择最低薪资</option>
+                        <option value="{$job_info['salary_low']}">{$job_info['salary_low']}</option>
                     </select>
-                    <span class="salary hide">到</span>
+                    <span class="salary">到</span>
                     <input type="text" name="salary_higLimit" data-value="{$job_info['salary_hig']}" class="hide salary_higLimit">
-                    <select id="salary_higLimit" class="hide">
+                    <select id="salary_higLimit">
+                        <option value="{$job_info['salary_hig']}">{$job_info['salary_hig']}</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <div class="tit">学历要求</div>
                     <input type="text" name="education" class="hide education" required>
                     <select data-first-title="选择学历" id="education" data-value="{$job_info['education']}">
-                        <option value="选择学历">选择学历</option>
+                        <option value="{$job_info['education']}">{$job_info['education']}</option>
                         <option value="不限">不限</option>
                         <option value="大专">大专</option>
                         <option value="本科">本科</option>
@@ -65,7 +64,7 @@
                     <div class="tit">经验要求</div>
                     <input type="text" name="work_time" class="hide work_time" >
                     <select data-first-title="选择工作经验" id="work_time" data-value="{$job_info['work_time']}" required>
-                        <option value="选择时间">选择时间</option>
+                        <option value="{$job_info['work_time']}">{$job_info['work_time']}</option>
                         <option value="不限">不限</option>
                         <option value="应届生">应届生</option>
                         <option value="1年以内">1年以内</option>
@@ -103,17 +102,9 @@
 </div>
 <include file="Public:footer" />
 <script src="__PUBLIC__/js/enterprise/add_job.js?38"></script>
-<script src="__PUBLIC__/js/enterprise/jquery.cxselect.min.js"></script>
 <script>
-    $.cxSelect.defaults.url = '__PUBLIC__/js/enterprise/cityData.min.json';
-
-    $('#city_china').cxSelect({
-        selects: ['province', 'city', 'area']
-    });
-
-    $('#city_china_val').cxSelect({
-        selects: ['province', 'city', 'area'],
-        nodata: 'none'
-    });
+    var opt0 = ["{$job_info['province']}","{$job_info['city']}","{$job_info['area']}"];//初始值
 </script>
+<script class="resources library" src="__PUBLIC__/js/enterprise/area.js?9" type="text/javascript"></script>
+<script type="text/javascript">_init_area();</script>
 

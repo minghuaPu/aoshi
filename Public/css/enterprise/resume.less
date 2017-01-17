@@ -74,6 +74,20 @@
             text-align: center;
             padding: 0;
         }
+        #all_check{
+            width: 15px;
+            height: 15px;
+            cursor: pointer;
+        }
+        .delete_all{
+            cursor: pointer;
+            color: red;
+            position: absolute;
+            width: 30px;
+            line-height: 50px;
+            top: 0;
+            right: 23px;
+        }
     }
     .table{
         margin: 0;
@@ -98,7 +112,10 @@
                 .btn-info{
                     height: 31px;
                     margin-top: -3px;
-                }
+                }.btn-danger{
+                     height: 31px;
+                     margin-top: -3px;
+                 }
                 button{
                     width: 80px;
                     height: 29px;
@@ -113,6 +130,12 @@
                     a:hover{
                         text-decoration: none;
                     }
+                }
+                input[type=checkbox]{
+                    width: 15px;
+                    height: 15px;
+                    margin: 10px 0 0 0;
+                    cursor: pointer;
                 }
             }
         }

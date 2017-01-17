@@ -87,6 +87,7 @@ class IndexController extends Controller {
        //echo $job->getLastSql();//获取上一次执行的sql语句
       
 
+
         // 第三步：赋值到模版变量
         $this->assign("job_info",$job_info);
 
@@ -140,7 +141,7 @@ class IndexController extends Controller {
 
         $this->display();
 
-          // session_start();  
+        session_start();
    
     }
 

@@ -26,9 +26,9 @@
 					<input type="text" name="username" id="user" class="ipt username" ng-model="username" ng-pattern="/^[A-Za-z0-9]\w{4,8}$/"  style=" border-top:0px solid #d5d5d5;" placeholder="设置帐号" required>
 				</div>
                 <div class=" user_tip" style="color:#e83636;font-size:12px;" ng-cloak>
-					<span   ng-show="(myForm.username.$dirty || myForm.username.$pristine) && myForm.username.$invalid">
-                        <span class="text-danger glyphicon  glyphicon-remove" ng-show="myForm.username.$error.required && myForm.username.$touched ">* 请输入新帐号。</span>
-                        <span class="text-danger glyphicon  glyphicon-remove" ng-if="(myForm.username.$error.pattern)&& myForm.username.$touched">*只能为英文或数字，且不能以数字打头并长度为5-8个字符!</sapn>
+					<span  ng-show="myForm.username.$dirty  && myForm.username.$invalid">
+                        <span class="text-danger glyphicon  glyphicon-remove" ng-show="myForm.username.$error.required ">* 请输入新帐号。</span>
+                        <span class="text-danger glyphicon  glyphicon-remove" ng-show="myForm.username.$error.pattern">*只能为英文或数字，且不能以数字打头并长度为5-8个字符!</sapn>
 					</span>
 				</div>
                 
@@ -37,9 +37,9 @@
 					<input type="password" name="password" id="password" class="ipt password" placeholder="设置登录密码" ng-model="password" ng-maxlength="18" ng-minlength="6" required>
 				</div>
                 <div class=" user_tip" style="color:#e83636;font-size:12px;" ng-cloak>
-					<span   ng-show="(myForm.password.$dirty || myForm.password.$pristine) && myForm.password.$invalid">
-                        <span class="text-danger glyphicon  glyphicon-remove" ng-show="myForm.password.$error.required && myForm.password.$touched" >* 请输入新密码。</span>
-                        <span class="text-danger glyphicon  glyphicon-remove" ng-if="(myForm.password.$error.minlength || myForm.password.$error.maxlength) && myForm.password.$touched">*长度为6-18个字符!</sapn>
+					<span  ng-show="myForm.password.$dirty && myForm.password.$invalid">
+                        <span class="text-danger glyphicon  glyphicon-remove" ng-show="myForm.password.$error.required " >* 请输入新密码。</span>
+                        <span class="text-danger glyphicon  glyphicon-remove" ng-show="myForm.password.$error.minlength || myForm.password.$error.maxlength">*长度为6-18个字符!</sapn>
 					</span>
 				</div>                
                 
@@ -61,7 +61,7 @@
 			</div>
 		</div>
 		<div class="button">
-			<button type="submit" class="login-btn register-btn" id="button" ng-disabled=" myForm.username.$invalid || myForm.password.$invalid || myForm.agpwd.$invalid ">注册</button>
+			<button type="submit" class="login-btn register-btn" id="button" ng-disabled="(myForm.username.$dirty || myForm.username.$pristine )&& myForm.username.$invalid ||(myForm.password.$dirty || myForm.password.$pristine )&& myForm.password.$invalid ||(myForm.agpwd.$dirty || myForm.agpwd.$pristine )&&  myForm.agpwd.$invalid ">注册</button>
 		</div>
 	
 	</form>
