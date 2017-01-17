@@ -113,3 +113,8 @@ body .body .login ul li {
   text-align: center;
   font-size: 12px;
 }
+.login .ex_jobseeker{
+  text-align: center;
+  display: block;
+  margin:5px 0px;
+}

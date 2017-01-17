@@ -3,6 +3,7 @@
 
 	<link rel="stylesheet" href="__PUBLIC__/css/common.css">
 	<link rel="stylesheet" href="__PUBLIC__/css/jobdetail.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/fonts/font_f8ufmrmnvizlg14i/iconfont.css">
 	 <div class="content">
 	 <volist name="job_detail" id="job_item">
 	 	<div class="container">
@@ -21,11 +22,11 @@
 							<li>{$job_item['education']}</li>
 						</ul>
 					</div>
-					<p class="local-time"></p>
+					<p class="local-time">{$time}</p>
 					<div class="speak-box">
 						<div class="box-con">
 							<div class="img">
-								<img src="__PUBLIC__/images/company-logo2.png">
+								<img src="{$job_item['photo']}">
 							</div>
 							<p>
 								<i class="i-left-jian"></i>
@@ -37,7 +38,7 @@
 					<div class="speak-box">
 						<div class="box-con">
 							<div class="img">
-								<img src="__PUBLIC__/images/company-logo2.png">
+								<img src="{$job_item['photo']}">
 							</div>
 							<p>
 								<i class="i-left-jian"></i>
@@ -50,7 +51,7 @@
 					<div class="speak-box">
 						<div class="box-con">
 							<div class="img">
-								<img src="__PUBLIC__/images/company-logo2.png">
+								<img src="{$job_item['photo']}">
 							</div>
 							<p>
 								<i class="i-left-jian"></i>
@@ -91,11 +92,11 @@
 				<!-- 公司显示表-->
 				<div class="company-dec">
 					<div class="company-left">
-						<div class="company-img">
-							<img src="__PUBLIC__/images/company-logo2.png">
+						<div class="company-img">		
+							<img src="{$job_item['photo']}">
 						</div>
 						<div class="company-name">
-							<p>{$job_item[company_name]}<span>招聘中</span></p>
+							<p>{$job_item[name]}  {$job_item[job]}<span>招聘中</span></p>
 							<span class="company-status">在线</span>
 						</div>
 						 <input type="hidden" value="{$job_item[id]}" id="job_ids"/>
@@ -106,16 +107,25 @@
 				<!-- 职位详情-->
 				<div class="job-detail">
 					<p class="job-describe">职位描述</p>
-					<div class="con-dec">{$job_item[job_describe]}</div>
+					<p>{$job_item[job_describe]}</p>
 					<p class="job-require">岗位要求</p>
-					<div class="con-dec">{$job_item[job_require]}</div>
-					<p class="company-address">公司地址</p>
-					<div class="con-dec">{$job_item[address]}</div>
+					<p>{$job_item[job_require]}</p>
+					<p class="company-describe">公司简介</p>
+					<div class="con-dec">
+						<p>{$job_item[introduction]}</p>
+						<i class="iconfont">&#xe620;</i>
+						<span>{$job_item[address]}</span>
+						<i class="iconfont">&#xe65d;</i>
+						<span>{$job_item[scale]}</span>
+						<i class="iconfont">&#xe69f;</i>
+						<span>{$job_item[phone]}</span>
+					</div>
 				</div>
 			</div>
 		</div>
 	</volist>
 	</div>
 	<script src="__PUBLIC__/js/enterprise/jobdetail.js"></script>
+	<script src="__PUBLIC__/fonts/font_f8ufmrmnvizlg14i/iconfont.js"></script>
 </body>
 </html>
