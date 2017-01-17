@@ -120,7 +120,9 @@ button {
 
 
 /*简历模块*/
-
+.who{
+	font-size:30px;	
+	}
 #resume {
 	margin: 0px auto;
 }
@@ -407,7 +409,7 @@ button {
 }
 
 #resume #job-career .list .name {
-	width: 200px;
+	width: 150px;
 }
 
 #resume #job-career .list .name i {
