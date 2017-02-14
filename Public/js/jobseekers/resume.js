@@ -1,25 +1,11 @@
 /*简历导航*/
-var $rNav =$("#nav-list"),
-	$rNavTop = $rNav.offset().top;
-
-$(window).scroll(function() {
-	
-	if($(document).scrollTop() >= $rNavTop) {	
-		$rNav.addClass("fixed");
-	} else {
-		$rNav.removeClass("fixed");	
-	}
-});
 $('#nav-list li').each(function() {
 	$(this).click(function() {
 		$(this).addClass('selected').siblings().removeClass('selected')
 	})
 });
 
-
 /*简历管理*/
-
-
 var resume = angular.module('resume', []);
 $rtn=null;
 resume.run(function($rootScope, service) {

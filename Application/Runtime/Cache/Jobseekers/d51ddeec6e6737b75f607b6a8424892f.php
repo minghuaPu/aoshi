@@ -1,15 +1,15 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html ng-app="resume">
 
 	<head>
 		<meta charset="utf-8">
 		<title>我的简历</title>
-		<link rel="stylesheet" href="__PUBLIC__/css/bootstrap-3.3.0/css/bootstrap.min.css">
-		<link rel="stylesheet" href="__PUBLIC__/css/jobseekers/cropper.min.css" rel="stylesheet" />
-		<link rel="stylesheet" href="__PUBLIC__/css/jobseekers/main.css" rel="stylesheet" />
-		<link rel="stylesheet" href="__PUBLIC__/css/jobseekers/resume.css">
+		<link rel="stylesheet" href="/aoshi/Public/css/bootstrap-3.3.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/aoshi/Public/css/jobseekers/cropper.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="/aoshi/Public/css/jobseekers/main.css" rel="stylesheet" />
+		<link rel="stylesheet" href="/aoshi/Public/css/jobseekers/resume.css">
 		<script>
-			var SITE_URL = "__MODULE__";
+			var SITE_URL = "/aoshi/index.php/Jobseekers";
 		</script>
 		<style type="text/css">
 			@charset "UTF-8";
@@ -44,12 +44,12 @@
 		<!--头部-->
 		<header id="header">
 			<nav class="container">
-				<a class="logo" href=""><img src="__PUBLIC__/images/logo.png"></a>
-				<a class="nav-link selected" href="{:U('Home/Index/index')}">首页</a>
-				<a class="nav-link" href="{:U('Index/index')}">简历管理</a>
-				<a class="nav-link" href="{:U('Index/delivery')}">投递箱</a>
-				<a class="nav-link fr" href="{:U('Login/log_out')}">退出</a>
-				<a class="nav-link fr" href="{:U('Index/index')}" ng-bind="basic[0].nickname" style="padding: 0 4px;color: #7b7b7b;"></a>
+				<a class="logo" href=""><img src="/aoshi/Public/images/logo.png"></a>
+				<a class="nav-link selected" href="<?php echo U('Home/Index/index');?>">首页</a>
+				<a class="nav-link" href="<?php echo U('Index/index');?>">简历管理</a>
+				<a class="nav-link" href="<?php echo U('Index/delivery');?>">投递箱</a>
+				<a class="nav-link fr" href="<?php echo U('Login/log_out');?>">退出</a>
+				<a class="nav-link fr" href="<?php echo U('Index/index');?>" ng-bind="basic[0].nickname" style="padding: 0 4px;color: #7b7b7b;"></a>
 			</nav>
 		</header>
 		<!--简历-->
@@ -58,11 +58,79 @@
 			<article class="resume-inner">
 				<!--用户头像-->
 				<aside class="avatar" id="crop-avatar">
-					<img class="absolute" src="__PUBLIC__/images/resume-bg.png">
-					<img id="avatar-img" class="center hear" src="__PUBLIC__/images/avatar.png">
-					<img id="avatar-bg" class="center" src="__PUBLIC__/images/avatar-bg.png">
+					<img class="absolute" src="/aoshi/Public/images/resume-bg.png">
+					<img id="avatar-img" class="center hear" src="/aoshi/Public/images/avatar.png">
+					<img id="avatar-bg" class="center" src="/aoshi/Public/images/avatar-bg.png">
 					<input id="avatar-upload" class="center" type="file">
-					<include file="crop" class="center"/>
+					   <div  id="crop-avatar" class="center" >
+            
+                        <!-- Current avatar -->
+                      
+                        <div class="avatar-view" title="点击换头像">
+                
+                            <?php if(is_array($jobseekers_info)): foreach($jobseekers_info as $key=>$item): ?><img src="<?php echo ($item["photo"]); ?>"  id="avatar-img" style="border-radius:50%" class="rate"/><?php endforeach; endif; ?>
+                            
+                        </div>
+            
+                        <!-- Cropping modal -->
+                          <div class="modal fade" id="avatar-modal" aria-hidden="true" aria-labelledby="avatar-modal-label" role="dialog" tabindex="-1">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                    <form class="avatar-form" action="<?php echo U('Crop/index');?>" enctype="multipart/form-data" method="post" style="display:block">
+                                                        <div class="modal-header">
+                                                            <button class="close" data-dismiss="modal" type="button">&times;</button>
+                                                            <h4 class="modal-title" id="avatar-modal-label">更换头像</h4>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="avatar-body">
+                            
+                                                                <!-- Upload image and data -->
+                                                                <div class="avatar-upload">
+                                                                    <input class="avatar-src" name="avatar_src" type="hidden"/>
+                                                                    <input class="avatar-data" name="avatar_data" type="hidden"/>
+                                                                    <label for="avatarInput">头像上传</label>
+                                                                    <input class="avatar-input" id="avatarInput" name="avatar_file" type="file"/>
+                                                                </div>
+                            
+                                                                <!-- Crop and preview -->
+                                                                <div class="row">
+                                                                    <div class="col-md-9">
+                                                                        <div class="avatar-wrapper"></div>
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div class="avatar-preview preview-lg"></div>
+                                                                        <div class="avatar-preview preview-md"></div>
+                                                                        <div class="avatar-preview preview-sm"></div>
+                                                                    </div>
+                                                                </div>
+                            
+                                                                <div class="row avatar-btns">
+                                                                    <div class="col-md-9">
+                                                                        <div class="btn-group">
+                                                                            <button class="btn btn-primary" data-method="rotate" data-option="-90" type="button" title="Rotate -90 degrees">向左旋转</button>
+                                                                            <button class="btn btn-primary" data-method="rotate" data-option="-15" type="button">-15度</button>
+                                                                            <button class="btn btn-primary" data-method="rotate" data-option="-30" type="button">-30度</button>
+                                                                            <button class="btn btn-primary" data-method="rotate" data-option="-45" type="button">-45度</button>
+                                                                        </div>
+                                                                        <div class="btn-group">
+                                                                            <button class="btn btn-primary" data-method="rotate" data-option="90" type="button" title="Rotate 90 degrees">向右旋转</button>
+                                                                            <button class="btn btn-primary" data-method="rotate" data-option="15" type="button">15度</button>
+                                                                            <button class="btn btn-primary" data-method="rotate" data-option="30" type="button">30度</button>
+                                                                            <button class="btn btn-primary" data-method="rotate" data-option="45" type="button">45度</button>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <button class="btn btn-primary btn-block avatar-save" type="submit">点击上传</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div><!-- /.modal -->     
+                         </div>
 				</aside>
 				<!--基本信息-->
 				<section id="user-info" ng-controller="resumeBasic">
@@ -389,7 +457,7 @@
 						<div class="top">
 							<span>简历完整度：<em id="finishing_rate" ng-bind="photo_rate+one_rate+two_rate+three_rate+four_rate+five_rate-integrity+'%'"></em></span>
 
-							<a class="fr" href="{:U('Preview/index')}" target="_blank">预览简历</a>
+							<a class="fr" href="<?php echo U('Preview/index');?>" target="_blank">预览简历</a>
 						</div>
 					</div>
 					<ul>
@@ -413,12 +481,12 @@
 			</aside>
 		</section>
 
-		<script type="text/javascript" src="__PUBLIC__/js/jobseekers/jquery-3.1.1.min.js"></script>
-		<script type="text/javascript" src="__PUBLIC__/js/angular-1.0.1.min.js"></script>
-		<script type="text/javascript" src="__PUBLIC__/js/jobseekers/resume.js"></script>
-		<script type="text/javascript" src="__PUBLIC__/css/bootstrap-3.3.0/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="__PUBLIC__/js/jobseekers/cropper.min.js"></script>
-		<script type="text/javascript" src="__PUBLIC__/js/jobseekers/main.js"></script>
+		<script type="text/javascript" src="/aoshi/Public/js/jobseekers/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="/aoshi/Public/js/angular-1.0.1.min.js"></script>
+		<script type="text/javascript" src="/aoshi/Public/js/jobseekers/resume.js"></script>
+		<script type="text/javascript" src="/aoshi/Public/css/bootstrap-3.3.0/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="/aoshi/Public/js/jobseekers/cropper.min.js"></script>
+		<script type="text/javascript" src="/aoshi/Public/js/jobseekers/main.js"></script>
 	</body>
 
 </html>
