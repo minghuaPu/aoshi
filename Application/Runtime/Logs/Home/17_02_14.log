@@ -37,3 +37,42 @@ ERR: 1146:Table 'yuanku_job.job' doesn't exist
 ERR: 1146:Table 'yuanku_job.job' doesn't exist
  [ SQL语句 ] : SHOW COLUMNS FROM `job`
 
+[ 2017-02-14T18:18:11+08:00 ] ::1 /aoshi/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011626s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.012390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012537s ]
+NOTIC: [8] Undefined variable: name D:\Wampserver\www\aoshi\Application\Home\Controller\IndexController.class.php 第 20 行.
+ERR: 1146:Table 'yuanku_job.job' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `job`
+ERR: 1146:Table 'yuanku_job.job' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `job`
+
+[ 2017-02-14T18:18:27+08:00 ] ::1 /aoshi/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000604s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000942s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001149s ]
+NOTIC: [8] Undefined variable: name D:\Wampserver\www\aoshi\Application\Home\Controller\IndexController.class.php 第 20 行.
+ERR: 1146:Table 'yuanku_job.job' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `job`
+ERR: 1146:Table 'yuanku_job.job' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `job`
+
+[ 2017-02-14T18:18:57+08:00 ] ::1 /aoshi/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000584s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001230s ]
+NOTIC: [8] Undefined variable: name D:\Wampserver\www\aoshi\Application\Home\Controller\IndexController.class.php 第 20 行.
+ERR: 1146:Table 'yuanku_job.job' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `job`
+ERR: 1146:Table 'yuanku_job.job' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `job`
+

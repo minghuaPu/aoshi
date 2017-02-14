@@ -118,3 +118,99 @@ INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000478s ]
 ERR: 无法加载模块:Application
 
+[ 2017-02-14T18:20:00+08:00 ] 127.0.0.1 /aoshi/Application/Jobseekers/View/Index/__PUBLIC__/css/bootstrap-3.3.0/css/bootstrap.min.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000969s ]
+ERR: 无法加载模块:Application
+
+[ 2017-02-14T18:20:00+08:00 ] 127.0.0.1 /aoshi/Application/Jobseekers/View/Index/__PUBLIC__/css/jobseekers/cropper.min.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000605s ]
+ERR: 无法加载模块:Application
+
+[ 2017-02-14T18:20:00+08:00 ] 127.0.0.1 /aoshi/Application/Jobseekers/View/Index/__PUBLIC__/css/jobseekers/resume.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000913s ]
+ERR: 无法加载模块:Application
+
+[ 2017-02-14T18:20:00+08:00 ] 127.0.0.1 /aoshi/Application/Jobseekers/View/Index/__PUBLIC__/css/jobseekers/main.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000928s ]
+ERR: 无法加载模块:Application
+
+[ 2017-02-14T18:20:00+08:00 ] 127.0.0.1 /aoshi/Application/Jobseekers/View/Index/__PUBLIC__/js/jobseekers/cropper.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000936s ]
+ERR: 无法加载模块:Application
+
+[ 2017-02-14T18:20:00+08:00 ] 127.0.0.1 /aoshi/Application/Jobseekers/View/Index/__PUBLIC__/css/bootstrap-3.3.0/js/bootstrap.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001163s ]
+ERR: 无法加载模块:Application
+
+[ 2017-02-14T18:20:00+08:00 ] 127.0.0.1 /aoshi/Application/Jobseekers/View/Index/__PUBLIC__/js/jobseekers/resume.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000949s ]
+ERR: 无法加载模块:Application
+
+[ 2017-02-14T18:20:00+08:00 ] 127.0.0.1 /aoshi/Application/Jobseekers/View/Index/__PUBLIC__/js/angular-1.0.1.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001088s ]
+ERR: 无法加载模块:Application
+
+[ 2017-02-14T18:20:00+08:00 ] 127.0.0.1 /aoshi/Application/Jobseekers/View/Index/__PUBLIC__/js/jobseekers/jquery-3.1.1.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000951s ]
+ERR: 无法加载模块:Application
+
+[ 2017-02-14T18:20:00+08:00 ] 127.0.0.1 /aoshi/Application/Jobseekers/View/Index/__PUBLIC__/js/jobseekers/main.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000597s ]
+ERR: 无法加载模块:Application
+
+[ 2017-02-14T18:20:00+08:00 ] 127.0.0.1 /aoshi/Application/Jobseekers/View/Index/__PUBLIC__/images/logo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001558s ]
+ERR: 无法加载模块:Application
+
+[ 2017-02-14T18:20:00+08:00 ] 127.0.0.1 /aoshi/Application/Jobseekers/View/Index/__PUBLIC__/images/avatar-bg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000968s ]
+ERR: 无法加载模块:Application
+
+[ 2017-02-14T18:20:00+08:00 ] 127.0.0.1 /aoshi/Application/Jobseekers/View/Index/__PUBLIC__/js/jobseekers/resume.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001039s ]
+ERR: 无法加载模块:Application
+
+[ 2017-02-14T18:20:00+08:00 ] 127.0.0.1 /aoshi/Application/Jobseekers/View/Index/__PUBLIC__/css/bootstrap-3.3.0/js/bootstrap.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000617s ]
+ERR: 无法加载模块:Application
+
+[ 2017-02-14T18:20:00+08:00 ] 127.0.0.1 /aoshi/Application/Jobseekers/View/Index/__PUBLIC__/js/jobseekers/cropper.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000645s ]
+ERR: 无法加载模块:Application
+
+[ 2017-02-14T18:20:00+08:00 ] 127.0.0.1 /aoshi/Application/Jobseekers/View/Index/__PUBLIC__/js/jobseekers/main.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000636s ]
+ERR: 无法加载模块:Application
+
