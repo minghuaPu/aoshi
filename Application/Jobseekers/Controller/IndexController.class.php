@@ -25,7 +25,7 @@ class IndexController extends ResumeController {
         $this->display();
     }
 	public function select(){
-		$uid=session('uid');			
+		$uid=1;			
 		$jobseekers_info= M('jobseekers')->where("uid =$uid")->select();//简历基本信息
 		$basic_info= M('resume_basic')->where("uid =$uid")->select();//简历基本信息
 		$experience_info= M('resume_experience')->where("uid =$uid")->select();//简历工作经历
@@ -46,7 +46,7 @@ class IndexController extends ResumeController {
 	}  
     public function save() {
     	
-    	$uid=session('uid');		
+    	$uid=1;		
 									
    		//简历添加
    		if(I('index') == "basic") {
