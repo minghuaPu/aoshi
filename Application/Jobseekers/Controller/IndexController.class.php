@@ -5,34 +5,33 @@ use Common\Controller\ResumeController;
 use Common\Controller\JobseekersController;
 
 class IndexController extends ResumeController {
-    public function index(){
-		/*if (session('user_login_status')) {
-		
-		}else{
-			 $this->error('请先登录!',U('Login/login'));
-			 
-		}*/
-		//如果没有登录，就提示请登录
-		//当前uid
+    public function index() {
+		//当前登录用户id
 		$uid=session('uid');
-		/*$sql1 ="select * from  jobseekers where  uid =". $uid .$pageObj -> limit;
-		$jobseekers_info=D("jobseekers")->query($sql1);	*/
-			
-		$jobseekers_info= M('jobseekers')->field("photo")->where("uid =$uid")->select();//简历基本信息
+		//简历基本信息	
+		$jobseekers_info=M('jobseekers')->field("photo")->where("uid =$uid")->select();
 
         $this->assign('jobseekers_info',$jobseekers_info);
 	
         $this->display();
-    }
-	public function select(){
-		$uid=1;			
-		$jobseekers_info= M('jobseekers')->where("uid =$uid")->select();//简历基本信息
-		$basic_info= M('resume_basic')->where("uid =$uid")->select();//简历基本信息
-		$experience_info= M('resume_experience')->where("uid =$uid")->select();//简历工作经历
-		$education_info= M('resume_education')->where("uid =$uid")->select(); //简历教育经历
-		$describe_info= M('jobseekers_describe')->where("uid =$uid")->select(); //简历自我描述
-		$prefered_info= M('resume_prefered')->where("uid =$uid")->select(); //简历求职意向
-			
+    }  
+    //负责简历信息的查询功能
+	public function select() {
+		//当前用户主键
+		$uid=session('uid');	
+		//用户基本信息	
+		$jobseekers_info=M('jobseekers')->field("photo")->where("uid =$uid")->select();
+		//简历基本信息
+		$basic_info=M('resume_basic')->where("uid =$uid")->select();
+		//简历工作经历
+		$experience_info=M('resume_experience')->where("uid =$uid")->select();
+		//简历教育经历
+		$education_info=M('resume_education')->where("uid =$uid")->select(); 
+		//简历自我描述
+		$describe_info=M('jobseekers_describe')->where("uid =$uid")->select(); 
+		//简历求职意向
+		$prefered_info=M('resume_prefered')->where("uid =$uid")->select(); 
+		//输出简历信息
 		echo json_encode(
    			array(
 		    	'user'=>$jobseekers_info,
@@ -40,14 +39,14 @@ class IndexController extends ResumeController {
 		    	'experience'=>$experience_info,
 		    	'education'=>$education_info,
 				'describe'=>$describe_info,
-		    	'prefered'=>$prefered_info,
+		    	'prefered'=>$prefered_info
 		 	)
    		);
-	}  
+	}
+	//负责简历信息的更新和添加功能
     public function save() {
-    	
-    	$uid=1;		
-									
+    	//当前用户主键
+		$uid = session('uid');						
    		//简历添加
    		if(I('index') == "basic") {
 			$resumes_basic = M('resume_basic');
@@ -61,13 +60,10 @@ class IndexController extends ResumeController {
 			$data['current_city'] = I('current_city');
 			$data['phone'] = I('phone');
 			$data['e_mail'] = I('e_mail');
-			if(I('basic_id')){
+			if(I('basic_id')) {
 				$resumes_basic->where("uid=$uid")->save($data);
-				echo json_encode($data);
-			} 
-			else {
-				$basic_id = $resumes_basic->data($data)->add();
-				echo $basic_id;
+			} else {
+				echo $resumes_basic->data($data)->add();
 			}
    		} elseif(I('index') == "experience") {
    			$resumes_jobexp = M('resume_experience');
@@ -76,40 +72,33 @@ class IndexController extends ResumeController {
 			$data['job_title'] = I('job_title');
 			$data['working_time'] = I('working_time');
 			$data['job_description'] = I('job_description');
-			if(I('experience_id')){
-				$experience_id=I('experience_id');
+			if(I('experience_id')) {
+				$experience_id = I('experience_id');
 				$resumes_jobexp->where("experience_id=$experience_id")->save($data);
-				echo json_encode($data);
-			} 
-			else {
-				$experience_id = $resumes_jobexp->data($data)->add();
-				echo $experience_id;
+			} else {
+				echo $resumes_jobexp->data($data)->add();
 			}
    		} elseif(I('index') == "education") {
 			$resumes_eduexp = M('resume_education');
 			$data['uid'] = $uid;
 			$data['school_name'] = I('school_name');
 			$data['major'] = I('major');
-			$data['degree'] =I('degree');
-			$data['graduated'] =I('graduated');
+			$data['degree'] = I('degree');
+			$data['graduated'] = I('graduated');
 			if(I('education_id')) {
 				$education_id=I('education_id');
 				$resumes_eduexp->where("education_id=$education_id")->save($data);
-				echo true;
 			} else {
-				$education_id = $resumes_eduexp->data($data)->add();
-				echo $education_id;
+				echo $resumes_eduexp->data($data)->add();
 			}
    		} elseif(I('index') == "describe") {
 			$resumes_describe = M('jobseekers_describe');
 			$data['uid']=$uid;
 			$data['describe'] = I('describe');
-			if(I('describe_id')){
+			if(I('describe_id')) {
 				$resumes_describe->where("uid=$uid")->save($data);
-				echo true;
 			} else {
-				$describe_id = $resumes_describe->data($data)->add();
-				echo $describe_id;
+				echo $resumes_describe->data($data)->add();
 			}
   	 	} elseif(I('index') == "prefered") {
    			$resumes_career = M('resume_prefered');
@@ -120,30 +109,51 @@ class IndexController extends ResumeController {
 			$data['expected_monthly_income'] =I('expected_monthly_income');
 			if(I('prefered_id')){
 				$resumes_career->where("uid=$uid")->save($data);
-				echo true;
 			} else {
-				$prefered_id = $resumes_career->data($data)->add();
-				echo $prefered_id;
+				echo $resumes_career->data($data)->add();
 			}
    	    } elseif(I('index') == "status") {
    			$resumes_basic = M('resume_basic');
 			$data['current_status'] = I('current_status');
 			$resumes_basic->where("uid=$uid")->save($data);
 			echo I('current_status');
-		 }
+		}
     }
+    //负责简历工作经历和教育经历删除功能
 	public function delete() {
-		if(I('index') == "experience"){
+		if(I('index') == "experience") {
 			$resume_id = I('experience_id');
 			$resumes_eduexp = M('resume_experience');
 			$resumes_eduexp->where("experience_id=$resume_id")->delete();
-		} 
-		else {
+		} else if(I('index') == "education") {
 			$resume_id = I('education_id');
 			$resumes_eduexp = M('resume_education');
 			$resumes_eduexp->where("education_id=$resume_id")->delete();
 		}
-   }
+	}
+	//负责简历预览功能
+	public function preview() {
+		//当前用户主键
+		$uid=session('uid');	
+		//用户头像信息	
+		$jobseekers_info=M('jobseekers')->field("jobseekers.photo")->where("uid=$uid")->select();
+		$this->assign('photo', $jobseekers_info);
+		//简历基本信息
+		$basic_info=M('resume_basic')->where("uid =$uid")->select();
+		$this->assign('basic', $basic_info);
+		//简历工作经历
+		$experience_info=M('resume_experience')->where("uid =$uid")->select();
+		$this->assign('experience', $experience_info);
+		//简历教育经历
+		$education_info=M('resume_education')->where("uid =$uid")->select(); 
+		$this->assign('education', $education_info);
+		//简历求职意向
+		$prefered_info=M('resume_prefered')->where("uid =$uid")->select(); 
+		$this->assign('prefered', $prefered_info);
+        //页面渲染输出
+       	$this->display("preview"); 
+	}
+	
 	public function delivery() //编辑
 	{
 /*原生：SELECT resume_delivery.delivery_time,resume_delivery.delivery_status,job.id,job.job_name,job.enterprise_id,job.money,job.place,company.id,company.company_name FROM resume_delivery left join job on resume_delivery.job_id=job.id left join company on job.enterprise_id=company.enterprise_id where jobseeker_id=5		

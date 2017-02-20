@@ -1,0 +1,111 @@
+[ 2017-02-20T11:28:12+08:00 ] 127.0.0.1 /aoshi/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000545s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000688s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000834s ]
+NOTIC: [8] Undefined variable: name D:\Wampserver\www\aoshi\Application\Home\Controller\IndexController.class.php 第 20 行.
+ERR: 1146:Table 'yuanku_job.job' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `job`
+ERR: 1146:Table 'yuanku_job.job' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `job`
+
+[ 2017-02-20T15:16:52+08:00 ] 127.0.0.1 /aoshi/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000528s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000704s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000838s ]
+SQL: SHOW COLUMNS FROM `jobseekers` [ RunTime:0.0007s ]
+SQL: SELECT `username` FROM `jobseekers` WHERE ( uid=1 )  [ RunTime:0.0003s ]
+ERR: 1146:Table 'yuanku_job.job' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `job`
+ERR: 1146:Table 'yuanku_job.job' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `job`
+
+[ 2017-02-20T15:16:58+08:00 ] 127.0.0.1 /aoshi/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000963s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001095s ]
+SQL: SHOW COLUMNS FROM `jobseekers` [ RunTime:0.0006s ]
+SQL: SELECT `username` FROM `jobseekers` WHERE ( uid=1 )  [ RunTime:0.0003s ]
+ERR: 1146:Table 'yuanku_job.job' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `job`
+ERR: 1146:Table 'yuanku_job.job' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `job`
+
+[ 2017-02-20T15:17:52+08:00 ] 127.0.0.1 /aoshi/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000513s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000651s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000776s ]
+SQL: SHOW COLUMNS FROM `jobseekers` [ RunTime:0.0007s ]
+SQL: SELECT `username` FROM `jobseekers` WHERE ( uid=1 )  [ RunTime:0.0003s ]
+ERR: 1146:Table 'yuanku_job.job' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `job`
+ERR: 1146:Table 'yuanku_job.job' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `job`
+
+[ 2017-02-20T15:20:12+08:00 ] 127.0.0.1 /aoshi/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000644s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000691s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000866s ]
+SQL: SHOW COLUMNS FROM `jobseekers` [ RunTime:0.0006s ]
+SQL: SELECT `username` FROM `jobseekers` WHERE ( uid=1 )  [ RunTime:0.0003s ]
+ERR: 1146:Table 'yuanku_job.job' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `job`
+ERR: 1146:Table 'yuanku_job.job' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `job`
+
+[ 2017-02-20T15:22:28+08:00 ] 127.0.0.1 /aoshi/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000581s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000813s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000956s ]
+SQL: SHOW COLUMNS FROM `jobseekers` [ RunTime:0.0008s ]
+SQL: SELECT `username` FROM `jobseekers` WHERE ( uid=1 )  [ RunTime:0.0004s ]
+ERR: 1146:Table 'yuanku_job.job' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `job`
+ERR: 1146:Table 'yuanku_job.job' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `job`
+
+[ 2017-02-20T15:25:01+08:00 ] 127.0.0.1 /aoshi/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000575s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000814s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000957s ]
+SQL: SHOW COLUMNS FROM `jobseekers` [ RunTime:0.0006s ]
+SQL: SELECT `username` FROM `jobseekers` WHERE ( uid=1 )  [ RunTime:0.0003s ]
+ERR: 1146:Table 'yuanku_job.job' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `job`
+ERR: 1146:Table 'yuanku_job.job' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `job`
+
+[ 2017-02-20T18:16:32+08:00 ] 127.0.0.1 /aoshi/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000430s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000488s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000608s ]
+SQL: SHOW COLUMNS FROM `jobseekers` [ RunTime:0.0007s ]
+SQL: SELECT `username` FROM `jobseekers` WHERE ( uid=1 )  [ RunTime:0.0003s ]
+ERR: 1146:Table 'yuanku_job.job' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `job`
+ERR: 1146:Table 'yuanku_job.job' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `job`
+
