@@ -153,7 +153,7 @@ class IndexController extends Controller {
             $datas['job_id']=$job_id;
             $datas['jobseeker_id']=$jobseeker_id;       
             $datas['delivery_time']=date('Y-m-d  H:i:s');
-
+            $posi=session('position');
             if(session('user_login_status')){
                 
                 $jobseekers_info= M('resume_delivery')->field("resume_delivery.delivery_time")->where("job_id =$job_id and jobseeker_id = $jobseeker_id")->select();//简历基本信
@@ -178,12 +178,10 @@ class IndexController extends Controller {
 
                 }
             else{
-                  echo  json_encode(array('msg'=>'请先登录！---（立即转跳前往求职者登录界面！）','url'=> U('Jobseekers/Login/index',array('job_id'=>$job_id)),'status'=>'-1'));
-               
-                } 
-
-            
-            }
-
-           
+            	if($posi != $job_id){
+                    session('position',$job_id);
+                }
+                echo json_encode(array('msg'=>'请先登录！---（立即转跳前往求职者登录界面！）','url'=> U('Jobseekers/Login/index'),'status'=>'-1'));
+            }  
+       }       
 }
