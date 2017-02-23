@@ -114,8 +114,8 @@ resume.controller('resumeJobexp', function($scope, service) {
 		if(confirm("确认删除")) {
 			$scope.experience.splice($scope.experience.indexOf(experience), 1);
 			service.remove('experience', experience);
+			location.reload()
 		};
-		location.reload()
 	};
 	$scope.cancel = function() {
 		$("#job-exp-c_n").attr("required", false);
@@ -153,8 +153,8 @@ resume.controller('resumeEduexp', function($scope, service) {
 		if(confirm("确认删除")) {
 			$scope.education.splice($scope.education.indexOf(education), 1);
 			service.remove('education', education);
+			location.reload()
 		};
-		location.reload()
 	};
 	$scope.cancel = function() {
 		$("#edu-exp-s_n").attr("required", false);
@@ -184,8 +184,8 @@ resume.controller('resumeCareer', function($scope, service) {
 		$scope.form = {
 			expected_position: '',
 			job_type: '全职',
-			expected_location: '无限',
-			expected_monthly_income: '无限'
+			expected_location: '广州',
+			expected_monthly_income: '面议'
 		}
 	};
 	$scope.cancel = function() {

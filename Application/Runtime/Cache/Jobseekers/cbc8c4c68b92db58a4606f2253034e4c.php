@@ -29,7 +29,6 @@
                 </div>
 			</div>
 		</div>
-		<input type="hidden" value="<?php echo ($info); ?>" name="befor"/>
 		<div class="button">
 			<button type="submit" class="login-btn register-btn" id="button">登录</button>
 		</div>

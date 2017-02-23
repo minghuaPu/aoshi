@@ -16,7 +16,7 @@
 				<div class="left">
 					<a class="logo" href="<?php echo U('Home/Index/index');?>"></a>
 					<a href="<?php echo U('Home/Index/index');?>" style="background-color:#00C2B8;">首页</a>
-					<a href="#">找工作</a>
+					<a href="<?php echo U('Home/Index/findjob');?>">找工作</a>
 					<a href="<?php echo U('Index/delivery');?>">投递箱</a>
 				</div>
 				<div class="right">
@@ -86,21 +86,23 @@
 	</div>
 </div>
 				<article id="basic" class="basic" ng-controller="resumeBasic">
-					<div ng-hide="form" ng-bind="basic[0].nickname"></div>
-					<div ng-hide="form" ng-bind="basic[0].peculiarity"></div>
-					<div ng-hide="form">
-						<span ng-bind="basic[0].sex"></span>
-						<span ng-bind="basic[0].birth"></span>
-						<span ng-bind="basic[0].top_edu"></span>
-						<span ng-bind="basic[0].work_years"></span>
-						<span ng-bind="basic[0].current_city"></span>
+					<div class="info" ng-show="basic[0]">
+						<div ng-hide="form" ng-bind="basic[0].nickname"></div>
+						<div ng-hide="form" ng-bind="basic[0].peculiarity"></div>
+						<div ng-hide="form">
+							<span ng-bind="basic[0].sex"></span>
+							<span ng-bind="basic[0].birth"></span>
+							<span ng-bind="basic[0].top_edu"></span>
+							<span ng-bind="basic[0].work_years"></span>
+							<span ng-bind="basic[0].current_city"></span>
+						</div>
+						<div ng-hide="form">
+							<span ng-bind="basic[0].phone"></span>
+							<span ng-bind="basic[0].e_mail"></span>
+						</div>
+						<a class="edit" ng-click="edit(basic[0])">编辑</a>
 					</div>
-					<div ng-hide="form">
-						<span ng-bind="basic[0].phone"></span>
-						<span ng-bind="basic[0].e_mail"></span>
-					</div>
-					<a class="edit" ng-click="edit(basic[0])">编辑</a>
-					<button class="add" ng-click="add()" ng-hide="basic[0]">+ 添加基本资料</button>
+					<button class="add" ng-click="add()" ng-hide="basic[0]||form">+ 添加基本资料</button>
 					<form id="user-info-form" ng-show="form" name="myForm" novalidate>
 						<fieldset>
 							<label>姓名</label>
@@ -182,7 +184,7 @@
 					<div class="title"><span>工作经历</span>
 						<a class="edit" href="javascript:;" ng-click="add()">添加</a>
 					</div>
-					<button class="add" ng-click="add()" ng-hide="experience[0]">+ 添加工作经历</button>
+					<button class="add" ng-click="add()" ng-hide="experience[0]||form">+ 添加工作经历</button>
 					<p ng-repeat="item in experience" ng-hide="form">
 						<em ng-bind="item.re_company_name"></em>
 						<em ng-bind="item.working_time"></em><br>
@@ -218,7 +220,7 @@
 					<div class="title"><span>教育经历</span>
 						<a class="edit" href="javascript:;" ng-click="add()">添加</a>
 					</div>
-					<button class="add" ng-click="add()" ng-hide="education[0]">+ 教育经历</button>
+					<button class="add" ng-click="add()" ng-hide="education[0]||form">+ 教育经历</button>
 					<p ng-repeat="item in education" ng-hide="form">
 						<em ng-bind="item.school_name"></em>
 						<em ng-bind="item.graduated+'年毕业'"></em><br>
@@ -293,7 +295,6 @@
 						<fieldset>
 							<label>职位类型</label>
 							<select class="input-text" ng-model="form.job_type" required>
-								<option>无限</option>
 								<option>全职</option>
 								<option>兼职</option>
 								<option>实习</option>
@@ -302,7 +303,6 @@
 						<fieldset>
 							<label>期望城市</label>
 							<select class="input-text" ng-model="form.expected_location" required>
-								<option>无限</option>
 								<option>北京</option>
 								<option>上海</option>
 								<option>广州</option>
@@ -313,7 +313,7 @@
 						<fieldset>
 							<label>期望月薪</label>
 							<select class="input-text" ng-model="form.expected_monthly_income" required>
-								<option>无限</option>
+								<option>面议</option>
 								<option>5k以下</option>
 								<option>5k-10k</option>
 								<option>10k-15k</option>

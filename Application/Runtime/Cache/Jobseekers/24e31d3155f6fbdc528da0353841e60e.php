@@ -18,15 +18,15 @@
 					<div><span><?php echo ($basic[0]["phone"]); ?></span><span><?php echo ($basic[0]["e_mail"]); ?></span></div>
 				</article><?php endif; ?>
 			<?php if($experience[0]): ?><article class="jobexp">
-					<div class="title"><span>工作经历</span></div>
+					<div class="title"> <span>工作经历</span></div>
 					<?php if(is_array($experience)): foreach($experience as $key=>$item): ?><p><em><?php echo ($item["re_company_name"]); ?></em><em><?php echo ($item["working_time"]); ?>年</em><br><em><?php echo ($item["job_title"]); ?></em><br><em><?php echo ($item["job_description"]); ?></em></p><?php endforeach; endif; ?>
 				</article><?php endif; ?>
 			<?php if($education[0]): ?><article class="eduexp">
-					<div class="title"><span>教育经历</span></div>
+					<div class="title"> <span>教育经历</span></div>
 					<?php if(is_array($education)): foreach($education as $key=>$item): ?><p><em><?php echo ($item["school_name"]); ?></em><em><?php echo ($item["graduated"]); ?>年毕业</em><br><em><?php echo ($item["degree"]); ?>-<?php echo ($item["major"]); ?></em></p><?php endforeach; endif; ?>
 				</article><?php endif; ?>
 			<?php if($prefered[0]): ?><article class="career">
-					<div class="title"><span>求职意向</span></div>
+					<div class="title"> <span>求职意向</span></div>
 					<div><em><?php echo ($prefered[0]["expected_position"]); ?></em><em><?php echo ($prefered[0]["job_type"]); ?></em><em><?php echo ($prefered[0]["expected_location"]); ?></em><em><?php echo ($prefered[0]["expected_monthly_income"]); ?></em></div>
 				</article><?php endif; ?>
 			<div class="status">- <?php echo ($basic[0]["current_status"]); ?> -</div>
