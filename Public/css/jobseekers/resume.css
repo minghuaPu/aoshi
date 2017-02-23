@@ -152,6 +152,7 @@ button {
 
 #basic .info {
 	margin: -15px 0;
+	padding: 15px 0;
 }
 
 #basic .info:hover {
@@ -276,13 +277,13 @@ button {
 	text-align: center;
 }
 
-#preview .basic div:nth-child(1) {
+#preview .info div:nth-child(1) {
 	line-height: 40px;
 	font-size: 30px;
 	color: #333;
 }
 
-#preview .basic div:nth-child(2) {
+#preview .info div:nth-child(2) {
 	line-height: 34px;
 	font-size: 16px;
 	color: #333;

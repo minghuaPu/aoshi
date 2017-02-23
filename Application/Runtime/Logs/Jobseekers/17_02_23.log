@@ -4112,3 +4112,659 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001623s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001824s ]
 
+[ 2017-02-23T20:22:36+08:00 ] 127.0.0.1 /aoshi/index.php/Jobseekers/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000673s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000899s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001037s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000286s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018555s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018707s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000848s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000965s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001096s ]
+
+[ 2017-02-23T20:22:36+08:00 ] 127.0.0.1 /aoshi/index.php/Jobseekers/Login/get_verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000895s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001681s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001978s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000941s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001082s ]
+
+[ 2017-02-23T20:23:49+08:00 ] 127.0.0.1 /aoshi/index.php/Jobseekers/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001794s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001126s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001279s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000269s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011861s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012021s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000833s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000965s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001018s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001135s ]
+
+[ 2017-02-23T20:23:49+08:00 ] 127.0.0.1 /aoshi/index.php/Jobseekers/Login/get_verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001203s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001184s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001336s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001284s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001480s ]
+
+[ 2017-02-23T20:23:53+08:00 ] 127.0.0.1 /aoshi/index.php/Jobseekers/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000475s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000878s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001068s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000204s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008359s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008504s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000656s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000776s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000818s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000935s ]
+
+[ 2017-02-23T20:23:53+08:00 ] 127.0.0.1 /aoshi/index.php/Jobseekers/Login/get_verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000910s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001072s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001250s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001133s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001300s ]
+
+[ 2017-02-23T20:24:05+08:00 ] 127.0.0.1 /aoshi/index.php/Jobseekers/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000463s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000773s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000897s ]
+NOTIC: [8] Use of undefined constant username - assumed 'username' D:\Wampserver\www\aoshi\Application\Jobseekers\Controller\LoginController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `jobseekers` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jobseekers` WHERE `username` = 'admin ' AND `password` = '21232f297a57a5a743894a0e4a801fc3'  [ RunTime:0.0008s ]
+NOTIC: [8] Use of undefined constant username - assumed 'username' D:\Wampserver\www\aoshi\Application\Jobseekers\Controller\LoginController.class.php 第 24 行.
+SQL: SELECT uid FROM jobseekers WHERE username='admin ' [ RunTime:0.0003s ]
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Wampserver\www\aoshi\Application\Jobseekers\Controller\LoginController.class.php 第 26 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000205s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.065052s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.065186s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000617s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000732s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000811s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000926s ]
+
+[ 2017-02-23T20:24:06+08:00 ] 127.0.0.1 /aoshi/index.php/Jobseekers/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000946s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000801s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000924s ]
+SQL: SHOW COLUMNS FROM `jobseekers` [ RunTime:0.0008s ]
+SQL: SELECT `photo` FROM `jobseekers` WHERE ( uid =1 )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000195s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000349s ]
+NOTIC: [8] Undefined variable: user D:\Wampserver\www\aoshi\Application\Runtime\Cache\Jobseekers\d51ddeec6e6737b75f607b6a8424892f.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014312s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014672s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001043s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001255s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001465s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001685s ]
+
+[ 2017-02-23T20:24:06+08:00 ] 127.0.0.1 /aoshi/index.php/Jobseekers?a=select
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000673s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001343s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001539s ]
+SQL: SHOW COLUMNS FROM `jobseekers` [ RunTime:0.0009s ]
+SQL: SELECT `photo` FROM `jobseekers` WHERE ( uid =1 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `resume_basic` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `resume_basic` WHERE ( uid =1 )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `resume_experience` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `resume_experience` WHERE ( uid =1 )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `resume_education` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `resume_education` WHERE ( uid =1 )  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jobseekers_describe` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jobseekers_describe` WHERE ( uid =1 )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `resume_prefered` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `resume_prefered` WHERE ( uid =1 )  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001543s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001687s ]
+
+[ 2017-02-23T20:24:19+08:00 ] 127.0.0.1 /aoshi/index.php/Jobseekers/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000504s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000943s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001095s ]
+SQL: SHOW COLUMNS FROM `jobseekers` [ RunTime:0.0007s ]
+SQL: SELECT `photo` FROM `jobseekers` WHERE ( uid =1 )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000169s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000301s ]
+NOTIC: [8] Undefined variable: user D:\Wampserver\www\aoshi\Application\Runtime\Cache\Jobseekers\d51ddeec6e6737b75f607b6a8424892f.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014278s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014413s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000643s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000764s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001279s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001472s ]
+
+[ 2017-02-23T20:24:20+08:00 ] 127.0.0.1 /aoshi/index.php/Jobseekers?a=select
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000902s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001153s ]
+SQL: SHOW COLUMNS FROM `jobseekers` [ RunTime:0.0018s ]
+SQL: SELECT `photo` FROM `jobseekers` WHERE ( uid =1 )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `resume_basic` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `resume_basic` WHERE ( uid =1 )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `resume_experience` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `resume_experience` WHERE ( uid =1 )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `resume_education` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `resume_education` WHERE ( uid =1 )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `jobseekers_describe` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jobseekers_describe` WHERE ( uid =1 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `resume_prefered` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `resume_prefered` WHERE ( uid =1 )  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001449s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001635s ]
+
+[ 2017-02-23T20:24:48+08:00 ] 127.0.0.1 /aoshi/index.php/Jobseekers/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000947s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000941s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001132s ]
+SQL: SHOW COLUMNS FROM `jobseekers` [ RunTime:0.0007s ]
+SQL: SELECT `photo` FROM `jobseekers` WHERE ( uid =1 )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000165s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000291s ]
+NOTIC: [8] Undefined variable: user D:\Wampserver\www\aoshi\Application\Runtime\Cache\Jobseekers\d51ddeec6e6737b75f607b6a8424892f.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013922s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014045s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000624s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000739s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001291s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001515s ]
+
+[ 2017-02-23T20:24:49+08:00 ] 127.0.0.1 /aoshi/index.php/Jobseekers?a=select
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001067s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001027s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001164s ]
+SQL: SHOW COLUMNS FROM `jobseekers` [ RunTime:0.0010s ]
+SQL: SELECT `photo` FROM `jobseekers` WHERE ( uid =1 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `resume_basic` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `resume_basic` WHERE ( uid =1 )  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `resume_experience` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `resume_experience` WHERE ( uid =1 )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `resume_education` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `resume_education` WHERE ( uid =1 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `jobseekers_describe` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jobseekers_describe` WHERE ( uid =1 )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `resume_prefered` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `resume_prefered` WHERE ( uid =1 )  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001181s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001316s ]
+
+[ 2017-02-23T20:27:34+08:00 ] 127.0.0.1 /aoshi/index.php/Jobseekers/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000533s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001252s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001500s ]
+SQL: SHOW COLUMNS FROM `jobseekers` [ RunTime:0.0011s ]
+SQL: SELECT `photo` FROM `jobseekers` WHERE ( uid =1 )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000336s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000609s ]
+NOTIC: [8] Undefined variable: user D:\Wampserver\www\aoshi\Application\Runtime\Cache\Jobseekers\d51ddeec6e6737b75f607b6a8424892f.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023136s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023322s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001047s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001233s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001333s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001540s ]
+
+[ 2017-02-23T20:27:34+08:00 ] 127.0.0.1 /aoshi/index.php/Jobseekers?a=select
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000679s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001216s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001457s ]
+SQL: SHOW COLUMNS FROM `jobseekers` [ RunTime:0.0009s ]
+SQL: SELECT `photo` FROM `jobseekers` WHERE ( uid =1 )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `resume_basic` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `resume_basic` WHERE ( uid =1 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `resume_experience` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `resume_experience` WHERE ( uid =1 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `resume_education` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `resume_education` WHERE ( uid =1 )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `jobseekers_describe` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jobseekers_describe` WHERE ( uid =1 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `resume_prefered` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `resume_prefered` WHERE ( uid =1 )  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001175s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001358s ]
+
+[ 2017-02-23T20:29:39+08:00 ] 127.0.0.1 /aoshi/index.php/Jobseekers/Index/preview.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000607s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000995s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001162s ]
+SQL: SHOW COLUMNS FROM `jobseekers` [ RunTime:0.0010s ]
+SQL: SELECT jobseekers.photo FROM `jobseekers` WHERE ( uid=1 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `resume_basic` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `resume_basic` WHERE ( uid =1 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `resume_experience` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `resume_experience` WHERE ( uid =1 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `resume_education` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `resume_education` WHERE ( uid =1 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `resume_prefered` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `resume_prefered` WHERE ( uid =1 )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000206s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056289s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056429s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000662s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000775s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000821s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000948s ]
+
+[ 2017-02-23T20:30:30+08:00 ] 127.0.0.1 /aoshi/index.php/Jobseekers/Index/preview.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000496s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000800s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000933s ]
+SQL: SHOW COLUMNS FROM `jobseekers` [ RunTime:0.0007s ]
+SQL: SELECT jobseekers.photo FROM `jobseekers` WHERE ( uid=1 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `resume_basic` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `resume_basic` WHERE ( uid =1 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `resume_experience` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `resume_experience` WHERE ( uid =1 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `resume_education` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `resume_education` WHERE ( uid =1 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `resume_prefered` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `resume_prefered` WHERE ( uid =1 )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000200s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013111s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013244s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000625s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000736s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000811s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000937s ]
+
+[ 2017-02-23T20:30:37+08:00 ] 127.0.0.1 /aoshi/index.php/Jobseekers/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000475s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000578s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000700s ]
+SQL: SHOW COLUMNS FROM `jobseekers` [ RunTime:0.0008s ]
+SQL: SELECT `photo` FROM `jobseekers` WHERE ( uid =1 )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000169s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000304s ]
+NOTIC: [8] Undefined variable: user D:\Wampserver\www\aoshi\Application\Runtime\Cache\Jobseekers\d51ddeec6e6737b75f607b6a8424892f.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013797s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013920s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000461s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000574s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000898s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001101s ]
+
+[ 2017-02-23T20:30:37+08:00 ] 127.0.0.1 /aoshi/index.php/Jobseekers?a=select
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000933s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001129s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001318s ]
+SQL: SHOW COLUMNS FROM `jobseekers` [ RunTime:0.0012s ]
+SQL: SELECT `photo` FROM `jobseekers` WHERE ( uid =1 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `resume_basic` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `resume_basic` WHERE ( uid =1 )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `resume_experience` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `resume_experience` WHERE ( uid =1 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `resume_education` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `resume_education` WHERE ( uid =1 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `jobseekers_describe` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jobseekers_describe` WHERE ( uid =1 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `resume_prefered` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `resume_prefered` WHERE ( uid =1 )  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001730s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001944s ]
+
+[ 2017-02-23T20:32:27+08:00 ] 127.0.0.1 /aoshi/index.php/Jobseekers/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000472s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000782s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000903s ]
+SQL: SHOW COLUMNS FROM `jobseekers` [ RunTime:0.0008s ]
+SQL: SELECT `photo` FROM `jobseekers` WHERE ( uid =1 )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000169s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000296s ]
+NOTIC: [8] Undefined variable: user D:\Wampserver\www\aoshi\Application\Runtime\Cache\Jobseekers\d51ddeec6e6737b75f607b6a8424892f.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014170s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014303s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000715s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000832s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001237s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001440s ]
+
+[ 2017-02-23T20:32:28+08:00 ] 127.0.0.1 /aoshi/index.php/Jobseekers?a=select
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000659s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001652s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001896s ]
+SQL: SHOW COLUMNS FROM `jobseekers` [ RunTime:0.0009s ]
+SQL: SELECT `photo` FROM `jobseekers` WHERE ( uid =1 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `resume_basic` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `resume_basic` WHERE ( uid =1 )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `resume_experience` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `resume_experience` WHERE ( uid =1 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `resume_education` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `resume_education` WHERE ( uid =1 )  [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `jobseekers_describe` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `jobseekers_describe` WHERE ( uid =1 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `resume_prefered` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `resume_prefered` WHERE ( uid =1 )  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001221s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001360s ]
+
+[ 2017-02-23T20:32:34+08:00 ] 127.0.0.1 /aoshi/index.php/Jobseekers/Index/preview.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000650s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000839s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000972s ]
+SQL: SHOW COLUMNS FROM `jobseekers` [ RunTime:0.0007s ]
+SQL: SELECT jobseekers.photo FROM `jobseekers` WHERE ( uid=1 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `resume_basic` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `resume_basic` WHERE ( uid =1 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `resume_experience` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `resume_experience` WHERE ( uid =1 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `resume_education` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `resume_education` WHERE ( uid =1 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `resume_prefered` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `resume_prefered` WHERE ( uid =1 )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000235s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014487s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014684s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000650s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000764s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000836s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000954s ]
+
+[ 2017-02-23T20:33:04+08:00 ] 127.0.0.1 /aoshi/index.php/Jobseekers/Login/log_out.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000668s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000879s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001036s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000198s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008088s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008216s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000757s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000871s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000813s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000929s ]
+
+[ 2017-02-23T20:33:07+08:00 ] 127.0.0.1 /aoshi/index.php/Jobseekers/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000593s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001431s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001662s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000251s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009022s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009159s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000881s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001249s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001436s ]
+
+[ 2017-02-23T20:33:07+08:00 ] 127.0.0.1 /aoshi/index.php/Jobseekers/Login/get_verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000079s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001323s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001089s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001306s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001140s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001358s ]
+
+[ 2017-02-23T20:33:16+08:00 ] 127.0.0.1 /aoshi/index.php/Jobseekers/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000644s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000814s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000942s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000186s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007101s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007235s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000654s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000766s ]
+
+[ 2017-02-23T20:33:18+08:00 ] 127.0.0.1 /aoshi/index.php/Jobseekers/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000854s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000892s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000206s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009823s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010301s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001196s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001335s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000852s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000973s ]
+
+[ 2017-02-23T20:33:18+08:00 ] 127.0.0.1 /aoshi/index.php/Jobseekers/Login/get_verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000062s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001288s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001829s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001577s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001837s ]
+
+[ 2017-02-23T20:33:33+08:00 ] 127.0.0.1 /aoshi/index.php/Jobseekers/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000525s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000808s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000981s ]
+NOTIC: [8] Use of undefined constant username - assumed 'username' D:\Wampserver\www\aoshi\Application\Jobseekers\Controller\LoginController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `jobseekers` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jobseekers` WHERE `username` = '648253615' AND `password` = '84f56ec3ca852afb16ae24eb6732bf8c'  [ RunTime:0.0004s ]
+NOTIC: [8] Use of undefined constant username - assumed 'username' D:\Wampserver\www\aoshi\Application\Jobseekers\Controller\LoginController.class.php 第 24 行.
+SQL: SELECT uid FROM jobseekers WHERE username='648253615' [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Wampserver\www\aoshi\Application\Jobseekers\Controller\LoginController.class.php 第 26 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000197s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007317s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007454s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000758s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000934s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001562s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001758s ]
+
+[ 2017-02-23T20:33:34+08:00 ] 127.0.0.1 /aoshi/index.php/Jobseekers/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000545s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001119s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001279s ]
+SQL: SHOW COLUMNS FROM `jobseekers` [ RunTime:0.0007s ]
+SQL: SELECT `photo` FROM `jobseekers` WHERE ( uid =2 )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000166s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000300s ]
+NOTIC: [8] Undefined variable: user D:\Wampserver\www\aoshi\Application\Runtime\Cache\Jobseekers\d51ddeec6e6737b75f607b6a8424892f.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014984s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015156s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000662s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000788s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001633s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001848s ]
+
+[ 2017-02-23T20:33:34+08:00 ] 127.0.0.1 /aoshi/index.php/Jobseekers?a=select
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000640s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001424s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001562s ]
+SQL: SHOW COLUMNS FROM `jobseekers` [ RunTime:0.0008s ]
+SQL: SELECT `photo` FROM `jobseekers` WHERE ( uid =2 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `resume_basic` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `resume_basic` WHERE ( uid =2 )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `resume_experience` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `resume_experience` WHERE ( uid =2 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `resume_education` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `resume_education` WHERE ( uid =2 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `jobseekers_describe` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jobseekers_describe` WHERE ( uid =2 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `resume_prefered` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `resume_prefered` WHERE ( uid =2 )  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001564s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001800s ]
+

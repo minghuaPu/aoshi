@@ -11,7 +11,7 @@
 		<section id="preview">
 			<img src="/aoshi/Public/images/resume-bg.png">
 			<img class="portrait" src="<?php echo ($photo[0]["photo"]); ?>">
-			<?php if($basic[0]): ?><article class="basic">
+			<?php if($basic[0]): ?><article class="basic info">
 					<div><?php echo ($basic[0]["nickname"]); ?></div>
 					<div><?php echo ($basic[0]["peculiarity"]); ?></div>
 					<div><span><?php echo ($basic[0]["sex"]); ?></span><span><?php echo ($basic[0]["birth"]); ?></span><span><?php echo ($basic[0]["top_edu"]); ?></span><span><?php echo ($basic[0]["work_years"]); ?></span><span><?php echo ($basic[0]["current_city"]); ?></span></div>
