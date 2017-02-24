@@ -1,9 +1,10 @@
+/*防闪烁*/
 setTimeout(function() {
 	var form = document.querySelectorAll('#resume form');
 	for(var i = 0; i < form.length; i++) {
 		form[i].style.visibility = 'visible'
 	};
-}, 1000)
+}, 1000);
 /*简历导航*/
 $('.resume-nav .nav a').each(function() {
 	$(this).click(function() {
@@ -21,7 +22,7 @@ resume.run(function($rootScope, service) {
 		$rootScope.education = data['education'];
 		$rootScope.prefered = data['prefered'];
 		$rootScope.integrity = 0;
-		if($rootScope.user[0]) {
+		if($rootScope.user[0].photo) {
 			$rootScope.integrity += 20;
 		}
 		if($rootScope.basic[0]) {
@@ -92,6 +93,7 @@ resume.controller('resumeBasic', function($scope, service) {
 				$scope.basic.push($scope.form);
 			}
 			delete $scope.form;
+			location.reload()
 		})
 	};
 });
@@ -201,6 +203,7 @@ resume.controller('resumeCareer', function($scope, service) {
 				$scope.prefered.push($scope.form);
 			}
 			delete $scope.form;
+			location.reload()
 		})
 	};
 });

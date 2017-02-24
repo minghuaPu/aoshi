@@ -225,7 +225,7 @@
 					<div class="title"><span>求职意向</span>
 						<a class="edit" href="javascript:;" ng-click="edit(prefered[0])">修改</a>
 					</div>
-					<button class="add" ng-click="add(prefered[0])" ng-hide="prefered[0]">+ 添加求职意向</button>
+					<button class="add" ng-click="add(prefered[0])" ng-hide="prefered[0]||form">+ 添加求职意向</button>
 					<div ng-show="prefered[0]" ng-hide="form">
 						<em ng-bind="prefered[0].expected_position"></em>
 						<em ng-bind="prefered[0].job_type"></em>
