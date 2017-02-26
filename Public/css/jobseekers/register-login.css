@@ -186,6 +186,12 @@
 		#button:hover{
 			background: #80c3f7;
 		}
+		.ex_enterprise{
+			display: block;
+			margin:10px 0px;
+			float:right;
+			color: #0f88eb;
+		}
 		.remember{
 			margin-top: 10px;
 			line-height: 30px;

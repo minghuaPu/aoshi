@@ -1,0 +1,358 @@
+[ 2017-02-24T13:25:06+08:00 ] 127.0.0.1 /aoshi/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.029963s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.021349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.021502s ]
+NOTIC: [8] Undefined variable: name D:\Wampserver\www\aoshi\Application\Home\Controller\IndexController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0363s ]
+NOTIC: [8] Undefined index: key D:\Wampserver\www\aoshi\Application\Home\Controller\IndexController.class.php 第 26 行.
+NOTIC: [8] Undefined variable: job_info D:\Wampserver\www\aoshi\Application\Home\Controller\IndexController.class.php 第 31 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000199s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000342s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 48 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 48 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 50 行.
+NOTIC: [8] Use of undefined constant News - assumed 'News' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.094374s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.094513s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.017802s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.017939s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.024657s ]
+INFO: [ app_end ] --END-- [ RunTime:0.024876s ]
+
+[ 2017-02-24T13:26:26+08:00 ] 127.0.0.1 /aoshi/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000456s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000456s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000619s ]
+NOTIC: [8] Undefined variable: name D:\Wampserver\www\aoshi\Application\Home\Controller\IndexController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: key D:\Wampserver\www\aoshi\Application\Home\Controller\IndexController.class.php 第 26 行.
+NOTIC: [8] Undefined variable: job_info D:\Wampserver\www\aoshi\Application\Home\Controller\IndexController.class.php 第 31 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000154s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000284s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 48 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 48 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 50 行.
+NOTIC: [8] Use of undefined constant News - assumed 'News' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013239s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013366s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000463s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000581s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001117s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001338s ]
+
+[ 2017-02-24T13:37:49+08:00 ] 127.0.0.1 /aoshi/index.php/Home/Index/findjob.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000459s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000474s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000601s ]
+SQL: SHOW COLUMNS FROM `jobseekers` [ RunTime:0.0006s ]
+SQL: SELECT `username` FROM `jobseekers` WHERE ( uid=2 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: key D:\Wampserver\www\aoshi\Application\Home\Controller\IndexController.class.php 第 57 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `job` LIMIT 1   [ RunTime:0.0003s ]
+ERR: 1054:Unknown column 'job.company_name' in 'field list'
+ [ SQL语句 ] : SELECT job.id,`job_name`,job.company_name,`salary_low`,`salary_hig`,job.city,`work_time`,`education`,`photo`,`name`,`job` FROM `job` INNER JOIN enterprise_info on enterprise_id=enterprise_info.id  WHERE ( `job_name` LIKE '%%' OR job.company_name LIKE '%%' ) AND `status` = 0 LIMIT 0,8  
+ERR: 1054:Unknown column 'job.company_name' in 'field list'
+ [ SQL语句 ] : SELECT job.id,`job_name`,job.company_name,`salary_low`,`salary_hig`,job.city,`work_time`,`education`,`photo`,`name`,`job` FROM `job` INNER JOIN enterprise_info on enterprise_id=enterprise_info.id  WHERE ( `job_name` LIKE '%%' OR job.company_name LIKE '%%' ) AND `status` = 0 LIMIT 0,8  
+
+[ 2017-02-24T13:37:51+08:00 ] 127.0.0.1 /aoshi/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000501s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000536s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000683s ]
+SQL: SHOW COLUMNS FROM `jobseekers` [ RunTime:0.0007s ]
+SQL: SELECT `username` FROM `jobseekers` WHERE ( uid=2 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: key D:\Wampserver\www\aoshi\Application\Home\Controller\IndexController.class.php 第 26 行.
+NOTIC: [8] Undefined variable: job_info D:\Wampserver\www\aoshi\Application\Home\Controller\IndexController.class.php 第 31 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000220s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000406s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 48 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 48 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 50 行.
+NOTIC: [8] Use of undefined constant News - assumed 'News' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015247s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015389s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000460s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000587s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000561s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000709s ]
+
+[ 2017-02-24T13:37:54+08:00 ] 127.0.0.1 /aoshi/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000484s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000496s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000628s ]
+SQL: SHOW COLUMNS FROM `jobseekers` [ RunTime:0.0006s ]
+SQL: SELECT `username` FROM `jobseekers` WHERE ( uid=2 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: key D:\Wampserver\www\aoshi\Application\Home\Controller\IndexController.class.php 第 26 行.
+NOTIC: [8] Undefined variable: job_info D:\Wampserver\www\aoshi\Application\Home\Controller\IndexController.class.php 第 31 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000300s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000589s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 48 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 48 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 50 行.
+NOTIC: [8] Use of undefined constant News - assumed 'News' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014809s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014971s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000591s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000759s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000618s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000779s ]
+
+[ 2017-02-24T13:37:58+08:00 ] 127.0.0.1 /aoshi/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000463s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000589s ]
+SQL: SHOW COLUMNS FROM `jobseekers` [ RunTime:0.0006s ]
+SQL: SELECT `username` FROM `jobseekers` WHERE ( uid=2 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: key D:\Wampserver\www\aoshi\Application\Home\Controller\IndexController.class.php 第 26 行.
+NOTIC: [8] Undefined variable: job_info D:\Wampserver\www\aoshi\Application\Home\Controller\IndexController.class.php 第 31 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000156s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000285s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 48 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 48 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 50 行.
+NOTIC: [8] Use of undefined constant News - assumed 'News' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014711s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014855s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000613s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000743s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000605s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000756s ]
+
+[ 2017-02-24T13:38:03+08:00 ] 127.0.0.1 /aoshi/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000553s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001512s ]
+NOTIC: [8] Undefined variable: name D:\Wampserver\www\aoshi\Application\Home\Controller\IndexController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: key D:\Wampserver\www\aoshi\Application\Home\Controller\IndexController.class.php 第 26 行.
+NOTIC: [8] Undefined variable: job_info D:\Wampserver\www\aoshi\Application\Home\Controller\IndexController.class.php 第 31 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000204s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000371s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 48 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 48 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 50 行.
+NOTIC: [8] Use of undefined constant News - assumed 'News' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014857s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015011s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000493s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000619s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000551s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000746s ]
+
+[ 2017-02-24T13:39:38+08:00 ] 127.0.0.1 /aoshi/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000434s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000558s ]
+NOTIC: [8] Undefined variable: name D:\Wampserver\www\aoshi\Application\Home\Controller\IndexController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: key D:\Wampserver\www\aoshi\Application\Home\Controller\IndexController.class.php 第 26 行.
+NOTIC: [8] Undefined variable: job_info D:\Wampserver\www\aoshi\Application\Home\Controller\IndexController.class.php 第 31 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000156s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000293s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 48 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 48 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 50 行.
+NOTIC: [8] Use of undefined constant News - assumed 'News' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014140s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014273s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000480s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000601s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000797s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000996s ]
+
+[ 2017-02-24T14:17:16+08:00 ] 127.0.0.1 /aoshi/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006621s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007453s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007600s ]
+SQL: SHOW COLUMNS FROM `jobseekers` [ RunTime:0.0246s ]
+SQL: SELECT `username` FROM `jobseekers` WHERE ( uid=2 )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0273s ]
+NOTIC: [8] Undefined index: key D:\Wampserver\www\aoshi\Application\Home\Controller\IndexController.class.php 第 26 行.
+NOTIC: [8] Undefined variable: job_info D:\Wampserver\www\aoshi\Application\Home\Controller\IndexController.class.php 第 31 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000186s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000333s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 48 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 48 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 50 行.
+NOTIC: [8] Use of undefined constant News - assumed 'News' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.071296s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.071441s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.012639s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012782s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.024066s ]
+INFO: [ app_end ] --END-- [ RunTime:0.024330s ]
+
+[ 2017-02-24T16:30:20+08:00 ] 127.0.0.1 /aoshi/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.640164s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.551286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.551446s ]
+SQL: SHOW COLUMNS FROM `jobseekers` [ RunTime:0.2608s ]
+SQL: SELECT `username` FROM `jobseekers` WHERE ( uid=2 )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.3681s ]
+NOTIC: [8] Undefined index: key D:\Wampserver\www\aoshi\Application\Home\Controller\IndexController.class.php 第 26 行.
+NOTIC: [8] Undefined variable: job_info D:\Wampserver\www\aoshi\Application\Home\Controller\IndexController.class.php 第 31 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.499205s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.499360s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 48 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 48 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 50 行.
+NOTIC: [8] Use of undefined constant News - assumed 'News' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.712737s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.712927s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.039691s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.039822s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.079354s ]
+INFO: [ app_end ] --END-- [ RunTime:0.079499s ]
+
+[ 2017-02-24T16:31:02+08:00 ] 127.0.0.1 /aoshi/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000512s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000526s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000668s ]
+NOTIC: [8] Undefined variable: name D:\Wampserver\www\aoshi\Application\Home\Controller\IndexController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: key D:\Wampserver\www\aoshi\Application\Home\Controller\IndexController.class.php 第 26 行.
+NOTIC: [8] Undefined variable: job_info D:\Wampserver\www\aoshi\Application\Home\Controller\IndexController.class.php 第 31 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000155s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000287s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 48 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 48 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 50 行.
+NOTIC: [8] Use of undefined constant News - assumed 'News' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015444s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015688s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000590s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000779s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000828s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001082s ]
+
+[ 2017-02-24T16:35:27+08:00 ] 127.0.0.1 /aoshi/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000457s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000546s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000684s ]
+NOTIC: [8] Undefined variable: name D:\Wampserver\www\aoshi\Application\Home\Controller\IndexController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: key D:\Wampserver\www\aoshi\Application\Home\Controller\IndexController.class.php 第 26 行.
+NOTIC: [8] Undefined variable: job_info D:\Wampserver\www\aoshi\Application\Home\Controller\IndexController.class.php 第 31 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000210s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000357s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 48 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 48 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 50 行.
+NOTIC: [8] Use of undefined constant News - assumed 'News' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015179s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015306s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000565s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000677s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000527s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000667s ]
+
+[ 2017-02-24T16:39:36+08:00 ] 127.0.0.1 /aoshi/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000423s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000615s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000754s ]
+NOTIC: [8] Undefined variable: name D:\Wampserver\www\aoshi\Application\Home\Controller\IndexController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `job` [ RunTime:0.0015s ]
+NOTIC: [8] Undefined index: key D:\Wampserver\www\aoshi\Application\Home\Controller\IndexController.class.php 第 26 行.
+NOTIC: [8] Undefined variable: job_info D:\Wampserver\www\aoshi\Application\Home\Controller\IndexController.class.php 第 31 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000153s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000287s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 48 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 48 行.
+NOTIC: [8] Use of undefined constant findjob - assumed 'findjob' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 50 行.
+NOTIC: [8] Use of undefined constant News - assumed 'News' D:\Wampserver\www\aoshi\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 52 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013606s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013730s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000330s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000440s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000828s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001021s ]
+

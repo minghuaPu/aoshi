@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>简历预览</title>
+		<link rel="stylesheet" href="__PUBLIC__/css/jobseekers/resume.css">
+	</head>
+
+	<body>
+		<section id="preview">
+			<img src="__PUBLIC__/images/resume-bg.png">
+			<img class="portrait" src="{$photo[0].photo}">
+			<if condition="$basic[0]">
+				<article class="basic info">
+					<div>{$basic[0].nickname}</div>
+					<div>{$basic[0].peculiarity}</div>
+					<div><span>{$basic[0].sex}</span><span>{$basic[0].birth}</span><span>{$basic[0].top_edu}</span><span>{$basic[0].work_years}</span><span>{$basic[0].current_city}</span></div>
+					<div><span>{$basic[0].phone}</span><span>{$basic[0].e_mail}</span></div>
+				</article>
+			</if>
+			<if condition="$experience[0]">
+				<article class="jobexp">
+					<div class="title"> <span>工作经历</span></div>
+					<foreach name="experience" item="item">
+						<p><em>{$item.re_company_name}</em><em>{$item.working_time}年</em><br><em>{$item.job_title}</em><br><em>{$item.job_description}</em></p>
+					</foreach>
+				</article>
+			</if>
+			<if condition="$education[0]">
+				<article class="eduexp">
+					<div class="title"> <span>教育经历</span></div>
+					<foreach name="education" item="item">
+						<p><em>{$item.school_name}</em><em>{$item.graduated}年毕业</em><br><em>{$item.degree}-{$item.major}</em></p>
+					</foreach>
+				</article>
+			</if>
+			<if condition="$prefered[0]">
+				<article class="career">
+					<div class="title"> <span>求职意向</span></div>
+					<div><em>{$prefered[0].expected_position}</em><em>{$prefered[0].job_type}</em><em>{$prefered[0].expected_location}</em><em>{$prefered[0].expected_monthly_income}</em></div>
+				</article>
+			</if>
+			<div class="status">- {$basic[0].current_status} -</div>
+		</section>
+	</body>
+
+</html>

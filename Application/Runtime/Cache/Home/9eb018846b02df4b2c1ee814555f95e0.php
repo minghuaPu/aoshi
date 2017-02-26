@@ -55,6 +55,11 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#"><i class="icon-ios"></i>iOS</a></li>
                     <li><a href="#"><i class="icon-android"></i>Android</a></li>
+
+                    <?php if($name): if(is_array($name)): foreach($name as $key=>$name): ?><li> <a href="<?php echo U('Jobseekers/Index/index');?>"><?php echo ($name["username"]); ?></a></li>
+       <li><a href="<?php echo U('Jobseekers/Login/log_out');?>">退出</a></li><?php endforeach; endif; ?>  
+    <?php else: ?>   
+         <li><a href="<?php echo U('Jobseekers/Login/login');?>">登录/注册</a></li><?php endif; ?>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -65,6 +70,7 @@
 <link rel="stylesheet" href="/aoshi/Public/css/common.css">
 <link rel="stylesheet" href="/aoshi/Public/css/findjob.css"> 
   	 
+	
 
 <!-- banner -->
 	<div class="container">
@@ -161,33 +167,79 @@
 
 
 <!-- 第四步：遍历模版变量 -->
+		
+		<div class="list-content">
 		<?php if(is_array($job_info)): $i = 0; $__LIST__ = $job_info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$job_item): $mod = ($i % 2 );++$i;?><div class="job-list">
-				<a href="<?php echo U('Index/jobdetail',array('id'=>$job_item['id']));?>"><!-- <?php echo U('Index/jobdetail',array(id=>$id));?> -->
+				<a href='jobdetail/id/<?php echo ($job_item["id"]); ?>'>
 					<div class="job-left">
 					<!-- 第五步：给对应信息添加动态数据 -->
 						<p class="job-name"><?php echo ($job_item["job_name"]); ?></p>
-						<p class="word-red"><strong>￥<?php echo ($job_item['money']); ?></strong></p>
+						<p class="word-red"><strong>￥<?php echo ($job_item['salary_low']); ?>-<?php echo ($job_item['salary_hig']); ?></strong></p>
 						<ul>
-							<li>广州</li>
-							<li>1-3年</li>
-							<li>本科</li>
+							<li><?php echo ($job_item['city']); ?></li>
+							<li><?php echo ($job_item['work_time']); ?></li>
+							<li><?php echo ($job_item['education']); ?></li>
 						</ul>
 					</div>
 					<div class="job-right">
 						<div class="company-img">
-							<img src="/aoshi/Public/images/company-logo2.png">
+								<img src="<?php echo ($job_item['photo']); ?>">
 						</div>
-						<span><?php echo ($job_item['company_name']); ?></span>
+						<span><?php echo ($job_item['name']); ?>  <?php echo ($job_item['job']); ?></span>
 					</div>
 				</a>
 			</div><?php endforeach; endif; else: echo "" ;endif; ?>
+		</div>
+		
 
 			<div class="next-page">
-				<a href="#">下一页</a>
+				<a>加载更多</a>
 			</div>
-
 		</div>
 	</div>
 	<script type="text/javascript" src="/aoshi/Public/js/enterprise/findjob.js"></script>
+	<script type="text/javascript">
+	var page = 0;
+    $(function() {
+        $('.next-page').on('click', function() {
+            page += 8;//点击一次追加8条
+            $.ajax({
+
+                url:"/aoshi/index.php/Home/Index/findjob",
+                data:{
+                    p:page,
+                },
+                dataType: "json",
+                type:"post",
+                success:function(data){
+                    var html = '';
+                    for(var i in data){
+                    	dataid=data[i].id;
+                        html +='<div class="job-list">';//拼接职位显示列表
+    						html +="<a href='jobdetail/id/"+dataid+"'>";
+	                            html +='<div class="job-left">'
+		                            html +='<p class="job-name">'+data[i].job_name+'</p>';
+		                            html +='<p class="word-red"><strong>￥'+data[i].salary_low+'-'+data[i].salary_hig+'</strong></p>';
+		                            html +='<ul>';
+			                            html +='<li>'+data[i].city+'</li>';
+			                            html +='<li>'+data[i].work_time+'</li>';
+			                            html +='<li>'+data[i].education+'</li>';
+		                            html +='</ul>';
+	                            html +='</div>';
+	                            html +='<div class="job-right">';
+		                            html +='<div class="company-img">';
+		                            	html +='<img src="'+data[i].photo+'">';
+		                            html +='</div>';
+		                            html +='<span>'+data[i].name+"  "+data[i].job+'</span>';
+	                            html +='</div>';
+                            html +='</a>';
+                        html +='</div>';
+                    }  
+                    $(".list-content").append(html);//追加
+                }
+            });   
+        });
+    });
+	</script>
 </body>
 </html>

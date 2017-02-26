@@ -58,7 +58,7 @@
 
                     <if condition="$name">
     <foreach name="name" item="name" >
-       <li> <a href="{:U('Jobseekers/Index/index')}">{$name.nickname}</a></li>
+       <li> <a href="{:U('Jobseekers/Index/index')}">{$name.username}</a></li>
        <li><a href="{:U('Jobseekers/Login/log_out')}">退出</a></li>
      </foreach>  
     <else/>   

@@ -230,14 +230,17 @@ body{
 	border-radius: 50%;
 	background: #53cac3;
 	margin: 7px auto;
+	float:right;
 }
 .position-right .job-list .job-right .company-img img{
 	width:100%;
+	border-radius: 50%;
 }
 .position-right .job-list .job-right span{
 	text-align: center;
 	display: block;
 	color:#000;
+	clear:both;
 }
 .position-right .next-page{
 	width:90%;

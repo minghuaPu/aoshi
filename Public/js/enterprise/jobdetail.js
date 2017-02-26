@@ -17,6 +17,10 @@
 					console.log(rtn.status)
 					if(rtn.status>=0) {
 						alert(rtn.msg);
+						if(rtn.url){
+							location.href = "http://"+location.host +rtn.url
+							}
+
 					}
 				
 					else{
